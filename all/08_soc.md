@@ -8,7 +8,7 @@ Analysts cannot manually perform every repetitive task.
 
 For example:
 
-```text id="soar01"
+```text
 SIEM Alert
    ↓
 Extract IP
@@ -40,7 +40,7 @@ SOAR is a security technology and operational approach that connects security to
 
 A simple architecture:
 
-```text id="soar02"
+```text
 SIEM
  ↓
 SOAR
@@ -64,13 +64,13 @@ Instead of analysts manually switching between many tools, SOAR can coordinate t
 
 Imagine:
 
-```text id="soar03"
+```text
 100 Alerts
 ```
 
 For every alert, an analyst manually:
 
-```text id="soar04"
+```text
 Copy IP
  ↓
 Threat Intelligence Lookup
@@ -106,7 +106,7 @@ A system performs a predefined task automatically.
 
 Example:
 
-```text id="soar05"
+```text
 Extract IP
  ↓
 Threat Intelligence Lookup
@@ -118,7 +118,7 @@ Coordinates multiple tools and actions into a broader security workflow.
 
 Example:
 
-```text id="soar06"
+```text
 SIEM Alert
  ↓
 Enrich IOC
@@ -142,7 +142,7 @@ Update Case
 
 Example:
 
-```text id="soar07"
+```text
 SIEM
   ↕
 SOAR
@@ -164,7 +164,7 @@ The SOAR platform acts as the workflow coordinator.
 
 A typical workflow:
 
-```text id="soar08"
+```text
 Security Event
       ↓
 SIEM
@@ -196,7 +196,7 @@ Example:
 
 ### Suspicious IP Playbook
 
-```text id="soar09"
+```text
 Alert Received
       ↓
 Extract IP
@@ -216,7 +216,7 @@ Another example:
 
 ### Phishing Playbook
 
-```text id="soar10"
+```text
 Phishing Alert
       ↓
 Extract URL
@@ -244,7 +244,7 @@ Generally:
 
 Human-readable operational instructions.
 
-```text id="soar11"
+```text
 Step 1
 Step 2
 Step 3
@@ -254,7 +254,7 @@ Step 3
 
 A broader workflow that can include:
 
-```text id="soar12"
+```text
 Automation
 Decision
 Tools
@@ -265,7 +265,7 @@ Documentation
 
 Example:
 
-```text id="soar13"
+```text
 Runbook:
 How to investigate suspicious IP
 
@@ -280,13 +280,13 @@ and create an investigation case.
 
 Suppose a SIEM generates:
 
-```text id="soar14"
+```text
 Suspicious IP Alert
 ```
 
 SOAR can automatically:
 
-```text id="soar15"
+```text
 1. Extract IP
 2. Lookup intelligence
 3. Find previous SIEM activity
@@ -306,14 +306,14 @@ Enrichment means adding additional information.
 
 Example:
 
-```text id="soar16"
+```text
 IOC:
 203.x.x.x
 ```
 
 Automation can query an approved intelligence source and add:
 
-```text id="soar17"
+```text
 Reputation
 Source
 Confidence
@@ -324,7 +324,7 @@ Related Information
 
 Then:
 
-```text id="soar18"
+```text
 Raw Alert
 +
 Enrichment
@@ -340,7 +340,7 @@ Automation can perform repetitive investigation tasks.
 
 Example:
 
-```text id="soar19"
+```text
 Alert
  ↓
 Extract User
@@ -368,7 +368,7 @@ A SOAR workflow can create a ticket automatically.
 
 Example:
 
-```text id="soar20"
+```text
 SIEM Alert
  ↓
 SOAR
@@ -378,7 +378,7 @@ Case Creation
 
 Ticket fields:
 
-```text id="soar21"
+```text
 Title
 Severity
 Priority
@@ -401,7 +401,7 @@ SOAR can notify the appropriate team.
 
 Examples:
 
-```text id="soar22"
+```text
 SIEM
  ↓
 SOAR
@@ -411,7 +411,7 @@ Email
 
 or:
 
-```text id="soar23"
+```text
 SIEM
  ↓
 SOAR
@@ -421,7 +421,7 @@ Chat / Collaboration Platform
 
 or:
 
-```text id="soar24"
+```text
 SIEM
  ↓
 SOAR
@@ -461,7 +461,7 @@ Suppose the SIEM incorrectly identifies an IP as malicious.
 
 Automation:
 
-```text id="soar25"
+```text
 Alert
  ↓
 Automatic Firewall Block
@@ -471,7 +471,7 @@ could accidentally block a legitimate service.
 
 Therefore:
 
-```text id="soar26"
+```text
 Detection
  ↓
 Validation
@@ -493,7 +493,7 @@ A **Human-in-the-Loop** workflow requires analyst approval before a potentially 
 
 Example:
 
-```text id="soar27"
+```text
 Alert
  ↓
 Enrichment
@@ -515,7 +515,7 @@ This is useful when an automated action could affect business operations.
 
 ### Fully Automated
 
-```text id="soar28"
+```text
 Alert
  ↓
 Decision
@@ -527,7 +527,7 @@ Useful for low-risk, well-understood tasks.
 
 ### Semi-Automated
 
-```text id="soar29"
+```text
 Alert
  ↓
 Enrichment
@@ -569,7 +569,7 @@ APIs are extremely important.
 
 A SOAR platform may communicate with:
 
-```text id="soar30"
+```text
 SIEM API
 EDR API
 Firewall API
@@ -582,7 +582,7 @@ Cloud API
 
 Example:
 
-```text id="soar31"
+```text
 SOAR
  ↓
 GET /indicator/203.x.x.x
@@ -596,7 +596,7 @@ SOAR
 
 Then:
 
-```text id="soar32"
+```text
 SOAR
  ↓
 POST /cases
@@ -634,13 +634,13 @@ External APIs may have rate limits.
 
 Example:
 
-```text id="soar33"
+```text
 100 requests/minute
 ```
 
 If the SOAR platform suddenly sends:
 
-```text id="soar34"
+```text
 1,000 requests/minute
 ```
 
@@ -666,7 +666,7 @@ Automation should handle:
 
 Suppose:
 
-```text id="soar35"
+```text
 Threat Intelligence API
       ↓
 Temporary Failure
@@ -676,7 +676,7 @@ The automation should not immediately fail the entire incident workflow.
 
 A controlled retry strategy can be:
 
-```text id="soar36"
+```text
 Request
  ↓
 Failure
@@ -698,7 +698,7 @@ Automation should avoid performing the same action repeatedly.
 
 Example:
 
-```text id="soar37"
+```text
 Block IP
 ```
 
@@ -706,7 +706,7 @@ If the same alert triggers five times, the system should not create five duplica
 
 A good workflow checks:
 
-```text id="soar38"
+```text
 Already Blocked?
 Already Ticketed?
 Already Enriched?
@@ -721,19 +721,19 @@ This concept is called **idempotency**.
 
 Suppose:
 
-```text id="soar39"
+```text
 100 identical alerts
 ```
 
 Without aggregation:
 
-```text id="soar40"
+```text
 100 tickets
 ```
 
 With proper logic:
 
-```text id="soar41"
+```text
 100 alerts
       ↓
 Correlation / Deduplication
@@ -779,7 +779,7 @@ Never deploy automation directly into production without testing.
 
 Test:
 
-```text id="soar42"
+```text
 Success
 Failure
 Timeout
@@ -792,7 +792,7 @@ Permission Error
 
 Example:
 
-```text id="soar43"
+```text
 Input:
 IP = 203.x.x.x
 
@@ -815,7 +815,7 @@ Graceful error
 
 Use:
 
-```text id="soar44"
+```text
 Requirement
  ↓
 Design
@@ -847,7 +847,7 @@ Detection Engineering and SOAR work together.
 
 Example:
 
-```text id="soar45"
+```text
 Detection
  ↓
 Alert
@@ -873,7 +873,7 @@ SOAR helps answer:
 
 Suppose the SIEM detects:
 
-```text id="soar46"
+```text
 Internal Host
       ↓
 Suspicious External IP
@@ -881,7 +881,7 @@ Suspicious External IP
 
 SOAR workflow:
 
-```text id="soar47"
+```text
 1. Receive Alert
 2. Extract IP
 3. Validate IP Format
@@ -905,7 +905,7 @@ A phishing alert arrives.
 
 SOAR can:
 
-```text id="soar48"
+```text
 Email Alert
  ↓
 Extract Sender
@@ -937,7 +937,7 @@ Suppose there is strong evidence that an account may be compromised.
 
 Workflow:
 
-```text id="soar49"
+```text
 SIEM Alert
  ↓
 Identify User
@@ -967,13 +967,13 @@ High-impact identity actions should have strong authorization controls.
 
 Endpoint generates:
 
-```text id="soar50"
+```text
 Suspicious File Detection
 ```
 
 SOAR can:
 
-```text id="soar51"
+```text
 Extract Hash
  ↓
 Threat Intelligence Lookup
@@ -997,7 +997,7 @@ This helps determine whether the event is isolated or widespread.
 
 Threat Intelligence is one of the easiest areas to automate.
 
-```text id="soar52"
+```text
 Alert
  ↓
 Extract IOC
@@ -1023,7 +1023,7 @@ SOAR can also automate predefined searches.
 
 Example:
 
-```text id="soar53"
+```text
 IOC Discovered
  ↓
 Search SIEM
@@ -1049,7 +1049,7 @@ Every automation workflow should expect failures.
 
 Possible failures:
 
-```text id="soar54"
+```text
 SIEM unavailable
 API unavailable
 Invalid token
@@ -1112,7 +1112,7 @@ Every important automated action should be traceable.
 
 Record:
 
-```text id="soar55"
+```text
 Who triggered it?
 What automation ran?
 When?
@@ -1125,7 +1125,7 @@ Who approved it?
 
 Example:
 
-```text id="soar56"
+```text
 Action:
 Firewall Block
 
@@ -1153,7 +1153,7 @@ Some automated actions should have rollback capability.
 
 Example:
 
-```text id="soar57"
+```text
 Firewall Block
  ↓
 False Positive Identified
@@ -1173,7 +1173,7 @@ Rollback capability is especially important for actions that can disrupt busines
 
 A mature workflow may look like:
 
-```text id="soar58"
+```text
 Detection
  ↓
 SOAR
@@ -1201,7 +1201,7 @@ This balances:
 
 Every important playbook should document:
 
-```text id="soar59"
+```text
 Playbook Name
 Purpose
 Trigger
@@ -1227,7 +1227,7 @@ This makes automation maintainable.
 
 You can create a small lab with:
 
-```text id="soar60"
+```text
 Wazuh / SIEM
 +
 Threat Intelligence
@@ -1241,7 +1241,7 @@ Ticketing System
 
 ### Lab 1 — IOC Enrichment
 
-```text id="soar61"
+```text
 SIEM Alert
  ↓
 Extract IP
@@ -1253,7 +1253,7 @@ Add Result
 
 ### Lab 2 — Automatic Case Creation
 
-```text id="soar62"
+```text
 SIEM Alert
  ↓
 Webhook
@@ -1263,7 +1263,7 @@ Create Ticket
 
 ### Lab 3 — Notification
 
-```text id="soar63"
+```text
 High-Priority Alert
  ↓
 Automation
@@ -1273,7 +1273,7 @@ SOC Notification
 
 ### Lab 4 — Approval-Based Response
 
-```text id="soar64"
+```text
 Alert
  ↓
 Enrichment
@@ -1289,7 +1289,7 @@ Authorized Response
 
 A practical architecture:
 
-```text id="soar65"
+```text
              ┌──────────────┐
              │     SIEM     │
              └──────┬───────┘
@@ -1321,7 +1321,7 @@ Automation can mature gradually.
 
 Manual investigation.
 
-```text id="soar66"
+```text
 Analyst does everything.
 ```
 
@@ -1329,7 +1329,7 @@ Analyst does everything.
 
 Automated enrichment.
 
-```text id="soar67"
+```text
 Alert → IOC Lookup
 ```
 
@@ -1337,7 +1337,7 @@ Alert → IOC Lookup
 
 Automated case management.
 
-```text id="soar68"
+```text
 Alert → Enrichment → Ticket
 ```
 
@@ -1345,7 +1345,7 @@ Alert → Enrichment → Ticket
 
 Semi-automated response.
 
-```text id="soar69"
+```text
 Alert → Enrichment → Analyst Approval → Action
 ```
 
@@ -1353,7 +1353,7 @@ Alert → Enrichment → Analyst Approval → Action
 
 Controlled automated response.
 
-```text id="soar70"
+```text
 Alert → Validation → Policy → Automated Action
 ```
 
@@ -1399,7 +1399,7 @@ Automation must handle repeated alerts safely.
 
 # 📋 44. SOAR Checklist
 
-```text id="soar71"
+```text
 [ ] Define automation objective
 
 [ ] Identify repetitive task
@@ -1453,7 +1453,7 @@ Automation must handle repeated alerts safely.
 
 Remember:
 
-```text id="soar72"
+```text
 Security Event
       ↓
 SIEM Detection
@@ -1593,7 +1593,7 @@ Don't automate simply because you can.
 
 Start with:
 
-```text id="soar73"
+```text
 Enrichment
 Ticket Creation
 Notification
@@ -1604,7 +1604,7 @@ Data Collection
 
 Use:
 
-```text id="soar74"
+```text
 Validation
 +
 Policy
@@ -1618,7 +1618,7 @@ when appropriate.
 
 You should always know:
 
-```text id="soar75"
+```text
 What happened?
 When?
 Why?
@@ -1632,7 +1632,7 @@ SOAR handles repetitive workflows.
 
 Analysts provide:
 
-```text id="soar76"
+```text
 Context
 Judgment
 Investigation

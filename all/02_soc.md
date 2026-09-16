@@ -741,6 +741,21 @@ This is much more valuable than only watching product demonstrations.
 
 ---
 
+# SIEM Platform Checklist
+
+```text
+[ ] Can explain SIEM collection → detection → alert → investigation flow
+[ ] Can describe Splunk roles: Forwarder → Indexer → Search Head
+[ ] Can write basic SPL search with index, sourcetype, stats
+[ ] Can describe Sentinel flow: Data Connector → Log Analytics → Analytics Rule → Incident
+[ ] Can write basic KQL with where, summarize, project
+[ ] Knows QRadar DSM, Offense, AQL basics and Elastic/OpenSearch index concepts
+[ ] Knows Wazuh manager, agent, rule, Active Response basics
+[ ] Can compare Event vs Alert vs Incident/Offense across platforms
+```
+
+---
+
 # 27. SIEM Engineer Interview Questions
 
 ### Q1. What is SIEM?

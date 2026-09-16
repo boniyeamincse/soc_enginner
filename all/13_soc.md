@@ -60,7 +60,7 @@ Slow SIEM হলে:
 
 SIEM performance broadly কয়েকটি layer-এ analyse করা যায়:
 
-```text id="g7f0az"
+```text
 Log Sources
      ↓
 Collection
@@ -90,7 +90,7 @@ Dashboard
 
 প্রথমে প্রশ্ন করবে:
 
-```text id="9ojqj7"
+```text
 What is slow?
      ↓
 Where is it slow?
@@ -152,7 +152,7 @@ SOC environment-এ সবচেয়ে common performance problem হলো **sl
 
 Example:
 
-```text id="k4v6kn"
+```text
 Search:
 All authentication events
 from all systems
@@ -163,7 +163,7 @@ for the last 2 years
 
 Better approach:
 
-```text id="40u7ml"
+```text
 Time Range
    ↓
 Relevant Index/Data
@@ -183,7 +183,7 @@ Query performance improve করার সবচেয়ে সহজ উপায়
 
 Bad:
 
-```text id="e7b3am"
+```text
 Search last 2 years
 ```
 
@@ -191,13 +191,13 @@ Search last 2 years
 
 Better:
 
-```text id="d6c5c7"
+```text
 Search last 24 hours
 ```
 
 তারপর প্রয়োজন হলে:
 
-```text id="x0e9ag"
+```text
 24h
  ↓
 7d
@@ -217,7 +217,7 @@ Query-তে যত দ্রুত relevant data filter করা যায়, �
 
 Bad approach:
 
-```text id="yr6v8j"
+```text
 Search everything
       ↓
 Process everything
@@ -227,7 +227,7 @@ Filter later
 
 Better:
 
-```text id="g6y5ht"
+```text
 Time filter
       ↓
 Event type
@@ -249,19 +249,19 @@ Result
 
 যদি authentication investigation হয়:
 
-```text id="35qjtp"
+```text
 Authentication Data
 ```
 
 যদি firewall investigation হয়:
 
-```text id="7jv5s1"
+```text
 Firewall Data
 ```
 
 যদি endpoint investigation হয়:
 
-```text id="g6f8c3"
+```text
 Endpoint Data
 ```
 
@@ -297,7 +297,7 @@ Relevant data source/index ব্যবহার করলে unnecessary scanni
 
 Example:
 
-```text id="y1x7iz"
+```text
 *admin*
 ```
 
@@ -305,7 +305,7 @@ Example:
 
 Better:
 
-```text id="v7p9xq"
+```text
 user = "admin"
 ```
 
@@ -321,7 +321,7 @@ Query-তে অপ্রয়োজনীয় সব field return করা উচ
 
 ধরুন analyst-এর শুধু দরকার:
 
-```text id="6v4l3x"
+```text
 timestamp
 user
 source_ip
@@ -347,7 +347,7 @@ Aggregation useful কিন্তু expensive হতে পারে।
 
 Example:
 
-```text id="u5c6n8"
+```text
 Count failed login
 by source IP
 for last 24 hours
@@ -395,7 +395,7 @@ Possible causes:
 
 # 📈 14. High CPU Troubleshooting Flow
 
-```text id="9t8zbr"
+```text
 CPU High
    ↓
 Check Which Process
@@ -455,7 +455,7 @@ Monitor করুন:
 
 যদি SIEM workload-এর কারণে system বারবার swap ব্যবহার করে:
 
-```text id="m2f7xk"
+```text
 RAM Pressure
      ↓
 Swap Usage
@@ -477,7 +477,7 @@ SIEM-এর জন্য disk performance অত্যন্ত গুরুত�
 
 কারণ:
 
-```text id="o9kpsd"
+```text
 Incoming Event
      ↓
 Processing
@@ -489,7 +489,7 @@ Disk Write
 
 আর search-এর সময়:
 
-```text id="2v7b8u"
+```text
 Query
   ↓
 Index
@@ -573,7 +573,7 @@ Index হলো SIEM search performance-এর গুরুত্বপূর্
 
 Conceptually:
 
-```text id="1f5kqg"
+```text
 Raw Events
     ↓
 Processed Events
@@ -619,7 +619,7 @@ Distributed search systems data-কে multiple logical partitions-এ ভাগ
 
 Conceptually:
 
-```text id="m8x6qo"
+```text
 Large Dataset
      |
      +---- Shard 1
@@ -661,14 +661,14 @@ Replication availability এবং resilience বাড়াতে সাহায
 
 Suppose:
 
-```text id="3uyv2g"
+```text
 Incoming EPS = 10,000
 Processing Capacity = 6,000 EPS
 ```
 
 তাহলে:
 
-```text id="8b4yk7"
+```text
 Incoming
    ↓
 10,000 EPS
@@ -680,7 +680,7 @@ Processing
 
 Backlog তৈরি হতে পারে।
 
-```text id="b5e5mu"
+```text
 Incoming Rate > Processing Rate
              ↓
            Queue ↑
@@ -698,7 +698,7 @@ Queue একটি useful performance indicator।
 
 যদি:
 
-```text id="s4d3z8"
+```text
 Queue = Normal
 ```
 
@@ -706,7 +706,7 @@ Queue = Normal
 
 কিন্তু:
 
-```text id="g1j8w3"
+```text
 Queue
   100
   500
@@ -725,7 +725,7 @@ Queue
 
 Conceptually:
 
-```text id="a7f0qc"
+```text
 Event Generated
       ↓
 Network
@@ -751,7 +751,7 @@ Performance troubleshooting-এর আগে baseline তৈরি করা উ
 
 Example:
 
-```text id="h4r5t2"
+```text
 Normal EPS          = 5,000
 Normal CPU          = 55%
 Normal RAM          = 65%
@@ -762,7 +762,7 @@ Normal Latency      = 5 sec
 
 তারপর incident-এর সময় compare করুন।
 
-```text id="x8f0zn"
+```text
 Baseline
    ↓
 Current Metrics
@@ -780,14 +780,14 @@ Potential Cause
 
 Example:
 
-```text id="b8jv2c"
+```text
 Before:
 Query = 30 sec
 ```
 
 Optimization-এর পরে:
 
-```text id="0v5v1w"
+```text
 After:
 Query = 5 sec
 ```
@@ -800,7 +800,7 @@ Query = 5 sec
 
 একটি practical process:
 
-```text id="f6g6ht"
+```text
 Identify Problem
       ↓
 Collect Metrics
@@ -832,7 +832,7 @@ Problem:
 
 Investigation:
 
-```text id="b3tqzi"
+```text
 Check Time Range
        ↓
 Check Query
@@ -878,7 +878,7 @@ Problem:
 
 Troubleshooting:
 
-```text id="j5o9i1"
+```text
 Firewall
    ↓
 Collector
@@ -898,7 +898,7 @@ Indexer
 
 যদি queue continuously grows:
 
-```text id="1r9qv7"
+```text
 Incoming Rate
      >
 Processing Rate
@@ -912,7 +912,7 @@ Processing Rate
 
 Problem:
 
-```text id="5o8jrh"
+```text
 CPU = 95%
 ```
 
@@ -992,7 +992,7 @@ Check করুন:
 
 Example:
 
-```text id="9qj2y8"
+```text
 Search millions of events
      ↓
 Every few seconds
@@ -1024,7 +1024,7 @@ Dashboard-ও SIEM performance impact করতে পারে।
 
 ধরুন dashboard-এ:
 
-```text id="84ot2n"
+```text
 20 panels
 +
 20 queries
@@ -1052,7 +1052,7 @@ Better approach:
 
 ধরুন:
 
-```text id="r9a6o4"
+```text
 1 Analyst  → 1 Query
 10 Analysts → 10 Queries
 50 Analysts → 50 Queries
@@ -1078,7 +1078,7 @@ System সেই workload কত efficiently handle করছে?
 
 Example:
 
-```text id="3f4c9k"
+```text
 SIEM Capacity = 10,000 EPS
 Current Load  = 5,000 EPS
 ```
@@ -1095,7 +1095,7 @@ Current Load  = 5,000 EPS
 
 Normal performance measure করুন।
 
-```text id="m9q9gy"
+```text
 CPU
 RAM
 Disk
@@ -1107,7 +1107,7 @@ Search latency
 
 একটি broad query চালান।
 
-```text id="w6v4my"
+```text
 Large time range
 ```
 
@@ -1131,7 +1131,7 @@ Relevant fields filter করুন।
 
 Before/After compare করুন।
 
-```text id="j7q1h4"
+```text
 Before Optimization
         ↓
 30 sec
@@ -1337,7 +1337,7 @@ Capacity describes how much workload the system can handle, while performance de
 
 তখন একজন SIEM Engineer-এর response হওয়া উচিত:
 
-```text id="znk7ry"
+```text
 What is slow?
      ↓
 Search?
@@ -1372,7 +1372,7 @@ Measure
 
 # 🔄 44. Complete SIEM Performance Flow
 
-```text id="2c9s8w"
+```text
 Performance Issue
        ↓
 Identify Layer

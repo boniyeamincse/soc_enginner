@@ -39,7 +39,7 @@ The SIEM Engineer needs to connect these systems to the SIEM.
 
 For example:
 
-```text id="7k2mfa"
+```text
 FortiGate
     │
     │ Syslog
@@ -52,7 +52,7 @@ SIEM
 
 Another system might use an API:
 
-```text id="r8f3nc"
+```text
 Cloud Platform
       │
       │ API
@@ -121,7 +121,7 @@ Common sources include:
 
 A basic architecture:
 
-```text id="0r9vpa"
+```text
 Firewall
    │
    │ Syslog
@@ -209,7 +209,7 @@ CEF is a standardized event format commonly used to send security events to SIEM
 
 A simplified example:
 
-```text id="7t2x9h"
+```text
 CEF:0|Vendor|Firewall|1.0|100|Blocked Connection|8|
 src=192.168.1.10 dst=10.10.10.20
 ```
@@ -236,7 +236,7 @@ Cloud services and SaaS platforms often expose APIs.
 
 A typical architecture:
 
-```text id="5x4b9p"
+```text
 Cloud / SaaS
      │
      ▼
@@ -286,7 +286,7 @@ Some APIs do not return all events in one response.
 
 Instead:
 
-```text id="c3x7va"
+```text
 Request
   ↓
 Page 1
@@ -310,7 +310,7 @@ Cloud APIs may limit the number of requests that can be made within a specific p
 
 Example:
 
-```text id="q3n5jk"
+```text
 100 requests/minute
 ```
 
@@ -328,7 +328,7 @@ An **agent** is software installed on a system that collects and forwards data.
 
 Architecture:
 
-```text id="r9v4cp"
+```text
 Windows/Linux
       │
       ▼
@@ -360,7 +360,7 @@ For example, a forwarder can collect local logs and forward them to a central SI
 
 Conceptually:
 
-```text id="9kzq8b"
+```text
 Server
   │
   ▼
@@ -380,7 +380,7 @@ Windows environments can use **Windows Event Forwarding (WEF)** to centralize Wi
 
 A simplified architecture:
 
-```text id="a7q3wh"
+```text
 Windows Server 1 ──┐
 Windows Server 2 ──┤
 Windows Server 3 ──┤
@@ -401,7 +401,7 @@ Some applications write logs to local files.
 
 Example:
 
-```text id="b2q9xe"
+```text
 /var/log/application.log
 ```
 
@@ -424,7 +424,7 @@ Some applications generate events across multiple lines.
 
 Example:
 
-```text id="p9k2jd"
+```text
 ERROR: Application failed
 Exception:
     Connection refused
@@ -445,13 +445,13 @@ Then a custom parser may be required.
 
 Example raw log:
 
-```text id="k8d4mx"
+```text
 AUTHFAIL|admin|192.168.10.20|VPN01|2026-09-16 14:20:10
 ```
 
 We may want:
 
-```text id="v6j1qa"
+```text
 event.action = authentication_failure
 user.name = admin
 source.ip = 192.168.10.20
@@ -471,7 +471,7 @@ These two concepts are related but different.
 
 Extract information from raw data.
 
-```text id="f2k6ps"
+```text
 Raw Log
    ↓
 source.ip
@@ -484,7 +484,7 @@ timestamp
 
 Map different field names/formats into a common structure.
 
-```text id="u5r8cx"
+```text
 src_ip
 sourceIP
 source_address
@@ -573,7 +573,7 @@ Test:
 
 A good validation process follows:
 
-```text id="5s9c4d"
+```text
 Source
   ↓
 Transport
@@ -659,13 +659,13 @@ This approach is much better than guessing.
 
 Suppose the SIEM receives:
 
-```text id="j4v8rm"
+```text
 Firewall login failed admin 192.168.10.20
 ```
 
 But the fields show:
 
-```text id="b8n2wp"
+```text
 username = null
 source.ip = null
 event.action = null
@@ -761,7 +761,7 @@ Before integrating a source, identify:
 
 Example:
 
-```text id="m8j4wz"
+```text
 Firewall
 10.10.10.10
      │
@@ -801,7 +801,7 @@ Filtering may be used to reduce unnecessary data.
 
 For example:
 
-```text id="x5p7bv"
+```text
 All Events
     │
     ├── Security Events → SIEM
@@ -899,7 +899,7 @@ Imagine an organization wants to connect a firewall to Wazuh.
 
 Basic flow:
 
-```text id="m0d4yt"
+```text
 Firewall
    │
    │ Syslog
@@ -935,7 +935,7 @@ This is a complete integration—not simply "send Syslog."
 
 A Windows environment might look like:
 
-```text id="j6v3sa"
+```text
 Windows Server
       │
       ▼
@@ -1045,7 +1045,7 @@ Avoid these common mistakes:
 
 Remember this:
 
-```text id="c4x9nw"
+```text
 Identify
    ↓
 Design

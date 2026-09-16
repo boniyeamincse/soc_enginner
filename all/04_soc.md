@@ -575,9 +575,12 @@ Sub-technique
 For example, a PowerShell-related detection can be associated with:
 
 ```text
-Command and Scripting Interpreter
-PowerShell
+Tactic: Execution (TA0002)
+Technique: T1059 Command and Scripting Interpreter
+Sub-technique: T1059.001 PowerShell
 ```
+
+Other common mappings: T1110 Brute Force, T1078 Valid Accounts, T1003 Credential Dumping, T1021 Remote Services. See #14 Advanced Detection and #17 hands-on for full examples.
 
 The exact mapping should be based on what the detection actually identifies.
 

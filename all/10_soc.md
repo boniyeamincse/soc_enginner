@@ -2009,5 +2009,5 @@ Try to build your own small SOC lab instead of only reading theory.
 
 **SIEM Engineer Index**
 
-**Series Completed — #10 SIEM Infrastructure**
+**Next Article: #11 — SIEM Architecture Design**
 

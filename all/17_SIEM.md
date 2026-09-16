@@ -37,7 +37,7 @@
 4. Searching          → data খোঁজা
 5. Detection          → rule লেখা
 6. Investigation      → alert তদন্ত করা
-7. Dashboard          → visualize করа
+7. Dashboard          → visualize করা
 8. Tuning             → false positive কমানো
 ```
 
@@ -78,7 +78,7 @@ Platform শেখা সহজ হয়ে যাবে, কারণ আপ�
 │      ▼              ▼              ▼             │
 │ ┌──────────┐  ┌────────────┐                     │
 │ │OpenSearch│  │ Sentinel   │  (Azure Cloud)      │
-│ │(Docker)  │  │ (Free detekt│                     │
+│ │(Docker)  │  │ (Free tier)│                     │
 │ └──────────┘  └────────────┘                     │
 └─────────────────────────────────────────────────┘
 ```
@@ -153,8 +153,8 @@ UF port     → 9997 (Universal Forwarder)
 ## 3.3 Elastic Security (Free Basic license)
 
 ```bash
-# Docker Compose (official quickstart)
-curl -sO https://raw.githubusercontent.com/elastic/elasticsearch/main/... 
+# Docker Compose (official quickstart - see elastic.co docs for current URL)
+curl -sO https://raw.githubusercontent.com/elastic/elasticsearch/main/docs/reference/setup/install/docker/docker-compose.yml 
 # অথবা simplified:
 docker network create elastic
 docker run -d --name es01 --net elastic -p 9200:9200 \
@@ -631,7 +631,7 @@ WEEK 5 — Sentinel (Cloud)
 WEEK 6 — Advanced + Portfolio
 ├── MISP TI integration → IOC match alert
 ├── Shuffle/Python automation
-├── Sigma rules লিখুন → uncómnverts → deploy
+├── Sigma rules লিখুন → convert → deploy
 └── Portfolio: GitHub repo + screenshots + writeup
 ```
 

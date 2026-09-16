@@ -4,7 +4,7 @@
 
 A SIEM can tell us:
 
-```text id="ti01"
+```text
 Which IP connected?
 Which user logged in?
 Which host generated the event?
@@ -16,7 +16,7 @@ But sometimes we need additional context.
 
 For example:
 
-```text id="ti02"
+```text
 203.x.x.x
 ```
 
@@ -24,7 +24,7 @@ A SIEM may know that an internal system communicated with this IP.
 
 But Threat Intelligence may provide additional information such as:
 
-```text id="ti03"
+```text
 Is this IP associated with known malicious activity?
 Has it been reported before?
 What type of threat has it been associated with?
@@ -69,7 +69,7 @@ But raw information is not automatically useful intelligence.
 
 The information needs:
 
-```text id="ti04"
+```text
 Context
 +
 Validation
@@ -85,7 +85,7 @@ Timeliness
 
 Suppose the SIEM detects:
 
-```text id="ti05"
+```text
 Internal Host
        ↓
 Connection
@@ -95,13 +95,13 @@ External IP
 
 Without intelligence:
 
-```text id="ti06"
+```text
 Unknown external IP
 ```
 
 With enrichment:
 
-```text id="ti07"
+```text
 External IP
        ↓
 Threat Intelligence Lookup
@@ -121,7 +121,7 @@ This can help the analyst prioritize and investigate the event.
 
 Common IOCs include:
 
-```text id="ti08"
+```text
 IP Address
 Domain
 URL
@@ -132,7 +132,7 @@ Hostname
 
 Examples:
 
-```text id="ti09"
+```text
 IP:
 203.x.x.x
 
@@ -153,13 +153,13 @@ This is a very important SOC concept.
 
 Suppose your threat feed contains:
 
-```text id="ti10"
+```text
 203.x.x.x
 ```
 
 Your firewall logs show:
 
-```text id="ti11"
+```text
 Internal Host → 203.x.x.x
 ```
 
@@ -205,7 +205,7 @@ Audience:
 
 Example:
 
-```text id="ti12"
+```text
 Increasing ransomware activity
 against a particular industry.
 ```
@@ -226,7 +226,7 @@ Useful for:
 
 Example:
 
-```text id="ti13"
+```text
 Adversaries commonly use
 specific techniques for credential access.
 ```
@@ -239,7 +239,7 @@ Focuses on campaigns and ongoing threat activity.
 
 Example:
 
-```text id="ti14"
+```text
 Current campaign
 Target
 Infrastructure
@@ -255,7 +255,7 @@ Focuses heavily on technical indicators.
 
 Examples:
 
-```text id="ti15"
+```text
 IP
 Domain
 URL
@@ -271,7 +271,7 @@ This is especially useful for SIEM enrichment and automated correlation.
 
 Threat Intelligence should follow a lifecycle.
 
-```text id="ti16"
+```text
 Direction
    ↓
 Collection
@@ -343,7 +343,7 @@ Raw intelligence often needs processing.
 
 Example:
 
-```text id="ti17"
+```text
 Raw Feed
    ↓
 Remove duplicates
@@ -361,7 +361,7 @@ Store
 
 For an IP feed:
 
-```text id="ti18"
+```text
 IP
 First Seen
 Last Seen
@@ -379,7 +379,7 @@ Analysis converts collected information into useful intelligence.
 
 Suppose a feed contains:
 
-```text id="ti19"
+```text
 IP A
 IP B
 IP C
@@ -387,7 +387,7 @@ IP C
 
 The analyst asks:
 
-```text id="ti20"
+```text
 Are these relevant to us?
 Have our systems communicated with them?
 What activity is associated with them?
@@ -405,7 +405,7 @@ Useful intelligence should reach the right people and systems.
 
 For example:
 
-```text id="ti21"
+```text
 Threat Intelligence
       ↓
 SIEM
@@ -415,7 +415,7 @@ SOC Analyst
 
 or:
 
-```text id="ti22"
+```text
 Threat Intelligence
       ↓
 Firewall
@@ -423,7 +423,7 @@ Firewall
 
 or:
 
-```text id="ti23"
+```text
 Threat Intelligence
       ↓
 EDR
@@ -439,7 +439,7 @@ SOC analysts should provide feedback.
 
 Example:
 
-```text id="ti24"
+```text
 Feed Indicator
       ↓
 Matched 500 alerts
@@ -459,7 +459,7 @@ This improves intelligence quality.
 
 The basic architecture is:
 
-```text id="ti25"
+```text
 Threat Feed
      ↓
 Processing
@@ -483,14 +483,14 @@ The SIEM can compare observed events against known indicators.
 
 Suppose an alert contains:
 
-```text id="ti26"
+```text
 Destination IP:
 203.x.x.x
 ```
 
 The SIEM can enrich the event:
 
-```text id="ti27"
+```text
 Destination IP:
 203.x.x.x
 
@@ -515,19 +515,19 @@ Now the analyst has more context.
 
 Imagine your firewall produces:
 
-```text id="ti28"
+```text
 Internal Host → External IP
 ```
 
 Threat Intelligence contains:
 
-```text id="ti29"
+```text
 External IP = Known Indicator
 ```
 
 Correlation:
 
-```text id="ti30"
+```text
 Firewall Event
       +
 Threat Intelligence Match
@@ -545,7 +545,7 @@ IP reputation attempts to provide context about an IP address.
 
 Possible classifications include:
 
-```text id="ti31"
+```text
 Known malicious
 Suspicious
 Unknown
@@ -576,7 +576,7 @@ Similar analysis can be performed for domains.
 
 Example:
 
-```text id="ti32"
+```text
 Internal Host
      ↓
 DNS Request
@@ -614,7 +614,7 @@ URLs can be useful in:
 
 Example:
 
-```text id="ti33"
+```text
 Email
  ↓
 URL
@@ -636,7 +636,7 @@ File hashes can be used to identify known files.
 
 Common hash types include:
 
-```text id="ti34"
+```text
 MD5
 SHA-1
 SHA-256
@@ -646,7 +646,7 @@ For security investigations, SHA-256 is commonly preferred for identifying files
 
 Example:
 
-```text id="ti35"
+```text
 Endpoint
  ↓
 File Hash
@@ -670,7 +670,7 @@ And:
 
 Email investigations can involve:
 
-```text id="ti36"
+```text
 Sender
 Recipient
 Domain
@@ -682,7 +682,7 @@ Message ID
 
 A SIEM can correlate:
 
-```text id="ti37"
+```text
 Email
  ↓
 URL
@@ -704,7 +704,7 @@ Not all intelligence sources are equally reliable.
 
 A useful intelligence record can contain:
 
-```text id="ti38"
+```text
 Indicator
 Source
 First Seen
@@ -716,7 +716,7 @@ Expiration
 
 For example:
 
-```text id="ti39"
+```text
 Indicator:
 203.x.x.x
 
@@ -744,7 +744,7 @@ An indicator that was malicious months ago may not have the same relevance today
 
 Therefore consider:
 
-```text id="ti40"
+```text
 First Seen
 Last Seen
 Expiration
@@ -753,7 +753,7 @@ Current Status
 
 Example:
 
-```text id="ti41"
+```text
 Indicator
  ↓
 Old intelligence
@@ -773,14 +773,14 @@ A feed should not be judged only by its size.
 
 For example:
 
-```text id="ti42"
+```text
 Feed A:
 1,000,000 indicators
 ```
 
 does not automatically mean it is better than:
 
-```text id="ti43"
+```text
 Feed B:
 20,000 high-quality indicators
 ```
@@ -811,19 +811,19 @@ Important factors include:
 
 Suppose an intelligence feed identifies:
 
-```text id="ti44"
+```text
 IP = Suspicious
 ```
 
 Your SIEM generates:
 
-```text id="ti45"
+```text
 500 alerts
 ```
 
 But investigation shows:
 
-```text id="ti46"
+```text
 Most traffic belongs to a legitimate cloud service.
 ```
 
@@ -851,7 +851,7 @@ Your organization generates valuable intelligence from its own incidents.
 
 Examples:
 
-```text id="ti47"
+```text
 Previously compromised IP
 Compromised account
 Malicious hash
@@ -862,7 +862,7 @@ Internal attacker infrastructure
 
 This can become:
 
-```text id="ti48"
+```text
 Internal Threat Intelligence
 ```
 
@@ -872,7 +872,7 @@ Internal Threat Intelligence
 
 Example:
 
-```text id="ti49"
+```text
 Incident
  ↓
 IOC Discovered
@@ -920,7 +920,7 @@ A TIP can integrate with the SIEM.
 
 Architecture:
 
-```text id="ti50"
+```text
 Threat Sources
        ↓
 TIP
@@ -940,7 +940,7 @@ SOC
 
 A SIEM integration may use:
 
-```text id="ti51"
+```text
 API
 STIX/TAXII
 CSV
@@ -951,7 +951,7 @@ Custom Connector
 
 The integration process is:
 
-```text id="ti52"
+```text
 Threat Source
  ↓
 Connector
@@ -991,7 +991,7 @@ TAXII provides mechanisms for exchanging threat intelligence.
 
 Conceptually:
 
-```text id="ti53"
+```text
 Threat Intelligence
        ↓
 STIX
@@ -1011,7 +1011,7 @@ Threat Intelligence can directly support Detection Engineering.
 
 Example:
 
-```text id="ti54"
+```text
 Threat Research
       ↓
 Known Behavior
@@ -1025,7 +1025,7 @@ SIEM Alert
 
 Another example:
 
-```text id="ti55"
+```text
 Known IOC
       ↓
 IOC Detection
@@ -1045,14 +1045,14 @@ Threat Intelligence can also create hunting hypotheses.
 
 Example:
 
-```text id="ti56"
+```text
 Threat Intelligence:
 Specific malicious infrastructure observed
 ```
 
 Hunt:
 
-```text id="ti57"
+```text
 Search historical DNS
 Search proxy logs
 Search firewall logs
@@ -1061,7 +1061,7 @@ Search endpoint logs
 
 Then:
 
-```text id="ti58"
+```text
 Indicator Found?
    ↓
 Yes → Investigate
@@ -1078,7 +1078,7 @@ If retention allows, search historical telemetry.
 
 Example:
 
-```text id="ti59"
+```text
 New IOC
  ↓
 Search last 30 days
@@ -1100,7 +1100,7 @@ One indicator can appear in many places.
 
 Example:
 
-```text id="ti60"
+```text
 IP
  ↓
 Firewall
@@ -1116,7 +1116,7 @@ SIEM
 
 Another:
 
-```text id="ti61"
+```text
 Hash
  ↓
 Email
@@ -1136,7 +1136,7 @@ Correlation across multiple sources can provide stronger context.
 
 Threat Intelligence may describe:
 
-```text id="ti62"
+```text
 Adversary
 Campaign
 Technique
@@ -1149,7 +1149,7 @@ Detection Engineers can use this information to identify detection opportunities
 
 For example:
 
-```text id="ti63"
+```text
 Threat Research
  ↓
 Observed Technique
@@ -1171,7 +1171,7 @@ Automation can enrich alerts automatically.
 
 Example:
 
-```text id="ti64"
+```text
 SIEM Alert
      ↓
 Extract IP
@@ -1235,7 +1235,7 @@ Large feeds can create significant data volume.
 
 Consider:
 
-```text id="ti65"
+```text
 1 Million Indicators
         ↓
 Continuous Correlation
@@ -1263,7 +1263,7 @@ Quality and relevance are more important than blindly collecting huge amounts of
 
 A SIEM/TIP dashboard may show:
 
-```text id="ti66"
+```text
 Active Indicators
 New Indicators
 Expired Indicators
@@ -1276,7 +1276,7 @@ Recent Matches
 
 SOC analysts may also need:
 
-```text id="ti67"
+```text
 Top Matched IPs
 Top Matched Domains
 Affected Hosts
@@ -1291,7 +1291,7 @@ Last Seen
 
 Build a small lab:
 
-```text id="ti68"
+```text
 Wazuh / SIEM
 +
 Firewall Logs
@@ -1305,7 +1305,7 @@ Threat Intelligence Feed
 
 Take a test indicator.
 
-```text id="ti69"
+```text
 IP
  ↓
 Threat Intelligence
@@ -1317,7 +1317,7 @@ Enrichment
 
 Generate a controlled network event in your lab.
 
-```text id="ti70"
+```text
 Network Event
 +
 Threat Intelligence Match
@@ -1329,7 +1329,7 @@ Alert
 
 Search whether the indicator appeared previously.
 
-```text id="ti71"
+```text
 IOC
  ↓
 Historical SIEM Search
@@ -1341,7 +1341,7 @@ Previous Events
 
 Create a detection for a known test indicator.
 
-```text id="ti72"
+```text
 IOC Match
  ↓
 Detection
@@ -1353,7 +1353,7 @@ Alert
 
 # 📋 40. Threat Intelligence Checklist
 
-```text id="ti73"
+```text
 [ ] Define intelligence requirements
 
 [ ] Identify relevant sources
@@ -1401,7 +1401,7 @@ Alert
 
 Remember:
 
-```text id="ti74"
+```text
 Requirement
      ↓
 Collection
@@ -1535,7 +1535,7 @@ Threat Intelligence can identify new indicators, adversary behaviors, and techni
 
 ### 1️⃣ Intelligence needs context
 
-```text id="ti75"
+```text
 IOC
 ≠
 Complete Investigation
@@ -1559,7 +1559,7 @@ The objective is not simply collecting indicators.
 
 The objective is:
 
-```text id="ti76"
+```text
 Understand
    ↓
 Detect

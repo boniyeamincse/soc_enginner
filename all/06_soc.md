@@ -36,7 +36,7 @@ A SIEM Engineer works closely with SOC Analysts to make this workflow effective.
 
 A typical SOC contains:
 
-```text id="soc01"
+```text
 Security Logs
       ↓
 SIEM
@@ -94,7 +94,7 @@ A SOC generally performs activities such as:
 
 A traditional SOC may have several levels.
 
-```text id="soc02"
+```text
 L1 Analyst
    ↓
 L2 Analyst
@@ -132,7 +132,7 @@ Responsibilities can include:
 
 Example:
 
-```text id="soc03"
+```text
 SIEM Alert
     ↓
 L1 Analyst
@@ -170,7 +170,7 @@ Responsibilities may include:
 
 Example:
 
-```text id="soc04"
+```text
 L1 Escalation
       ↓
 L2 Investigation
@@ -254,7 +254,7 @@ An event is a recorded activity.
 
 Example:
 
-```text id="soc05"
+```text
 User login failed
 ```
 
@@ -262,7 +262,7 @@ User login failed
 
 An alert is generated when a detection identifies activity that meets defined conditions.
 
-```text id="soc06"
+```text
 Multiple failed logins
         ↓
 Detection Rule
@@ -274,7 +274,7 @@ Alert
 
 An incident is a security case requiring investigation and potentially response.
 
-```text id="soc07"
+```text
 Multiple alerts
       +
 Evidence
@@ -292,7 +292,7 @@ An alert does not automatically mean an incident.
 
 A practical alert lifecycle is:
 
-```text id="soc08"
+```text
 Alert Created
       ↓
 Assigned
@@ -320,7 +320,7 @@ The SIEM identifies suspicious activity.
 
 Example:
 
-```text id="soc09"
+```text
 20 failed logins
 from same source IP
 within 5 minutes
@@ -328,7 +328,7 @@ within 5 minutes
 
 Detection rule:
 
-```text id="soc10"
+```text
 Authentication Failure
 +
 Threshold
@@ -338,7 +338,7 @@ Time Window
 
 Result:
 
-```text id="soc11"
+```text
 Security Alert
 ```
 
@@ -372,7 +372,7 @@ After validation, investigate the activity.
 
 Look at:
 
-```text id="soc12"
+```text
 User
 Source IP
 Destination
@@ -387,7 +387,7 @@ Threat Intelligence
 
 Then build the timeline.
 
-```text id="soc13"
+```text
 Before
   ↓
 During
@@ -423,7 +423,7 @@ Check:
 
 Example:
 
-```text id="soc14"
+```text
 Alert
  ↓
 Host A
@@ -503,13 +503,13 @@ Activities may include:
 
 Recovery should not simply mean:
 
-```text id="soc15"
+```text
 System is working
 ```
 
 You should also confirm:
 
-```text id="soc16"
+```text
 System is secure
 +
 Monitoring is active
@@ -525,7 +525,7 @@ Documentation is a critical SOC responsibility.
 
 Record:
 
-```text id="soc17"
+```text
 What happened?
 When?
 Which system?
@@ -548,7 +548,7 @@ A well-documented incident helps future investigations.
 
 Remember:
 
-```text id="soc18"
+```text
 Detect
   ↓
 Validate
@@ -580,7 +580,7 @@ This is one of the most important workflows for a SOC Engineer.
 
 During triage, ask:
 
-```text id="soc19"
+```text
 What triggered the alert?
 Who is involved?
 Which asset?
@@ -600,7 +600,7 @@ The goal is to prioritize investigation appropriately.
 
 Organizations may classify alerts using:
 
-```text id="soc20"
+```text
 Low
 Medium
 High
@@ -647,7 +647,7 @@ How urgently the SOC should handle the case.
 
 Example:
 
-```text id="soc21"
+```text
 High Severity
 +
 High Confidence
@@ -667,7 +667,7 @@ A SOC should track incidents using a case or ticketing system.
 
 A case may contain:
 
-```text id="soc22"
+```text
 Case ID
 Title
 Severity
@@ -687,7 +687,7 @@ Resolution
 
 Common statuses include:
 
-```text id="soc23"
+```text
 New
 Assigned
 In Progress
@@ -704,7 +704,7 @@ Closed
 
 When an alert is generated:
 
-```text id="soc24"
+```text
 Alert
  ↓
 Queue
@@ -736,7 +736,7 @@ Escalation is necessary when the current analyst or team needs additional expert
 
 Examples:
 
-```text id="soc25"
+```text
 L1
  ↓
 L2
@@ -744,7 +744,7 @@ L2
 
 or:
 
-```text id="soc26"
+```text
 SOC
  ↓
 Incident Response
@@ -752,7 +752,7 @@ Incident Response
 
 or:
 
-```text id="soc27"
+```text
 Security Team
  ↓
 Network Team
@@ -760,7 +760,7 @@ Network Team
 
 or:
 
-```text id="soc28"
+```text
 Security Team
  ↓
 System Owner
@@ -776,7 +776,7 @@ Escalation should include useful evidence instead of simply saying:
 
 A useful escalation should include:
 
-```text id="soc29"
+```text
 Incident Summary
 
 Detection Name
@@ -844,7 +844,7 @@ A security incident may contain multiple stages.
 
 For example:
 
-```text id="soc30"
+```text
 Initial Access
       ↓
 Execution
@@ -874,7 +874,7 @@ Example:
 
 ### Suspicious Login Runbook
 
-```text id="soc31"
+```text
 1. Validate login event
 2. Identify user
 3. Identify source IP
@@ -907,7 +907,7 @@ A broader response workflow that can include decisions, automation, people, tool
 
 Example:
 
-```text id="soc32"
+```text
 Alert
  ↓
 Playbook
@@ -929,7 +929,7 @@ Automation can reduce repetitive work.
 
 Example:
 
-```text id="soc33"
+```text
 SIEM Alert
  ↓
 Automation
@@ -957,7 +957,7 @@ Their feedback is extremely valuable.
 
 Example:
 
-```text id="soc34"
+```text
 Detection
  ↓
 100 Alerts
@@ -981,7 +981,7 @@ The Detection Engineer can then investigate and tune the rule.
 
 A mature SOC operates as a continuous loop:
 
-```text id="soc35"
+```text
 Detection
  ↓
 Alert
@@ -1035,7 +1035,7 @@ It measures how long it takes to identify a security event or incident.
 
 Conceptually:
 
-```text id="soc36"
+```text
 Security Activity
       ↓
 Time passes
@@ -1055,7 +1055,7 @@ Always check how your organization defines the metric.
 
 Conceptually:
 
-```text id="soc37"
+```text
 Detection
  ↓
 Investigation
@@ -1075,7 +1075,7 @@ SOC operations often run across multiple shifts.
 
 A good handover should include:
 
-```text id="soc38"
+```text
 Open Incidents
 Pending Investigations
 High-Priority Alerts
@@ -1088,7 +1088,7 @@ Important Changes
 
 Example:
 
-```text id="soc39"
+```text
 Case #1024
 
 Status:
@@ -1145,7 +1145,7 @@ SOC analysts should have only the permissions needed for their role.
 
 Example:
 
-```text id="soc40"
+```text
 L1 Analyst
  ↓
 Read / Investigate
@@ -1153,7 +1153,7 @@ Read / Investigate
 
 More sensitive actions may require:
 
-```text id="soc41"
+```text
 L2 / Incident Response
  ↓
 Containment
@@ -1183,7 +1183,7 @@ A SOC platform should ideally support:
 
 For example:
 
-```text id="soc42"
+```text
 Analyst
  ↓
 Investigate
@@ -1203,7 +1203,7 @@ Manage Platform
 
 A SOC dashboard may show:
 
-```text id="soc43"
+```text
 Open Alerts
 Open Incidents
 Critical Alerts
@@ -1225,7 +1225,7 @@ The dashboard should help analysts make decisions rather than simply display lar
 
 You can build a basic SOC lab using:
 
-```text id="soc44"
+```text
 Windows VM
 Linux VM
 Wazuh
@@ -1241,7 +1241,7 @@ Generate several authentication failures in your authorized lab.
 
 Then follow:
 
-```text id="soc45"
+```text
 Event
  ↓
 SIEM Detection
@@ -1267,7 +1267,7 @@ Documentation
 
 Suppose the SIEM generates:
 
-```text id="soc46"
+```text
 Alert:
 Multiple Failed SSH Logins
 ```
@@ -1276,7 +1276,7 @@ Multiple Failed SSH Logins
 
 Check:
 
-```text id="soc47"
+```text
 Timestamp
 Source IP
 Destination Host
@@ -1287,13 +1287,13 @@ Username
 
 Search:
 
-```text id="soc48"
+```text
 All activity from source IP
 ```
 
 ### Step 3 — Check Successful Login
 
-```text id="soc49"
+```text
 Failed
 Failed
 Failed
@@ -1306,7 +1306,7 @@ Now investigate the successful login.
 
 Search:
 
-```text id="soc50"
+```text
 Processes
 Authentication
 Privilege changes
@@ -1315,7 +1315,7 @@ Network connections
 
 ### Step 5 — Determine Scope
 
-```text id="soc51"
+```text
 One host?
 Multiple hosts?
 One account?
@@ -1326,7 +1326,7 @@ Multiple accounts?
 
 Based on evidence and organizational procedures:
 
-```text id="soc52"
+```text
 Close
 or
 Escalate
@@ -1338,7 +1338,7 @@ Contain
 
 Record:
 
-```text id="soc53"
+```text
 Finding
 Evidence
 Timeline
@@ -1352,7 +1352,7 @@ Verdict
 
 Think of it this way:
 
-```text id="soc54"
+```text
 SIEM
 =
 Security Data + Detection + Investigation Platform
@@ -1360,7 +1360,7 @@ Security Data + Detection + Investigation Platform
 
 SOC:
 
-```text id="soc55"
+```text
 People
 +
 Process
@@ -1384,7 +1384,7 @@ The relationship is very important.
 
 ### SIEM Engineer:
 
-```text id="soc56"
+```text
 Investigates Rule
       ↓
 Checks Data
@@ -1404,7 +1404,7 @@ Another example:
 
 SOC:
 
-```text id="soc57"
+```text
 Reports Detection Gap
       ↓
 Security / IT Team
@@ -1422,7 +1422,7 @@ This creates a continuous security improvement cycle.
 
 # 📋 45. SOC Operations Checklist
 
-```text id="soc58"
+```text
 [ ] Monitor SIEM
 
 [ ] Review new alerts
@@ -1588,7 +1588,7 @@ If an important action or finding is not documented, it becomes difficult to ver
 
 Every investigation can improve:
 
-```text id="soc59"
+```text
 Detection
 Process
 Runbook
@@ -1604,7 +1604,7 @@ A SOC is not just a room full of analysts watching dashboards.
 
 A mature SOC combines:
 
-```text id="soc60"
+```text
 People
 +
 Process

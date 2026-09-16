@@ -1232,16 +1232,16 @@ For example:
 
 ```text
 Log Availability:
-≥ defined target
+≥ 99.5% per critical source (example - adapt to org)
 
 Log Latency:
-≤ defined target
+≤ 5 min for critical sources, ≤ 15 min standard (example)
 
 Parsing Success:
-≥ defined target
+≥ 99% parsed, < 1% unparsed (example)
 
 Critical Source Silence:
-Alert immediately/within defined period
+Alert if no events for > 15 min (example)
 ```
 
 The exact targets should be based on business and security requirements.

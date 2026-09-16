@@ -914,6 +914,21 @@ A detection idea can be represented independently of one specific SIEM query lan
 
 Always validate the converted query against your actual data.
 
+Minimal Sigma example structure (see #17 for runnable YAML + `sigma convert`):
+
+```yaml
+title: Multiple Failed SSH Logins
+logsource:
+  product: linux
+detection:
+  selection:
+    EventID: 4625
+  condition: selection | count() > 5
+tags:
+  - attack.credential_access
+  - attack.t1110
+```
+
 ---
 
 # 2️⃣7️⃣ Detection-as-Code

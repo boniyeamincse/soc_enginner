@@ -798,7 +798,23 @@ Peak EPS    = measured/projected peak
 | HA/Replication     |  Required |
 | Backup             |  Required |
 
-**Note:** এটি example planning data; production sizing-এর আগে real measurements এবং platform-specific sizing guidance ব্যবহার করা উচিত।
+**Note:** এটি example planning data; production sizing-এর আগে real measurements এবং platform-specific sizing guidance ব্যবহার করা উচিত.
+
+---
+
+# ✅ Capacity Planning Checklist
+
+```text
+[ ] Average EPS and Peak EPS measured from real sources
+[ ] Events/day calculated: EPS x 86400
+[ ] GB/day calculated: events/day x avg event size
+[ ] Retention storage calculated: GB/day x retention days
+[ ] Index + replication + buffer overhead added (see #10 storage tiers)
+[ ] Hot / Warm / Cold / Archive split defined
+[ ] CPU / RAM / Disk IOPS and network sized for peak + 20-30% buffer
+[ ] Capacity alerts set (e.g. 80% warn, 90% critical)
+[ ] Worksheet reviewed before procurement / expansion
+```
 
 ---
 

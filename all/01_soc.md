@@ -129,6 +129,22 @@ Important security events-এর মধ্যে থাকতে পারে:
 
 একজন SIEM Engineer-এর Windows Event ID এবং event structure সম্পর্কে ভালো ধারণা থাকা প্রয়োজন।
 
+Key Windows Security Event IDs for SIEM:
+
+```text
+4624 = Successful logon
+4625 = Failed logon
+4672 = Special privileges assigned (admin logon)
+4720 = User account created
+4732 = Member added to security-enabled group
+4688 = New process created
+4689 = Process exited
+7045 = Service installed
+4104 = PowerShell script block logging
+```
+
+Always validate field names per platform (e.g. Splunk `EventCode`, Sentinel `EventID`, Elastic `winlog.event_id`).
+
 ---
 
 # 5. Linux Logs
@@ -759,7 +775,12 @@ SIEM infrastructure planning-এর সময় **EPS (Events Per Second)** গু
 
 ```text
 EPS = 1,000
+Events/day = EPS x 86400 = 86.4M
+GB/day = Events/day x avg event size (e.g. 86.4M x 1KB ~ 86.4 GB)
+Retention storage = GB/day x retention days
 ```
+
+See #10 SIEM Infrastructure and #12 Capacity Planning for full sizing with index, replication and buffer overhead.
 
 মানে প্রতি second-এ প্রায় 1,000 events আসছে।
 
