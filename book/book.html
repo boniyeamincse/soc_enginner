@@ -177,6 +177,8 @@ tr:nth-child(even) td { background: #f8fafc; }
 hr { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
 .book-footer { text-align: center; color: var(--muted); margin-top: 3rem; font-size: 0.9rem; }
 
+.front-page { margin-top: 3rem; }
+
 @page {
 size: A4;
 margin: 20mm 16mm 22mm 16mm;
@@ -189,6 +191,7 @@ header#title-block-header { border-radius: 0; }
 h1 { page-break-before: always; }
 header#title-block-header + h1, h1:first-of-type { page-break-before: avoid; }
 pre, table, blockquote { page-break-inside: avoid; }
+.front-page { page-break-before: always; }
 a { text-decoration: none; }
 }
 </style>
@@ -203,6 +206,7 @@ a { text-decoration: none; }
 <ul>
 <li><a href="#siem-engineer-study-notes" id="toc-siem-engineer-study-notes">🛡️ SIEM Engineer — Study
 Notes</a></li>
+<li><a href="#preface" id="toc-preface">Preface</a></li>
 <li><a href="#part-i-foundation" id="toc-part-i-foundation">Part I —
 Foundation</a></li>
 <li><a href="#siem-engineer-01-log-management" id="toc-siem-engineer-01-log-management">SIEM Engineer #01 — Log
@@ -762,6 +766,58 @@ and build a GitHub portfolio</label></li>
 </ul>
 <hr />
 <p><em>Last updated: September 2026</em></p>
+<hr />
+<h2 class="front-page" id="copyright">Copyright</h2>
+<p><strong>SIEM Engineer — Complete Study Notes</strong> First Edition ·
+September 2026</p>
+<p>© 2026 Boni Yeamin. Free for personal learning use.</p>
+<p>All commands, queries and detections in this book are for
+<strong>educational and authorized lab use only</strong>. Never run
+scans, attacks or brute-force simulations against systems you do not own
+or have explicit written permission to test. Product versions, free-tier
+limits and install steps change over time — always verify against the
+official documentation before building your lab.</p>
+<h2 class="front-page" id="about-the-author">About the Author</h2>
+<p><strong>Boni Yeamin</strong> writes practical SOC / SIEM study notes
+and learns in public through a 17-article series covering log
+management, SIEM platforms, detection engineering, SOC operations,
+threat intelligence, SOAR, dashboards, infrastructure, architecture
+design, capacity planning, performance tuning, threat hunting and data
+quality — ending with a multi-platform hands-on capstone (Wazuh, Splunk,
+Elastic, OpenSearch, Microsoft Sentinel).</p>
+<p>GitHub: <strong>boniyeamincse</strong></p>
+<h1 id="preface">Preface</h1>
+<p>This book collects the complete 17-article SIEM Engineer series into
+one volume so you can read it start to finish like a real book.</p>
+<p><strong>How this book is organized</strong> — five parts:</p>
+<ul>
+<li><strong>Part I — Foundation (#01–#03):</strong> logs, SIEM
+platforms, log integration</li>
+<li><strong>Part II — Detection &amp; Investigation (#04–#05,
+#14–#15):</strong> queries, detection engineering, threat hunting</li>
+<li><strong>Part III — SOC, Intel &amp; Automation (#06–#08):</strong>
+SOC operations, threat intelligence, SOAR</li>
+<li><strong>Part IV — Reporting &amp; Infrastructure (#09–#13,
+#16):</strong> dashboards, infrastructure, architecture, sizing, tuning,
+data quality</li>
+<li><strong>Part V — Capstone (#17):</strong> one lab, one dataset, same
+exercises on five platforms</li>
+</ul>
+<p><strong>Conventions used in this book:</strong></p>
+<ul>
+<li><code>text</code> diagrams show pipelines and flows step by
+step</li>
+<li><code>bash</code> / <code>spl</code> / <code>kql</code> /
+<code>yaml</code> blocks are copy-paste starting points for your lab —
+adapt field names to your data</li>
+<li>Every chapter ends with interview questions, a practical checklist
+and a takeaway</li>
+<li>Articles #01, #11–#13 and #17 mix Bengali + English (Banglish); the
+rest are in English</li>
+</ul>
+<p><strong>How to read:</strong> follow #01 → #17 in order, build the
+Wazuh lab from #17 alongside your reading, and finish each chapter’s
+checklist before moving on.</p>
 <hr />
 <hr />
 <h1 id="part-i-foundation">Part I — Foundation</h1>

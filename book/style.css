@@ -84,6 +84,9 @@ tr:nth-child(even) td { background: #f8fafc; }
 hr { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
 .book-footer { text-align: center; color: var(--muted); margin-top: 3rem; font-size: 0.9rem; }
 
+/* Front matter (copyright / author pages) */
+.front-page { margin-top: 3rem; }
+
 /* Print / PDF */
 @page {
   size: A4;
@@ -97,5 +100,6 @@ hr { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
   h1 { page-break-before: always; }
   header#title-block-header + h1, h1:first-of-type { page-break-before: avoid; }
   pre, table, blockquote { page-break-inside: avoid; }
+  .front-page { page-break-before: always; }
   a { text-decoration: none; }
 }

@@ -59,6 +59,52 @@ SKIP_LINE = {
 }
 SKIP_SUBHEAD = {"### Previous", "### Current", "### Next"}
 
+FRONT_MATTER = """## Copyright {.front-page}
+
+**SIEM Engineer — Complete Study Notes**
+First Edition · September 2026
+
+© 2026 Boni Yeamin. Free for personal learning use.
+
+All commands, queries and detections in this book are for **educational and authorized lab use only**.
+Never run scans, attacks or brute-force simulations against systems you do not own or have
+explicit written permission to test. Product versions, free-tier limits and install steps change
+over time — always verify against the official documentation before building your lab.
+
+## About the Author {.front-page}
+
+**Boni Yeamin** writes practical SOC / SIEM study notes and learns in public through a 17-article
+series covering log management, SIEM platforms, detection engineering, SOC operations, threat
+intelligence, SOAR, dashboards, infrastructure, architecture design, capacity planning, performance
+tuning, threat hunting and data quality — ending with a multi-platform hands-on capstone
+(Wazuh, Splunk, Elastic, OpenSearch, Microsoft Sentinel).
+
+GitHub: **boniyeamincse**
+
+# Preface
+
+This book collects the complete 17-article SIEM Engineer series into one volume so you can read
+it start to finish like a real book.
+
+**How this book is organized** — five parts:
+
+- **Part I — Foundation (#01–#03):** logs, SIEM platforms, log integration
+- **Part II — Detection & Investigation (#04–#05, #14–#15):** queries, detection engineering, threat hunting
+- **Part III — SOC, Intel & Automation (#06–#08):** SOC operations, threat intelligence, SOAR
+- **Part IV — Reporting & Infrastructure (#09–#13, #16):** dashboards, infrastructure, architecture, sizing, tuning, data quality
+- **Part V — Capstone (#17):** one lab, one dataset, same exercises on five platforms
+
+**Conventions used in this book:**
+
+- `text` diagrams show pipelines and flows step by step
+- `bash` / `spl` / `kql` / `yaml` blocks are copy-paste starting points for your lab — adapt field names to your data
+- Every chapter ends with interview questions, a practical checklist and a takeaway
+- Articles #01, #11–#13 and #17 mix Bengali + English (Banglish); the rest are in English
+
+**How to read:** follow #01 → #17 in order, build the Wazuh lab from #17 alongside your reading,
+and finish each chapter's checklist before moving on.
+"""
+
 
 def clean_chapter(text: str) -> str:
     lines = text.split("\n")
@@ -100,6 +146,7 @@ def clean_chapter(text: str) -> str:
 
 def main():
     parts = [(ROOT / "README.md").read_text(encoding="utf-8").strip() + "\n"]
+    parts.append(FRONT_MATTER.strip() + "\n")
     for rel, _ in CHAPTERS:
         if rel in PARTS:
             title, sub = PARTS[rel]
