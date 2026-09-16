@@ -45,25 +45,25 @@ The core concept is:
 
 Threat Intelligence can provide information about:
 
-==> Malicious IP addresses
+- Malicious IP addresses
 
-==> Malicious domains
+- Malicious domains
 
-==> URLs
+- URLs
 
-==> File hashes
+- File hashes
 
-==> Malware families
+- Malware families
 
-==> Threat actors
+- Threat actors
 
-==> Attack techniques
+- Attack techniques
 
-==> Vulnerabilities
+- Vulnerabilities
 
-==> Campaigns
+- Campaigns
 
-==> Indicators of compromise
+- Indicators of compromise
 
 But raw information is not automatically useful intelligence.
 
@@ -167,19 +167,19 @@ This is useful evidence.
 
 But you still need to investigate:
 
-==> Which host communicated?
+- Which host communicated?
 
-==> Which process initiated the connection?
+- Which process initiated the connection?
 
-==> Which user was logged in?
+- Which user was logged in?
 
-==> When did it happen?
+- When did it happen?
 
-==> Was the indicator still relevant?
+- Was the indicator still relevant?
 
-==> Was the connection blocked?
+- Was the connection blocked?
 
-==> Was there any additional suspicious activity?
+- Was there any additional suspicious activity?
 
 Therefore:
 
@@ -197,11 +197,11 @@ Focuses on high-level risks and trends.
 
 Audience:
 
-==> Management
+- Management
 
-==> Security leadership
+- Security leadership
 
-==> Risk teams
+- Risk teams
 
 Example:
 
@@ -218,11 +218,11 @@ Focuses on adversary techniques and behaviors.
 
 Useful for:
 
-==> Detection Engineering
+- Detection Engineering
 
-==> Threat Hunting
+- Threat Hunting
 
-==> SOC teams
+- SOC teams
 
 Example:
 
@@ -299,13 +299,13 @@ First ask:
 
 Examples:
 
-==> Which threats target our industry?
+- Which threats target our industry?
 
-==> Which malicious IPs are contacting our infrastructure?
+- Which malicious IPs are contacting our infrastructure?
 
-==> Which vulnerabilities are actively being exploited?
+- Which vulnerabilities are actively being exploited?
 
-==> Which threat behaviors should our SOC detect?
+- Which threat behaviors should our SOC detect?
 
 Without clear requirements, teams may collect large amounts of irrelevant information.
 
@@ -317,21 +317,21 @@ Threat information can come from multiple sources.
 
 Examples:
 
-==> Threat intelligence platforms
+- Threat intelligence platforms
 
-==> Commercial feeds
+- Commercial feeds
 
-==> Open-source intelligence
+- Open-source intelligence
 
-==> Security vendors
+- Security vendors
 
-==> CERT/CSIRT organizations
+- CERT/CSIRT organizations
 
-==> Internal incident data
+- Internal incident data
 
-==> Malware analysis
+- Malware analysis
 
-==> Security research
+- Security research
 
 The source should be evaluated for reliability and relevance.
 
@@ -556,15 +556,15 @@ But reputation information must be treated carefully.
 
 An IP can be:
 
-==> Shared
+- Shared
 
-==> Dynamic
+- Dynamic
 
-==> Reassigned
+- Reassigned
 
-==> Compromised temporarily
+- Compromised temporarily
 
-==> Used by legitimate services
+- Used by legitimate services
 
 Therefore, reputation should be one part of the investigation.
 
@@ -586,17 +586,17 @@ Suspicious Domain
 
 Investigate:
 
-==> Which host requested it?
+- Which host requested it?
 
-==> Which user?
+- Which user?
 
-==> When?
+- When?
 
-==> Was there an HTTP/HTTPS connection afterward?
+- Was there an HTTP/HTTPS connection afterward?
 
-==> Was the domain recently registered?
+- Was the domain recently registered?
 
-==> Is it present in trusted intelligence sources?
+- Is it present in trusted intelligence sources?
 
 ---
 
@@ -604,13 +604,13 @@ Investigate:
 
 URLs can be useful in:
 
-==> Phishing investigation
+- Phishing investigation
 
-==> Web security monitoring
+- Web security monitoring
 
-==> Email security
+- Email security
 
-==> Proxy analysis
+- Proxy analysis
 
 Example:
 
@@ -787,23 +787,23 @@ Feed B:
 
 Important factors include:
 
-==> Accuracy
+- Accuracy
 
-==> Relevance
+- Relevance
 
-==> Freshness
+- Freshness
 
-==> Confidence
+- Confidence
 
-==> Coverage
+- Coverage
 
-==> Update frequency
+- Update frequency
 
-==> False-positive rate
+- False-positive rate
 
-==> Data format
+- Data format
 
-==> Integration capability
+- Integration capability
 
 ---
 
@@ -829,15 +829,15 @@ Most traffic belongs to a legitimate cloud service.
 
 Possible reasons:
 
-==> Shared infrastructure
+- Shared infrastructure
 
-==> Stale intelligence
+- Stale intelligence
 
-==> Poor feed quality
+- Poor feed quality
 
-==> Incorrect classification
+- Incorrect classification
 
-==> Legitimate infrastructure reuse
+- Legitimate infrastructure reuse
 
 The solution is investigation and controlled tuning—not blindly trusting or ignoring the feed.
 
@@ -898,23 +898,23 @@ A **TIP** can help manage threat intelligence.
 
 Common functions include:
 
-==> IOC storage
+- IOC storage
 
-==> Enrichment
+- Enrichment
 
-==> Relationships
+- Relationships
 
-==> Feeds
+- Feeds
 
-==> Confidence
+- Confidence
 
-==> Expiration
+- Expiration
 
-==> Sharing
+- Sharing
 
-==> Investigation
+- Investigation
 
-==> Automation
+- Automation
 
 A TIP can integrate with the SIEM.
 
@@ -1189,19 +1189,19 @@ This saves analyst time.
 
 But API integrations must handle:
 
-==> Authentication
+- Authentication
 
-==> Rate limits
+- Rate limits
 
-==> Timeouts
+- Timeouts
 
-==> API failures
+- API failures
 
-==> Invalid responses
+- Invalid responses
 
-==> Data freshness
+- Data freshness
 
-==> Duplicate data
+- Duplicate data
 
 ---
 
@@ -1211,19 +1211,19 @@ Protect your integrations.
 
 Use:
 
-==> Secure API credentials
+- Secure API credentials
 
-==> Secret management
+- Secret management
 
-==> TLS
+- TLS
 
-==> Least privilege
+- Least privilege
 
-==> API access controls
+- API access controls
 
-==> Monitoring
+- Monitoring
 
-==> Rate limiting
+- Rate limiting
 
 Do not hard-code sensitive API keys inside detection rules or scripts.
 
@@ -1245,15 +1245,15 @@ High Storage / Compute
 
 Before integrating everything, determine:
 
-==> Which indicators are relevant?
+- Which indicators are relevant?
 
-==> Which data types are needed?
+- Which data types are needed?
 
-==> How long should indicators be retained?
+- How long should indicators be retained?
 
-==> How often should feeds update?
+- How often should feeds update?
 
-==> What should expire?
+- What should expire?
 
 Quality and relevance are more important than blindly collecting huge amounts of data.
 
@@ -1583,34 +1583,31 @@ The important flow is:
 
 The SIEM Engineer should be able to work with:
 
-==> IP Intelligence
+- IP Intelligence
 
-==> Domain Intelligence
+- Domain Intelligence
 
-==> URL Intelligence
+- URL Intelligence
 
-==> Hash Intelligence
+- Hash Intelligence
 
-==> IOC Feeds
+- IOC Feeds
 
-==> STIX/TAXII
+- STIX/TAXII
 
-==> Threat Intelligence Platforms
+- Threat Intelligence Platforms
 
-==> SIEM Correlation
+- SIEM Correlation
 
-==> Threat Hunting
+- Threat Hunting
 
-==> Detection Engineering
+- Detection Engineering
 
-==> Automated Enrichment
+- Automated Enrichment
 
 The most important mindset is:
 
 > **Don't blindly trust an indicator. Validate the indicator, understand the context, and investigate the evidence.**
-
----
-
 
 ---
 

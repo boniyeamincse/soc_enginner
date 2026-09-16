@@ -31,12 +31,12 @@ Failed password for admin from 192.168.10.50
 
 এই একটি log থেকে আমরা জানতে পারি:
 
-==> Time: `14:20:15`
-==> Host: `server01`
-==> Service: `sshd`
-==> Username: `admin`
-==> Source IP: `192.168.10.50`
-==> Event: Failed password
+- Time: `14:20:15`
+- Host: `server01`
+- Service: `sshd`
+- Username: `admin`
+- Source IP: `192.168.10.50`
+- Event: Failed password
 
 একজন SIEM Engineer-এর কাজ হলো এই ধরনের raw information-কে security investigation-এর জন্য useful data-তে পরিণত করা।
 
@@ -52,11 +52,11 @@ SIEM-এর মূল শক্তি হলো **data**।
 
 তাহলে SOC analyst হয়তো জানতে পারবে না:
 
-==> কোন IP internal network-এ connection করার চেষ্টা করেছে
-==> কোন connection blocked হয়েছে
-==> কোন port scan হয়েছে
-==> কোন suspicious outbound connection হয়েছে
-==> কোন VPN activity হয়েছে
+- কোন IP internal network-এ connection করার চেষ্টা করেছে
+- কোন connection blocked হয়েছে
+- কোন port scan হয়েছে
+- কোন suspicious outbound connection হয়েছে
+- কোন VPN activity হয়েছে
 
 তাই SIEM Engineer-এর প্রথম লক্ষ্য:
 
@@ -74,19 +74,19 @@ Firewall হলো SIEM-এর অন্যতম গুরুত্বপূর
 
 Firewall logs থেকে পাওয়া যেতে পারে:
 
-==> Source IP
-==> Destination IP
-==> Source Port
-==> Destination Port
-==> Protocol
-==> Action — Allow/Block
-==> Policy ID
-==> Username
-==> Application
-==> URL
-==> NAT information
-==> VPN activity
-==> Threat/IPS events
+- Source IP
+- Destination IP
+- Source Port
+- Destination Port
+- Protocol
+- Action — Allow/Block
+- Policy ID
+- Username
+- Application
+- URL
+- NAT information
+- VPN activity
+- Threat/IPS events
 
 Example:
 
@@ -108,24 +108,24 @@ Windows environment-এ অনেক security-relevant events generate হয়।
 
 বিশেষ করে:
 
-==> Windows Security Event Log
-==> System Logs
-==> Application Logs
-==> PowerShell Logs
-==> Windows Defender Logs
-==> Sysmon Logs
+- Windows Security Event Log
+- System Logs
+- Application Logs
+- PowerShell Logs
+- Windows Defender Logs
+- Sysmon Logs
 
 Important security events-এর মধ্যে থাকতে পারে:
 
-==> Successful Login
-==> Failed Login
-==> Account Creation
-==> Account Modification
-==> Privilege Changes
-==> Process Creation
-==> PowerShell Activity
-==> Service Creation
-==> Security Policy Changes
+- Successful Login
+- Failed Login
+- Account Creation
+- Account Modification
+- Privilege Changes
+- Process Creation
+- PowerShell Activity
+- Service Creation
+- Security Policy Changes
 
 একজন SIEM Engineer-এর Windows Event ID এবং event structure সম্পর্কে ভালো ধারণা থাকা প্রয়োজন।
 
@@ -162,13 +162,13 @@ Common locations:
 
 Security investigation-এ গুরুত্বপূর্ণ হতে পারে:
 
-==> SSH Login
-==> Failed SSH Login
-==> sudo activity
-==> User creation
-==> Authentication events
-==> Service activity
-==> System events
+- SSH Login
+- Failed SSH Login
+- sudo activity
+- User creation
+- Authentication events
+- Service activity
+- System events
 
 Example:
 
@@ -186,14 +186,14 @@ Enterprise Windows environment-এ **Active Directory** অত্যন্ত �
 
 AD logs থেকে security team দেখতে পারে:
 
-==> User authentication
-==> Failed authentication
-==> Account lockout
-==> Group membership changes
-==> Privilege changes
-==> Kerberos activity
-==> Domain Controller events
-==> Account creation/deletion
+- User authentication
+- Failed authentication
+- Account lockout
+- Group membership changes
+- Privilege changes
+- Kerberos activity
+- Domain Controller events
+- Account creation/deletion
 
 উদাহরণ:
 
@@ -209,22 +209,22 @@ Remote users এবং employees VPN ব্যবহার করলে VPN logs
 
 VPN logs থেকে পাওয়া যেতে পারে:
 
-==> Username
-==> Source IP
-==> Login time
-==> Logout time
-==> Authentication status
-==> Assigned IP
-==> VPN gateway
-==> Connection duration
+- Username
+- Source IP
+- Login time
+- Logout time
+- Authentication status
+- Assigned IP
+- VPN gateway
+- Connection duration
 
 Possible detections:
 
-==> Multiple failed VPN login
-==> Login from unusual location
-==> Suspicious account usage
-==> Login outside normal working hours
-==> Impossible travel-type patterns
+- Multiple failed VPN login
+- Login from unusual location
+- Suspicious account usage
+- Login outside normal working hours
+- Impossible travel-type patterns
 
 ---
 
@@ -234,15 +234,15 @@ Proxy বা Secure Web Gateway থেকে web browsing activity সম্প�
 
 Common information:
 
-==> Source IP
-==> Username
-==> Requested URL
-==> Domain
-==> HTTP Method
-==> Status Code
-==> User-Agent
-==> Category
-==> Action
+- Source IP
+- Username
+- Requested URL
+- Domain
+- HTTP Method
+- Status Code
+- User-Agent
+- Category
+- Action
 
 এগুলো ব্যবহার করে malicious domain access, suspicious downloads এবং unusual web activity investigate করা যায়।
 
@@ -254,14 +254,14 @@ IDS/IPS network traffic monitor করে suspicious activity detect করত�
 
 Logs may contain:
 
-==> Signature
-==> Source IP
-==> Destination IP
-==> Port
-==> Protocol
-==> Attack Type
-==> Severity
-==> Action
+- Signature
+- Source IP
+- Destination IP
+- Port
+- Protocol
+- Attack Type
+- Severity
+- Action
 
 Example:
 
@@ -281,15 +281,15 @@ Modern SOC environment-এ endpoint telemetry অত্যন্ত গুরু
 
 EDR logs may include:
 
-==> Process creation
-==> Parent-child process relationship
-==> Command line
-==> File creation
-==> File modification
-==> Network connection
-==> Registry activity
-==> Malware detection
-==> User activity
+- Process creation
+- Parent-child process relationship
+- Command line
+- File creation
+- File modification
+- Network connection
+- Registry activity
+- Malware detection
+- User activity
 
 Example:
 
@@ -311,22 +311,22 @@ Modern organizations cloud services ব্যবহার করে।
 
 Common cloud log sources:
 
-==> AWS CloudTrail
-==> AWS VPC Flow Logs
-==> Azure Activity Logs
-==> Microsoft Entra ID logs
-==> Google Cloud Audit Logs
-==> Cloud firewall logs
-==> Cloud application logs
+- AWS CloudTrail
+- AWS VPC Flow Logs
+- Azure Activity Logs
+- Microsoft Entra ID logs
+- Google Cloud Audit Logs
+- Cloud firewall logs
+- Cloud application logs
 
 Cloud logs থেকে detect করা যেতে পারে:
 
-==> Unusual login
-==> Privilege escalation
-==> API activity
-==> Resource creation
-==> Configuration changes
-==> Suspicious access
+- Unusual login
+- Privilege escalation
+- API activity
+- Resource creation
+- Configuration changes
+- Suspicious access
 
 ---
 
@@ -349,12 +349,12 @@ Database query failed
 
 Application logs ব্যবহার করে detect করা যেতে পারে:
 
-==> Brute-force attempts
-==> Account abuse
-==> Privilege abuse
-==> Suspicious API activity
-==> Authentication attacks
-==> Application errors
+- Brute-force attempts
+- Account abuse
+- Privilege abuse
+- Suspicious API activity
+- Authentication attacks
+- Application errors
 
 ---
 
@@ -364,13 +364,13 @@ Database logs থেকেও গুরুত্বপূর্ণ security info
 
 Examples:
 
-==> Database login
-==> Failed authentication
-==> Query activity
-==> Permission changes
-==> User creation
-==> Data access
-==> Configuration changes
+- Database login
+- Failed authentication
+- Query activity
+- Permission changes
+- User creation
+- Data access
+- Configuration changes
 
 Sensitive database activity monitoring-এর ক্ষেত্রে এগুলো গুরুত্বপূর্ণ।
 
@@ -382,21 +382,21 @@ Network infrastructure থেকেও logs collect করা হয়।
 
 Examples:
 
-==> Router
-==> Switch
-==> Wireless Controller
-==> Load Balancer
-==> DNS Server
-==> DHCP Server
+- Router
+- Switch
+- Wireless Controller
+- Load Balancer
+- DNS Server
+- DHCP Server
 
 These logs can provide information about:
 
-==> Network connections
-==> Configuration changes
-==> Authentication
-==> Device health
-==> Network errors
-==> Suspicious activity
+- Network connections
+- Configuration changes
+- Authentication
+- Device health
+- Network errors
+- Suspicious activity
 
 ---
 
@@ -452,22 +452,22 @@ Log collection হলো source system থেকে logs সংগ্রহ ক�
 
 Common approaches:
 
-==> Syslog
-==> Agent-based collection
-==> Forwarder
-==> API
-==> Windows Event Forwarding
-==> File monitoring
-==> Cloud connector
-==> Message queue
+- Syslog
+- Agent-based collection
+- Forwarder
+- API
+- Windows Event Forwarding
+- File monitoring
+- Cloud connector
+- Message queue
 
 কোন method ব্যবহার হবে তা depend করে:
 
-==> Log source
-==> Vendor
-==> Network architecture
-==> Security requirement
-==> SIEM platform
+- Log source
+- Vendor
+- Network architecture
+- Security requirement
+- SIEM platform
 
 ---
 
@@ -477,9 +477,9 @@ Common approaches:
 
 Commonly used ports:
 
-==> UDP 514
-==> TCP 514
-==> TCP 6514 — commonly used for Syslog over TLS
+- UDP 514
+- TCP 514
+- TCP 6514 — commonly used for Syslog over TLS
 
 Example architecture:
 
@@ -516,12 +516,12 @@ Collector / SIEM
 
 Agent-এর সুবিধা হতে পারে:
 
-==> Reliable collection
-==> Local file monitoring
-==> Structured event collection
-==> Secure transport
-==> Filtering
-==> Buffering
+- Reliable collection
+- Local file monitoring
+- Structured event collection
+- Secure transport
+- Filtering
+- Buffering
 
 Wazuh environment-এ Wazuh Agent একটি common example।
 
@@ -558,14 +558,14 @@ Log source থেকে SIEM পর্যন্ত data কীভাবে য�
 
 Potential problems:
 
-==> Network failure
-==> Firewall blocking
-==> Wrong port
-==> DNS issue
-==> TLS certificate problem
-==> Authentication failure
-==> Collector service down
-==> Queue overflow
+- Network failure
+- Firewall blocking
+- Wrong port
+- DNS issue
+- TLS certificate problem
+- Authentication failure
+- Collector service down
+- Queue overflow
 
 তাই শুধু SIEM dashboard দেখা যথেষ্ট নয়।
 
@@ -626,10 +626,10 @@ Security investigation-এ time অত্যন্ত গুরুত্বপ�
 
 তাই SIEM environment-এ:
 
-==> Timezone
-==> Timestamp format
-==> NTP synchronization
-==> Event time vs ingestion time
+- Timezone
+- Timestamp format
+- NTP synchronization
+- Event time vs ingestion time
 
 এসব properly manage করা প্রয়োজন।
 
@@ -647,12 +647,12 @@ Source IP: 185.x.x.x
 
 এর সাথে যোগ হতে পারে:
 
-==> GeoIP
-==> ASN
-==> Threat Intelligence reputation
-==> Asset information
-==> User information
-==> Domain information
+- GeoIP
+- ASN
+- Threat Intelligence reputation
+- Asset information
+- User information
+- Domain information
 
 তখন analyst আরও useful context পায়।
 
@@ -664,13 +664,13 @@ SIEM-এ data আসছে মানেই কাজ শেষ নয়।
 
 SIEM Engineer-কে দেখতে হবে:
 
-==> সব expected sources থেকে logs আসছে কি না
-==> Events drop হচ্ছে কি না
-==> Parsing ঠিক হচ্ছে কি না
-==> Fields populated হচ্ছে কি না
-==> Timestamp ঠিক আছে কি না
-==> Duplicate logs হচ্ছে কি না
-==> Data delay হচ্ছে কি না
+- সব expected sources থেকে logs আসছে কি না
+- Events drop হচ্ছে কি না
+- Parsing ঠিক হচ্ছে কি না
+- Fields populated হচ্ছে কি না
+- Timestamp ঠিক আছে কি না
+- Duplicate logs হচ্ছে কি না
+- Data delay হচ্ছে কি না
 
 এটাকে **Log/Data Quality Management** হিসেবে দেখা যায়।
 
@@ -682,13 +682,13 @@ High-volume environment-এ log loss একটি গুরুত্বপূর
 
 Possible causes:
 
-==> Network congestion
-==> Collector overload
-==> Queue overflow
-==> Disk full
-==> Rate limiting
-==> Incorrect configuration
-==> SIEM ingestion limit
+- Network congestion
+- Collector overload
+- Queue overflow
+- Disk full
+- Rate limiting
+- Incorrect configuration
+- SIEM ingestion limit
 
 একজন SIEM Engineer-এর লক্ষ্য হলো critical security data যেন silently lost না হয় তা নিশ্চিত করা।
 
@@ -712,10 +712,10 @@ Firewall
 
 Duplicate data:
 
-==> Storage বাড়ায়
-==> Search result distort করতে পারে
-==> Alert volume বাড়াতে পারে
-==> SOC analyst-এর workload বাড়াতে পারে
+- Storage বাড়ায়
+- Search result distort করতে পারে
+- Alert volume বাড়াতে পারে
+- SOC analyst-এর workload বাড়াতে পারে
 
 তাই deduplication এবং proper ingestion design গুরুত্বপূর্ণ।
 
@@ -727,12 +727,12 @@ Duplicate data:
 
 Retention policy নির্ভর করতে পারে:
 
-==> Security requirements
-==> Compliance
-==> Legal requirements
-==> Business requirements
-==> Storage capacity
-==> Investigation needs
+- Security requirements
+- Compliance
+- Legal requirements
+- Business requirements
+- Storage capacity
+- Investigation needs
 
 একটি সাধারণ storage model:
 
@@ -756,12 +756,12 @@ Large-scale SIEM environment-এ data দ্রুত search করার জন
 
 একজন SIEM Engineer-এর বুঝতে হবে:
 
-==> Data organization
-==> Index/storage structure
-==> Search performance
-==> Time-based searching
-==> Field-based searching
-==> Data lifecycle
+- Data organization
+- Index/storage structure
+- Search performance
+- Time-based searching
+- Field-based searching
+- Data lifecycle
 
 Poor indexing বা inefficient queries investigation slow করে দিতে পারে।
 
@@ -788,12 +788,12 @@ See #10 SIEM Infrastructure and #12 Capacity Planning for full sizing with index
 
 SIEM Engineer-কে consider করতে হয়:
 
-==> Average EPS
-==> Peak EPS
-==> Data size
-==> Daily ingestion
-==> Storage requirement
-==> Search workload
+- Average EPS
+- Peak EPS
+- Data size
+- Daily ingestion
+- Storage requirement
+- Search workload
 
 Capacity planning-এর জন্য শুধু average volume দেখলে হবে না; peak traffic-ও consider করতে হবে।
 
@@ -805,18 +805,18 @@ SIEM Engineer নিজেও SIEM-এর health monitor করেন।
 
 Monitor করা যেতে পারে:
 
-==> Ingestion rate
-==> Event count
-==> EPS
-==> Queue size
-==> Collector health
-==> Parser errors
-==> Dropped events
-==> Disk usage
-==> CPU
-==> Memory
-==> Network
-==> Data latency
+- Ingestion rate
+- Event count
+- EPS
+- Queue size
+- Collector health
+- Parser errors
+- Dropped events
+- Disk usage
+- CPU
+- Memory
+- Network
+- Data latency
 
 ---
 
@@ -876,14 +876,14 @@ Logs নিজেরাও sensitive security data হতে পারে।
 
 তাই consider করতে হবে:
 
-==> Access Control
-==> Encryption in Transit
-==> Encryption at Rest
-==> Integrity
-==> Least Privilege
-==> Audit Logging
-==> Secure Retention
-==> Backup
+- Access Control
+- Encryption in Transit
+- Encryption at Rest
+- Integrity
+- Least Privilege
+- Audit Logging
+- Secure Retention
+- Backup
 
 কারণ attacker যদি logs modify বা delete করতে পারে, তাহলে investigation এবং forensic evidence ক্ষতিগ্রস্ত হতে পারে।
 
@@ -933,11 +933,11 @@ Threat hunting-এর জন্যও quality logs দরকার।
 
 তাহলে প্রয়োজন হতে পারে:
 
-==> Authentication logs
-==> VPN logs
-==> AD logs
-==> Endpoint logs
-==> GeoIP information
+- Authentication logs
+- VPN logs
+- AD logs
+- Endpoint logs
+- GeoIP information
 
 তাই ভালো threat hunting শুরু হয় ভালো log visibility থেকে।
 
@@ -968,16 +968,16 @@ Threat hunting-এর জন্যও quality logs দরকার।
 
 Lab-এ practice করতে পারেন:
 
-==> Linux SSH failed login generate করা
-==> Windows login events generate করা
-==> Firewall logs forward করা
-==> Wazuh Agent configure করা
-==> Syslog configure করা
-==> Logs search করা
-==> Custom parser তৈরি করা
-==> Detection rule তৈরি করা
-==> Alert generate করা
-==> False Positive tune করা
+- Linux SSH failed login generate করা
+- Windows login events generate করা
+- Firewall logs forward করা
+- Wazuh Agent configure করা
+- Syslog configure করা
+- Logs search করা
+- Custom parser তৈরি করা
+- Detection rule তৈরি করা
+- Alert generate করা
+- False Positive tune করা
 
 ---
 
@@ -987,54 +987,54 @@ Lab-এ practice করতে পারেন:
 
 ### Log Sources
 
-==> Firewall connected?
-==> Windows connected?
-==> Linux connected?
-==> AD connected?
-==> VPN connected?
-==> Proxy connected?
-==> IDS/IPS connected?
-==> EDR connected?
-==> Cloud connected?
-==> Application connected?
+- Firewall connected?
+- Windows connected?
+- Linux connected?
+- AD connected?
+- VPN connected?
+- Proxy connected?
+- IDS/IPS connected?
+- EDR connected?
+- Cloud connected?
+- Application connected?
 
 ### Collection
 
-==> Correct protocol?
-==> Correct port?
-==> Agent healthy?
-==> API authentication working?
-==> Network connectivity available?
+- Correct protocol?
+- Correct port?
+- Agent healthy?
+- API authentication working?
+- Network connectivity available?
 
 ### Processing
 
-==> Parsing working?
-==> Fields extracted?
-==> Normalization correct?
-==> Timestamp correct?
-==> Enrichment working?
+- Parsing working?
+- Fields extracted?
+- Normalization correct?
+- Timestamp correct?
+- Enrichment working?
 
 ### Storage
 
-==> Data indexed?
-==> Retention configured?
-==> Storage available?
-==> Backup/archive working?
+- Data indexed?
+- Retention configured?
+- Storage available?
+- Backup/archive working?
 
 ### Monitoring
 
-==> EPS normal?
-==> Data delay normal?
-==> Dropped events?
-==> Parser errors?
-==> Collector health?
+- EPS normal?
+- Data delay normal?
+- Dropped events?
+- Parser errors?
+- Collector health?
 
 ### Security
 
-==> Access control configured?
-==> Encryption enabled?
-==> Audit logging enabled?
-==> Sensitive data protected?
+- Access control configured?
+- Encryption enabled?
+- Audit logging enabled?
+- Sensitive data protected?
 
 ---
 

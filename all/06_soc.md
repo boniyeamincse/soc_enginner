@@ -8,17 +8,17 @@ But an alert by itself is not an incident.
 
 A SOC team needs a structured process to understand:
 
-==> What happened?
+- What happened?
 
-==> Is the alert valid?
+- Is the alert valid?
 
-==> Which user or system is affected?
+- Which user or system is affected?
 
-==> What is the scope?
+- What is the scope?
 
-==> What action should be taken?
+- What action should be taken?
 
-==> Does the incident need escalation?
+- Does the incident need escalation?
 
 This is where **SOC Operations** becomes important.
 
@@ -64,29 +64,29 @@ The SOC continuously monitors the organization's security environment.
 
 A SOC generally performs activities such as:
 
-==> Security monitoring
+- Security monitoring
 
-==> Alert triage
+- Alert triage
 
-==> Incident investigation
+- Incident investigation
 
-==> Threat detection
+- Threat detection
 
-==> Threat hunting
+- Threat hunting
 
-==> Incident response
+- Incident response
 
-==> Threat intelligence enrichment
+- Threat intelligence enrichment
 
-==> Vulnerability awareness
+- Vulnerability awareness
 
-==> Security reporting
+- Security reporting
 
-==> Detection tuning
+- Detection tuning
 
-==> Incident documentation
+- Incident documentation
 
-==> Continuous improvement
+- Continuous improvement
 
 ---
 
@@ -116,19 +116,19 @@ L1 usually focuses on initial alert handling.
 
 Responsibilities can include:
 
-==> Monitor alerts
+- Monitor alerts
 
-==> Validate alerts
+- Validate alerts
 
-==> Perform initial investigation
+- Perform initial investigation
 
-==> Identify false positives
+- Identify false positives
 
-==> Collect basic evidence
+- Collect basic evidence
 
-==> Follow runbooks
+- Follow runbooks
 
-==> Escalate complex incidents
+- Escalate complex incidents
 
 Example:
 
@@ -152,21 +152,21 @@ L2 generally performs deeper investigation.
 
 Responsibilities may include:
 
-==> Advanced log analysis
+- Advanced log analysis
 
-==> Correlation
+- Correlation
 
-==> Threat hunting
+- Threat hunting
 
-==> Incident scoping
+- Incident scoping
 
-==> Root-cause investigation
+- Root-cause investigation
 
-==> Detection tuning
+- Detection tuning
 
-==> Supporting containment
+- Supporting containment
 
-==> L1 guidance
+- L1 guidance
 
 Example:
 
@@ -188,21 +188,21 @@ Containment Recommendation
 
 L3-level work may involve:
 
-==> Advanced threat hunting
+- Advanced threat hunting
 
-==> Malware analysis
+- Malware analysis
 
-==> Detection engineering
+- Detection engineering
 
-==> Incident response
+- Incident response
 
-==> Advanced forensic analysis
+- Advanced forensic analysis
 
-==> Complex attack-chain investigation
+- Complex attack-chain investigation
 
-==> Security architecture
+- Security architecture
 
-==> Engineering improvements
+- Engineering improvements
 
 Not every organization uses the same L1/L2/L3 structure.
 
@@ -214,31 +214,31 @@ A SIEM Engineer is not simply a person who manages a SIEM server.
 
 They may be responsible for:
 
-==> Log onboarding
+- Log onboarding
 
-==> Parser management
+- Parser management
 
-==> Detection rules
+- Detection rules
 
-==> Correlation rules
+- Correlation rules
 
-==> Alert quality
+- Alert quality
 
-==> SIEM health
+- SIEM health
 
-==> Query performance
+- Query performance
 
-==> Dashboards
+- Dashboards
 
-==> Integrations
+- Integrations
 
-==> Automation
+- Automation
 
-==> Data retention
+- Data retention
 
-==> Troubleshooting
+- Troubleshooting
 
-==> Detection coverage
+- Detection coverage
 
 The SIEM Engineer enables analysts to work effectively.
 
@@ -350,17 +350,17 @@ The analyst checks whether the alert is valid.
 
 Questions:
 
-==> Did the event actually occur?
+- Did the event actually occur?
 
-==> Are the logs correct?
+- Are the logs correct?
 
-==> Is the source known?
+- Is the source known?
 
-==> Is the user legitimate?
+- Is the user legitimate?
 
-==> Is this expected administrative activity?
+- Is this expected administrative activity?
 
-==> Is the detection working correctly?
+- Is the detection working correctly?
 
 Validation prevents analysts from spending unnecessary time on bad data or broken detections.
 
@@ -405,21 +405,21 @@ One of the most important SOC questions is:
 
 Check:
 
-==> One user?
+- One user?
 
-==> Multiple users?
+- Multiple users?
 
-==> One host?
+- One host?
 
-==> Multiple hosts?
+- Multiple hosts?
 
-==> One IP?
+- One IP?
 
-==> Multiple IPs?
+- Multiple IPs?
 
-==> One application?
+- One application?
 
-==> Multiple applications?
+- Multiple applications?
 
 Example:
 
@@ -445,17 +445,17 @@ Containment attempts to limit further impact.
 
 Depending on the incident and organizational procedures, actions may include:
 
-==> Isolating an affected endpoint
+- Isolating an affected endpoint
 
-==> Blocking a malicious network indicator
+- Blocking a malicious network indicator
 
-==> Disabling a compromised account
+- Disabling a compromised account
 
-==> Revoking sessions
+- Revoking sessions
 
-==> Restricting network access
+- Restricting network access
 
-==> Applying emergency firewall controls
+- Applying emergency firewall controls
 
 Containment should be authorized and carefully documented.
 
@@ -467,17 +467,17 @@ Eradication means removing the cause or malicious artifacts from the environment
 
 Examples can include:
 
-==> Removing malicious persistence
+- Removing malicious persistence
 
-==> Removing unauthorized accounts
+- Removing unauthorized accounts
 
-==> Removing malicious files
+- Removing malicious files
 
-==> Patching exploited vulnerabilities
+- Patching exploited vulnerabilities
 
-==> Rotating compromised credentials
+- Rotating compromised credentials
 
-==> Removing unauthorized configurations
+- Removing unauthorized configurations
 
 The exact action depends on the incident.
 
@@ -489,17 +489,17 @@ Recovery returns affected systems to normal operation.
 
 Activities may include:
 
-==> Restoring systems
+- Restoring systems
 
-==> Rebuilding compromised hosts
+- Rebuilding compromised hosts
 
-==> Restoring clean backups
+- Restoring clean backups
 
-==> Validating security controls
+- Validating security controls
 
-==> Monitoring affected systems
+- Monitoring affected systems
 
-==> Confirming normal operation
+- Confirming normal operation
 
 Recovery should not simply mean:
 
@@ -611,19 +611,19 @@ But priority should be based on organizational criteria.
 
 Consider:
 
-==> Asset importance
+- Asset importance
 
-==> User privilege
+- User privilege
 
-==> Detection confidence
+- Detection confidence
 
-==> Potential impact
+- Potential impact
 
-==> Scope
+- Scope
 
-==> Business context
+- Business context
 
-==> Evidence
+- Evidence
 
 For example, an alert involving a critical production server may require different handling from an identical alert on a test machine.
 
@@ -716,15 +716,15 @@ Investigation
 
 Assignment can be based on:
 
-==> Shift
+- Shift
 
-==> Analyst skill
+- Analyst skill
 
-==> Severity
+- Severity
 
-==> Workload
+- Workload
 
-==> Incident type
+- Incident type
 
 Good assignment prevents important alerts from being ignored.
 
@@ -818,21 +818,21 @@ After an incident, ask:
 
 Possible causes:
 
-==> Stolen credentials
+- Stolen credentials
 
-==> Misconfiguration
+- Misconfiguration
 
-==> Vulnerability
+- Vulnerability
 
-==> Weak access control
+- Weak access control
 
-==> Malicious email
+- Malicious email
 
-==> Exposed service
+- Exposed service
 
-==> Insider activity
+- Insider activity
 
-==> Compromised endpoint
+- Compromised endpoint
 
 Do not assume the root cause before collecting evidence.
 
@@ -1005,23 +1005,23 @@ This is how SOC operations improve over time.
 
 SOC teams may track metrics such as:
 
-==> Alert volume
+- Alert volume
 
-==> Mean Time to Detect (MTTD)
+- Mean Time to Detect (MTTD)
 
-==> Mean Time to Respond (MTTR)
+- Mean Time to Respond (MTTR)
 
-==> False-positive rate
+- False-positive rate
 
-==> Escalation rate
+- Escalation rate
 
-==> Incident volume
+- Incident volume
 
-==> Detection coverage
+- Detection coverage
 
-==> Response time
+- Response time
 
-==> Case closure time
+- Case closure time
 
 Metrics should be interpreted in context rather than used in isolation.
 
@@ -1117,21 +1117,21 @@ During investigations, preserve relevant evidence.
 
 Examples:
 
-==> Log events
+- Log events
 
-==> Alert details
+- Alert details
 
-==> Screenshots
+- Screenshots
 
-==> Hashes
+- Hashes
 
-==> Network information
+- Network information
 
-==> Timeline
+- Timeline
 
-==> Analyst notes
+- Analyst notes
 
-==> Ticket history
+- Ticket history
 
 Maintain accurate timestamps and document actions.
 
@@ -1169,17 +1169,17 @@ This reduces operational risk.
 
 A SOC platform should ideally support:
 
-==> RBAC
+- RBAC
 
-==> MFA
+- MFA
 
-==> Audit logs
+- Audit logs
 
-==> Session management
+- Session management
 
-==> Access reviews
+- Access reviews
 
-==> Separation of duties
+- Separation of duties
 
 For example:
 
@@ -1627,9 +1627,6 @@ Remember the core flow:
 **Detect → Validate → Investigate → Scope → Contain → Eradicate → Recover → Document → Improve**
 
 If you understand this workflow and can explain it with real examples during an interview, you demonstrate practical SOC knowledge—not just SIEM tool knowledge.
-
----
-
 
 ---
 

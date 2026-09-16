@@ -8,15 +8,15 @@ A SIEM Engineer-এর জন্য শুধু SIEM install করা যথ�
 
 এই article-এ আমরা practicalভাবে শিখব:
 
-==> EPS Calculation
-==> Events Per Day
-==> GB/day
-==> Storage Planning
-==> Retention
-==> Peak Load
-==> Growth Estimation
-==> Capacity Buffer
-==> Real-world SIEM sizing
+- EPS Calculation
+- Events Per Day
+- GB/day
+- Storage Planning
+- Retention
+- Peak Load
+- Growth Estimation
+- Capacity Buffer
+- Real-world SIEM sizing
 
 ---
 
@@ -48,23 +48,23 @@ How much future growth?
 
 Capacity ঠিকভাবে plan না করলে SIEM environment-এ বিভিন্ন সমস্যা হতে পারে।
 
-==> Logs drop হতে পারে
+- Logs drop হতে পারে
 
-==> Events delayed হতে পারে
+- Events delayed হতে পারে
 
-==> Search slow হতে পারে
+- Search slow হতে পারে
 
-==> Storage full হতে পারে
+- Storage full হতে পারে
 
-==> Detection delayed হতে পারে
+- Detection delayed হতে পারে
 
-==> CPU/RAM saturation হতে পারে
+- CPU/RAM saturation হতে পারে
 
-==> Network congestion হতে পারে
+- Network congestion হতে পারে
 
-==> Investigation difficult হতে পারে
+- Investigation difficult হতে পারে
 
-==> Future growth handle করা কঠিন হতে পারে
+- Future growth handle করা কঠিন হতে পারে
 
 একজন SIEM Engineer-এর লক্ষ্য হলো **আজকের workload এবং আগামী দিনের growth—দুটোই বিবেচনা করা।**
 
@@ -74,29 +74,29 @@ Capacity ঠিকভাবে plan না করলে SIEM environment-এ ব
 
 SIEM capacity planning-এর সময় কয়েকটি metric সবচেয়ে গুরুত্বপূর্ণ।
 
-==> EPS
+- EPS
 
-==> Peak EPS
+- Peak EPS
 
-==> Events Per Day
+- Events Per Day
 
-==> Average Event Size
+- Average Event Size
 
-==> GB/day
+- GB/day
 
-==> Retention Period
+- Retention Period
 
-==> Storage Requirement
+- Storage Requirement
 
-==> Search Workload
+- Search Workload
 
-==> CPU
+- CPU
 
-==> RAM
+- RAM
 
-==> Network Bandwidth
+- Network Bandwidth
 
-==> Growth Rate
+- Growth Rate
 
 ---
 
@@ -280,25 +280,25 @@ SIEM storage planning-এর সময় শুধু raw data calculate করল
 
 Consider করুন:
 
-==> Raw event data
+- Raw event data
 
-==> Index overhead
+- Index overhead
 
-==> Metadata
+- Metadata
 
-==> Replication
+- Replication
 
-==> Compression
+- Compression
 
-==> Hot/warm/cold storage
+- Hot/warm/cold storage
 
-==> Backup
+- Backup
 
-==> Temporary files
+- Temporary files
 
-==> Free-space requirement
+- Free-space requirement
 
-==> Growth buffer
+- Growth buffer
 
 ---
 
@@ -316,11 +316,11 @@ Last 7 days
 
 Advantages:
 
-==> Fast search
+- Fast search
 
-==> Fast investigation
+- Fast investigation
 
-==> Recent incidents সহজে analyse করা যায়
+- Recent incidents সহজে analyse করা যায়
 
 ---
 
@@ -392,19 +392,19 @@ Archive = 1 year
 
 Retention নির্ধারণের সময় consider করুন:
 
-==> Compliance
+- Compliance
 
-==> Legal requirements
+- Legal requirements
 
-==> Incident investigation
+- Incident investigation
 
-==> Threat hunting
+- Threat hunting
 
-==> Business requirements
+- Business requirements
 
-==> Storage cost
+- Storage cost
 
-==> Privacy requirements
+- Privacy requirements
 
 ---
 
@@ -426,19 +426,19 @@ Retention নির্ধারণের সময় consider করুন:
 
 কারণ:
 
-==> New servers
+- New servers
 
-==> New applications
+- New applications
 
-==> More endpoints
+- More endpoints
 
-==> Cloud adoption
+- Cloud adoption
 
-==> New branches
+- New branches
 
-==> More security tools
+- More security tools
 
-==> Increased logging
+- Increased logging
 
 তাই capacity planning-এ growth estimate রাখতে হবে।
 
@@ -491,17 +491,17 @@ Peak EPS    = 8,000
 
 Peak হতে পারে:
 
-==> Authentication storm
+- Authentication storm
 
-==> Malware outbreak
+- Malware outbreak
 
-==> DDoS-related logging
+- DDoS-related logging
 
-==> Firewall event spike
+- Firewall event spike
 
-==> Large-scale scanning
+- Large-scale scanning
 
-==> Incident response activity
+- Incident response activity
 
 তাই:
 
@@ -550,17 +550,17 @@ SIEM traffic
 
 Consider করুন:
 
-==> Log traffic
+- Log traffic
 
-==> Management traffic
+- Management traffic
 
-==> Search traffic
+- Search traffic
 
-==> Replication traffic
+- Replication traffic
 
-==> Backup traffic
+- Backup traffic
 
-==> API traffic
+- API traffic
 
 একই network link-এ সব traffic থাকলে congestion হতে পারে।
 
@@ -570,23 +570,23 @@ Consider করুন:
 
 CPU requirement depend করে:
 
-==> EPS
+- EPS
 
-==> Parsing
+- Parsing
 
-==> Normalization
+- Normalization
 
-==> Correlation
+- Correlation
 
-==> Detection
+- Detection
 
-==> Enrichment
+- Enrichment
 
-==> Compression
+- Compression
 
-==> Indexing
+- Indexing
 
-==> Search workload
+- Search workload
 
 একটি SIEM-এর CPU requirement শুধু log volume দিয়ে determine করা যায় না।
 
@@ -596,21 +596,21 @@ CPU requirement depend করে:
 
 RAM গুরুত্বপূর্ণ হতে পারে:
 
-==> Search
+- Search
 
-==> Caching
+- Caching
 
-==> Indexing
+- Indexing
 
-==> Query processing
+- Query processing
 
-==> Detection
+- Detection
 
-==> Application services
+- Application services
 
-==> Buffers
+- Buffers
 
-==> JVM/runtime workloads যেখানে প্রযোজ্য
+- JVM/runtime workloads যেখানে প্রযোজ্য
 
 তাই RAM planning workload-based হওয়া উচিত।
 
@@ -622,15 +622,15 @@ High-volume SIEM-এর জন্য শুধু disk capacity নয়, **disk p
 
 Consider করুন:
 
-==> Write IOPS
+- Write IOPS
 
-==> Read IOPS
+- Read IOPS
 
-==> Throughput
+- Throughput
 
-==> Latency
+- Latency
 
-==> Concurrent searches
+- Concurrent searches
 
 একটি storage-এর capacity অনেক TB হতে পারে, কিন্তু I/O performance কম হলে SIEM search এবং ingestion slow হতে পারে।
 
@@ -723,19 +723,19 @@ Provisioned Storage
 
 ধরুন একটি company-এর:
 
-==> 1,500 Windows endpoints
+- 1,500 Windows endpoints
 
-==> 100 Linux servers
+- 100 Linux servers
 
-==> 20 network devices
+- 20 network devices
 
-==> 5 firewalls
+- 5 firewalls
 
-==> Active Directory
+- Active Directory
 
-==> Web applications
+- Web applications
 
-==> Cloud services
+- Cloud services
 
 প্রথমে source অনুযায়ী event generation estimate করতে হবে।
 
@@ -761,23 +761,23 @@ Peak EPS    = measured/projected peak
 
 এরপর calculate করতে হবে:
 
-==> Events/day
+- Events/day
 
-==> GB/day
+- GB/day
 
-==> Retention
+- Retention
 
-==> Storage
+- Storage
 
-==> Network
+- Network
 
-==> CPU
+- CPU
 
-==> RAM
+- RAM
 
-==> Indexing
+- Indexing
 
-==> Search workload
+- Search workload
 
 ---
 
@@ -824,27 +824,27 @@ Capacity planning একবার করে শেষ হয়ে যায় না
 
 Continuously monitor করুন:
 
-==> EPS trend
+- EPS trend
 
-==> Daily GB
+- Daily GB
 
-==> Storage utilization
+- Storage utilization
 
-==> CPU utilization
+- CPU utilization
 
-==> RAM utilization
+- RAM utilization
 
-==> Disk I/O
+- Disk I/O
 
-==> Search latency
+- Search latency
 
-==> Ingestion latency
+- Ingestion latency
 
-==> Queue size
+- Queue size
 
-==> Event drops
+- Event drops
 
-==> Network utilization
+- Network utilization
 
 ---
 
@@ -992,23 +992,23 @@ because one day contains 86,400 seconds.
 
 **Answer:**
 
-==> EPS
+- EPS
 
-==> Event size
+- Event size
 
-==> Retention
+- Retention
 
-==> Index overhead
+- Index overhead
 
-==> Replication
+- Replication
 
-==> Compression
+- Compression
 
-==> Metadata
+- Metadata
 
-==> Backup
+- Backup
 
-==> Growth
+- Growth
 
 ---
 
@@ -1058,29 +1058,29 @@ Depending on the platform and configuration, ingestion may fail, indexing may st
 
 I monitor:
 
-==> EPS
+- EPS
 
-==> Peak EPS
+- Peak EPS
 
-==> GB/day
+- GB/day
 
-==> Storage utilization
+- Storage utilization
 
-==> CPU
+- CPU
 
-==> RAM
+- RAM
 
-==> Disk I/O
+- Disk I/O
 
-==> Network
+- Network
 
-==> Search latency
+- Search latency
 
-==> Ingestion latency
+- Ingestion latency
 
-==> Queue size
+- Queue size
 
-==> Event drops
+- Event drops
 
 ---
 
@@ -1212,17 +1212,17 @@ SIEM Capacity Planning-এর মূল বিষয় হলো:
 
 একজন ভালো SIEM Engineer আগে থেকে বুঝতে পারে:
 
-==> কত data আসবে
+- কত data আসবে
 
-==> কত দ্রুত আসবে
+- কত দ্রুত আসবে
 
-==> কতদিন রাখতে হবে
+- কতদিন রাখতে হবে
 
-==> কত storage লাগবে
+- কত storage লাগবে
 
-==> কত processing power লাগবে
+- কত processing power লাগবে
 
-==> কখন capacity বাড়াতে হবে
+- কখন capacity বাড়াতে হবে
 
 **Remember:**
 
@@ -1234,35 +1234,33 @@ SIEM Capacity Planning-এর মূল বিষয় হলো:
 
 ### Previous
 
-==> **#11 — SIEM Architecture Design**
+- **#11 — SIEM Architecture Design**
 
 ### Current
 
-==> **#12 — SIEM Capacity Planning**
+- **#12 — SIEM Capacity Planning**
 
 ### Next
 
-==> **#13 — SIEM Performance Tuning**
+- **#13 — SIEM Performance Tuning**
 
 পরের article-এ আমরা দেখব:
 
-==> Slow Queries
+- Slow Queries
 
-==> CPU/RAM Bottlenecks
+- CPU/RAM Bottlenecks
 
-==> Disk I/O
+- Disk I/O
 
-==> Index Optimization
+- Index Optimization
 
-==> Search Optimization
+- Search Optimization
 
-==> Query Performance
+- Query Performance
 
-==> Ingestion Performance
+- Ingestion Performance
 
-==> Troubleshooting
-
----
+- Troubleshooting
 
 ---
 

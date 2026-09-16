@@ -6,29 +6,29 @@ A SIEM is not only a software application.
 
 Behind every SIEM platform, there is an infrastructure that handles:
 
-==> Log ingestion
+- Log ingestion
 
-==> Data processing
+- Data processing
 
-==> Parsing
+- Parsing
 
-==> Indexing
+- Indexing
 
-==> Searching
+- Searching
 
-==> Storage
+- Storage
 
-==> Retention
+- Retention
 
-==> Detection
+- Detection
 
-==> Dashboard
+- Dashboard
 
-==> Alerting
+- Alerting
 
-==> High availability
+- High availability
 
-==> Backup and recovery
+- Backup and recovery
 
 A SIEM Engineer therefore needs both **Security Knowledge + Infrastructure Knowledge**.
 
@@ -162,29 +162,29 @@ Search / Dashboard
 
 Common components include:
 
-==> Data Collectors
+- Data Collectors
 
-==> Log Forwarders
+- Log Forwarders
 
-==> Ingestion Nodes
+- Ingestion Nodes
 
-==> Processing Nodes
+- Processing Nodes
 
-==> Indexers
+- Indexers
 
-==> Search Nodes
+- Search Nodes
 
-==> Management Nodes
+- Management Nodes
 
-==> Storage
+- Storage
 
-==> Database / Index Cluster
+- Database / Index Cluster
 
-==> Dashboard
+- Dashboard
 
-==> API Services
+- API Services
 
-==> Monitoring
+- Monitoring
 
 The exact architecture depends on the SIEM platform and organization.
 
@@ -309,17 +309,17 @@ This is only a simplified raw-data estimate.
 
 Actual SIEM storage can be significantly different because of:
 
-==> Indexing
+- Indexing
 
-==> Metadata
+- Metadata
 
-==> Replication
+- Replication
 
-==> Compression
+- Compression
 
-==> Retention
+- Retention
 
-==> Internal overhead
+- Internal overhead
 
 ---
 
@@ -329,19 +329,19 @@ Storage is one of the most important SIEM infrastructure considerations.
 
 You need to consider:
 
-==> Daily ingestion
+- Daily ingestion
 
-==> Retention period
+- Retention period
 
-==> Replication
+- Replication
 
-==> Index overhead
+- Index overhead
 
-==> Compression
+- Compression
 
-==> Search requirements
+- Search requirements
 
-==> Backup requirements
+- Backup requirements
 
 Example:
 
@@ -417,17 +417,17 @@ These are only examples.
 
 The actual retention period should follow:
 
-==> Business requirements
+- Business requirements
 
-==> Security requirements
+- Security requirements
 
-==> Legal requirements
+- Legal requirements
 
-==> Compliance requirements
+- Compliance requirements
 
-==> Storage capacity
+- Storage capacity
 
-==> Incident investigation needs
+- Incident investigation needs
 
 ---
 
@@ -447,15 +447,15 @@ Storage
 
 Possible consequences:
 
-==> Log ingestion failure
+- Log ingestion failure
 
-==> Indexing problems
+- Indexing problems
 
-==> Search problems
+- Search problems
 
-==> Service instability
+- Service instability
 
-==> Data loss
+- Data loss
 
 Therefore, storage monitoring is essential.
 
@@ -465,17 +465,17 @@ Therefore, storage monitoring is essential.
 
 SIEM systems perform many CPU-intensive tasks:
 
-==> Parsing
+- Parsing
 
-==> Indexing
+- Indexing
 
-==> Searching
+- Searching
 
-==> Correlation
+- Correlation
 
-==> Detection
+- Detection
 
-==> Compression
+- Compression
 
 Monitor:
 
@@ -488,15 +488,15 @@ System Load
 
 A sudden increase may indicate:
 
-==> Increased event volume
+- Increased event volume
 
-==> Expensive query
+- Expensive query
 
-==> Detection problem
+- Detection problem
 
-==> Misconfiguration
+- Misconfiguration
 
-==> Infrastructure issue
+- Infrastructure issue
 
 ---
 
@@ -506,15 +506,15 @@ SIEM components can require significant memory.
 
 Monitor:
 
-==> RAM usage
+- RAM usage
 
-==> Swap
+- Swap
 
-==> JVM memory where applicable
+- JVM memory where applicable
 
-==> Cache
+- Cache
 
-==> Memory pressure
+- Memory pressure
 
 Example:
 
@@ -540,15 +540,15 @@ SIEM workloads can generate heavy disk activity.
 
 Monitor:
 
-==> Read IOPS
+- Read IOPS
 
-==> Write IOPS
+- Write IOPS
 
-==> Disk latency
+- Disk latency
 
-==> Throughput
+- Throughput
 
-==> Queue depth
+- Queue depth
 
 High disk latency can affect:
 
@@ -566,17 +566,17 @@ SIEM infrastructure depends heavily on networking.
 
 Monitor:
 
-==> Bandwidth
+- Bandwidth
 
-==> Packet loss
+- Packet loss
 
-==> Latency
+- Latency
 
-==> Connections
+- Connections
 
-==> Interface errors
+- Interface errors
 
-==> Network saturation
+- Network saturation
 
 Example:
 
@@ -620,27 +620,27 @@ The SIEM infrastructure itself must be secured.
 
 Use:
 
-==> Minimal services
+- Minimal services
 
-==> Secure configuration
+- Secure configuration
 
-==> Patch management
+- Patch management
 
-==> Strong authentication
+- Strong authentication
 
-==> MFA where supported
+- MFA where supported
 
-==> RBAC
+- RBAC
 
-==> Firewall restrictions
+- Firewall restrictions
 
-==> Secure management access
+- Secure management access
 
-==> File permissions
+- File permissions
 
-==> Audit logging
+- Audit logging
 
-==> Endpoint protection where appropriate
+- Endpoint protection where appropriate
 
 Remember:
 
@@ -712,17 +712,17 @@ SIEM
 
 Advantages:
 
-==> Simple
+- Simple
 
-==> Easy to maintain
+- Easy to maintain
 
-==> Lower infrastructure complexity
+- Lower infrastructure complexity
 
 Limitations:
 
-==> Limited scalability
+- Limited scalability
 
-==> Single point of failure
+- Single point of failure
 
 ---
 
@@ -736,21 +736,21 @@ Sources ────┼── Node 2
 
 Advantages:
 
-==> Scalability
+- Scalability
 
-==> Redundancy
+- Redundancy
 
-==> Better workload distribution
+- Better workload distribution
 
 But:
 
-==> More complexity
+- More complexity
 
-==> More infrastructure
+- More infrastructure
 
-==> More monitoring
+- More monitoring
 
-==> More operational requirements
+- More operational requirements
 
 ---
 
@@ -831,17 +831,17 @@ Ask:
 
 Possible scenarios:
 
-==> Server failure
+- Server failure
 
-==> Storage failure
+- Storage failure
 
-==> Database/index failure
+- Database/index failure
 
-==> Network failure
+- Network failure
 
-==> Data corruption
+- Data corruption
 
-==> Site failure
+- Site failure
 
 A DR plan should define:
 
@@ -863,19 +863,19 @@ Backup requirements depend on what data and configuration need recovery.
 
 Possible backup targets:
 
-==> Configuration
+- Configuration
 
-==> Detection rules
+- Detection rules
 
-==> Dashboards
+- Dashboards
 
-==> Parsers
+- Parsers
 
-==> Important case data
+- Important case data
 
-==> Metadata
+- Metadata
 
-==> Critical supporting databases
+- Critical supporting databases
 
 Not every SIEM deployment should back up raw event data in the same way; retention and archival architecture should be designed deliberately.
 
@@ -969,27 +969,27 @@ Never assume an upgrade is risk-free.
 
 Patch:
 
-==> Operating System
+- Operating System
 
-==> SIEM components
+- SIEM components
 
-==> Database/index components
+- Database/index components
 
-==> Agents
+- Agents
 
-==> Supporting software
+- Supporting software
 
 Prioritize patches based on:
 
-==> Security risk
+- Security risk
 
-==> Exposure
+- Exposure
 
-==> Vendor guidance
+- Vendor guidance
 
-==> Business impact
+- Business impact
 
-==> Compatibility
+- Compatibility
 
 ---
 
@@ -1114,31 +1114,31 @@ Slow searches can affect SOC operations.
 
 Possible causes:
 
-==> Very large time range
+- Very large time range
 
-==> High-cardinality fields
+- High-cardinality fields
 
-==> Expensive joins/correlations
+- Expensive joins/correlations
 
-==> Poor query design
+- Poor query design
 
-==> Insufficient resources
+- Insufficient resources
 
-==> Too much data
+- Too much data
 
-==> Poor indexing strategy
+- Poor indexing strategy
 
 Improve performance through:
 
-==> Better queries
+- Better queries
 
-==> Appropriate indexes/data streams
+- Appropriate indexes/data streams
 
-==> Time filtering
+- Time filtering
 
-==> Data lifecycle management
+- Data lifecycle management
 
-==> Resource scaling
+- Resource scaling
 
 The exact optimization techniques depend on the SIEM platform.
 
@@ -1223,13 +1223,13 @@ Archive
 
 This balances:
 
-==> Search performance
+- Search performance
 
-==> Storage cost
+- Storage cost
 
-==> Retention
+- Retention
 
-==> Investigation requirements
+- Investigation requirements
 
 ---
 
@@ -1259,15 +1259,15 @@ If TLS is used, certificates must be managed.
 
 Monitor:
 
-==> Expiration
+- Expiration
 
-==> Trust chain
+- Trust chain
 
-==> Hostname validation
+- Hostname validation
 
-==> Key rotation
+- Key rotation
 
-==> Certificate deployment
+- Certificate deployment
 
 A certificate expiration can unexpectedly break log ingestion.
 
@@ -1279,15 +1279,15 @@ SIEM infrastructure benefits from automation.
 
 Possible tools include:
 
-==> Ansible
+- Ansible
 
-==> Terraform
+- Terraform
 
-==> Shell scripting
+- Shell scripting
 
-==> Python
+- Python
 
-==> CI/CD
+- CI/CD
 
 Example:
 
@@ -1311,17 +1311,17 @@ Important configurations should be documented and version controlled where appro
 
 Examples:
 
-==> Parsers
+- Parsers
 
-==> Detection rules
+- Detection rules
 
-==> Dashboards
+- Dashboards
 
-==> Deployment configuration
+- Deployment configuration
 
-==> Automation scripts
+- Automation scripts
 
-==> Infrastructure configuration
+- Infrastructure configuration
 
 This helps with:
 
@@ -1361,15 +1361,15 @@ Documentation
 
 This is particularly important for changes affecting:
 
-==> Log ingestion
+- Log ingestion
 
-==> Detection
+- Detection
 
-==> Storage
+- Storage
 
-==> Authentication
+- Authentication
 
-==> Network access
+- Network access
 
 ---
 
@@ -1377,29 +1377,29 @@ This is particularly important for changes affecting:
 
 Test:
 
-==> Ingestion
+- Ingestion
 
-==> Parsing
+- Parsing
 
-==> Indexing
+- Indexing
 
-==> Searching
+- Searching
 
-==> Detection
+- Detection
 
-==> Alerting
+- Alerting
 
-==> Dashboard
+- Dashboard
 
-==> API
+- API
 
-==> Backup
+- Backup
 
-==> Restore
+- Restore
 
-==> Failover
+- Failover
 
-==> Recovery
+- Recovery
 
 Example:
 
@@ -1594,19 +1594,19 @@ Dashboard
 
 Monitor:
 
-==> CPU
+- CPU
 
-==> RAM
+- RAM
 
-==> Disk
+- Disk
 
-==> Network
+- Network
 
-==> Agent status
+- Agent status
 
-==> Alert rate
+- Alert rate
 
-==> Storage
+- Storage
 
 ---
 

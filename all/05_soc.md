@@ -81,21 +81,21 @@ Then you gradually expand the investigation.
 
 Good query skills help you:
 
-==> Investigate alerts faster
+- Investigate alerts faster
 
-==> Find related events
+- Find related events
 
-==> Build incident timelines
+- Build incident timelines
 
-==> Perform threat hunting
+- Perform threat hunting
 
-==> Validate detections
+- Validate detections
 
-==> Identify false positives
+- Identify false positives
 
-==> Find suspicious behavior
+- Find suspicious behavior
 
-==> Collect evidence
+- Collect evidence
 
 ---
 
@@ -543,19 +543,19 @@ This immediately tells you which source deserves further investigation.
 
 Common aggregation concepts include:
 
-==> Count
+- Count
 
-==> Sum
+- Sum
 
-==> Average
+- Average
 
-==> Minimum
+- Minimum
 
-==> Maximum
+- Maximum
 
-==> Distinct count
+- Distinct count
 
-==> Group by
+- Group by
 
 ---
 
@@ -717,19 +717,19 @@ source_ip = 203.x.x.x
 
 You may investigate:
 
-==> How many connections?
+- How many connections?
 
-==> Which internal systems contacted it?
+- Which internal systems contacted it?
 
-==> Which ports?
+- Which ports?
 
-==> When did communication begin?
+- When did communication begin?
 
-==> Which users were involved?
+- Which users were involved?
 
-==> Was it seen before?
+- Was it seen before?
 
-==> Is it associated with known threat intelligence?
+- Is it associated with known threat intelligence?
 
 Do not conclude that an IP is malicious based only on one indicator.
 
@@ -786,21 +786,21 @@ hostname = SERVER-01
 
 Investigate:
 
-==> Authentication
+- Authentication
 
-==> Processes
+- Processes
 
-==> Network connections
+- Network connections
 
-==> File activity
+- File activity
 
-==> Privilege changes
+- Privilege changes
 
-==> Security alerts
+- Security alerts
 
-==> Endpoint detections
+- Endpoint detections
 
-==> Configuration changes
+- Configuration changes
 
 This helps determine whether the host is affected or simply generated an alert.
 
@@ -858,17 +858,17 @@ Device
 
 Questions:
 
-==> Was the login successful?
+- Was the login successful?
 
-==> Was the account expected?
+- Was the account expected?
 
-==> Was the source known?
+- Was the source known?
 
-==> Was the destination expected?
+- Was the destination expected?
 
-==> Were there repeated failures?
+- Were there repeated failures?
 
-==> Was there a privilege change afterward?
+- Was there a privilege change afterward?
 
 ---
 
@@ -978,19 +978,19 @@ Time patterns
 
 Good hunters ask questions such as:
 
-==> Which accounts have unusual login behavior?
+- Which accounts have unusual login behavior?
 
-==> Which systems have unexpected outbound connections?
+- Which systems have unexpected outbound connections?
 
-==> Which hosts are communicating with suspicious destinations?
+- Which hosts are communicating with suspicious destinations?
 
-==> Which users suddenly have privilege changes?
+- Which users suddenly have privilege changes?
 
-==> Which processes are rarely observed?
+- Which processes are rarely observed?
 
-==> Which authentication failures are increasing?
+- Which authentication failures are increasing?
 
-==> Which systems have missing security telemetry?
+- Which systems have missing security telemetry?
 
 ---
 
@@ -1116,15 +1116,15 @@ Current:
 
 This may indicate:
 
-==> Misconfiguration
+- Misconfiguration
 
-==> System issue
+- System issue
 
-==> Scanning
+- Scanning
 
-==> Attack activity
+- Attack activity
 
-==> Logging problem
+- Logging problem
 
 The query identifies the anomaly.
 
@@ -1388,19 +1388,19 @@ Delayed Investigation
 
 Good practices:
 
-==> Use appropriate time ranges
+- Use appropriate time ranges
 
-==> Filter early
+- Filter early
 
-==> Search relevant indexes/data sources
+- Search relevant indexes/data sources
 
-==> Select necessary fields
+- Select necessary fields
 
-==> Avoid unnecessary expensive operations
+- Avoid unnecessary expensive operations
 
-==> Use indexed/search-optimized fields where applicable
+- Use indexed/search-optimized fields where applicable
 
-==> Test queries before production use
+- Test queries before production use
 
 ---
 
@@ -1713,30 +1713,27 @@ A strong investigation follows:
 
 The most important skills are:
 
-==> SPL
+- SPL
 
-==> KQL
+- KQL
 
-==> Elasticsearch/OpenSearch Query
+- Elasticsearch/OpenSearch Query
 
-==> Filtering
+- Filtering
 
-==> Aggregation
+- Aggregation
 
-==> Correlation
+- Correlation
 
-==> Pivoting
+- Pivoting
 
-==> Timeline Analysis
+- Timeline Analysis
 
-==> Threat Hunting
+- Threat Hunting
 
-==> IOC Investigation
+- IOC Investigation
 
-==> Evidence-based Investigation
-
----
-
+- Evidence-based Investigation
 
 ---
 

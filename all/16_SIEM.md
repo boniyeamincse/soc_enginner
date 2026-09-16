@@ -20,15 +20,15 @@ This is why **SIEM Data Quality** is a critical responsibility for a SIEM Engine
 
 A SIEM Engineer should be able to answer:
 
-==> Are the logs arriving?
-==> Are they complete?
-==> Are they parsed correctly?
-==> Are timestamps correct?
-==> Are events duplicated?
-==> Are important fields available?
-==> Is there ingestion delay?
-==> Are events being dropped?
-==> Is the data trustworthy enough for detection?
+- Are the logs arriving?
+- Are they complete?
+- Are they parsed correctly?
+- Are timestamps correct?
+- Are events duplicated?
+- Are important fields available?
+- Is there ingestion delay?
+- Are events being dropped?
+- Is the data trustworthy enough for detection?
 
 ---
 
@@ -36,15 +36,15 @@ A SIEM Engineer should be able to answer:
 
 **SIEM Data Quality** means ensuring that security data entering and stored inside the SIEM is:
 
-==> Available
-==> Complete
-==> Accurate
-==> Timely
-==> Correctly parsed
-==> Properly normalized
-==> Consistent
-==> Searchable
-==> Reliable
+- Available
+- Complete
+- Accurate
+- Timely
+- Correctly parsed
+- Properly normalized
+- Consistent
+- Searchable
+- Reliable
 
 Think of the SIEM pipeline:
 
@@ -218,18 +218,18 @@ One of the most common SIEM problems is:
 
 Possible causes:
 
-==> Source service stopped
-==> Agent stopped
-==> Network problem
-==> Firewall blocking traffic
-==> Wrong destination
-==> Authentication failure
-==> Certificate problem
-==> Collector failure
-==> Parser problem
-==> Storage problem
-==> Queue overflow
-==> Configuration error
+- Source service stopped
+- Agent stopped
+- Network problem
+- Firewall blocking traffic
+- Wrong destination
+- Authentication failure
+- Certificate problem
+- Collector failure
+- Parser problem
+- Storage problem
+- Queue overflow
+- Configuration error
 
 ---
 
@@ -300,13 +300,13 @@ This should create a health signal.
 
 A SIEM should ideally monitor:
 
-==> Last event time
-==> Event count
-==> EPS
-==> Connection status
-==> Agent status
-==> Queue status
-==> Error rate
+- Last event time
+- Event count
+- EPS
+- Connection status
+- Agent status
+- Queue status
+- Error rate
 
 ---
 
@@ -361,12 +361,12 @@ Now the same event may appear twice.
 
 Possible causes:
 
-==> Multiple forwarding paths
-==> Misconfigured agents
-==> Retry behavior
-==> Collector duplication
-==> Load-balancing issues
-==> Replayed events
+- Multiple forwarding paths
+- Misconfigured agents
+- Retry behavior
+- Collector duplication
+- Load-balancing issues
+- Replayed events
 
 ---
 
@@ -374,13 +374,13 @@ Possible causes:
 
 Duplicates can affect:
 
-==> Alert volume
-==> EPS calculations
-==> Storage
-==> Dashboards
-==> Correlation rules
-==> Threshold detections
-==> Incident investigation
+- Alert volume
+- EPS calculations
+- Storage
+- Dashboards
+- Correlation rules
+- Threshold detections
+- Incident investigation
 
 Example:
 
@@ -563,12 +563,12 @@ But the SIEM may display:
 
 Possible causes:
 
-==> Time zone mismatch
-==> NTP problem
-==> Incorrect parser
-==> Timestamp format issue
-==> Collector clock problem
-==> Daylight-saving handling where applicable
+- Time zone mismatch
+- NTP problem
+- Incorrect parser
+- Timestamp format issue
+- Collector clock problem
+- Daylight-saving handling where applicable
 
 ---
 
@@ -594,11 +594,11 @@ The investigation timeline becomes misleading.
 
 This can affect:
 
-==> Correlation
-==> Sequence detection
-==> Incident investigation
-==> Threat hunting
-==> Root-cause analysis
+- Correlation
+- Sequence detection
+- Incident investigation
+- Threat hunting
+- Root-cause analysis
 
 ---
 
@@ -623,10 +623,10 @@ All systems should maintain consistent time.
 
 A SIEM Engineer should monitor:
 
-==> Clock drift
-==> Time zone configuration
-==> NTP synchronization
-==> Timestamp parsing
+- Clock drift
+- Time zone configuration
+- NTP synchronization
+- Timestamp parsing
 
 ---
 
@@ -686,14 +686,14 @@ Storage
 
 Possible causes:
 
-==> Network congestion
-==> Collector overload
-==> Queue backlog
-==> CPU saturation
-==> Disk I/O
-==> Indexing delay
-==> Rate limiting
-==> Backpressure
+- Network congestion
+- Collector overload
+- Queue backlog
+- CPU saturation
+- Disk I/O
+- Indexing delay
+- Rate limiting
+- Backpressure
 
 ---
 
@@ -733,11 +733,11 @@ This creates a data-loss risk.
 
 Monitor:
 
-==> Queue depth
-==> Queue growth
-==> Processing rate
-==> Event drops
-==> Retry rate
+- Queue depth
+- Queue growth
+- Processing rate
+- Event drops
+- Retry rate
 
 ---
 
@@ -747,13 +747,13 @@ Event drops are particularly important.
 
 Possible causes:
 
-==> Queue overflow
-==> Network failure
-==> Collector overload
-==> Parser errors
-==> Storage failure
-==> Rate limiting
-==> Resource exhaustion
+- Queue overflow
+- Network failure
+- Collector overload
+- Parser errors
+- Storage failure
+- Rate limiting
+- Resource exhaustion
 
 If events are dropped, detection coverage may be affected.
 
@@ -1148,10 +1148,10 @@ Duplicate forwarding path
 
 Fix:
 
-==> Correct forwarding configuration
-==> Validate event count
-==> Confirm alert volume
-==> Check storage impact
+- Correct forwarding configuration
+- Validate event count
+- Confirm alert volume
+- Check storage impact
 
 ---
 
@@ -1256,23 +1256,23 @@ Prioritize monitoring based on importance.
 
 ### Critical
 
-==> Domain Controllers
-==> Firewalls
-==> Identity Systems
-==> EDR
-==> VPN
-==> Critical Servers
+- Domain Controllers
+- Firewalls
+- Identity Systems
+- EDR
+- VPN
+- Critical Servers
 
 ### Important
 
-==> Application Servers
-==> Web Servers
-==> Databases
+- Application Servers
+- Web Servers
+- Databases
 
 ### Lower Priority
 
-==> Development Systems
-==> Test Systems
+- Development Systems
+- Test Systems
 
 The classification depends on the organization's architecture.
 
@@ -1282,11 +1282,11 @@ The classification depends on the organization's architecture.
 
 Reliable logging can also support:
 
-==> Auditability
-==> Investigation
-==> Incident response
-==> Security monitoring
-==> Compliance requirements
+- Auditability
+- Investigation
+- Incident response
+- Security monitoring
+- Compliance requirements
 
 But compliance requirements vary by organization, industry, and jurisdiction.
 
@@ -1582,16 +1582,6 @@ Troubleshooting
 ```
 
 Together, these create a reliable SIEM environment.
-
----
-
-## 📚 SIEM Engineer Learning Series
-
-**Previous:** #15 — Threat Hunting with SIEM
-
-**Current:** #16 — SIEM Data Quality & Troubleshooting
-
-**Next:** #17 — Hands-On SIEM: Multi-Platform Practical Guide
 
 ---
 

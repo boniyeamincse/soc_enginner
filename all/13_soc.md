@@ -10,21 +10,21 @@ SOC Analyst যখন search করে:
 
 একজন **SIEM Engineer**-এর কাজ শুধু SIEM চালু রাখা নয়। তাকে বুঝতে হয়:
 
-==> Why is the SIEM slow?
+- Why is the SIEM slow?
 
-==> Where is the bottleneck?
+- Where is the bottleneck?
 
-==> Is ingestion delayed?
+- Is ingestion delayed?
 
-==> Is storage slow?
+- Is storage slow?
 
-==> Is the query inefficient?
+- Is the query inefficient?
 
-==> Is CPU overloaded?
+- Is CPU overloaded?
 
-==> Is memory under pressure?
+- Is memory under pressure?
 
-==> Is indexing the problem?
+- Is indexing the problem?
 
 এই process-কে বলা হয় **SIEM Performance Tuning**।
 
@@ -36,21 +36,21 @@ SIEM performance directly affects SOC operations।
 
 Slow SIEM হলে:
 
-==> Alert processing delay হতে পারে
+- Alert processing delay হতে পারে
 
-==> Investigation slow হতে পারে
+- Investigation slow হতে পারে
 
-==> Threat hunting difficult হতে পারে
+- Threat hunting difficult হতে পারে
 
-==> Detection latency বাড়তে পারে
+- Detection latency বাড়তে পারে
 
-==> Search timeout হতে পারে
+- Search timeout হতে পারে
 
-==> Dashboard slow হতে পারে
+- Dashboard slow হতে পারে
 
-==> Analyst productivity কমতে পারে
+- Analyst productivity কমতে পারে
 
-==> Incident response delay হতে পারে
+- Incident response delay হতে পারে
 
 তাই performance tuning একটি continuous SIEM engineering activity।
 
@@ -112,37 +112,37 @@ What is the safest fix?
 
 Monitor করুন:
 
-==> EPS
+- EPS
 
-==> Ingestion latency
+- Ingestion latency
 
-==> Processing latency
+- Processing latency
 
-==> Queue size
+- Queue size
 
-==> CPU utilization
+- CPU utilization
 
-==> RAM utilization
+- RAM utilization
 
-==> Disk utilization
+- Disk utilization
 
-==> Disk IOPS
+- Disk IOPS
 
-==> Disk latency
+- Disk latency
 
-==> Network throughput
+- Network throughput
 
-==> Search latency
+- Search latency
 
-==> Query execution time
+- Query execution time
 
-==> Indexing rate
+- Indexing rate
 
-==> Event drops
+- Event drops
 
-==> Error rate
+- Error rate
 
-==> Node health
+- Node health
 
 ---
 
@@ -273,21 +273,21 @@ Relevant data source/index ব্যবহার করলে unnecessary scanni
 
 একটি efficient query সাধারণত:
 
-==> Specific time range ব্যবহার করে
+- Specific time range ব্যবহার করে
 
-==> Relevant dataset ব্যবহার করে
+- Relevant dataset ব্যবহার করে
 
-==> প্রয়োজনীয় fields ব্যবহার করে
+- প্রয়োজনীয় fields ব্যবহার করে
 
-==> Early filtering করে
+- Early filtering করে
 
-==> Unnecessary wildcard avoid করে
+- Unnecessary wildcard avoid করে
 
-==> Unnecessary expensive operations avoid করে
+- Unnecessary expensive operations avoid করে
 
-==> Result size সীমিত রাখে
+- Result size সীমিত রাখে
 
-==> Aggregation carefully ব্যবহার করে
+- Aggregation carefully ব্যবহার করে
 
 ---
 
@@ -333,11 +333,11 @@ action
 
 কম data return করলে:
 
-==> Query response ছোট হয়
+- Query response ছোট হয়
 
-==> Network usage কমে
+- Network usage কমে
 
-==> UI rendering দ্রুত হতে পারে
+- UI rendering দ্রুত হতে পারে
 
 ---
 
@@ -359,11 +359,11 @@ for last 24 hours
 
 তাই:
 
-==> Time range সীমিত করুন
+- Time range সীমিত করুন
 
-==> Relevant fields ব্যবহার করুন
+- Relevant fields ব্যবহার করুন
 
-==> Result size control করুন
+- Result size control করুন
 
 ---
 
@@ -373,23 +373,23 @@ CPU high হলে first identify করতে হবে কোন component CPU
 
 Possible causes:
 
-==> High EPS
+- High EPS
 
-==> Complex parsing
+- Complex parsing
 
-==> Heavy detection rules
+- Heavy detection rules
 
-==> Expensive correlation
+- Expensive correlation
 
-==> Large searches
+- Large searches
 
-==> Many concurrent queries
+- Many concurrent queries
 
-==> Compression
+- Compression
 
-==> Indexing workload
+- Indexing workload
 
-==> Background tasks
+- Background tasks
 
 ---
 
@@ -423,31 +423,31 @@ Tune / Scale
 
 Memory pressure হলে:
 
-==> Search slow হতে পারে
+- Search slow হতে পারে
 
-==> Cache efficiency কমতে পারে
+- Cache efficiency কমতে পারে
 
-==> Processes restart করতে পারে
+- Processes restart করতে পারে
 
-==> Garbage collection pressure হতে পারে
+- Garbage collection pressure হতে পারে
 
-==> System swap ব্যবহার করতে পারে
+- System swap ব্যবহার করতে পারে
 
-==> Overall latency বাড়তে পারে
+- Overall latency বাড়তে পারে
 
 Monitor করুন:
 
-==> Used memory
+- Used memory
 
-==> Available memory
+- Available memory
 
-==> Cache
+- Cache
 
-==> Swap
+- Swap
 
-==> Process memory
+- Process memory
 
-==> Runtime/JVM memory যেখানে applicable
+- Runtime/JVM memory যেখানে applicable
 
 ---
 
@@ -507,21 +507,21 @@ Result
 
 Monitor করুন:
 
-==> Disk utilization
+- Disk utilization
 
-==> IOPS
+- IOPS
 
-==> Read throughput
+- Read throughput
 
-==> Write throughput
+- Write throughput
 
-==> Latency
+- Latency
 
-==> Queue depth
+- Queue depth
 
-==> Free space
+- Free space
 
-==> Filesystem health
+- Filesystem health
 
 ---
 
@@ -529,17 +529,17 @@ Monitor করুন:
 
 যদি disk bottleneck হয়:
 
-==> Ingestion slow
+- Ingestion slow
 
-==> Search slow
+- Search slow
 
-==> Indexing delay
+- Indexing delay
 
-==> Queue বৃদ্ধি
+- Queue বৃদ্ধি
 
-==> Event latency বৃদ্ধি
+- Event latency বৃদ্ধি
 
-==> Dashboard delay
+- Dashboard delay
 
 হতে পারে।
 
@@ -549,21 +549,21 @@ Monitor করুন:
 
 Storage optimization-এর মধ্যে থাকতে পারে:
 
-==> Appropriate storage type
+- Appropriate storage type
 
-==> Proper indexing strategy
+- Proper indexing strategy
 
-==> Retention policy
+- Retention policy
 
-==> Data lifecycle management
+- Data lifecycle management
 
-==> Compression where appropriate
+- Compression where appropriate
 
-==> Old data tiering
+- Old data tiering
 
-==> Unnecessary data reduction
+- Unnecessary data reduction
 
-==> Storage monitoring
+- Storage monitoring
 
 ---
 
@@ -585,13 +585,13 @@ Search
 
 ভালো indexing-এর লক্ষ্য:
 
-==> Fast search
+- Fast search
 
-==> Efficient storage
+- Efficient storage
 
-==> Manageable index size
+- Manageable index size
 
-==> Predictable performance
+- Predictable performance
 
 Index strategy platform-specific হতে পারে।
 
@@ -601,11 +601,11 @@ Index strategy platform-specific হতে পারে।
 
 Index খুব বড় হলে:
 
-==> Search scope বাড়ে
+- Search scope বাড়ে
 
-==> Storage usage বাড়ে
+- Storage usage বাড়ে
 
-==> Maintenance difficult হতে পারে
+- Maintenance difficult হতে পারে
 
 অন্যদিকে excessive small indexes/shards/partitions তৈরি করলেও overhead বাড়তে পারে।
 
@@ -645,11 +645,11 @@ Replication availability এবং resilience বাড়াতে সাহায
 
 কিন্তু replication-এর কারণে:
 
-==> Additional storage
+- Additional storage
 
-==> Additional network traffic
+- Additional network traffic
 
-==> Additional write workload
+- Additional write workload
 
 প্রয়োজন হতে পারে।
 
@@ -854,19 +854,19 @@ Identify Bottleneck
 
 Possible causes:
 
-==> Large time range
+- Large time range
 
-==> Inefficient query
+- Inefficient query
 
-==> Heavy aggregation
+- Heavy aggregation
 
-==> Storage latency
+- Storage latency
 
-==> High concurrent searches
+- High concurrent searches
 
-==> Indexing pressure
+- Indexing pressure
 
-==> Resource saturation
+- Resource saturation
 
 ---
 
@@ -918,21 +918,21 @@ CPU = 95%
 
 Check করুন:
 
-==> Which process?
+- Which process?
 
-==> EPS কি বেড়েছে?
+- EPS কি বেড়েছে?
 
-==> New log source added?
+- New log source added?
 
-==> New detection rule deployed?
+- New detection rule deployed?
 
-==> Large query চলছে?
+- Large query চলছে?
 
-==> Parsing expensive?
+- Parsing expensive?
 
-==> Search concurrency বেড়েছে?
+- Search concurrency বেড়েছে?
 
-==> Recent configuration change?
+- Recent configuration change?
 
 তারপর root cause identify করুন।
 
@@ -944,45 +944,45 @@ Check করুন:
 
 ### Query
 
-==> Time range optimization
+- Time range optimization
 
-==> Field filtering
+- Field filtering
 
-==> Efficient search logic
+- Efficient search logic
 
 ### Detection
 
-==> Unnecessary rules remove/tune
+- Unnecessary rules remove/tune
 
-==> Expensive correlation review
+- Expensive correlation review
 
-==> Duplicate detections reduce
+- Duplicate detections reduce
 
 ### Storage
 
-==> Appropriate storage
+- Appropriate storage
 
-==> Retention optimization
+- Retention optimization
 
-==> Index strategy
+- Index strategy
 
 ### Infrastructure
 
-==> CPU
+- CPU
 
-==> RAM
+- RAM
 
-==> Disk I/O
+- Disk I/O
 
-==> Network
+- Network
 
 ### Architecture
 
-==> Horizontal scaling
+- Horizontal scaling
 
-==> Workload separation
+- Workload separation
 
-==> Load balancing
+- Load balancing
 
 ---
 
@@ -1004,17 +1004,17 @@ Complex correlation
 
 তাই detection engineering-এর সময় consider করতে হবে:
 
-==> Search frequency
+- Search frequency
 
-==> Dataset size
+- Dataset size
 
-==> Time window
+- Time window
 
-==> Query complexity
+- Query complexity
 
-==> Field availability
+- Field availability
 
-==> Result volume
+- Result volume
 
 ---
 
@@ -1036,15 +1036,15 @@ Large time range
 
 Better approach:
 
-==> প্রয়োজনীয় panels
+- প্রয়োজনীয় panels
 
-==> Appropriate time range
+- Appropriate time range
 
-==> Efficient queries
+- Efficient queries
 
-==> Cached/summary data যেখানে appropriate
+- Cached/summary data যেখানে appropriate
 
-==> Drill-down dashboards
+- Drill-down dashboards
 
 ---
 
@@ -1151,55 +1151,55 @@ Change documentation করুন।
 
 ### Query
 
-==> Time range checked
+- Time range checked
 
-==> Query complexity checked
+- Query complexity checked
 
-==> Wildcards reviewed
+- Wildcards reviewed
 
-==> Fields reviewed
+- Fields reviewed
 
-==> Aggregations reviewed
+- Aggregations reviewed
 
-==> Result size reviewed
+- Result size reviewed
 
 ### Infrastructure
 
-==> CPU checked
+- CPU checked
 
-==> RAM checked
+- RAM checked
 
-==> Disk checked
+- Disk checked
 
-==> IOPS checked
+- IOPS checked
 
-==> Network checked
+- Network checked
 
 ### SIEM
 
-==> EPS checked
+- EPS checked
 
-==> Queue checked
+- Queue checked
 
-==> Ingestion latency checked
+- Ingestion latency checked
 
-==> Index health checked
+- Index health checked
 
-==> Search concurrency checked
+- Search concurrency checked
 
-==> Detection workload checked
+- Detection workload checked
 
 ### Operations
 
-==> Baseline available
+- Baseline available
 
-==> Recent changes reviewed
+- Recent changes reviewed
 
-==> Optimization tested
+- Optimization tested
 
-==> Before/after measured
+- Before/after measured
 
-==> Documentation updated
+- Documentation updated
 
 ---
 
@@ -1219,25 +1219,25 @@ SIEM Performance Tuning is the process of identifying and reducing bottlenecks i
 
 I would check:
 
-==> Query time range
+- Query time range
 
-==> Query complexity
+- Query complexity
 
-==> Dataset/index selection
+- Dataset/index selection
 
-==> CPU
+- CPU
 
-==> RAM
+- RAM
 
-==> Disk I/O
+- Disk I/O
 
-==> Index health
+- Index health
 
-==> Search concurrency
+- Search concurrency
 
-==> Ingestion/indexing workload
+- Ingestion/indexing workload
 
-==> Recent configuration changes
+- Recent configuration changes
 
 ---
 
@@ -1271,19 +1271,19 @@ Event latency is the time between an event being generated and becoming availabl
 
 Possible causes include:
 
-==> High EPS
+- High EPS
 
-==> Network congestion
+- Network congestion
 
-==> Collector overload
+- Collector overload
 
-==> Processing bottleneck
+- Processing bottleneck
 
-==> Queue buildup
+- Queue buildup
 
-==> Indexing bottleneck
+- Indexing bottleneck
 
-==> Storage latency
+- Storage latency
 
 ---
 
@@ -1305,27 +1305,27 @@ Capacity describes how much workload the system can handle, while performance de
 
 # ❌ 42. Common Performance Tuning Mistakes
 
-==> Blindly restarting services
+- Blindly restarting services
 
-==> Increasing CPU without finding the bottleneck
+- Increasing CPU without finding the bottleneck
 
-==> Adding RAM without measuring memory pressure
+- Adding RAM without measuring memory pressure
 
-==> Ignoring disk I/O
+- Ignoring disk I/O
 
-==> Ignoring query design
+- Ignoring query design
 
-==> Searching huge time ranges unnecessarily
+- Searching huge time ranges unnecessarily
 
-==> Running expensive queries continuously
+- Running expensive queries continuously
 
-==> Creating too many detection rules
+- Creating too many detection rules
 
-==> Ignoring dashboard workload
+- Ignoring dashboard workload
 
-==> Making changes without baseline
+- Making changes without baseline
 
-==> Not measuring before/after performance
+- Not measuring before/after performance
 
 ---
 
@@ -1404,21 +1404,21 @@ SIEM performance tuning-এর মূল লক্ষ্য শুধু **"serv
 
 লক্ষ্য হলো:
 
-==> Reliable ingestion
+- Reliable ingestion
 
-==> Low event latency
+- Low event latency
 
-==> Efficient indexing
+- Efficient indexing
 
-==> Fast investigation
+- Fast investigation
 
-==> Efficient detection
+- Efficient detection
 
-==> Stable dashboards
+- Stable dashboards
 
-==> Predictable performance
+- Predictable performance
 
-==> Scalable operations
+- Scalable operations
 
 **Remember:**
 
@@ -1432,35 +1432,33 @@ SIEM performance tuning-এর মূল লক্ষ্য শুধু **"serv
 
 ### Previous
 
-==> **#12 — SIEM Capacity Planning**
+- **#12 — SIEM Capacity Planning**
 
 ### Current
 
-==> **#13 — SIEM Performance Tuning**
+- **#13 — SIEM Performance Tuning**
 
 ### Next
 
-==> **#14 — Advanced Detection Engineering**
+- **#14 — Advanced Detection Engineering**
 
 Next article-এ আমরা আরও advanced level-এ যাব:
 
-==> Behavioral Detection
+- Behavioral Detection
 
-==> Correlation
+- Correlation
 
-==> Sequence Detection
+- Sequence Detection
 
-==> Risk-Based Detection
+- Risk-Based Detection
 
-==> Detection Tuning
+- Detection Tuning
 
-==> False Positive Reduction
+- False Positive Reduction
 
-==> Detection Testing
+- Detection Testing
 
-==> MITRE ATT&CK Mapping
-
----
+- MITRE ATT&CK Mapping
 
 ---
 

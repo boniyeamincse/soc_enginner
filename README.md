@@ -147,7 +147,7 @@ A complete study-note series covering the **SIEM Engineer** learning path — fr
 > One lab, one dataset, same exercises on 5 platforms.
 - **Covers:** Unified lab (Ubuntu + Windows + Attacker VM), Wazuh / Splunk / Elastic / OpenSearch / Sentinel setup, one-dataset approach
 - **Key work:** Same brute-force detection in 5 query languages, attack-chain investigation, dashboards, SOAR / Python automation, MISP intel, Sigma rules, Windows Event ID cheat sheet
-- **Hands-on:** 6-week plan (`Wazuh → Splunk → Elastic → Sentinel`), portfolio-ready screenshots & writeup
+- **Hands-on:** 6-week plan (`Wazuh → Splunk → Elastic → Sentinel`), portfolio-ready screenshots & write-up
 
 ---
 

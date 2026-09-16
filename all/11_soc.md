@@ -1,4 +1,3 @@
-
 # SIEM Engineer #11 — SIEM Architecture Design
 
 A SIEM Engineer শুধু SIEM platform install বা alert monitor করে না।
@@ -96,27 +95,27 @@ Applications
 
 কিন্তু environment বড় হলে কয়েকটি সমস্যা দেখা দেয়:
 
-==> অনেক বেশি logs
+- অনেক বেশি logs
 
-==> High EPS
+- High EPS
 
-==> Storage growth
+- Storage growth
 
-==> Search performance
+- Search performance
 
-==> Network latency
+- Network latency
 
-==> Single Point of Failure
+- Single Point of Failure
 
-==> Data loss
+- Data loss
 
-==> High availability requirement
+- High availability requirement
 
-==> Multiple SOC analysts
+- Multiple SOC analysts
 
-==> Compliance requirements
+- Compliance requirements
 
-==> Disaster Recovery requirement
+- Disaster Recovery requirement
 
 তাই SIEM deploy করার আগে architecture design করা অত্যন্ত গুরুত্বপূর্ণ।
 
@@ -128,23 +127,23 @@ Applications
 
 ### মূল principles:
 
-==> Scalability
+- Scalability
 
-==> Availability
+- Availability
 
-==> Performance
+- Performance
 
-==> Security
+- Security
 
-==> Reliability
+- Reliability
 
-==> Maintainability
+- Maintainability
 
-==> Observability
+- Observability
 
-==> Disaster Recovery
+- Disaster Recovery
 
-==> Cost efficiency
+- Cost efficiency
 
 একটি ভালো architecture শুধু **আজকের workload** handle করবে না।
 
@@ -183,37 +182,37 @@ Applications
 
 এখানে একটি server অনেকগুলো কাজ করতে পারে।
 
-==> Log collection
+- Log collection
 
-==> Processing
+- Processing
 
-==> Storage
+- Storage
 
-==> Detection
+- Detection
 
-==> Search
+- Search
 
-==> Dashboard
+- Dashboard
 
 ### সুবিধা
 
-==> Simple deployment
+- Simple deployment
 
-==> Low cost
+- Low cost
 
-==> Easy management
+- Easy management
 
-==> Lab-এর জন্য ভালো
+- Lab-এর জন্য ভালো
 
 ### সীমাবদ্ধতা
 
-==> Single Point of Failure
+- Single Point of Failure
 
-==> Limited scalability
+- Limited scalability
 
-==> Resource contention
+- Resource contention
 
-==> Large workload-এ performance সমস্যা হতে পারে
+- Large workload-এ performance সমস্যা হতে পারে
 
 ---
 
@@ -254,15 +253,15 @@ Medium environment-এ components আলাদা করা শুরু কর�
 
 উদাহরণ:
 
-==> Collector শুধু logs collect করবে
+- Collector শুধু logs collect করবে
 
-==> Processing layer parsing করবে
+- Processing layer parsing করবে
 
-==> Indexer data store করবে
+- Indexer data store করবে
 
-==> Search layer queries handle করবে
+- Search layer queries handle করবে
 
-==> Dashboard analyst interface provide করবে
+- Dashboard analyst interface provide করবে
 
 ---
 
@@ -335,21 +334,21 @@ Sources
 
 ### সুবিধা
 
-==> Simple management
+- Simple management
 
-==> Centralized visibility
+- Centralized visibility
 
-==> Easy investigation
+- Easy investigation
 
-==> Easier policy management
+- Easier policy management
 
 ### সমস্যা
 
-==> Network dependency
+- Network dependency
 
-==> Central bottleneck হতে পারে
+- Central bottleneck হতে পারে
 
-==> Large scale-এ scalability challenge
+- Large scale-এ scalability challenge
 
 ---
 
@@ -372,13 +371,13 @@ Large environment-এ বিভিন্ন location বা network segment-এ 
 
 উদাহরণ:
 
-==> Dhaka Data Center
+- Dhaka Data Center
 
-==> Chattogram Data Center
+- Chattogram Data Center
 
-==> Cloud Environment
+- Cloud Environment
 
-==> Remote Office
+- Remote Office
 
 প্রতিটি location local collection করতে পারে এবং central SIEM-এ normalized data পাঠাতে পারে।
 
@@ -405,13 +404,13 @@ Large environment-এ বিভিন্ন location বা network segment-এ 
 
 এটি সাধারণত:
 
-==> Lab
+- Lab
 
-==> Small organization
+- Small organization
 
-==> POC
+- POC
 
-==> Training environment
+- Training environment
 
 -এর জন্য ব্যবহারযোগ্য।
 
@@ -444,15 +443,15 @@ Different workloads different nodes-এ distribute করা হয়।
 
 ### সুবিধা
 
-==> Better scalability
+- Better scalability
 
-==> Better availability
+- Better availability
 
-==> Workload separation
+- Workload separation
 
-==> Easier capacity planning
+- Easier capacity planning
 
-==> Better performance isolation
+- Better performance isolation
 
 ---
 
@@ -462,29 +461,29 @@ Different workloads different nodes-এ distribute করা হয়।
 
 Sources হতে পারে:
 
-==> Windows
+- Windows
 
-==> Linux
+- Linux
 
-==> Firewall
+- Firewall
 
-==> Router
+- Router
 
-==> Switch
+- Switch
 
-==> Active Directory
+- Active Directory
 
-==> Database
+- Database
 
-==> Web Server
+- Web Server
 
-==> Application
+- Application
 
-==> Cloud service
+- Cloud service
 
-==> EDR
+- EDR
 
-==> IDS/IPS
+- IDS/IPS
 
 Collector-এর কাজ:
 
@@ -519,15 +518,15 @@ SIEM
 
 Forwarder architecture-এর সুবিধা:
 
-==> Network traffic control
+- Network traffic control
 
-==> Local buffering
+- Local buffering
 
-==> Reliable forwarding
+- Reliable forwarding
 
-==> Centralized ingestion
+- Centralized ingestion
 
-==> Remote site support
+- Remote site support
 
 ---
 
@@ -549,19 +548,19 @@ Processing
 
 Ingestion layer-এর গুরুত্বপূর্ণ বিষয়:
 
-==> Throughput
+- Throughput
 
-==> Buffering
+- Buffering
 
-==> Backpressure
+- Backpressure
 
-==> Reliability
+- Reliability
 
-==> Authentication
+- Authentication
 
-==> Encryption
+- Encryption
 
-==> Error handling
+- Error handling
 
 ---
 
@@ -625,15 +624,15 @@ Processed Events
 
 Indexer-এর primary responsibilities:
 
-==> Index events
+- Index events
 
-==> Store searchable data
+- Store searchable data
 
-==> Support queries
+- Support queries
 
-==> Manage data lifecycle
+- Manage data lifecycle
 
-==> Support retention policies
+- Support retention policies
 
 Large deployment-এ একাধিক indexer ব্যবহার করা যেতে পারে।
 
@@ -677,25 +676,25 @@ Dashboard হলো analyst এবং management-এর জন্য visualizati
 
 এখানে থাকতে পারে:
 
-==> Security Alerts
+- Security Alerts
 
-==> Authentication Events
+- Authentication Events
 
-==> Failed Logins
+- Failed Logins
 
-==> Malware Alerts
+- Malware Alerts
 
-==> Firewall Events
+- Firewall Events
 
-==> Top Source IPs
+- Top Source IPs
 
-==> Top Destination IPs
+- Top Destination IPs
 
-==> Detection Trends
+- Detection Trends
 
-==> Incident Metrics
+- Incident Metrics
 
-==> System Health
+- System Health
 
 ---
 
@@ -719,17 +718,17 @@ SOC Investigation
 
 Detection logic হতে পারে:
 
-==> Signature-based
+- Signature-based
 
-==> Threshold-based
+- Threshold-based
 
-==> Correlation-based
+- Correlation-based
 
-==> Behavioral
+- Behavioral
 
-==> Sequence-based
+- Sequence-based
 
-==> Risk-based
+- Risk-based
 
 Detection Engineering নিয়ে বিস্তারিত আমরা **#14 Advanced Detection Engineering**-এ দেখব।
 
@@ -844,15 +843,15 @@ HA architecture:
 
 Load balancing ব্যবহার করা যায়:
 
-==> Log ingestion
+- Log ingestion
 
-==> API traffic
+- API traffic
 
-==> Search requests
+- Search requests
 
-==> Web interface
+- Web interface
 
-==> Collector traffic
+- Collector traffic
 
 ---
 
@@ -897,31 +896,31 @@ SIEM architecture design করার আগে requirements collect করত�
 
 ### Questions:
 
-==> কতগুলো log source আছে?
+- কতগুলো log source আছে?
 
-==> কত EPS generate হচ্ছে?
+- কত EPS generate হচ্ছে?
 
-==> Peak EPS কত?
+- Peak EPS কত?
 
-==> প্রতিদিন কত GB logs?
+- প্রতিদিন কত GB logs?
 
-==> Retention কতদিন?
+- Retention কতদিন?
 
-==> কতজন analyst?
+- কতজন analyst?
 
-==> কতগুলো office/data center?
+- কতগুলো office/data center?
 
-==> Cloud environment আছে?
+- Cloud environment আছে?
 
-==> Compliance requirement কী?
+- Compliance requirement কী?
 
-==> HA requirement কী?
+- HA requirement কী?
 
-==> RPO কী?
+- RPO কী?
 
-==> RTO কী?
+- RTO কী?
 
-==> Future growth কত?
+- Future growth কত?
 
 এই প্রশ্নগুলোর উত্তর ছাড়া architecture blindly design করা উচিত নয়।
 
@@ -1028,19 +1027,19 @@ SIEM environment-কে security zones-এর মধ্যে design করা �
 
 Principles:
 
-==> Least privilege
+- Least privilege
 
-==> Network segmentation
+- Network segmentation
 
-==> Restricted management access
+- Restricted management access
 
-==> TLS where supported
+- TLS where supported
 
-==> Firewall rules
+- Firewall rules
 
-==> Administrative access control
+- Administrative access control
 
-==> Monitoring
+- Monitoring
 
 ---
 
@@ -1050,45 +1049,45 @@ SIEM নিজেই একটি highly sensitive system।
 
 কারণ SIEM-এর মধ্যে থাকতে পারে:
 
-==> Authentication logs
+- Authentication logs
 
-==> User information
+- User information
 
-==> IP addresses
+- IP addresses
 
-==> Security alerts
+- Security alerts
 
-==> Investigation data
+- Investigation data
 
-==> Threat intelligence
+- Threat intelligence
 
-==> Incident information
+- Incident information
 
 তাই SIEM security গুরুত্বপূর্ণ।
 
 ### Security controls:
 
-==> RBAC
+- RBAC
 
-==> MFA যেখানে supported
+- MFA যেখানে supported
 
-==> TLS encryption
+- TLS encryption
 
-==> Secure API authentication
+- Secure API authentication
 
-==> Secrets management
+- Secrets management
 
-==> Admin network restriction
+- Admin network restriction
 
-==> Audit logging
+- Audit logging
 
-==> Certificate management
+- Certificate management
 
-==> Regular patching
+- Regular patching
 
-==> Backup protection
+- Backup protection
 
-==> Strong authentication
+- Strong authentication
 
 ---
 
@@ -1144,27 +1143,27 @@ SOC
 
 Advantages:
 
-==> Infrastructure control
+- Infrastructure control
 
-==> Data residency control
+- Data residency control
 
-==> Custom networking
+- Custom networking
 
-==> Internal integration
+- Internal integration
 
 Challenges:
 
-==> Hardware cost
+- Hardware cost
 
-==> Maintenance
+- Maintenance
 
-==> Scaling
+- Scaling
 
-==> Backup
+- Backup
 
-==> DR
+- DR
 
-==> Infrastructure management
+- Infrastructure management
 
 ---
 
@@ -1190,19 +1189,19 @@ SOC
 
 Considerations:
 
-==> API integration
+- API integration
 
-==> Cloud identity
+- Cloud identity
 
-==> Network connectivity
+- Network connectivity
 
-==> Data transfer
+- Data transfer
 
-==> Storage cost
+- Storage cost
 
-==> Access control
+- Access control
 
-==> Multi-account architecture
+- Multi-account architecture
 
 ---
 
@@ -1250,21 +1249,21 @@ DR SIEM
 
 DR planning-এর গুরুত্বপূর্ণ বিষয়:
 
-==> Backup
+- Backup
 
-==> Replication যেখানে supported
+- Replication যেখানে supported
 
-==> Configuration backup
+- Configuration backup
 
-==> Detection rule backup
+- Detection rule backup
 
-==> Dashboard backup
+- Dashboard backup
 
-==> Integration configuration
+- Integration configuration
 
-==> Certificate/secret recovery process
+- Certificate/secret recovery process
 
-==> Restore testing
+- Restore testing
 
 ---
 
@@ -1304,35 +1303,35 @@ SIEM-এর নিজের health monitor করতে হবে।
 
 Monitor করুন:
 
-==> EPS
+- EPS
 
-==> Ingestion rate
+- Ingestion rate
 
-==> Event latency
+- Event latency
 
-==> Queue size
+- Queue size
 
-==> CPU
+- CPU
 
-==> RAM
+- RAM
 
-==> Disk usage
+- Disk usage
 
-==> Disk I/O
+- Disk I/O
 
-==> Network
+- Network
 
-==> Search latency
+- Search latency
 
-==> Failed ingestion
+- Failed ingestion
 
-==> Collector status
+- Collector status
 
-==> Index health
+- Index health
 
-==> Certificate expiry
+- Certificate expiry
 
-==> Service availability
+- Service availability
 
 একজন SIEM Engineer-এর জন্য **SIEM health monitoring** অত্যন্ত গুরুত্বপূর্ণ।
 
@@ -1430,21 +1429,21 @@ Ticketing
 
 ধরুন একটি organization-এর:
 
-==> 2,000 endpoints
+- 2,000 endpoints
 
-==> Windows Servers
+- Windows Servers
 
-==> Linux Servers
+- Linux Servers
 
-==> Active Directory
+- Active Directory
 
-==> Firewalls
+- Firewalls
 
-==> Routers/Switches
+- Routers/Switches
 
-==> Web Applications
+- Web Applications
 
-==> Cloud workloads
+- Cloud workloads
 
 এবং একটি SOC team আছে।
 
@@ -1565,39 +1564,39 @@ Architecture design করার পরে documentation করতে হবে�
 
 Documentation-এ থাকতে পারে:
 
-==> Architecture diagram
+- Architecture diagram
 
-==> IP/network zones
+- IP/network zones
 
-==> Data sources
+- Data sources
 
-==> Collectors
+- Collectors
 
-==> Ingestion paths
+- Ingestion paths
 
-==> Storage
+- Storage
 
-==> Retention
+- Retention
 
-==> Detection components
+- Detection components
 
-==> Integrations
+- Integrations
 
-==> HA configuration
+- HA configuration
 
-==> DR configuration
+- DR configuration
 
-==> Backup process
+- Backup process
 
-==> Monitoring
+- Monitoring
 
-==> Ports and protocols
+- Ports and protocols
 
-==> Authentication
+- Authentication
 
-==> Ownership
+- Ownership
 
-==> Troubleshooting procedure
+- Troubleshooting procedure
 
 ---
 
@@ -1765,33 +1764,33 @@ Horizontal scaling means adding more nodes to distribute the workload.
 
 I consider:
 
-==> EPS
+- EPS
 
-==> Peak EPS
+- Peak EPS
 
-==> Data volume
+- Data volume
 
-==> Retention
+- Retention
 
-==> Log sources
+- Log sources
 
-==> Network architecture
+- Network architecture
 
-==> Storage
+- Storage
 
-==> Search workload
+- Search workload
 
-==> HA
+- HA
 
-==> Security
+- Security
 
-==> DR
+- DR
 
-==> RPO/RTO
+- RPO/RTO
 
-==> Future growth
+- Future growth
 
-==> Cost
+- Cost
 
 ---
 
@@ -1845,21 +1844,21 @@ Search
 
 Then check:
 
-==> Source timestamp
+- Source timestamp
 
-==> Network latency
+- Network latency
 
-==> Collector health
+- Collector health
 
-==> Queue/backpressure
+- Queue/backpressure
 
-==> Processing latency
+- Processing latency
 
-==> Indexing performance
+- Indexing performance
 
-==> Storage I/O
+- Storage I/O
 
-==> Search latency
+- Search latency
 
 This approach helps identify where the delay occurs.
 
@@ -1871,81 +1870,81 @@ Architecture final করার আগে check করুন:
 
 ### Requirements
 
-==> Log sources identified
+- Log sources identified
 
-==> EPS measured
+- EPS measured
 
-==> Peak EPS identified
+- Peak EPS identified
 
-==> Retention defined
+- Retention defined
 
-==> Compliance requirements identified
+- Compliance requirements identified
 
 ### Infrastructure
 
-==> CPU planned
+- CPU planned
 
-==> RAM planned
+- RAM planned
 
-==> Storage planned
+- Storage planned
 
-==> Network planned
+- Network planned
 
-==> Scaling strategy defined
+- Scaling strategy defined
 
 ### Architecture
 
-==> Collector design complete
+- Collector design complete
 
-==> Ingestion design complete
+- Ingestion design complete
 
-==> Processing design complete
+- Processing design complete
 
-==> Indexing design complete
+- Indexing design complete
 
-==> Search design complete
+- Search design complete
 
 ### Availability
 
-==> HA requirement defined
+- HA requirement defined
 
-==> Failover tested
+- Failover tested
 
-==> Load balancing considered
+- Load balancing considered
 
-==> Single Points of Failure identified
+- Single Points of Failure identified
 
 ### Security
 
-==> RBAC configured
+- RBAC configured
 
-==> TLS considered
+- TLS considered
 
-==> Admin access restricted
+- Admin access restricted
 
-==> Secrets protected
+- Secrets protected
 
-==> Audit logging enabled
+- Audit logging enabled
 
 ### DR
 
-==> Backup defined
+- Backup defined
 
-==> RPO defined
+- RPO defined
 
-==> RTO defined
+- RTO defined
 
-==> Restore tested
+- Restore tested
 
 ### Operations
 
-==> Monitoring configured
+- Monitoring configured
 
-==> Alerting configured
+- Alerting configured
 
-==> Documentation completed
+- Documentation completed
 
-==> Troubleshooting runbook available
+- Troubleshooting runbook available
 
 ---
 
@@ -2050,19 +2049,19 @@ SIEM Architecture হলো পুরো SOC/SIEM environment-এর foundation�
 
 একটি ভালো architecture:
 
-==> Reliable log collection নিশ্চিত করে
+- Reliable log collection নিশ্চিত করে
 
-==> Detection-এর জন্য quality data দেয়
+- Detection-এর জন্য quality data দেয়
 
-==> Investigation দ্রুত করে
+- Investigation দ্রুত করে
 
-==> Single Point of Failure কমায়
+- Single Point of Failure কমায়
 
-==> Future growth support করে
+- Future growth support করে
 
-==> Security এবং compliance requirements support করে
+- Security এবং compliance requirements support করে
 
-==> Disaster-এর সময় recovery সহজ করে
+- Disaster-এর সময় recovery সহজ করে
 
 **Remember:**
 
@@ -2074,37 +2073,35 @@ SIEM Architecture হলো পুরো SOC/SIEM environment-এর foundation�
 
 ### Previous
 
-==> **#10 — SIEM Infrastructure**
+- **#10 — SIEM Infrastructure**
 
 ### Current
 
-==> **#11 — SIEM Architecture Design**
+- **#11 — SIEM Architecture Design**
 
 ### Next
 
-==> **#12 — SIEM Capacity Planning**
+- **#12 — SIEM Capacity Planning**
 
 Next article-এ আমরা practical calculation শিখব:
 
-==> EPS Calculation
+- EPS Calculation
 
-==> Events Per Day
+- Events Per Day
 
-==> GB/day
+- GB/day
 
-==> Storage Calculation
+- Storage Calculation
 
-==> Retention Planning
+- Retention Planning
 
-==> Peak Load
+- Peak Load
 
-==> Growth Estimation
+- Growth Estimation
 
-==> Capacity Buffer
+- Capacity Buffer
 
-==> Real-world SIEM sizing example
-
----
+- Real-world SIEM sizing example
 
 ---
 

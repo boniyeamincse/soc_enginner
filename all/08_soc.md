@@ -84,13 +84,13 @@ Send Message
 
 This creates:
 
-==> Repetitive work
+- Repetitive work
 
-==> Human error
+- Human error
 
-==> Slow response
+- Slow response
 
-==> Analyst fatigue
+- Analyst fatigue
 
 Automation can reduce these repetitive activities.
 
@@ -439,17 +439,17 @@ Some actions can be automated.
 
 Examples may include:
 
-==> Disable a compromised account
+- Disable a compromised account
 
-==> Isolate an endpoint
+- Isolate an endpoint
 
-==> Block an indicator
+- Block an indicator
 
-==> Revoke a session
+- Revoke a session
 
-==> Create a firewall block
+- Create a firewall block
 
-==> Add an IOC to a security control
+- Add an IOC to a security control
 
 But automated response requires careful design.
 
@@ -612,15 +612,15 @@ Automation requires secure authentication.
 
 Common methods include:
 
-==> API Keys
+- API Keys
 
-==> OAuth
+- OAuth
 
-==> Service Accounts
+- Service Accounts
 
-==> Bearer Tokens
+- Bearer Tokens
 
-==> Client Certificates
+- Client Certificates
 
 Secrets should be stored securely.
 
@@ -648,17 +648,17 @@ the API may reject requests.
 
 Automation should handle:
 
-==> Rate limits
+- Rate limits
 
-==> Retries
+- Retries
 
-==> Backoff
+- Backoff
 
-==> Timeouts
+- Timeouts
 
-==> API errors
+- API errors
 
-==> Duplicate requests
+- Duplicate requests
 
 ---
 
@@ -751,23 +751,23 @@ A SOC should measure automation.
 
 Useful metrics include:
 
-==> Number of automated workflows
+- Number of automated workflows
 
-==> Automation success rate
+- Automation success rate
 
-==> Automation failure rate
+- Automation failure rate
 
-==> Average execution time
+- Average execution time
 
-==> Manual effort reduced
+- Manual effort reduced
 
-==> Number of enriched alerts
+- Number of enriched alerts
 
-==> Number of duplicate cases prevented
+- Number of duplicate cases prevented
 
-==> Analyst approval rate
+- Analyst approval rate
 
-==> Rollback/failure incidents
+- Rollback/failure incidents
 
 Metrics should help identify whether automation is actually improving operations.
 
@@ -1062,17 +1062,17 @@ Unexpected response
 
 Good automation should:
 
-==> Detect the failure
+- Detect the failure
 
-==> Record the error
+- Record the error
 
-==> Retry when appropriate
+- Retry when appropriate
 
-==> Avoid destructive assumptions
+- Avoid destructive assumptions
 
-==> Notify the responsible team
+- Notify the responsible team
 
-==> Continue safely when possible
+- Continue safely when possible
 
 ---
 
@@ -1084,23 +1084,23 @@ Therefore protect it carefully.
 
 Use:
 
-==> RBAC
+- RBAC
 
-==> MFA
+- MFA
 
-==> Least privilege
+- Least privilege
 
-==> Secure secret storage
+- Secure secret storage
 
-==> API access controls
+- API access controls
 
-==> Audit logging
+- Audit logging
 
-==> Approval workflows
+- Approval workflows
 
-==> Change management
+- Change management
 
-==> Network restrictions
+- Network restrictions
 
 A compromised SOAR platform could potentially affect multiple security systems.
 
@@ -1651,31 +1651,31 @@ The complete concept is:
 
 Important skills include:
 
-==> REST API
+- REST API
 
-==> Webhooks
+- Webhooks
 
-==> Python automation
+- Python automation
 
-==> Playbooks
+- Playbooks
 
-==> Threat Intelligence integration
+- Threat Intelligence integration
 
-==> Ticketing integration
+- Ticketing integration
 
-==> Error handling
+- Error handling
 
-==> Authentication
+- Authentication
 
-==> RBAC
+- RBAC
 
-==> Approval workflows
+- Approval workflows
 
-==> Audit logging
+- Audit logging
 
-==> Rollback
+- Rollback
 
-==> Automation testing
+- Automation testing
 
 The goal is not:
 
@@ -1684,9 +1684,6 @@ The goal is not:
 The goal is:
 
 > **“Automate the right things safely.”**
-
----
-
 
 ---
 

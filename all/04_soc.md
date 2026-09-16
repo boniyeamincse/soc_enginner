@@ -103,19 +103,19 @@ SOC Analyst
 
 Good detections help SOC teams:
 
-==> Reduce manual investigation
+- Reduce manual investigation
 
-==> Detect suspicious behavior faster
+- Detect suspicious behavior faster
 
-==> Improve incident response
+- Improve incident response
 
-==> Reduce unnecessary alerts
+- Reduce unnecessary alerts
 
-==> Improve MITRE ATT&CK visibility
+- Improve MITRE ATT&CK visibility
 
-==> Support threat hunting
+- Support threat hunting
 
-==> Standardize security monitoring
+- Standardize security monitoring
 
 ---
 
@@ -165,17 +165,17 @@ Everything starts with a security question.
 
 Examples:
 
-==> Can we detect SSH brute-force activity?
+- Can we detect SSH brute-force activity?
 
-==> Can we detect suspicious PowerShell execution?
+- Can we detect suspicious PowerShell execution?
 
-==> Can we detect unexpected administrator creation?
+- Can we detect unexpected administrator creation?
 
-==> Can we detect privilege group changes?
+- Can we detect privilege group changes?
 
-==> Can we detect suspicious login behavior?
+- Can we detect suspicious login behavior?
 
-==> Can we detect communication with known malicious IPs?
+- Can we detect communication with known malicious IPs?
 
 This is the starting point.
 
@@ -275,19 +275,19 @@ Therefore:
 
 You should verify:
 
-==> Logs are arriving
+- Logs are arriving
 
-==> Parsing is correct
+- Parsing is correct
 
-==> Fields are normalized
+- Fields are normalized
 
-==> Timestamps are correct
+- Timestamps are correct
 
-==> Required fields exist
+- Required fields exist
 
-==> Events are not duplicated
+- Events are not duplicated
 
-==> Events are not heavily delayed
+- Events are not heavily delayed
 
 ---
 
@@ -343,13 +343,13 @@ within 5 minutes
 
 Useful for:
 
-==> Brute force
+- Brute force
 
-==> Repeated authentication failures
+- Repeated authentication failures
 
-==> Excessive connection attempts
+- Excessive connection attempts
 
-==> Repeated security events
+- Repeated security events
 
 ---
 
@@ -711,19 +711,19 @@ Multiple Windows Authentication Failures
 
 The analyst can then investigate:
 
-==> Source IP
+- Source IP
 
-==> Username
+- Username
 
-==> Target host
+- Target host
 
-==> Login type
+- Login type
 
-==> Historical activity
+- Historical activity
 
-==> Related events
+- Related events
 
-==> Endpoint activity
+- Endpoint activity
 
 ---
 
@@ -777,15 +777,15 @@ Alert
 
 The detection becomes stronger when additional context is available:
 
-==> Who performed the change?
+- Who performed the change?
 
-==> Which account was modified?
+- Which account was modified?
 
-==> Which host?
+- Which host?
 
-==> Was there an approved ticket?
+- Was there an approved ticket?
 
-==> Was the change expected?
+- Was the change expected?
 
 ---
 
@@ -900,23 +900,23 @@ It may need tuning.
 
 Detection tuning can include:
 
-==> Adjusting thresholds
+- Adjusting thresholds
 
-==> Changing time windows
+- Changing time windows
 
-==> Adding conditions
+- Adding conditions
 
-==> Adding context
+- Adding context
 
-==> Creating exceptions
+- Creating exceptions
 
-==> Adding trusted sources
+- Adding trusted sources
 
-==> Excluding approved service accounts
+- Excluding approved service accounts
 
-==> Improving field normalization
+- Improving field normalization
 
-==> Correlating additional events
+- Correlating additional events
 
 Example:
 
@@ -1115,17 +1115,17 @@ Again, this is a simplified learning example.
 
 A production detection should account for:
 
-==> Time window
+- Time window
 
-==> Identity context
+- Identity context
 
-==> Trusted sources
+- Trusted sources
 
-==> User risk
+- User risk
 
-==> Related events
+- Related events
 
-==> Appropriate exclusions
+- Appropriate exclusions
 
 ---
 
@@ -1165,17 +1165,17 @@ The important lesson is that Detection Engineering is not limited to one SIEM pl
 
 The concepts apply across:
 
-==> Wazuh
+- Wazuh
 
-==> Splunk
+- Splunk
 
-==> Microsoft Sentinel
+- Microsoft Sentinel
 
-==> QRadar
+- QRadar
 
-==> Elastic Security
+- Elastic Security
 
-==> OpenSearch
+- OpenSearch
 
 and other security monitoring platforms.
 
@@ -1203,17 +1203,17 @@ Deployment
 
 Benefits include:
 
-==> Version history
+- Version history
 
-==> Peer review
+- Peer review
 
-==> Change tracking
+- Change tracking
 
-==> Testing
+- Testing
 
-==> Rollback
+- Rollback
 
-==> Collaboration
+- Collaboration
 
 A detection rule should be treated as production security logic.
 
@@ -1281,23 +1281,23 @@ You should monitor whether the rule is healthy.
 
 Useful metrics include:
 
-==> Alert volume
+- Alert volume
 
-==> False-positive rate
+- False-positive rate
 
-==> Detection firing frequency
+- Detection firing frequency
 
-==> Data freshness
+- Data freshness
 
-==> Rule execution errors
+- Rule execution errors
 
-==> Query performance
+- Query performance
 
-==> Missing telemetry
+- Missing telemetry
 
-==> Detection coverage
+- Detection coverage
 
-==> Analyst feedback
+- Analyst feedback
 
 A rule that worked six months ago may become ineffective after an infrastructure or logging change.
 
@@ -1323,19 +1323,19 @@ Therefore:
 
 Optimize:
 
-==> Search scope
+- Search scope
 
-==> Time range
+- Time range
 
-==> Indexed fields
+- Indexed fields
 
-==> Query structure
+- Query structure
 
-==> Event volume
+- Event volume
 
-==> Correlation frequency
+- Correlation frequency
 
-==> Data retention
+- Data retention
 
 ---
 
@@ -1697,9 +1697,6 @@ The complete Detection Engineering mindset is:
 **Hypothesis → Data → Logic → Rule → Test → Tune → Deploy → Monitor → Improve**
 
 If you master this process, you move beyond simply operating a SIEM and start thinking like a **Detection Engineer**.
-
----
-
 
 ---
 

@@ -12,19 +12,19 @@ This is where **Dashboard & Reporting** becomes important.
 
 A SIEM Engineer should know how to transform raw security data into:
 
-==> SOC Dashboards
+- SOC Dashboards
 
-==> Investigation Dashboards
+- Investigation Dashboards
 
-==> Security Metrics
+- Security Metrics
 
-==> Management Reports
+- Management Reports
 
-==> Detection Coverage
+- Detection Coverage
 
-==> Alert Trends
+- Alert Trends
 
-==> Incident Reports
+- Incident Reports
 
 The basic idea is:
 
@@ -86,17 +86,17 @@ An analyst cannot manually review every event.
 
 A dashboard can immediately show:
 
-==> Which alerts are increasing?
+- Which alerts are increasing?
 
-==> Which systems are generating alerts?
+- Which systems are generating alerts?
 
-==> Which users are involved?
+- Which users are involved?
 
-==> Which detection rules are triggering?
+- Which detection rules are triggering?
 
-==> Which incidents are still open?
+- Which incidents are still open?
 
-==> Are critical alerts increasing?
+- Are critical alerts increasing?
 
 This helps analysts understand the security environment faster.
 
@@ -162,27 +162,27 @@ Report = What happened during a period?
 
 A SIEM Engineer may be responsible for:
 
-==> Creating dashboards
+- Creating dashboards
 
-==> Building queries
+- Building queries
 
-==> Designing visualizations
+- Designing visualizations
 
-==> Creating reports
+- Creating reports
 
-==> Maintaining dashboard data
+- Maintaining dashboard data
 
-==> Validating metrics
+- Validating metrics
 
-==> Optimizing queries
+- Optimizing queries
 
-==> Troubleshooting missing data
+- Troubleshooting missing data
 
-==> Supporting SOC analysts
+- Supporting SOC analysts
 
-==> Supporting management reporting
+- Supporting management reporting
 
-==> Monitoring SIEM health
+- Monitoring SIEM health
 
 ---
 
@@ -251,19 +251,19 @@ One of the most important SOC dashboards.
 
 Useful metrics:
 
-==> Alerts by severity
+- Alerts by severity
 
-==> Alerts by status
+- Alerts by status
 
-==> Alerts by detection rule
+- Alerts by detection rule
 
-==> Alerts by source
+- Alerts by source
 
-==> Alerts by host
+- Alerts by host
 
-==> Alerts by user
+- Alerts by user
 
-==> Alerts over time
+- Alerts over time
 
 Example:
 
@@ -301,17 +301,17 @@ But remember:
 
 It could be caused by:
 
-==> New detection rules
+- New detection rules
 
-==> Configuration changes
+- Configuration changes
 
-==> New log sources
+- New log sources
 
-==> Scanner activity
+- Scanner activity
 
-==> Increased legitimate activity
+- Increased legitimate activity
 
-==> Detection tuning problems
+- Detection tuning problems
 
 Therefore, dashboards provide visibility; analysts still need investigation.
 
@@ -378,17 +378,17 @@ user02 → 41
 
 Additional metrics:
 
-==> Successful logins
+- Successful logins
 
-==> Failed logins
+- Failed logins
 
-==> MFA failures
+- MFA failures
 
-==> Login source countries/locations where legitimately available
+- Login source countries/locations where legitimately available
 
-==> Unusual login times
+- Unusual login times
 
-==> Privileged account activity
+- Privileged account activity
 
 This can help identify suspicious authentication behavior.
 
@@ -425,19 +425,19 @@ The exact fields depend on the endpoint security platform and integration.
 
 Useful network metrics include:
 
-==> Firewall events
+- Firewall events
 
-==> IDS/IPS alerts
+- IDS/IPS alerts
 
-==> VPN activity
+- VPN activity
 
-==> Proxy activity
+- Proxy activity
 
-==> DNS events
+- DNS events
 
-==> Network anomalies
+- Network anomalies
 
-==> Blocked connections
+- Blocked connections
 
 Example:
 
@@ -487,21 +487,21 @@ Authentication dashboards are extremely useful.
 
 Monitor:
 
-==> Failed logins
+- Failed logins
 
-==> Successful logins
+- Successful logins
 
-==> Account lockouts
+- Account lockouts
 
-==> Privileged logins
+- Privileged logins
 
-==> New accounts
+- New accounts
 
-==> Password changes
+- Password changes
 
-==> MFA failures
+- MFA failures
 
-==> Authentication anomalies
+- Authentication anomalies
 
 Example:
 
@@ -522,21 +522,21 @@ Detection Engineers need their own visibility.
 
 Monitor:
 
-==> Detection rules
+- Detection rules
 
-==> Rule execution
+- Rule execution
 
-==> Alert count
+- Alert count
 
-==> False positives
+- False positives
 
-==> True positives
+- True positives
 
-==> Detection coverage
+- Detection coverage
 
-==> Disabled rules
+- Disabled rules
 
-==> Detection errors
+- Detection errors
 
 Example:
 
@@ -573,13 +573,13 @@ Credential Access
 
 A dashboard can show:
 
-==> Techniques covered
+- Techniques covered
 
-==> Techniques without detection
+- Techniques without detection
 
-==> Number of detections per technique
+- Number of detections per technique
 
-==> Alert activity by technique
+- Alert activity by technique
 
 This helps identify detection coverage gaps.
 
@@ -689,25 +689,25 @@ Therefore, always document what your organization means by MTTR.
 
 A SOC metrics dashboard can include:
 
-==> MTTD
+- MTTD
 
-==> MTTR
+- MTTR
 
-==> Alert volume
+- Alert volume
 
-==> Incident volume
+- Incident volume
 
-==> False-positive rate
+- False-positive rate
 
-==> Escalation rate
+- Escalation rate
 
-==> SLA compliance
+- SLA compliance
 
-==> Automation rate
+- Automation rate
 
-==> Open-case backlog
+- Open-case backlog
 
-==> Detection coverage
+- Detection coverage
 
 Example:
 
@@ -762,17 +762,17 @@ Wazuh-Agent-22    Healthy
 
 Important metrics:
 
-==> Last received event
+- Last received event
 
-==> EPS
+- EPS
 
-==> Event delay
+- Event delay
 
-==> Parsing failures
+- Parsing failures
 
-==> Connection status
+- Connection status
 
-==> Agent status
+- Agent status
 
 ---
 
@@ -794,17 +794,17 @@ Peak EPS:
 
 A sudden change can indicate:
 
-==> Log source configuration change
+- Log source configuration change
 
-==> Attack activity
+- Attack activity
 
-==> Application issue
+- Application issue
 
-==> Duplicate logging
+- Duplicate logging
 
-==> Integration problem
+- Integration problem
 
-==> SIEM ingestion problem
+- SIEM ingestion problem
 
 ---
 
@@ -845,19 +845,19 @@ A dashboard is only as good as the query behind it.
 
 Typical query operations include:
 
-==> Filtering
+- Filtering
 
-==> Grouping
+- Grouping
 
-==> Counting
+- Counting
 
-==> Aggregation
+- Aggregation
 
-==> Time bucketing
+- Time bucketing
 
-==> Sorting
+- Sorting
 
-==> Correlation
+- Correlation
 
 Example concept:
 
@@ -883,17 +883,17 @@ Security data is often time-based.
 
 Useful visualizations include:
 
-==> Line charts
+- Line charts
 
-==> Bar charts
+- Bar charts
 
-==> Area charts
+- Area charts
 
-==> Tables
+- Tables
 
-==> Heatmaps
+- Heatmaps
 
-==> Single-value metrics
+- Single-value metrics
 
 Choose the visualization based on the question.
 
@@ -1161,17 +1161,17 @@ Dashboards may contain sensitive information.
 
 Protect them with:
 
-==> RBAC
+- RBAC
 
-==> Authentication
+- Authentication
 
-==> Least privilege
+- Least privilege
 
-==> Appropriate data access
+- Appropriate data access
 
-==> Audit logging
+- Audit logging
 
-==> Secure sharing
+- Secure sharing
 
 For example, an executive dashboard may not need the same raw event details available to a SOC analyst.
 
@@ -1181,21 +1181,21 @@ For example, an executive dashboard may not need the same raw event details avai
 
 Common SIEM reports include:
 
-==> Daily SOC Report
+- Daily SOC Report
 
-==> Weekly Security Report
+- Weekly Security Report
 
-==> Monthly Security Report
+- Monthly Security Report
 
-==> Incident Report
+- Incident Report
 
-==> Vulnerability-related Security Report
+- Vulnerability-related Security Report
 
-==> Compliance Report
+- Compliance Report
 
-==> Detection Coverage Report
+- Detection Coverage Report
 
-==> Log Health Report
+- Log Health Report
 
 ---
 
@@ -1484,19 +1484,19 @@ Dashboards need maintenance.
 
 Things change:
 
-==> Log sources
+- Log sources
 
-==> Field names
+- Field names
 
-==> Detection rules
+- Detection rules
 
-==> SIEM versions
+- SIEM versions
 
-==> Data schemas
+- Data schemas
 
-==> Business requirements
+- Business requirements
 
-==> Security policies
+- Security policies
 
 Therefore:
 
@@ -1518,17 +1518,17 @@ Dashboards are not only for management.
 
 Detection Engineers can use dashboards to identify:
 
-==> Noisy rules
+- Noisy rules
 
-==> Detection spikes
+- Detection spikes
 
-==> Detection gaps
+- Detection gaps
 
-==> Data source problems
+- Data source problems
 
-==> False-positive trends
+- False-positive trends
 
-==> Rule performance
+- Rule performance
 
 Example:
 
@@ -1734,33 +1734,33 @@ Security / Operational Decision
 
 To become strong in Dashboard & Reporting, learn:
 
-==> SPL
+- SPL
 
-==> KQL
+- KQL
 
-==> Elasticsearch/OpenSearch queries
+- Elasticsearch/OpenSearch queries
 
-==> Data aggregation
+- Data aggregation
 
-==> Time-series analysis
+- Time-series analysis
 
-==> Visualization
+- Visualization
 
-==> Dashboard design
+- Dashboard design
 
-==> SIEM data models
+- SIEM data models
 
-==> SOC metrics
+- SOC metrics
 
-==> MTTD/MTTR concepts
+- MTTD/MTTR concepts
 
-==> Detection coverage
+- Detection coverage
 
-==> Log health monitoring
+- Log health monitoring
 
-==> Reporting
+- Reporting
 
-==> Data validation
+- Data validation
 
 ---
 
@@ -1776,38 +1776,35 @@ The complete concept is:
 
 A good SIEM dashboard should answer:
 
-==> What is happening?
+- What is happening?
 
-==> Where is it happening?
+- Where is it happening?
 
-==> Which users or systems are involved?
+- Which users or systems are involved?
 
-==> Which detections are firing?
+- Which detections are firing?
 
-==> How serious is the activity?
+- How serious is the activity?
 
-==> What is changing over time?
+- What is changing over time?
 
-==> What needs investigation?
+- What needs investigation?
 
 And a good report should answer:
 
-==> What happened?
+- What happened?
 
-==> How frequently?
+- How frequently?
 
-==> How did the SOC respond?
+- How did the SOC respond?
 
-==> What trends were observed?
+- What trends were observed?
 
-==> What should be monitored or improved?
+- What should be monitored or improved?
 
 **Remember:**
 
 > **A dashboard is not decoration. It is a security visibility and investigation tool.**
-
----
-
 
 ---
 

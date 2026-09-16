@@ -61,22 +61,22 @@ SIEM Platform
 
 A SIEM Engineer may be responsible for:
 
-==> Deploying the SIEM
-==> Configuring data sources
-==> Onboarding logs
-==> Creating indexes/data streams
-==> Building parsers
-==> Creating detection rules
-==> Writing queries
-==> Creating dashboards
-==> Managing alerts
-==> Tuning false positives
-==> Monitoring ingestion
-==> Managing storage
-==> Troubleshooting performance
-==> Integrating threat intelligence
-==> Automating security workflows
-==> Maintaining and upgrading the platform
+- Deploying the SIEM
+- Configuring data sources
+- Onboarding logs
+- Creating indexes/data streams
+- Building parsers
+- Creating detection rules
+- Writing queries
+- Creating dashboards
+- Managing alerts
+- Tuning false positives
+- Monitoring ingestion
+- Managing storage
+- Troubleshooting performance
+- Integrating threat intelligence
+- Automating security workflows
+- Maintaining and upgrading the platform
 
 So, SIEM engineering is much broader than simply watching a dashboard.
 
@@ -86,12 +86,12 @@ So, SIEM engineering is much broader than simply watching a dashboard.
 
 Some commonly encountered platforms include:
 
-==> Splunk
-==> Microsoft Sentinel
-==> IBM QRadar
-==> Elastic Security
-==> OpenSearch
-==> Wazuh
+- Splunk
+- Microsoft Sentinel
+- IBM QRadar
+- Elastic Security
+- OpenSearch
+- Wazuh
 
 Each platform has its own architecture, terminology, query language, integrations, and operational model.
 
@@ -107,19 +107,19 @@ In security environments, **Splunk Enterprise Security** provides security monit
 
 For a SIEM Engineer, important Splunk concepts include:
 
-==> Index
-==> Sourcetype
-==> Source
-==> Host
-==> Forwarder
-==> Indexer
-==> Search Head
-==> SPL
-==> Data Model
-==> Correlation Search
-==> Risk-based Alerting
-==> Dashboard
-==> Alert
+- Index
+- Sourcetype
+- Source
+- Host
+- Forwarder
+- Indexer
+- Search Head
+- SPL
+- Data Model
+- Correlation Search
+- Risk-based Alerting
+- Dashboard
+- Alert
 
 ---
 
@@ -173,12 +173,12 @@ This searches for Windows failed authentication events based on the specified fi
 
 You can then perform operations such as:
 
-==> Filtering
-==> Counting
-==> Grouping
-==> Statistical analysis
-==> Time-based analysis
-==> Correlation
+- Filtering
+- Counting
+- Grouping
+- Statistical analysis
+- Time-based analysis
+- Correlation
 
 Example:
 
@@ -200,15 +200,15 @@ It integrates closely with the Microsoft security ecosystem and Azure services.
 
 Important Sentinel concepts include:
 
-==> Data Connectors
-==> Log Analytics Workspace
-==> KQL
-==> Analytics Rules
-==> Incidents
-==> Workbooks
-==> Hunting Queries
-==> Automation Rules
-==> Playbooks
+- Data Connectors
+- Log Analytics Workspace
+- KQL
+- Analytics Rules
+- Incidents
+- Workbooks
+- Hunting Queries
+- Automation Rules
+- Playbooks
 
 ---
 
@@ -229,15 +229,15 @@ This can help identify accounts with a high number of failed authentication even
 
 A SIEM Engineer working with Sentinel should become comfortable with:
 
-==> `where`
-==> `summarize`
-==> `project`
-==> `extend`
-==> `join`
-==> `count()`
-==> Time filtering
-==> Aggregation
-==> Correlation
+- `where`
+- `summarize`
+- `project`
+- `extend`
+- `join`
+- `count()`
+- Time filtering
+- Aggregation
+- Correlation
 
 ---
 
@@ -279,15 +279,15 @@ QRadar is known for centralized security event monitoring, correlation, offense 
 
 Important concepts include:
 
-==> Events
-==> Flows
-==> Log Sources
-==> Offenses
-==> Rules
-==> CRE
-==> DSM
-==> Ariel
-==> Reference Sets
+- Events
+- Flows
+- Log Sources
+- Offenses
+- Rules
+- CRE
+- DSM
+- Ariel
+- Reference Sets
 
 ---
 
@@ -295,13 +295,13 @@ Important concepts include:
 
 A QRadar environment can receive events from different sources:
 
-==> Firewall
-==> Windows
-==> Linux
-==> IDS/IPS
-==> VPN
-==> Proxy
-==> Applications
+- Firewall
+- Windows
+- Linux
+- IDS/IPS
+- VPN
+- Proxy
+- Applications
 
 QRadar can correlate events and generate an **Offense** when activity meets configured conditions.
 
@@ -329,13 +329,13 @@ It helps QRadar understand and process events from different device types.
 
 A SIEM Engineer working with QRadar should understand:
 
-==> Log Source configuration
-==> DSM
-==> Event parsing
-==> Rules
-==> Offenses
-==> Reference Sets
-==> Event properties
+- Log Source configuration
+- DSM
+- Event parsing
+- Rules
+- Offenses
+- Reference Sets
+- Event properties
 
 ---
 
@@ -345,15 +345,15 @@ A SIEM Engineer working with QRadar should understand:
 
 Important components include:
 
-==> Elasticsearch
-==> Kibana
-==> Elastic Agent
-==> Beats
-==> Data Streams
-==> Detection Rules
-==> Cases
-==> Timeline
-==> Threat Intelligence
+- Elasticsearch
+- Kibana
+- Elastic Agent
+- Beats
+- Data Streams
+- Detection Rules
+- Cases
+- Timeline
+- Threat Intelligence
 
 ---
 
@@ -383,14 +383,14 @@ Security Analyst
 
 A SIEM Engineer should understand:
 
-==> Indexing
-==> Data Streams
-==> Mappings
-==> Fields
-==> Querying
-==> Shards
-==> Replicas
-==> Cluster health
+- Indexing
+- Data Streams
+- Mappings
+- Fields
+- Querying
+- Shards
+- Replicas
+- Cluster health
 
 ---
 
@@ -400,23 +400,23 @@ A SIEM Engineer should understand:
 
 An OpenSearch-based security environment can provide:
 
-==> Log collection
-==> Search
-==> Dashboards
-==> Alerting
-==> Security analytics
-==> Detection capabilities
+- Log collection
+- Search
+- Dashboards
+- Alerting
+- Security analytics
+- Detection capabilities
 
 For an engineer, useful concepts include:
 
-==> OpenSearch
-==> OpenSearch Dashboards
-==> Index
-==> Index Pattern
-==> Data Stream
-==> Query
-==> Alert
-==> Security Analytics
+- OpenSearch
+- OpenSearch Dashboards
+- Index
+- Index Pattern
+- Data Stream
+- Query
+- Alert
+- Security Analytics
 
 ---
 
@@ -428,10 +428,10 @@ For someone starting SIEM engineering, Wazuh can be a useful hands-on platform b
 
 Important Wazuh components include:
 
-==> Wazuh Agent
-==> Wazuh Server
-==> Wazuh Indexer
-==> Wazuh Dashboard
+- Wazuh Agent
+- Wazuh Server
+- Wazuh Indexer
+- Wazuh Dashboard
 
 ---
 
@@ -588,15 +588,15 @@ SIEM platforms provide dashboards to visualize security data.
 
 Common dashboard components:
 
-==> Alert count
-==> Severity
-==> Top source IPs
-==> Top targeted assets
-==> Failed authentication
-==> Malware events
-==> Network activity
-==> Incident trends
-==> Detection trends
+- Alert count
+- Severity
+- Top source IPs
+- Top targeted assets
+- Failed authentication
+- Malware events
+- Network activity
+- Incident trends
+- Detection trends
 
 But remember:
 
@@ -612,17 +612,17 @@ A SIEM Engineer also needs to monitor the platform itself.
 
 Important metrics include:
 
-==> CPU
-==> Memory
-==> Disk
-==> Network
-==> EPS
-==> Ingestion latency
-==> Queue size
-==> Search performance
-==> Storage utilization
-==> Service health
-==> Cluster health
+- CPU
+- Memory
+- Disk
+- Network
+- EPS
+- Ingestion latency
+- Queue size
+- Search performance
+- Storage utilization
+- Service health
+- Cluster health
 
 The SIEM should be treated as a production security system.
 
@@ -634,16 +634,16 @@ There is no single platform that fits every organization.
 
 The choice may depend on:
 
-==> Organization size
-==> Existing infrastructure
-==> Cloud strategy
-==> Budget
-==> Compliance requirements
-==> Data volume
-==> Security requirements
-==> Existing Microsoft environment
-==> Required integrations
-==> Available engineering skills
+- Organization size
+- Existing infrastructure
+- Cloud strategy
+- Budget
+- Compliance requirements
+- Data volume
+- Security requirements
+- Existing Microsoft environment
+- Required integrations
+- Available engineering skills
 
 For example, an organization heavily invested in Microsoft services may evaluate Microsoft Sentinel, while another organization may already have a mature Splunk environment.
 
@@ -659,26 +659,26 @@ A practical approach is:
 
 ### Foundation
 
-==> Networking
-==> Linux
-==> Windows
-==> Authentication
-==> Logs
-==> Security fundamentals
+- Networking
+- Linux
+- Windows
+- Authentication
+- Logs
+- Security fundamentals
 
 ### Choose One Primary SIEM
 
 Go deep into one:
 
-==> Splunk
+- Splunk
 **or**
-==> Microsoft Sentinel
+- Microsoft Sentinel
 **or**
-==> QRadar
+- QRadar
 **or**
-==> Elastic
+- Elastic
 **or**
-==> Wazuh
+- Wazuh
 
 ### Then Learn Others
 
@@ -724,16 +724,16 @@ Dashboard
 
 Then practice:
 
-==> Generate failed SSH logins
-==> Generate Windows authentication events
-==> Collect logs
-==> Search events
-==> Create detection rules
-==> Generate alerts
-==> Investigate alerts
-==> Tune false positives
-==> Build dashboard
-==> Configure Active Response
+- Generate failed SSH logins
+- Generate Windows authentication events
+- Collect logs
+- Search events
+- Create detection rules
+- Generate alerts
+- Investigate alerts
+- Tune false positives
+- Build dashboard
+- Configure Active Response
 
 After that, repeat similar exercises using another SIEM platform.
 
@@ -842,15 +842,15 @@ If you understand those concepts deeply, you can adapt to different SIEM technol
 
 In the next article, we will go deeper into:
 
-==> Syslog
-==> CEF
-==> API Integration
-==> Agents
-==> Forwarders
-==> Cloud Connectors
-==> Custom Parsers
-==> Data Onboarding
-==> Log Pipeline Troubleshooting
+- Syslog
+- CEF
+- API Integration
+- Agents
+- Forwarders
+- Cloud Connectors
+- Custom Parsers
+- Data Onboarding
+- Log Pipeline Troubleshooting
 
 **Collecting logs is one thing. Successfully integrating them into a SIEM is another.**
 

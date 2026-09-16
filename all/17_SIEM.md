@@ -1,8 +1,8 @@
-# 🟢🟡🔴 SIEM Engineer #17 — Hands-On SIEM: Complete Multi-Platform Practical Guide
+# 🟢🟡🔴 SIEM Engineer #17 — Hands-On SIEM: Multi-Platform Practical Guide
 
 ## 🛡️ Introduction
 
-পর্যন্ত আমরা যা শিখেছি তার বেশিরভাগই **theory**।
+এখন পর্যন্ত আমরা যা শিখেছি তার বেশিরভাগই **theory**।
 
 এই article-এর মূল কথা একটাই:
 
@@ -10,11 +10,11 @@
 
 একজন SIEM Engineer-এর জন্য দরকার:
 
-==> একটি platform ভালোভাবে জানা (primary skill)
+- একটি platform ভালোভাবে জানা (primary skill)
 
-==> অন্য platform-গুলোতে একই কাজ করতে পারা (adaptability)
+- অন্য platform-গুলোতে একই কাজ করতে পারা (adaptability)
 
-==> কোন platform-এ কোন কাজ কীভাবে হয় তার ধারণা (concept portability)
+- কোন platform-এ কোন কাজ কীভাবে হয় তার ধারণা (concept portability)
 
 এই guide-এ আমরা **একটি lab, একটি dataset, এবং একই workflow** ব্যবহার করে শিখব:
 
@@ -119,7 +119,7 @@ SIEM platform (per platform)        → 4-8 GB RAM
 
 ```bash
 # Ubuntu Server-এ all-in-one install
-curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh
+curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh
 sudo bash ./wazuh-install.sh -a
 ```
 
@@ -132,7 +132,7 @@ Dashboard      → web UI (port 443)
 Agent          → Windows/Linux endpoint-এ
 ```
 
-## 3.2 Splunk (Free = 500 MB/day)
+## 3.2 Splunk (Free/Trial Lab Option — 500 MB/day)
 
 ```bash
 # Docker (easiest)
@@ -142,7 +142,7 @@ docker run -d -p 8000:8000 -p 8088:8088 -p 9997:9997 \
   --name splunk splunk/splunk:latest
 ```
 
-অথবা direct install: `splunk.com` → Splunk Enterprise Free trial → পরে Free license।
+অথবা direct install: `splunk.com` → Splunk Enterprise free trial/free license option। Splunk Enterprise Trial/Free সাধারণত standalone lab use-এর জন্য 500 MB/day indexing limit দেয়; install করার আগে official Splunk page verify করুন।
 
 ```text
 Web UI      → http://localhost:8000
@@ -150,37 +150,41 @@ HEC port    → 8088 (HTTP Event Collector)
 UF port     → 9997 (Universal Forwarder)
 ```
 
-## 3.3 Elastic Security (Free Basic license)
+## 3.3 Elastic Security (Basic License Lab Option)
 
 ```bash
 # Docker Compose (official quickstart - see elastic.co docs for current URL)
-curl -sO https://raw.githubusercontent.com/elastic/elasticsearch/main/docs/reference/setup/install/docker/docker-compose.yml 
+curl -sO https://raw.githubusercontent.com/elastic/elasticsearch/main/docs/reference/setup/install/docker/docker-compose.yml
 # অথবা simplified:
 docker network create elastic
 docker run -d --name es01 --net elastic -p 9200:9200 \
   -e "discovery.type=single-node" \
   -e "xpack.security.enabled=false" \
-  docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+  docker.elastic.co/elasticsearch/elasticsearch:9.5.3
 docker run -d --name kibana --net elastic -p 5601:5601 \
-  docker.elastic.co/kibana/kibana:8.15.0
+  docker.elastic.co/kibana/kibana:9.5.3
 ```
 
 তারপর Kibana → **Security → Install Elastic Agent** → endpoint-এ agent install।
 
-## 3.4 OpenSearch (Fully Free)
+## 3.4 OpenSearch (Open-Source Lab Option)
 
 ```bash
 # Docker Compose
 git clone https://github.com/opensearch-project/opensearch-devops
 # অথবা simple:
-docker run -d -p 9200:9200 -p 9600:9600 \
+docker network create opensearch-net
+docker run -d --name opensearch --net opensearch-net -p 9200:9200 -p 9600:9600 \
   -e "discovery.type=single-node" \
-  -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=StrongPass123!" \
+  -e "DISABLE_SECURITY_PLUGIN=true" \
   opensearchproject/opensearch:latest
-docker run -d -p 5601:5601 \
-  -e "OPENSEARCH_HOSTS=[\"https://opensearch:9200\"]" \
+docker run -d --name opensearch-dashboards --net opensearch-net -p 5601:5601 \
+  -e "OPENSEARCH_HOSTS=[\"http://opensearch:9200\"]" \
+  -e "DISABLE_SECURITY_DASHBOARDS_PLUGIN=true" \
   opensearchproject/opensearch-dashboards:latest
 ```
+
+> ⚠️ Security plugin disable করা শুধু isolated lab/testing-এর জন্য। Production setup official secured deployment guide follow করবে।
 
 ## 3.5 Microsoft Sentinel (Cloud)
 
@@ -221,7 +225,7 @@ docker run -d -p 5601:5601 \
 │  → Windows-এ নতুন user তৈরি                       │
 │                                                    │
 │  DATASET 5 — Firewall Traffic (optional)          │
-│  → pfSense/Fortigate demo syslog                  │
+│  → pfSense/FortiGate demo syslog                  │
 └────────────────────────────────────────────────────┘
 ```
 
@@ -262,7 +266,7 @@ Ubuntu SSH logs
    ├── Wazuh Agent (Ubuntu-তে install)      → Wazuh Manager
    ├── Universal Forwarder                   → Splunk Indexer
    ├── Elastic Agent / Filebeat              → Elasticsearch
-   ├── Fluentbit / Logstash                  → OpenSearch
+   ├── Fluent Bit / Logstash                 → OpenSearch
    └── Syslog (rsyslog → collector/AMA)      → Sentinel Log Analytics
 ```
 
@@ -415,7 +419,7 @@ Dashboards → Security Analytics → Detector:
 ```text
 Input:    syslog index
 Workflow: ssh_brute_force
-Trigger:  count >= 10 in 5m → Notification channel (email/slack)
+Trigger:  count >= 10 in 5m → Notification channel (email/Slack)
 ```
 
 ## 7.5 Sentinel Analytics Rule (KQL)
@@ -632,7 +636,7 @@ WEEK 6 — Advanced + Portfolio
 ├── MISP TI integration → IOC match alert
 ├── Shuffle/Python automation
 ├── Sigma rules লিখুন → convert → deploy
-└── Portfolio: GitHub repo + screenshots + writeup
+└── Portfolio: GitHub repo + screenshots + write-up
 ```
 
 ---
@@ -734,7 +738,7 @@ Sentinel-এর ingestion budget মনিটর করুন। Lab শেষ�
 
 ```text
 [ ] Lab VMs ready (Ubuntu, Windows, Attacker)
-[ ] Dataset scripts ready (brute force, windows events)
+[ ] Dataset scripts ready (brute force, Windows events)
 [ ] Wazuh installed + 2 agents
 [ ] Splunk installed + UF
 [ ] Elastic installed + agent

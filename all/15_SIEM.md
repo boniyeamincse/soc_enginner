@@ -20,14 +20,14 @@ This is where **Threat Hunting** becomes important.
 
 Threat Hunting means proactively searching security data to discover:
 
-==> Unknown threats
-==> Hidden attacker activity
-==> Suspicious behavior
-==> Compromised accounts
-==> Persistence
-==> Lateral movement
-==> Data exfiltration
-==> Detection gaps
+- Unknown threats
+- Hidden attacker activity
+- Suspicious behavior
+- Compromised accounts
+- Persistence
+- Lateral movement
+- Data exfiltration
+- Detection gaps
 
 A SIEM Engineer should understand how SIEM data can support continuous threat hunting.
 
@@ -73,13 +73,13 @@ The key difference is that hunting does not always wait for an alert.
 
 Attackers may:
 
-==> Use legitimate tools
-==> Compromise valid accounts
-==> Modify existing processes
-==> Blend into normal traffic
-==> Avoid known malware signatures
-==> Operate slowly
-==> Exploit detection gaps
+- Use legitimate tools
+- Compromise valid accounts
+- Modify existing processes
+- Blend into normal traffic
+- Avoid known malware signatures
+- Operate slowly
+- Exploit detection gaps
 
 Therefore:
 
@@ -197,12 +197,12 @@ be performing unusual authentication activity.
 
 Then ask:
 
-==> Which users?
-==> Which hosts?
-==> Which source IPs?
-==> What time period?
-==> What authentication methods?
-==> What behavior is unusual?
+- Which users?
+- Which hosts?
+- Which source IPs?
+- What time period?
+- What authentication methods?
+- What behavior is unusual?
 
 ---
 
@@ -287,11 +287,11 @@ IOC means **Indicator of Compromise**.
 
 Examples:
 
-==> Malicious IP
-==> Malicious domain
-==> URL
-==> File hash
-==> Email address
+- Malicious IP
+- Malicious domain
+- URL
+- File hash
+- Email address
 
 Suppose you have:
 
@@ -310,12 +310,12 @@ dst_ip = "203.0.113.50"
 
 Then investigate:
 
-==> Which systems communicated with it?
-==> When?
-==> How frequently?
-==> Which user was involved?
-==> Which process generated the traffic?
-==> Was there related DNS activity?
+- Which systems communicated with it?
+- When?
+- How frequently?
+- Which user was involved?
+- Which process generated the traffic?
+- Was there related DNS activity?
 
 ---
 
@@ -367,11 +367,11 @@ Suspicious PowerShell
 
 Instead of searching only for one known hash or IP, search for behaviors such as:
 
-==> Encoded commands
-==> Unusual PowerShell execution
-==> Suspicious parent-child processes
-==> Unexpected network connections
-==> Unusual users executing PowerShell
+- Encoded commands
+- Unusual PowerShell execution
+- Suspicious parent-child processes
+- Unexpected network connections
+- Unusual users executing PowerShell
 
 This can help identify previously unknown infrastructure.
 
@@ -419,33 +419,33 @@ A SIEM hunter may use:
 
 ### Endpoint
 
-==> Windows Security Logs
-==> Sysmon
-==> Linux audit logs
-==> EDR
+- Windows Security Logs
+- Sysmon
+- Linux audit logs
+- EDR
 
 ### Network
 
-==> Firewall
-==> IDS/IPS
-==> DNS
-==> Proxy
-==> NetFlow
+- Firewall
+- IDS/IPS
+- DNS
+- Proxy
+- NetFlow
 
 ### Identity
 
-==> Active Directory
-==> VPN
-==> SSO
-==> MFA
-==> Cloud Identity
+- Active Directory
+- VPN
+- SSO
+- MFA
+- Cloud Identity
 
 ### Application
 
-==> Web Server
-==> Database
-==> API Gateway
-==> Application logs
+- Web Server
+- Database
+- API Gateway
+- Application logs
 
 The more useful telemetry available, the more hunting possibilities exist.
 
@@ -584,11 +584,11 @@ Observed:
 
 Questions:
 
-==> Is this legitimate?
-==> Was the password recently changed?
-==> Is an application generating the activity?
-==> Is the account under attack?
-==> Was there a successful login afterward?
+- Is this legitimate?
+- Was the password recently changed?
+- Is an application generating the activity?
+- Is the account under attack?
+- Was there a successful login afterward?
 
 ---
 
@@ -680,13 +680,13 @@ Network activity?
 
 Network hunting can investigate:
 
-==> Rare destinations
-==> High-volume connections
-==> Unusual ports
-==> Multiple destination hosts
-==> DNS anomalies
-==> Repeated failed connections
-==> Unexpected outbound traffic
+- Rare destinations
+- High-volume connections
+- Unusual ports
+- Multiple destination hosts
+- DNS anomalies
+- Repeated failed connections
+- Unexpected outbound traffic
 
 Example:
 
@@ -700,10 +700,10 @@ within 10 minutes
 
 Investigate:
 
-==> What process created the connections?
-==> Is the destination legitimate?
-==> Is this normal for the host?
-==> What DNS requests occurred?
+- What process created the connections?
+- Is the destination legitimate?
+- Is this normal for the host?
+- What DNS requests occurred?
 
 ---
 
@@ -713,11 +713,11 @@ DNS is extremely useful for threat hunting.
 
 Search for:
 
-==> Rare domains
-==> Newly observed domains
-==> High-frequency queries
-==> Suspicious query patterns
-==> Unexpected external domains
+- Rare domains
+- Newly observed domains
+- High-frequency queries
+- Suspicious query patterns
+- Unexpected external domains
 
 Example:
 
@@ -920,12 +920,12 @@ But threat intelligence should not be treated as absolute truth.
 
 Consider:
 
-==> Source reputation
-==> Confidence
-==> Age
-==> Expiration
-==> Context
-==> Multiple sources
+- Source reputation
+- Confidence
+- Age
+- Expiration
+- Context
+- Multiple sources
 
 ---
 
@@ -1167,11 +1167,11 @@ Multiple remote connections in a short period may warrant investigation dependin
 
 A good query should be:
 
-==> Focused
-==> Understandable
-==> Reusable
-==> Efficient
-==> Documented
+- Focused
+- Understandable
+- Reusable
+- Efficient
+- Documented
 
 Start with a simple query.
 
@@ -1254,15 +1254,15 @@ Threat hunting should not be measured only by the number of hunts.
 
 Useful metrics include:
 
-==> Hunts completed
-==> Suspicious findings
-==> Confirmed incidents
-==> Detection gaps discovered
-==> New detections created
-==> Existing detections improved
-==> Time spent per hunt
-==> Data sources used
-==> Coverage improvements
+- Hunts completed
+- Suspicious findings
+- Confirmed incidents
+- Detection gaps discovered
+- New detections created
+- Existing detections improved
+- Time spent per hunt
+- Data sources used
+- Coverage improvements
 
 A hunt that finds a detection gap can be valuable even when no incident is discovered.
 
@@ -1272,16 +1272,16 @@ A hunt that finds a detection gap can be valuable even when no incident is disco
 
 Avoid:
 
-==> Searching without a hypothesis
-==> Searching too much data at once
-==> Ignoring normal behavior
-==> Trusting one IOC blindly
-==> Ignoring historical data
-==> Not correlating data sources
-==> Not documenting findings
-==> Treating anomalies as confirmed attacks
-==> Never converting findings into detections
-==> Ignoring query performance
+- Searching without a hypothesis
+- Searching too much data at once
+- Ignoring normal behavior
+- Trusting one IOC blindly
+- Ignoring historical data
+- Not correlating data sources
+- Not documenting findings
+- Treating anomalies as confirmed attacks
+- Never converting findings into detections
+- Ignoring query performance
 
 ---
 
@@ -1526,13 +1526,13 @@ Threat Hunting helps answer that question.
 
 Remember:
 
-==> **IOC Hunting** finds known indicators.
-==> **TTP Hunting** finds attacker behavior.
-==> **Behavioral Hunting** finds abnormal activity.
-==> **Historical Hunting** finds previous exposure.
-==> **Correlation** connects separate events.
-==> **Pivoting** expands the investigation.
-==> **Detection Engineering** turns hunting knowledge into repeatable detection.
+- **IOC Hunting** finds known indicators.
+- **TTP Hunting** finds attacker behavior.
+- **Behavioral Hunting** finds abnormal activity.
+- **Historical Hunting** finds previous exposure.
+- **Correlation** connects separate events.
+- **Pivoting** expands the investigation.
+- **Detection Engineering** turns hunting knowledge into repeatable detection.
 
 The strongest SIEM workflow is not:
 
@@ -1555,16 +1555,6 @@ New Detection
  ↓
 Continuous Improvement
 ```
-
----
-
-## 📚 SIEM Engineer Learning Series
-
-**Previous:** #14 — Advanced Detection Engineering
-
-**Current:** #15 — Threat Hunting with SIEM
-
-**Next:** #16 — SIEM Data Quality & Troubleshooting
 
 ---
 

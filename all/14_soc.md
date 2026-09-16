@@ -27,13 +27,13 @@ Does this behavior match an attack pattern?
 
 Advanced Detection Engineering focuses on building detections that are:
 
-==> Accurate
-==> Context-aware
-==> Scalable
-==> Testable
-==> Maintainable
-==> Low-noise
-==> Useful for SOC Analysts
+- Accurate
+- Context-aware
+- Scalable
+- Testable
+- Maintainable
+- Low-noise
+- Useful for SOC Analysts
 
 ---
 
@@ -41,15 +41,15 @@ Advanced Detection Engineering focuses on building detections that are:
 
 **Advanced Detection Engineering** is the process of designing SIEM detection logic that identifies suspicious activities by analyzing:
 
-==> Multiple events
-==> User behavior
-==> Host behavior
-==> Network activity
-==> Authentication patterns
-==> Process activity
-==> Threat Intelligence
-==> Attack techniques
-==> Historical behavior
+- Multiple events
+- User behavior
+- Host behavior
+- Network activity
+- Authentication patterns
+- Process activity
+- Threat Intelligence
+- Attack techniques
+- Historical behavior
 
 Instead of depending on a single event, advanced detection can combine multiple signals.
 
@@ -85,11 +85,11 @@ A large organization can generate thousands or millions of events every day.
 
 If every suspicious-looking event becomes an alert, the SOC may experience:
 
-==> Alert Fatigue
-==> High False Positives
-==> Analyst Overload
-==> Missed Threats
-==> Slow Investigation
+- Alert Fatigue
+- High False Positives
+- Analyst Overload
+- Missed Threats
+- Slow Investigation
 
 Good detection engineering tries to answer:
 
@@ -148,13 +148,13 @@ against multiple user accounts from a single source.
 
 Now identify the required evidence.
 
-==> Authentication logs
-==> Username
-==> Source IP
-==> Destination system
-==> Authentication result
-==> Timestamp
-==> Account type
+- Authentication logs
+- Username
+- Source IP
+- Destination system
+- Authentication result
+- Timestamp
+- Account type
 
 The hypothesis becomes the foundation of the detection.
 
@@ -170,36 +170,36 @@ For example:
 
 Possible sources:
 
-==> Windows Security Logs
-==> Sysmon
-==> PowerShell logs
-==> Endpoint Security
-==> EDR
+- Windows Security Logs
+- Sysmon
+- PowerShell logs
+- Endpoint Security
+- EDR
 
 ### Linux Detection
 
-==> SSH logs
-==> Authentication logs
-==> Audit logs
-==> Process logs
-==> Shell history where appropriate
+- SSH logs
+- Authentication logs
+- Audit logs
+- Process logs
+- Shell history where appropriate
 
 ### Network Detection
 
-==> Firewall
-==> IDS/IPS
-==> Proxy
-==> DNS
-==> VPN
-==> NetFlow
+- Firewall
+- IDS/IPS
+- Proxy
+- DNS
+- VPN
+- NetFlow
 
 ### Identity Detection
 
-==> Active Directory
-==> Azure/Cloud Identity
-==> VPN
-==> SSO
-==> MFA
+- Active Directory
+- Azure/Cloud Identity
+- VPN
+- SSO
+- MFA
 
 ---
 
@@ -227,13 +227,13 @@ Bad field understanding can create bad detections.
 
 Always verify:
 
-==> Field name
-==> Data type
-==> Example values
-==> Normal values
-==> Missing values
-==> Normalization
-==> Timestamp format
+- Field name
+- Data type
+- Example values
+- Normal values
+- Missing values
+- Normalization
+- Timestamp format
 
 ---
 
@@ -261,11 +261,11 @@ User added to privileged group
 
 does not tell us:
 
-==> Was this authorized?
-==> Who performed it?
-==> From which host?
-==> Was there suspicious activity before it?
-==> Is this normal for the user?
+- Was this authorized?
+- Who performed it?
+- From which host?
+- Was there suspicious activity before it?
+- Is this normal for the user?
 
 This is why correlation becomes important.
 
@@ -326,11 +326,11 @@ TIME WINDOW = 5 minutes
 
 Thresholds should be based on:
 
-==> Environment baseline
-==> User behavior
-==> Authentication system
-==> Business requirements
-==> Historical activity
+- Environment baseline
+- User behavior
+- Authentication system
+- Business requirements
+- Historical activity
 
 Avoid choosing arbitrary thresholds.
 
@@ -433,13 +433,13 @@ That deviation may deserve investigation.
 
 Baselines can be created for:
 
-==> Users
-==> Hosts
-==> Applications
-==> IP addresses
-==> Network traffic
-==> Processes
-==> Authentication
+- Users
+- Hosts
+- Applications
+- IP addresses
+- Network traffic
+- Processes
+- Authentication
 
 But remember:
 
@@ -589,14 +589,14 @@ Administrators and applications may legitimately use it.
 
 Therefore, detection logic may consider:
 
-==> User
-==> Parent process
-==> Command line
-==> Destination
-==> Host role
-==> Time
-==> Frequency
-==> Known administrative activity
+- User
+- Parent process
+- Command line
+- Destination
+- Host role
+- Time
+- Frequency
+- Known administrative activity
 
 Instead of:
 
@@ -640,11 +640,11 @@ for a documented reason.
 
 Every exception should have:
 
-==> Owner
-==> Reason
-==> Scope
-==> Expiration/review date
-==> Approval
+- Owner
+- Reason
+- Scope
+- Expiration/review date
+- Approval
 
 ---
 
@@ -703,14 +703,14 @@ Therefore, detection should focus on suspicious characteristics.
 
 Potential signals:
 
-==> Encoded commands
-==> Suspicious parent process
-==> Unusual user
-==> Unexpected server
-==> Download activity
-==> External connection
-==> Abnormal execution time
-==> Suspicious command-line patterns
+- Encoded commands
+- Suspicious parent process
+- Unusual user
+- Unexpected server
+- Download activity
+- External connection
+- Abnormal execution time
+- Suspicious command-line patterns
 
 A stronger detection may correlate:
 
@@ -778,12 +778,12 @@ Host C
 
 Possible signals:
 
-==> New remote login
-==> RDP
-==> SMB
-==> WinRM
-==> SSH
-==> Remote administration tools
+- New remote login
+- RDP
+- SMB
+- WinRM
+- SSH
+- Remote administration tools
 
 A useful detection can correlate:
 
@@ -851,10 +851,10 @@ For example, a detection involving suspicious PowerShell activity can be mapped 
 
 This helps the SOC understand:
 
-==> What behavior are we detecting?
-==> Which attack technique does it represent?
-==> Which techniques are missing?
-==> Where are our detection gaps?
+- What behavior are we detecting?
+- Which attack technique does it represent?
+- Which techniques are missing?
+- Where are our detection gaps?
 
 ---
 
@@ -907,10 +907,10 @@ The advantage is portability.
 
 A detection idea can be represented independently of one specific SIEM query language and then adapted to platforms such as:
 
-==> Splunk
-==> Elastic
-==> Microsoft Sentinel
-==> Other SIEM platforms
+- Splunk
+- Elastic
+- Microsoft Sentinel
+- Other SIEM platforms
 
 Always validate the converted query against your actual data.
 
@@ -1004,11 +1004,11 @@ Correct handling
 
 This helps identify:
 
-==> False positives
-==> False negatives
-==> Missing fields
-==> Logic errors
-==> Performance problems
+- False positives
+- False negatives
+- Missing fields
+- Logic errors
+- Performance problems
 
 ---
 
@@ -1032,13 +1032,13 @@ This can consume significant SIEM resources.
 
 Detection engineers should consider:
 
-==> Search scope
-==> Time window
-==> Indexed fields
-==> Query complexity
-==> Event volume
-==> Scheduling frequency
-==> Correlation strategy
+- Search scope
+- Time window
+- Indexed fields
+- Query complexity
+- Event volume
+- Scheduling frequency
+- Correlation strategy
 
 A good detection should be both **accurate and efficient**.
 
@@ -1295,18 +1295,18 @@ The SOC Analyst sees real-world alert behavior that may not be visible during in
 
 Avoid these mistakes:
 
-==> Creating alerts for every suspicious event
-==> Using arbitrary thresholds
-==> Ignoring normal user behavior
-==> Not testing negative cases
-==> No documentation
-==> No MITRE mapping
-==> No exception management
-==> Excessive allowlisting
-==> Ignoring query performance
-==> Never reviewing old detections
-==> Measuring success only by alert reduction
-==> Deploying rules without validating data
+- Creating alerts for every suspicious event
+- Using arbitrary thresholds
+- Ignoring normal user behavior
+- Not testing negative cases
+- No documentation
+- No MITRE mapping
+- No exception management
+- Excessive allowlisting
+- Ignoring query performance
+- Never reviewing old detections
+- Measuring success only by alert reduction
+- Deploying rules without validating data
 
 ---
 
@@ -1467,33 +1467,23 @@ It is about creating **reliable security signals from raw data**.
 
 A strong SIEM Engineer should understand:
 
-==> Detection Logic
-==> Correlation
-==> Behavioral Detection
-==> Sequence Detection
-==> Risk-Based Detection
-==> Baselines
-==> False Positive Reduction
-==> MITRE ATT&CK
-==> Sigma
-==> Detection-as-Code
-==> Testing
-==> Performance
-==> Continuous Tuning
+- Detection Logic
+- Correlation
+- Behavioral Detection
+- Sequence Detection
+- Risk-Based Detection
+- Baselines
+- False Positive Reduction
+- MITRE ATT&CK
+- Sigma
+- Detection-as-Code
+- Testing
+- Performance
+- Continuous Tuning
 
 Remember:
 
 > **Good detection creates useful signals. Great detection creates useful context.**
-
----
-
-## 📚 SIEM Engineer Learning Series
-
-**Previous:** #13 — SIEM Performance Tuning
-
-**Current:** #14 — Advanced Detection Engineering
-
-**Next:** #15 — Threat Hunting with SIEM
 
 ---
 

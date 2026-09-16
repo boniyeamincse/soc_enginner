@@ -25,15 +25,15 @@ A simple way to think about it is:
 
 Suppose an organization has:
 
-==> FortiGate Firewall
-==> Windows Servers
-==> Linux Servers
-==> Active Directory
-==> VPN
-==> EDR
-==> Web Application
-==> AWS
-==> Wazuh
+- FortiGate Firewall
+- Windows Servers
+- Linux Servers
+- Active Directory
+- VPN
+- EDR
+- Web Application
+- AWS
+- Wazuh
 
 The SIEM Engineer needs to connect these systems to the SIEM.
 
@@ -89,17 +89,17 @@ Therefore, a SIEM Engineer must ensure that critical data sources are properly o
 
 The most common methods include:
 
-==> Syslog
-==> CEF
-==> API Integration
-==> Agents
-==> Forwarders
-==> Windows Event Forwarding
-==> File-based collection
-==> Cloud Connectors
-==> Message Queues
-==> Custom Connectors
-==> Custom Parsers
+- Syslog
+- CEF
+- API Integration
+- Agents
+- Forwarders
+- Windows Event Forwarding
+- File-based collection
+- Cloud Connectors
+- Message Queues
+- Custom Connectors
+- Custom Parsers
 
 Let's understand them one by one.
 
@@ -111,13 +111,13 @@ Let's understand them one by one.
 
 Common sources include:
 
-==> Firewalls
-==> Routers
-==> Switches
-==> VPN Gateways
-==> IDS/IPS
-==> Proxy Servers
-==> Network Appliances
+- Firewalls
+- Routers
+- Switches
+- VPN Gateways
+- IDS/IPS
+- Proxy Servers
+- Network Appliances
 
 A basic architecture:
 
@@ -134,9 +134,9 @@ SIEM
 
 Common Syslog ports include:
 
-==> UDP 514
-==> TCP 514
-==> TCP 6514 for Syslog over TLS
+- UDP 514
+- TCP 514
+- TCP 6514 for Syslog over TLS
 
 The exact configuration depends on the vendor and environment.
 
@@ -148,11 +148,11 @@ A SIEM Engineer should understand the basic Syslog structure.
 
 Syslog messages commonly contain information such as:
 
-==> Timestamp
-==> Host
-==> Facility
-==> Severity
-==> Message
+- Timestamp
+- Host
+- Facility
+- Severity
+- Message
 
 Severity levels commonly range from:
 
@@ -174,26 +174,26 @@ However, severity values should not automatically be treated as the actual busin
 
 Advantages:
 
-==> Simple
-==> Low overhead
-==> Commonly supported
+- Simple
+- Low overhead
+- Commonly supported
 
 Limitations:
 
-==> No delivery guarantee
-==> Packets may be lost
+- No delivery guarantee
+- Packets may be lost
 
 ### TCP
 
 Advantages:
 
-==> Reliable transport
-==> Better delivery behavior
+- Reliable transport
+- Better delivery behavior
 
 Limitations:
 
-==> More connection overhead
-==> Requires appropriate configuration
+- More connection overhead
+- Requires appropriate configuration
 
 For security-sensitive environments, encrypted transport such as **Syslog over TLS** may be appropriate.
 
@@ -216,13 +216,13 @@ src=192.168.1.10 dst=10.10.10.20
 
 The event contains structured information such as:
 
-==> Vendor
-==> Product
-==> Event ID
-==> Event Name
-==> Severity
-==> Source IP
-==> Destination IP
+- Vendor
+- Product
+- Event ID
+- Event Name
+- Severity
+- Source IP
+- Destination IP
 
 Using standardized formats can make integration and parsing easier.
 
@@ -251,14 +251,14 @@ SIEM
 
 API-based integration may require:
 
-==> API Endpoint
-==> Authentication
-==> API Key/Token
-==> OAuth
-==> Pagination
-==> Rate-limit handling
-==> Error handling
-==> Data transformation
+- API Endpoint
+- Authentication
+- API Key/Token
+- OAuth
+- Pagination
+- Rate-limit handling
+- Error handling
+- Data transformation
 
 A SIEM Engineer should understand basic REST API concepts.
 
@@ -270,11 +270,11 @@ Security data should not be collected using insecure authentication methods.
 
 Common authentication mechanisms include:
 
-==> API Keys
-==> Bearer Tokens
-==> OAuth 2.0
-==> Certificates
-==> Service Accounts
+- API Keys
+- Bearer Tokens
+- OAuth 2.0
+- Certificates
+- Service Accounts
 
 Credentials should be stored securely and should not be hardcoded into scripts or configuration files unnecessarily.
 
@@ -340,13 +340,13 @@ Collector / SIEM
 
 Agents can provide capabilities such as:
 
-==> Log collection
-==> File monitoring
-==> Process monitoring
-==> Security event collection
-==> Secure transport
-==> Buffering
-==> Filtering
+- Log collection
+- File monitoring
+- Process monitoring
+- Security event collection
+- Secure transport
+- Buffering
+- Filtering
 
 Wazuh Agent is one example of agent-based security data collection.
 
@@ -409,12 +409,12 @@ A collector or agent can monitor the file and forward new entries to the SIEM.
 
 Important considerations include:
 
-==> File rotation
-==> Encoding
-==> Permissions
-==> Multiline events
-==> Log format
-==> File path changes
+- File rotation
+- Encoding
+- Permissions
+- Multiline events
+- Log format
+- File path changes
 
 ---
 
@@ -510,11 +510,11 @@ Example:
 
 ### Step 2 — Identify Available Logs
 
-==> Traffic
-==> VPN
-==> Authentication
-==> IPS
-==> Malware
+- Traffic
+- VPN
+- Authentication
+- IPS
+- Malware
 
 ### Step 3 — Select Integration Method
 
@@ -558,14 +558,14 @@ Never assume that an integration is working simply because the configuration was
 
 Test:
 
-==> Are logs being generated?
-==> Are packets/events reaching the collector?
-==> Is authentication working?
-==> Are events being parsed?
-==> Are fields populated?
-==> Are timestamps correct?
-==> Are events searchable?
-==> Are alerts working?
+- Are logs being generated?
+- Are packets/events reaching the collector?
+- Is authentication working?
+- Are events being parsed?
+- Are fields populated?
+- Are timestamps correct?
+- Are events searchable?
+- Are alerts working?
 
 ---
 
@@ -673,12 +673,12 @@ event.action = null
 
 Possible causes:
 
-==> Parser mismatch
-==> Vendor format changed
-==> Wrong parser selected
-==> Incorrect regular expression
-==> Unexpected delimiter
-==> New log format
+- Parser mismatch
+- Vendor format changed
+- Wrong parser selected
+- Incorrect regular expression
+- Unexpected delimiter
+- New log format
 
 The SIEM Engineer should inspect the raw event and update the parsing logic.
 
@@ -688,8 +688,8 @@ The SIEM Engineer should inspect the raw event and update the parsing logic.
 
 Suppose the same firewall is sending logs through:
 
-==> Syslog
-==> API
+- Syslog
+- API
 
 Both may contain the same events.
 
@@ -697,11 +697,11 @@ The result could be duplicate events.
 
 Possible solutions:
 
-==> Disable unnecessary ingestion path
-==> Configure deduplication
-==> Adjust source configuration
-==> Add unique event identifiers
-==> Review ingestion architecture
+- Disable unnecessary ingestion path
+- Configure deduplication
+- Adjust source configuration
+- Add unique event identifiers
+- Review ingestion architecture
 
 ---
 
@@ -711,12 +711,12 @@ Sometimes logs arrive several minutes late.
 
 Possible causes:
 
-==> Network latency
-==> Collector queue
-==> High ingestion volume
-==> API polling interval
-==> SIEM processing delay
-==> Storage/indexing load
+- Network latency
+- Collector queue
+- High ingestion volume
+- API polling interval
+- SIEM processing delay
+- Storage/indexing load
 
 Monitor:
 
@@ -732,14 +732,14 @@ Log integration itself must be secured.
 
 Important practices:
 
-==> Use encrypted transport where appropriate
-==> Protect API credentials
-==> Use least privilege
-==> Restrict network access
-==> Validate certificates
-==> Monitor collector access
-==> Protect log integrity
-==> Avoid exposing collectors unnecessarily
+- Use encrypted transport where appropriate
+- Protect API credentials
+- Use least privilege
+- Restrict network access
+- Validate certificates
+- Monitor collector access
+- Protect log integrity
+- Avoid exposing collectors unnecessarily
 
 Security infrastructure should not create a new attack surface.
 
@@ -749,15 +749,15 @@ Security infrastructure should not create a new attack surface.
 
 Before integrating a source, identify:
 
-==> Source IP
-==> Destination IP
-==> Protocol
-==> Port
-==> DNS requirement
-==> Firewall rules
-==> Routing
-==> NAT requirements
-==> TLS requirements
+- Source IP
+- Destination IP
+- Protocol
+- Port
+- DNS requirement
+- Firewall rules
+- Routing
+- NAT requirements
+- TLS requirements
 
 Example:
 
@@ -781,13 +781,13 @@ When TLS is used, certificate problems can stop ingestion.
 
 Check:
 
-==> Certificate validity
-==> Certificate chain
-==> Hostname/SAN
-==> Trusted CA
-==> Expiration
-==> TLS version
-==> Client/server configuration
+- Certificate validity
+- Certificate chain
+- Hostname/SAN
+- Trusted CA
+- Expiration
+- TLS version
+- Client/server configuration
 
 A certificate may be valid but still fail if the trust chain or hostname validation is incorrect.
 
@@ -822,12 +822,12 @@ Log integration also affects cost.
 
 More logs mean:
 
-==> More network traffic
-==> More storage
-==> More indexing
-==> More processing
-==> More search workload
-==> Potentially higher licensing/cloud costs
+- More network traffic
+- More storage
+- More indexing
+- More processing
+- More search workload
+- Potentially higher licensing/cloud costs
 
 Therefore, SIEM Engineers need to balance:
 
@@ -843,26 +843,26 @@ An organization may prioritize:
 
 ### High Priority
 
-==> Authentication
-==> Firewall
-==> Active Directory
-==> EDR
-==> VPN
-==> IDS/IPS
-==> Privileged activity
+- Authentication
+- Firewall
+- Active Directory
+- EDR
+- VPN
+- IDS/IPS
+- Privileged activity
 
 ### Medium Priority
 
-==> Application
-==> Proxy
-==> DNS
-==> Network devices
+- Application
+- Proxy
+- DNS
+- Network devices
 
 ### Contextual
 
-==> General operational logs
-==> Debug logs
-==> Low-value informational events
+- General operational logs
+- Debug logs
+- Low-value informational events
 
 The exact priority depends on the organization's architecture and monitoring requirements.
 
@@ -874,20 +874,20 @@ Every onboarded data source should ideally have documentation.
 
 Record:
 
-==> Source name
-==> Vendor/product
-==> IP/hostname
-==> Integration method
-==> Protocol
-==> Port
-==> Authentication
-==> Parser
-==> Normalized fields
-==> Expected EPS
-==> Retention
-==> Owner
-==> Detection rules
-==> Troubleshooting steps
+- Source name
+- Vendor/product
+- IP/hostname
+- Integration method
+- Protocol
+- Port
+- Authentication
+- Parser
+- Normalized fields
+- Expected EPS
+- Retention
+- Owner
+- Detection rules
+- Troubleshooting steps
 
 This becomes extremely useful when the environment grows.
 
@@ -918,14 +918,14 @@ Wazuh Dashboard
 
 The SIEM Engineer should verify:
 
-==> Firewall logging enabled
-==> Correct destination configured
-==> Correct protocol/port
-==> Network connectivity
-==> Wazuh receiving logs
-==> Decoder extracting fields
-==> Rules generating alerts
-==> Dashboard showing events
+- Firewall logging enabled
+- Correct destination configured
+- Correct protocol/port
+- Network connectivity
+- Wazuh receiving logs
+- Decoder extracting fields
+- Rules generating alerts
+- Dashboard showing events
 
 This is a complete integration—not simply "send Syslog."
 
@@ -956,11 +956,11 @@ Alert
 
 Potential detections:
 
-==> Brute Force
-==> Suspicious Account Creation
-==> Privilege Changes
-==> Suspicious PowerShell
-==> Abnormal Authentication
+- Brute Force
+- Suspicious Account Creation
+- Privilege Changes
+- Suspicious PowerShell
+- Abnormal Authentication
 
 Again, detection quality depends on the underlying log collection.
 
@@ -996,16 +996,16 @@ This is why production SIEM environments need **data-source health monitoring**.
 
 Avoid these common mistakes:
 
-==> Connecting a source without defining the use case
-==> Sending logs without validating them
-==> Ignoring timestamps
-==> Ignoring time synchronization
-==> Not monitoring log volume
-==> Creating parsers without testing raw events
-==> Filtering too much data
-==> Hardcoding API credentials
-==> Not documenting the integration
-==> Assuming "configured" means "working"
+- Connecting a source without defining the use case
+- Sending logs without validating them
+- Ignoring timestamps
+- Ignoring time synchronization
+- Not monitoring log volume
+- Creating parsers without testing raw events
+- Filtering too much data
+- Hardcoding API credentials
+- Not documenting the integration
+- Assuming "configured" means "working"
 
 ---
 
@@ -1013,31 +1013,31 @@ Avoid these common mistakes:
 
 ### Before Integration
 
-==> Identify log source
-==> Identify security use cases
-==> Determine required events
-==> Select integration method
-==> Identify network requirements
+- Identify log source
+- Identify security use cases
+- Determine required events
+- Select integration method
+- Identify network requirements
 
 ### During Integration
 
-==> Configure source
-==> Configure collector/connector
-==> Configure authentication
-==> Verify network
-==> Verify transport
-==> Configure parser
+- Configure source
+- Configure collector/connector
+- Configure authentication
+- Verify network
+- Verify transport
+- Configure parser
 
 ### After Integration
 
-==> Verify events
-==> Verify fields
-==> Verify timestamps
-==> Verify normalization
-==> Test searches
-==> Test detection
-==> Monitor ingestion
-==> Document configuration
+- Verify events
+- Verify fields
+- Verify timestamps
+- Verify normalization
+- Test searches
+- Test detection
+- Monitor ingestion
+- Document configuration
 
 ---
 
@@ -1097,14 +1097,14 @@ Log Integration is the process of connecting systems, applications, network devi
 
 ### Q2. What are common log integration methods?
 
-==> Syslog
-==> CEF
-==> API
-==> Agents
-==> Forwarders
-==> Windows Event Forwarding
-==> Cloud connectors
-==> File-based collection
+- Syslog
+- CEF
+- API
+- Agents
+- Forwarders
+- Windows Event Forwarding
+- Cloud connectors
+- File-based collection
 
 ### Q3. What would you check if Syslog logs are not arriving?
 
@@ -1182,18 +1182,18 @@ In the next article, we will move from **collecting security data** to **detecti
 
 We will cover:
 
-==> Detection Rules
-==> Correlation Rules
-==> Sigma
-==> MITRE ATT&CK
-==> Detection Logic
-==> Threshold Detection
-==> Behavioral Detection
-==> False Positive Reduction
-==> Alert Tuning
-==> Detection Testing
-==> Detection Lifecycle
-==> Real-world Brute Force Detection
+- Detection Rules
+- Correlation Rules
+- Sigma
+- MITRE ATT&CK
+- Detection Logic
+- Threshold Detection
+- Behavioral Detection
+- False Positive Reduction
+- Alert Tuning
+- Detection Testing
+- Detection Lifecycle
+- Real-world Brute Force Detection
 
 **Logs give us visibility. Detection Engineering turns that visibility into security alerts.**
 
