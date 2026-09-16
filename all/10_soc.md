@@ -1969,11 +1969,25 @@ The most important mindset is:
 
 **#10 — SIEM Infrastructure ← You are here**
 
+**#11 — SIEM Architecture Design → Next**
+
+**#12 — SIEM Capacity Planning**
+
+**#13 — SIEM Performance Tuning**
+
+**#14 — Advanced Detection Engineering**
+
+**#15 — Threat Hunting with SIEM**
+
+**#16 — SIEM Data Quality & Troubleshooting**
+
+**#17 — Hands-On SIEM: Multi-Platform Practical Guide**
+
 ---
 
 ## 🎯 What Next?
 
-After completing these 10 core topics, the next step is practical implementation.
+After completing these core topics, continue with #11 Architecture Design → #12–#13 sizing & tuning → #14–#16 advanced topics, then finish with the #17 hands-on capstone.
 
 A good learning path is:
 

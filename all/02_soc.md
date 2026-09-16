@@ -853,3 +853,51 @@ In the next article, we will go deeper into:
 ==> Log Pipeline Troubleshooting
 
 **Collecting logs is one thing. Successfully integrating them into a SIEM is another.**
+
+---
+
+## 📚 SIEM Engineer Learning Series
+
+**#01 — Log Management**
+
+**#02 — SIEM Platforms ← You are here**
+
+**#03 — Log Integration → Next**
+
+**#04 — Detection Engineering**
+
+**#05 — Query & Investigation**
+
+**#06 — SOC Operations**
+
+**#07 — Threat Intelligence**
+
+**#08 — Automation & SOAR**
+
+**#09 — Dashboard & Reporting**
+
+**#10 — SIEM Infrastructure**
+
+**#11 — SIEM Architecture Design**
+
+**#12 — SIEM Capacity Planning**
+
+**#13 — SIEM Performance Tuning**
+
+**#14 — Advanced Detection Engineering**
+
+**#15 — Threat Hunting with SIEM**
+
+**#16 — SIEM Data Quality & Troubleshooting**
+
+**#17 — Hands-On SIEM: Multi-Platform Practical Guide**
+
+---
+
+### Navigation
+
+**← Previous Article: #01 — Log Management**
+
+**SIEM Engineer Index**
+
+**Next Article: #03 — Log Integration →**

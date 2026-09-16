@@ -1591,7 +1591,7 @@ Together, these create a reliable SIEM environment.
 
 **Current:** #16 — SIEM Data Quality & Troubleshooting
 
-**Next:** #17 — SIEM Use Case Development
+**Next:** #17 — Hands-On SIEM: Multi-Platform Practical Guide
 
 ---
 
@@ -1611,3 +1611,51 @@ If the answer is no, fix the **data pipeline** first.
 
 **Follow the SIEM Engineer learning series — Boni Yeamin**
 
+
+---
+
+## 📚 SIEM Engineer Learning Series
+
+**#01 — Log Management**
+
+**#02 — SIEM Platforms**
+
+**#03 — Log Integration**
+
+**#04 — Detection Engineering**
+
+**#05 — Query & Investigation**
+
+**#06 — SOC Operations**
+
+**#07 — Threat Intelligence**
+
+**#08 — Automation & SOAR**
+
+**#09 — Dashboard & Reporting**
+
+**#10 — SIEM Infrastructure**
+
+**#11 — SIEM Architecture Design**
+
+**#12 — SIEM Capacity Planning**
+
+**#13 — SIEM Performance Tuning**
+
+**#14 — Advanced Detection Engineering**
+
+**#15 — Threat Hunting with SIEM**
+
+**#16 — SIEM Data Quality & Troubleshooting ← You are here**
+
+**#17 — Hands-On SIEM: Multi-Platform Practical Guide → Next**
+
+---
+
+### Navigation
+
+**← Previous Article: #15 — Threat Hunting with SIEM**
+
+**SIEM Engineer Index**
+
+**Next Article: #17 — Hands-On SIEM: Multi-Platform Practical Guide →**

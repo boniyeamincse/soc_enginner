@@ -1462,3 +1462,12 @@ Next article-এ আমরা আরও advanced level-এ যাব:
 
 ---
 
+---
+
+### Navigation
+
+**← Previous Article: #12 — SIEM Capacity Planning**
+
+**SIEM Engineer Index**
+
+**Next Article: #14 — Advanced Detection Engineering →**

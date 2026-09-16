@@ -829,4 +829,6 @@ Platform বদলাবে, skill থাকবে।
 
 **SIEM Engineer Index**
 
+**You have completed the full #01–#17 series 🎉**
+
 ---

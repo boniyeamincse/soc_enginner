@@ -2106,4 +2106,12 @@ Next article-এ আমরা practical calculation শিখব:
 
 ---
 
+---
 
+### Navigation
+
+**← Previous Article: #10 — SIEM Infrastructure**
+
+**SIEM Engineer Index**
+
+**Next Article: #12 — SIEM Capacity Planning →**

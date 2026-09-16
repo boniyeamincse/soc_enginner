@@ -1700,6 +1700,9 @@ If you master this process, you move beyond simply operating a SIEM and start th
 
 ---
 
+
+---
+
 ## 📚 SIEM Engineer Learning Series
 
 **#01 — Log Management**
@@ -1721,6 +1724,20 @@ If you master this process, you move beyond simply operating a SIEM and start th
 **#09 — Dashboard & Reporting**
 
 **#10 — SIEM Infrastructure**
+
+**#11 — SIEM Architecture Design**
+
+**#12 — SIEM Capacity Planning**
+
+**#13 — SIEM Performance Tuning**
+
+**#14 — Advanced Detection Engineering**
+
+**#15 — Threat Hunting with SIEM**
+
+**#16 — SIEM Data Quality & Troubleshooting**
+
+**#17 — Hands-On SIEM: Multi-Platform Practical Guide**
 
 ---
 

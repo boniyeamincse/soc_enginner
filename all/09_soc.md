@@ -1808,6 +1808,9 @@ And a good report should answer:
 
 ---
 
+
+---
+
 ## 📚 SIEM Engineer Learning Series
 
 **#01 — Log Management**
@@ -1829,6 +1832,20 @@ And a good report should answer:
 **#09 — Dashboard & Reporting ← You are here**
 
 **#10 — SIEM Infrastructure → Next**
+
+**#11 — SIEM Architecture Design**
+
+**#12 — SIEM Capacity Planning**
+
+**#13 — SIEM Performance Tuning**
+
+**#14 — Advanced Detection Engineering**
+
+**#15 — Threat Hunting with SIEM**
+
+**#16 — SIEM Data Quality & Troubleshooting**
+
+**#17 — Hands-On SIEM: Multi-Platform Practical Guide**
 
 ---
 

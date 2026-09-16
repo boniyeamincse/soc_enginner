@@ -1264,3 +1264,12 @@ SIEM Capacity Planning-এর মূল বিষয় হলো:
 
 ---
 
+---
+
+### Navigation
+
+**← Previous Article: #11 — SIEM Architecture Design**
+
+**SIEM Engineer Index**
+
+**Next Article: #13 — SIEM Performance Tuning →**
