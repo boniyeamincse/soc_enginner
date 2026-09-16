@@ -1,0 +1,93 @@
+/* SIEM Engineer Study Notes — professional book theme (screen + print) */
+:root {
+  --ink: #1a2332;
+  --muted: #5b6b7f;
+  --accent: #0e639c;
+  --accent-bg: #eaf3fb;
+  --border: #d7e0ea;
+  --code-bg: #f4f6f9;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Noto Serif Bengali", "Noto Sans Bengali", "Noto Sans", Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  line-height: 1.75;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  background: #fff;
+}
+/* Cover */
+header#title-block-header {
+  text-align: center;
+  padding: 3.5rem 1rem 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(160deg, #0f2027, #203a43 55%, #0e639c);
+  color: #fff;
+  border-radius: 14px;
+}
+header#title-block-header .title {
+  font-size: 2.2rem;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+header#title-block-header .author,
+header#title-block-header .date { opacity: 0.9; }
+/* TOC */
+#TOC {
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 2.5rem;
+}
+#TOC ul { padding-left: 1.2rem; }
+#TOC a { color: var(--accent); text-decoration: none; }
+#TOC a:hover { text-decoration: underline; }
+/* Headings */
+h1, h2, h3, h4 { line-height: 1.35; color: #102a43; }
+h1 { font-size: 1.9rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.4rem; margin-top: 3rem; }
+h2 { font-size: 1.45rem; margin-top: 2.2rem; }
+h3 { font-size: 1.15rem; }
+a { color: var(--accent); }
+blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-bg);
+  margin: 1.2rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 0 8px 8px 0;
+  color: #243b53;
+}
+code { font-family: "JetBrains Mono", "Noto Sans Mono", Consolas, monospace; font-size: 0.88em; }
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: 1.55;
+}
+pre code { background: none; font-size: 0.85rem; white-space: pre; }
+table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.95rem; }
+th, td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; }
+th { background: #102a43; color: #fff; }
+tr:nth-child(even) td { background: #f8fafc; }
+hr { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+.book-footer { text-align: center; color: var(--muted); margin-top: 3rem; font-size: 0.9rem; }
+
+/* Print / PDF */
+@page {
+  size: A4;
+  margin: 20mm 16mm 22mm 16mm;
+  @bottom-center { content: counter(page); color: #5b6b7f; font-size: 9pt; }
+  @top-center { content: "SIEM Engineer — Study Notes"; color: #8a9bb0; font-size: 8pt; }
+}
+@media print {
+  body { max-width: none; padding: 0; font-size: 11pt; }
+  header#title-block-header { border-radius: 0; }
+  h1 { page-break-before: always; }
+  header#title-block-header + h1, h1:first-of-type { page-break-before: avoid; }
+  pre, table, blockquote { page-break-inside: avoid; }
+  a { text-decoration: none; }
+}
