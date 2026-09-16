@@ -5,7 +5,7 @@ A complete study-note series covering the **SIEM Engineer** learning path — fr
 > **Languages:** Articles #01–#03, #11–#13, #17 are written in **Bengali + English (Banglish)**.
 > Articles #04–#10 and #14–#16 are in **English**.
 
-> 📁 **Note:** The full series (all 16 articles) also lives in the [`all/`](all/) folder. Files `12_soc.md`–`14_soc.md` exist only there; the root folder holds #01–#11 plus this README.
+> 📁 **Note:** The full series (all 17 articles) lives in the [`all/`](all/) folder.
 
 ---
 
@@ -13,23 +13,23 @@ A complete study-note series covering the **SIEM Engineer** learning path — fr
 
 | # | File | Topic | Status |
 |---|------|-------|--------|
-| 01 | [01_soc.md](01_soc.md) | Log Management | ✅ Complete |
-| 02 | [02_soc.md](02_soc.md) | SIEM Platforms | ✅ Complete |
-| 03 | [03_soc.md](03_soc.md) | Log Integration | ✅ Complete |
-| 04 | [04_soc.md](04_soc.md) | Detection Engineering | ✅ Complete |
-| 05 | [05_soc.md](05_soc.md) | Query & Investigation | ✅ Complete |
-| 06 | [06_soc.md](06_soc.md) | SOC Operations | ✅ Complete |
-| 07 | [07_soc.md](07_soc.md) | Threat Intelligence | ✅ Complete |
-| 08 | [08_soc.md](08_soc.md) | Automation & SOAR | ✅ Complete |
-| 09 | [09_soc.md](09_soc.md) | Dashboard & Reporting | ✅ Complete |
-| 10 | [10_soc.md](10_soc.md) | SIEM Infrastructure | ✅ Complete |
-| 11 | [11_soc.md](11_soc.md) | SIEM Architecture Design | ✅ Complete |
-| 12 | [all/12_soc.md](all/12_soc.md) | SIEM Capacity Planning | ✅ Complete |
-| 13 | [all/13_soc.md](all/13_soc.md) | SIEM Performance Tuning | ✅ Complete |
-| 14 | [all/14_soc.md](all/14_soc.md) | Advanced Detection Engineering | ✅ Complete |
-| 15 | [all/15_SIEM.md](all/15_SIEM.md) | Threat Hunting with SIEM | ✅ Complete |
-| 16 | [all/16_SIEM.md](all/16_SIEM.md) | SIEM Data Quality & Troubleshooting | ✅ Complete |
-| 17 | [all/17_SIEM.md](all/17_SIEM.md) | 🆕 Hands-On SIEM: Multi-Platform Practical Guide | ✅ Complete |
+| 01 | [01_soc.md](all/01_soc.md) | Log Management | ✅ Complete |
+| 02 | [02_soc.md](all/02_soc.md) | SIEM Platforms | ✅ Complete |
+| 03 | [03_soc.md](all/03_soc.md) | Log Integration | ✅ Complete |
+| 04 | [04_soc.md](all/04_soc.md) | Detection Engineering | ✅ Complete |
+| 05 | [05_soc.md](all/05_soc.md) | Query & Investigation | ✅ Complete |
+| 06 | [06_soc.md](all/06_soc.md) | SOC Operations | ✅ Complete |
+| 07 | [07_soc.md](all/07_soc.md) | Threat Intelligence | ✅ Complete |
+| 08 | [08_soc.md](all/08_soc.md) | Automation & SOAR | ✅ Complete |
+| 09 | [09_soc.md](all/09_soc.md) | Dashboard & Reporting | ✅ Complete |
+| 10 | [10_soc.md](all/10_soc.md) | SIEM Infrastructure | ✅ Complete |
+| 11 | [11_soc.md](all/11_soc.md) | SIEM Architecture Design | ✅ Complete |
+| 12 | [12_soc.md](all/12_soc.md) | SIEM Capacity Planning | ✅ Complete |
+| 13 | [13_soc.md](all/13_soc.md) | SIEM Performance Tuning | ✅ Complete |
+| 14 | [14_soc.md](all/14_soc.md) | Advanced Detection Engineering | ✅ Complete |
+| 15 | [15_SIEM.md](all/15_SIEM.md) | Threat Hunting with SIEM | ✅ Complete |
+| 16 | [16_SIEM.md](all/16_SIEM.md) | SIEM Data Quality & Troubleshooting | ✅ Complete |
+| 17 | [17_SIEM.md](all/17_SIEM.md) | 🆕 Hands-On SIEM: Multi-Platform Practical Guide | ✅ Complete |
 
 ---
 
@@ -105,14 +105,14 @@ Log Source → Collection → Transport → Parsing → Normalization → Enrich
 
 1. **Read in order (#01 → #17)** — each article builds on the previous one.
 2. **#17 is the hands-on capstone** — do its 6-week lab plan alongside everything else.
-2. **Every article ends with:**
+3. **Every article ends with:**
    - 🎤 Interview questions & answers
    - 📋 Practical checklist
    - 🚀 Final takeaway
-3. **Build a lab alongside reading** — the recommended setup used across the series:
+4. **Build a lab alongside reading** — the recommended setup used across the series:
    - Windows VM + Linux VM + Firewall (or pfSense) + **Wazuh** as the SIEM
    - Practice: generate failed SSH/Windows logins → collect → parse → detect → investigate → tune → dashboard
-4. **Interview prep:** review the Q&A sections of each article, plus the checklists.
+5. **Interview prep:** review the Q&A sections of each article, plus the checklists.
 
 ---
 
