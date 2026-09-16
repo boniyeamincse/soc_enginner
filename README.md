@@ -35,57 +35,119 @@ A complete study-note series covering the **SIEM Engineer** learning path — fr
 
 ## 🗂️ Topic Summaries
 
-### #01 — Log Management
-What a log is, common SIEM log sources (Firewall, Windows, Linux, AD, VPN, Proxy, IDS/IPS, EDR, Cloud, Application, Database, Network devices), the log pipeline
-(**Collect → Transport → Parse → Normalize → Enrich → Store → Search → Monitor → Retain**), Syslog/Agent/API collection, EPS, data quality, log loss & duplicates, retention, troubleshooting missing logs.
+> Each summary follows the same format: **what it covers → key flow → hands-on outcome**. Click the title to open the full note.
 
-### #02 — SIEM Platforms
-Splunk (SPL, Forwarder/Indexer/Search Head), Microsoft Sentinel (KQL, Analytics Rules), IBM QRadar (DSM, Offenses, AQL), Elastic Security, OpenSearch, Wazuh architecture, and how the same concepts map across platforms.
+**Phase 1 — Foundation (#01–#03)**
 
-### #03 — Log Integration
-Integration methods (Syslog, CEF, API, Agents, Forwarders, WEF, file-based, cloud connectors), Syslog facility/severity, UDP vs TCP vs TLS, API auth/pagination/rate limits, custom parsers, parsing vs normalization, 10-step data onboarding, integration troubleshooting & monitoring.
+### [#01 — Log Management](all/01_soc.md)
+> What logs are and how they reach the SIEM.
+- **Covers:** Log sources (Firewall, Windows, Linux, AD, VPN, Proxy, IDS/IPS, EDR, Cloud, App, DB, Network), Syslog / Agent / API collection, parsing, normalization, enrichment
+- **Key flow:** `Collect → Transport → Parse → Normalize → Enrich → Store → Search → Monitor → Retain`
+- **Hands-on:** EPS basics, data quality, log loss & duplicates, retention, missing-log troubleshooting
 
-### #04 — Detection Engineering
-Detection lifecycle (**Hypothesis → Data → Logic → Rule → Test → Tune → Deploy → Monitor → Improve**), detection types (threshold, sequence, behavioral, anomaly, correlation), Sigma rules, MITRE ATT&CK mapping, false positives & tuning, alert deduplication, Detection-as-Code, detection testing.
+### [#02 — SIEM Platforms](all/02_soc.md)
+> How the major SIEMs work and how concepts map across them.
+- **Covers:** Splunk (SPL, Forwarder / Indexer / Search Head), Sentinel (KQL, Analytics Rules), QRadar (DSM, Offenses, AQL), Elastic, OpenSearch, Wazuh
+- **Key idea:** `Log Sources → Collection → SIEM Platform → Search / Detection / Alert → Investigation → Dashboard`
+- **Hands-on:** Compare the same workflow on different platforms, platform-health checks, lab with Wazuh
 
-### #05 — Query & Investigation
-SPL and KQL examples, filtering/aggregation/grouping/sorting, pivoting (**IP → User → Host → Process → Network**), timeline analysis, before/during/after investigation, IP/user/host/process/auth investigation, threat hunting, IOC investigation, common query mistakes, query performance.
+### [#03 — Log Integration](all/03_soc.md)
+> Connecting a new source and making it usable in the SIEM.
+- **Covers:** Syslog (facility / severity, UDP vs TCP vs TLS), CEF, API (auth / pagination / rate limits), Agents, Forwarders, WEF, file-based, cloud connectors, custom parsers
+- **Key flow:** `Identify → Configure → Transport → Parse → Normalize → Test Search → Detect → Monitor`
+- **Hands-on:** 10-step data onboarding, parsing vs normalization, end-to-end validation, troubleshooting
 
-### #06 — SOC Operations
-SOC team structure (L1/L2/L3), **Event vs Alert vs Incident**, incident response lifecycle (**Detect → Validate → Investigate → Scope → Contain → Eradicate → Recover → Document**), triage, severity vs priority vs confidence, ticketing, escalation, runbooks vs playbooks, MTTD/MTTR, shift handover, evidence handling, SOC metrics.
+**Phase 2 — Detection & Investigation (#04–#05, #14–#15)**
 
-### #07 — Threat Intelligence
-IOC types (IP, domain, URL, hash, email), strategic/tactical/operational/technical intelligence, CTI lifecycle (**Direction → Collection → Processing → Analysis → Dissemination → Feedback**), STIX/TAXII, TIPs, IOC enrichment & correlation, feed quality, freshness & confidence, internal intelligence.
+### [#04 — Detection Engineering](all/04_soc.md)
+> Turning telemetry into reliable detections.
+- **Covers:** Detection lifecycle, threshold / sequence / behavioral / anomaly / correlation types, Sigma rules, MITRE ATT&CK mapping (e.g. `T1059.001`, `T1110`), severity vs confidence
+- **Key flow:** `Hypothesis → Data → Logic → Rule → Test → Tune → Deploy → Monitor → Improve`
+- **Hands-on:** SSH brute-force, Windows failed-login, PowerShell rules, FP tuning, deduplication, Detection-as-Code
 
-### #08 — Automation & SOAR
-SOAR concepts, orchestration, playbooks, alert enrichment automation, automatic ticket creation, automated response risks, **human-in-the-loop**, fully vs semi-automated workflows, decision matrix, API auth/rate limits/retries, idempotency, error handling, rollback, audit logging, automation maturity levels.
+### [#05 — Query & Investigation](all/05_soc.md)
+> Finding the story in the data with SPL / KQL.
+- **Covers:** Filtering, aggregation, `group by`, sorting, pivoting (`IP → User → Host → Process → Network`), timeline analysis, before / during / after method
+- **Key flow:** `Alert → Validate → Filter → Pivot → Correlate → Scope → Escalate / Close`
+- **Hands-on:** IP / user / host / process / auth investigations, TP vs FP verdicts, IOC hunting, query-performance pitfalls
 
-### #09 — Dashboard & Reporting
-Dashboard vs report, analyst/manager/executive dashboards, alert trends, severity dashboards, auth/endpoint/network/firewall dashboards, detection & MITRE coverage dashboards, MTTD/MTTR metrics, EPS & log-source health monitoring, drill-down, dashboard design principles & common mistakes, SOC reports.
+### [#14 — Advanced Detection Engineering](all/14_soc.md)
+> Accurate, context-aware detections beyond single events.
+- **Covers:** Single-event vs correlation vs behavioral vs risk-based detections, baselines, entity-based logic, allowlists, suppression, FP-rate reduction
+- **Key idea:** `Risk = Event + Behavior + TI + Context`
+- **Hands-on:** Brute-force, PowerShell, privesc, lateral-movement, scanning detections + Sigma YAML structure
 
-### #10 — SIEM Infrastructure
-Infrastructure components, collectors/forwarders/ingestion, EPS & data-volume calculation, storage planning & tiering (**Hot → Warm → Cold → Archive**), retention, CPU/memory/disk/network monitoring, HA & clustering, load balancing, failover, queues/buffers, DR, backup & restore testing, RPO/RTO, upgrades & patching, capacity planning, scaling (vertical vs horizontal).
+### [#15 — Threat Hunting with SIEM](all/15_SIEM.md)
+> Proactively looking for what alerts missed.
+- **Covers:** Hypothesis-driven hunting, IOC vs TTP hunting, MITRE-based hunts, time / baseline / user / host / process / DNS / auth hunting, pivoting
+- **Key flow:** `Hypothesis → Search → Evidence → Verdict → New / Improved Detection`
+- **Hands-on:** 6 starter hunts, hunt notebook template, TI enrichment, hunt → detection promotion
 
-### #11 — SIEM Architecture Design
-Design principles, small/medium/enterprise architectures, centralized vs distributed, single-node vs multi-node, collector/forwarder/ingestion/processing/indexer/search/dashboard/detection layers, HA & load balancing, scalability, network & security architecture, RBAC, on-prem vs cloud vs hybrid, DR (RPO/RTO), observability, common architecture mistakes, real-world design example.
+**Phase 3 — SOC, Intel & Automation (#06–#08)**
 
-### #12 — SIEM Capacity Planning
-Practical SIEM sizing: EPS calculation, events per day, GB/day estimation, storage planning, retention sizing, peak load, growth estimation, capacity buffer, and a real-world SIEM sizing example.
+### [#06 — SOC Operations](all/06_soc.md)
+> How a SOC turns alerts into resolved incidents.
+- **Covers:** L1 / L2 / L3 roles, **Event vs Alert vs Incident**, triage, severity vs priority vs confidence, ticketing, escalation, RCA, attack-chain analysis
+- **Key flow:** `Detect → Validate → Investigate → Scope → Contain → Eradicate → Recover → Document`
+- **Hands-on:** Suspicious-login runbook, runbook vs playbook, MTTD / MTTR, shift handover, evidence handling
 
-### #13 — SIEM Performance Tuning
-Why SIEM performance matters for SOC operations, finding bottlenecks (ingestion, storage, query, CPU, memory, indexing), ingestion delay, slow search analysis, query optimization, resource monitoring, and performance tuning best practices.
+### [#07 — Threat Intelligence](all/07_soc.md)
+> Giving alerts context with IOCs and intel lifecycle.
+- **Covers:** IOC types (IP, domain, URL, hash, email), strategic / tactical / operational / technical intel, CTI lifecycle, STIX / TAXII, TIPs, enrichment & correlation
+- **Key flow:** `Direction → Collection → Processing → Analysis → Dissemination → Feedback`
+- **Hands-on:** IP / domain / URL / hash / email intel, feed quality, freshness & confidence, internal IOCs
 
-### #14 — Advanced Detection Engineering
-Beyond single-event detection: building detections that are accurate and context-aware, attack-pattern matching, correlation logic, behavioral detections, detection quality improvement, and advanced detection design principles.
+### [#08 — Automation & SOAR](all/08_soc.md)
+> Automating the repetitive SOC work safely.
+- **Covers:** Orchestration, playbooks, enrichment, auto-ticketing, notification, automated response risks, **human-in-the-loop**, fully vs semi-automated, APIs, idempotency, rollback
+- **Key flow:** `Alert → Enrich → Decide → Act → Ticket → Notify → Audit`
+- **Hands-on:** Suspicious-IP, phishing & compromised-account workflows, decision matrix, automation metrics
 
-### #15 — Threat Hunting with SIEM
-Proactive hunting mindset (**What should I expect? What is unusual? What evidence do I have?**), hypothesis-driven hunting, hunting with SIEM queries, MITRE ATT&CK-based hunting, pivoting, detection gap discovery, and the Threat Hunter + SIEM Engineer mindset.
+**Phase 4 — Reporting & Infrastructure (#09–#13, #16)**
 
-### #16 — SIEM Data Quality & Troubleshooting
-Ensuring security data is available, complete, accurate, timely, parsed, normalized, searchable, and reliable: log-arrival checks, timestamp validation, duplicate detection, ingestion delay, dropped events, field parsing validation, and data-trustworthiness for detection.
+### [#09 — Dashboard & Reporting](all/09_soc.md)
+> Making SOC activity visible and measurable.
+- **Covers:** Dashboard vs report, analyst / manager / executive views, alert trends, severity, auth / endpoint / network / firewall panels, MITRE coverage, drill-down design
+- **Key metrics:** MTTD / MTTR, EPS & source-health, detection coverage
+- **Hands-on:** Time-series / geo / table visualizations, filters, dashboard → investigation workflow
 
-### #17 — Hands-On SIEM: Multi-Platform Practical Guide 🆕
-The complete practical article: one unified lab (Ubuntu + Windows + Attacker VM), one dataset, same 8 exercises on **Wazuh, Splunk, Elastic, OpenSearch & Sentinel** together — installation commands, the same brute-force detection written in 5 platform query languages, attack-chain investigation, dashboards, SOAR/Python automation, MISP threat intel, Sigma rules, Windows Event ID cheat sheet, and a 6-week combined learning plan.
+### [#10 — SIEM Infrastructure](all/10_soc.md)
+> What the SIEM runs on and how to keep it healthy.
+- **Covers:** Collectors, forwarders, ingestion, EPS & data-volume math, `Hot → Warm → Cold` storage, retention, CPU / memory / disk / network monitoring
+- **Key topics:** HA & clustering, load balancing, failover, queues / buffers, DR, backup & restore testing, RPO / RTO, upgrades
+- **Hands-on:** Storage estimation (`~172 GB/day` example), health monitoring, scaling vertical vs horizontal
+
+### [#11 — SIEM Architecture Design](all/11_soc.md)
+> Designing small, medium and enterprise SIEMs.
+- **Covers:** Design principles, centralized vs distributed, single-node vs multi-node, collector / ingestion / processing / indexer / search / dashboard / detection layers
+- **Key topics:** HA, scalability, network & security architecture, RBAC, on-prem vs cloud vs hybrid, observability, DR
+- **Hands-on:** Real-world design example, common architecture mistakes, sizing inputs for #12
+
+### [#12 — SIEM Capacity Planning](all/12_soc.md)
+> Sizing the SIEM with real numbers.
+- **Covers:** EPS, events/day (`EPS × 86400`), GB/day, retention sizing, peak vs average, growth, replication & buffer
+- **Key formulas:** `Events/day = EPS × 86400` → `GB/day = events × avg size` → `Retention = GB/day × days`
+- **Hands-on:** Planning worksheet, `2000 EPS × 1KB × 30d ≈ 5.18TB` example, capacity alerts (80% warn / 90% crit)
+
+### [#13 — SIEM Performance Tuning](all/13_soc.md)
+> Finding and fixing slowness.
+- **Covers:** Bottlenecks (ingestion, storage, query, CPU, memory, indexing), ingestion delay, slow-search analysis, time-range & filter-early optimization, index / shard tuning
+- **Key flow:** `Identify → Measure Baseline → Tune → Before / After Test → Monitor`
+- **Hands-on:** Slow-search, delayed-logs & high-CPU scenarios, queue & latency checks
+
+### [#16 — SIEM Data Quality & Troubleshooting](all/16_SIEM.md)
+> Making sure the data is trustworthy for detection.
+- **Covers:** Availability, completeness, accuracy, timeliness, parsing & field mapping, timestamps, duplicates, latency, drops
+- **Key flow:** `Source → Network → Collector → Ingestion → Parsing → Search → Detection`
+- **Hands-on:** Silence detection, EPS-drop alerts, parsing-failure triage, example SLAs (99.5% availability, ≤5 min latency)
+
+**Capstone (#17)**
+
+### [#17 — Hands-On SIEM: Multi-Platform Practical Guide 🆕](all/17_SIEM.md)
+> One lab, one dataset, same exercises on 5 platforms.
+- **Covers:** Unified lab (Ubuntu + Windows + Attacker VM), Wazuh / Splunk / Elastic / OpenSearch / Sentinel setup, one-dataset approach
+- **Key work:** Same brute-force detection in 5 query languages, attack-chain investigation, dashboards, SOAR / Python automation, MISP intel, Sigma rules, Windows Event ID cheat sheet
+- **Hands-on:** 6-week plan (`Wazuh → Splunk → Elastic → Sentinel`), portfolio-ready screenshots & writeup
 
 ---
 
