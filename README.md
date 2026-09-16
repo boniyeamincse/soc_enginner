@@ -1,11 +1,16 @@
 # 🛡️ SIEM Engineer — Study Notes
 
-A complete study-note series covering the **SIEM Engineer** learning path — from log management fundamentals to enterprise SIEM architecture design. Written for SOC/SIEM engineer interview preparation and hands-on lab practice.
+![Articles](https://img.shields.io/badge/articles-17-blue)
+![Hands-on](https://img.shields.io/badge/hands--on-Wazuh%20%7C%20Splunk%20%7C%20Elastic%20%7C%20Sentinel-green)
+![Language](https://img.shields.io/badge/language-English%20%2B%20Banglish-orange)
 
-> **Languages:** Articles #01–#03, #11–#13, #17 are written in **Bengali + English (Banglish)**.
-> Articles #04–#10 and #14–#16 are in **English**.
+A complete **SIEM Engineer** learning path — from log management fundamentals to enterprise SIEM architecture design, with a multi-platform hands-on capstone. Written for **SOC / SIEM engineer interview preparation** and lab practice.
 
-> 📁 **Note:** The full series (all 17 articles) lives in the [`all/`](all/) folder.
+**Who is this for:** SOC analysts (L1/L2), aspiring SIEM engineers, and anyone preparing for SIEM interviews who wants theory + query + detection + lab in one place.
+
+> **Languages (verified):** **#01, #11–#13, #17** are written in **Bengali + English (Banglish)**. **#02–#10 and #14–#16** are in **English**.
+
+> 📁 **Folders:** all 17 articles live in [`all/`](all/). The combined professional edition (read online or print) is in [`book/`](book/) — [`book.html`](book/book.html) + [`book.pdf`](book/book.pdf).
 
 ---
 

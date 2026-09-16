@@ -60,39 +60,38 @@
       }
     pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     div.sourceCode
-      {   }
+      {  background-color: #f8f8f8; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { color: #008000; } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.al { color: #ef2929; } /* Alert */
+    code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #204a87; } /* Attribute */
+    code span.bn { color: #0000cf; } /* BaseN */
+    code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4e9a06; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #8f5902; font-style: italic; } /* Comment */
+    code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+    code span.dt { color: #204a87; } /* DataType */
+    code span.dv { color: #0000cf; } /* DecVal */
+    code span.er { color: #a40000; font-weight: bold; } /* Error */
     code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { color: #008000; font-weight: bold; } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    code span.fl { color: #0000cf; } /* Float */
+    code span.fu { color: #204a87; font-weight: bold; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+    code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+    code span.ot { color: #8f5902; } /* Other */
+    code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+    code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+    code span.ss { color: #4e9a06; } /* SpecialString */
+    code span.st { color: #4e9a06; } /* String */
+    code span.va { color: #000000; } /* Variable */
+    code span.vs { color: #4e9a06; } /* VerbatimString */
+    code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -100,6 +99,7 @@
 <header id="title-block-header">
 <h1 class="title">SIEM Engineer — Complete Study Notes</h1>
 <p class="author">Boni Yeamin</p>
+<p class="date">September 2026</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -109,48 +109,7 @@ id="toc-siem-engineer-study-notes">🛡️ SIEM Engineer — Study Notes</a>
 <li><a href="#series-index" id="toc-series-index">📚 Series
 Index</a></li>
 <li><a href="#topic-summaries" id="toc-topic-summaries">🗂️ Topic
-Summaries</a>
-<ul>
-<li><a href="#log-management" id="toc-log-management">#01 — Log
-Management</a></li>
-<li><a href="#siem-platforms" id="toc-siem-platforms">#02 — SIEM
-Platforms</a></li>
-<li><a href="#log-integration" id="toc-log-integration">#03 — Log
-Integration</a></li>
-<li><a href="#detection-engineering" id="toc-detection-engineering">#04
-— Detection Engineering</a></li>
-<li><a href="#query-investigation" id="toc-query-investigation">#05 —
-Query &amp; Investigation</a></li>
-<li><a href="#advanced-detection-engineering"
-id="toc-advanced-detection-engineering">#14 — Advanced Detection
-Engineering</a></li>
-<li><a href="#threat-hunting-with-siem"
-id="toc-threat-hunting-with-siem">#15 — Threat Hunting with
-SIEM</a></li>
-<li><a href="#soc-operations" id="toc-soc-operations">#06 — SOC
-Operations</a></li>
-<li><a href="#threat-intelligence" id="toc-threat-intelligence">#07 —
-Threat Intelligence</a></li>
-<li><a href="#automation-soar" id="toc-automation-soar">#08 — Automation
-&amp; SOAR</a></li>
-<li><a href="#dashboard-reporting" id="toc-dashboard-reporting">#09 —
-Dashboard &amp; Reporting</a></li>
-<li><a href="#siem-infrastructure" id="toc-siem-infrastructure">#10 —
-SIEM Infrastructure</a></li>
-<li><a href="#siem-architecture-design"
-id="toc-siem-architecture-design">#11 — SIEM Architecture
-Design</a></li>
-<li><a href="#siem-capacity-planning"
-id="toc-siem-capacity-planning">#12 — SIEM Capacity Planning</a></li>
-<li><a href="#siem-performance-tuning"
-id="toc-siem-performance-tuning">#13 — SIEM Performance Tuning</a></li>
-<li><a href="#siem-data-quality-troubleshooting"
-id="toc-siem-data-quality-troubleshooting">#16 — SIEM Data Quality &amp;
-Troubleshooting</a></li>
-<li><a href="#hands-on-siem-multi-platform-practical-guide"
-id="toc-hands-on-siem-multi-platform-practical-guide">#17 — Hands-On
-SIEM: Multi-Platform Practical Guide 🆕</a></li>
-</ul></li>
+Summaries</a></li>
 <li><a href="#core-flow-to-remember" id="toc-core-flow-to-remember">🔁
 Core Flow to Remember</a></li>
 <li><a href="#how-to-use-these-notes" id="toc-how-to-use-these-notes">🎯
@@ -230,30 +189,7 @@ Indexing &amp; Search</a></li>
 Monitoring</a></li>
 <li><a href="#troubleshooting-missing-logs"
 id="toc-troubleshooting-missing-logs">32. Troubleshooting Missing
-Logs</a>
-<ul>
-<li><a href="#step-1-check-the-source"
-id="toc-step-1-check-the-source">Step 1 — Check the Source</a></li>
-<li><a href="#step-2-check-configuration"
-id="toc-step-2-check-configuration">Step 2 — Check
-Configuration</a></li>
-<li><a href="#step-3-check-network" id="toc-step-3-check-network">Step 3
-— Check Network</a></li>
-<li><a href="#step-4-check-port" id="toc-step-4-check-port">Step 4 —
-Check Port</a></li>
-<li><a href="#step-5-check-collector"
-id="toc-step-5-check-collector">Step 5 — Check Collector</a></li>
-<li><a href="#step-6-check-transport"
-id="toc-step-6-check-transport">Step 6 — Check Transport</a></li>
-<li><a href="#step-7-check-parsing" id="toc-step-7-check-parsing">Step 7
-— Check Parsing</a></li>
-<li><a href="#step-8-check-siem" id="toc-step-8-check-siem">Step 8 —
-Check SIEM</a></li>
-<li><a href="#step-9-check-storage" id="toc-step-9-check-storage">Step 9
-— Check Storage</a></li>
-<li><a href="#step-10-validate" id="toc-step-10-validate">Step 10 —
-Validate</a></li>
-</ul></li>
+Logs</a></li>
 <li><a href="#log-management-security"
 id="toc-log-management-security">33. Log Management Security</a></li>
 <li><a href="#log-management-and-detection-engineering"
@@ -267,15 +203,7 @@ id="toc-practical-siem-log-management-lab">36. Practical SIEM Log
 Management Lab</a></li>
 <li><a href="#siem-engineer-log-management-checklist"
 id="toc-siem-engineer-log-management-checklist">37. SIEM Engineer Log
-Management Checklist</a>
-<ul>
-<li><a href="#log-sources" id="toc-log-sources">Log Sources</a></li>
-<li><a href="#collection" id="toc-collection">Collection</a></li>
-<li><a href="#processing" id="toc-processing">Processing</a></li>
-<li><a href="#storage" id="toc-storage">Storage</a></li>
-<li><a href="#monitoring" id="toc-monitoring">Monitoring</a></li>
-<li><a href="#security" id="toc-security">Security</a></li>
-</ul></li>
+Management Checklist</a></li>
 <li><a href="#real-world-siem-engineer-mindset"
 id="toc-real-world-siem-engineer-mindset">38. Real-World SIEM Engineer
 Mindset</a></li>
@@ -287,34 +215,12 @@ id="toc-why-does-log-management-matter">💡 Why Does Log Management
 Matter?</a></li>
 <li><a href="#interview-questions-for-siem-engineer"
 id="toc-interview-questions-for-siem-engineer">Interview Questions for
-SIEM Engineer</a>
-<ul>
-<li><a href="#q1.-what-is-log-management"
-id="toc-q1.-what-is-log-management">Q1. What is Log Management?</a></li>
-<li><a href="#q2.-what-are-common-siem-log-sources"
-id="toc-q2.-what-are-common-siem-log-sources">Q2. What are common SIEM
-log sources?</a></li>
-<li><a href="#q3.-what-is-log-parsing"
-id="toc-q3.-what-is-log-parsing">Q3. What is log parsing?</a></li>
-<li><a href="#q4.-what-is-log-normalization"
-id="toc-q4.-what-is-log-normalization">Q4. What is log
-normalization?</a></li>
-<li><a
-href="#q5.-what-would-you-check-if-logs-suddenly-stop-coming-into-the-siem"
-id="toc-q5.-what-would-you-check-if-logs-suddenly-stop-coming-into-the-siem">Q5.
-What would you check if logs suddenly stop coming into the
-SIEM?</a></li>
-<li><a href="#q6.-what-is-eps" id="toc-q6.-what-is-eps">Q6. What is
-EPS?</a></li>
-</ul></li>
+SIEM Engineer</a></li>
 <li><a href="#final-takeaway" id="toc-final-takeaway">Final Takeaway</a>
 <ul>
 <li><a href="#siem-engineer-learning-series"
 id="toc-siem-engineer-learning-series">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation" id="toc-navigation">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-02-siem-platforms"
 id="toc-siem-engineer-02-siem-platforms">SIEM Engineer #02 — SIEM
@@ -332,13 +238,7 @@ a SIEM Engineer Do With a SIEM Platform?</a></li>
 Major SIEM Platforms</a></li>
 <li><a href="#splunk" id="toc-splunk">4. Splunk</a></li>
 <li><a href="#splunk-architecture" id="toc-splunk-architecture">5.
-Splunk Architecture</a>
-<ul>
-<li><a href="#search-head" id="toc-search-head">==&gt; Search
-Head</a></li>
-<li><a href="#indexer" id="toc-indexer">==&gt; Indexer</a></li>
-<li><a href="#forwarder" id="toc-forwarder">==&gt; Forwarder</a></li>
-</ul></li>
+Splunk Architecture</a></li>
 <li><a href="#spl-splunk-search-processing-language"
 id="toc-spl-splunk-search-processing-language">6. SPL — Splunk Search
 Processing Language</a></li>
@@ -366,15 +266,7 @@ id="toc-siem-platforms-have-similar-concepts">18. SIEM Platforms Have
 Similar Concepts</a></li>
 <li><a href="#query-language-is-a-core-skill"
 id="toc-query-language-is-a-core-skill">19. Query Language Is a Core
-Skill</a>
-<ul>
-<li><a href="#splunk-1" id="toc-splunk-1">Splunk</a></li>
-<li><a href="#microsoft-sentinel-1"
-id="toc-microsoft-sentinel-1">Microsoft Sentinel</a></li>
-<li><a href="#qradar" id="toc-qradar">QRadar</a></li>
-<li><a href="#elasticopensearch"
-id="toc-elasticopensearch">Elastic/OpenSearch</a></li>
-</ul></li>
+Skill</a></li>
 <li><a href="#detection-rules" id="toc-detection-rules">20. Detection
 Rules</a></li>
 <li><a href="#alert-vs-incident-vs-offense"
@@ -387,37 +279,14 @@ SIEM Platform Health</a></li>
 id="toc-choosing-a-siem-platform">24. Choosing a SIEM Platform</a></li>
 <li><a href="#what-should-a-siem-engineer-learn"
 id="toc-what-should-a-siem-engineer-learn">25. What Should a SIEM
-Engineer Learn?</a>
-<ul>
-<li><a href="#foundation" id="toc-foundation">Foundation</a></li>
-<li><a href="#choose-one-primary-siem"
-id="toc-choose-one-primary-siem">Choose One Primary SIEM</a></li>
-<li><a href="#then-learn-others" id="toc-then-learn-others">Then Learn
-Others</a></li>
-</ul></li>
+Engineer Learn?</a></li>
 <li><a href="#practical-lab" id="toc-practical-lab">26. Practical
 Lab</a></li>
 <li><a href="#siem-platform-checklist"
 id="toc-siem-platform-checklist">SIEM Platform Checklist</a></li>
 <li><a href="#siem-engineer-interview-questions"
 id="toc-siem-engineer-interview-questions">27. SIEM Engineer Interview
-Questions</a>
-<ul>
-<li><a href="#q1.-what-is-siem" id="toc-q1.-what-is-siem">Q1. What is
-SIEM?</a></li>
-<li><a href="#q2.-what-siem-platforms-have-you-worked-with"
-id="toc-q2.-what-siem-platforms-have-you-worked-with">Q2. What SIEM
-platforms have you worked with?</a></li>
-<li><a href="#q3.-what-is-the-difference-between-an-event-and-an-alert"
-id="toc-q3.-what-is-the-difference-between-an-event-and-an-alert">Q3.
-What is the difference between an Event and an Alert?</a></li>
-<li><a href="#q4.-what-is-a-correlation-rule"
-id="toc-q4.-what-is-a-correlation-rule">Q4. What is a correlation
-rule?</a></li>
-<li><a href="#q5.-why-is-query-language-important"
-id="toc-q5.-why-is-query-language-important">Q5. Why is query language
-important?</a></li>
-</ul></li>
+Questions</a></li>
 <li><a href="#the-most-important-mindset"
 id="toc-the-most-important-mindset">28. The Most Important
 Mindset</a></li>
@@ -427,10 +296,7 @@ Takeaway</a>
 <li><a href="#next-article" id="toc-next-article">Next Article</a></li>
 <li><a href="#siem-engineer-learning-series-1"
 id="toc-siem-engineer-learning-series-1">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-1" id="toc-navigation-1">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-03-log-integration"
 id="toc-siem-engineer-03-log-integration">SIEM Engineer #03 — Log
@@ -455,11 +321,7 @@ Integration</a></li>
 id="toc-syslog-facility-and-severity">5. Syslog Facility and
 Severity</a></li>
 <li><a href="#syslog-over-udp-vs-tcp" id="toc-syslog-over-udp-vs-tcp">6.
-Syslog over UDP vs TCP</a>
-<ul>
-<li><a href="#udp" id="toc-udp">UDP</a></li>
-<li><a href="#tcp" id="toc-tcp">TCP</a></li>
-</ul></li>
+Syslog over UDP vs TCP</a></li>
 <li><a href="#cef-integration" id="toc-cef-integration">7. CEF
 Integration</a></li>
 <li><a href="#api-integration" id="toc-api-integration">8. API
@@ -482,66 +344,16 @@ Logs</a></li>
 <li><a href="#custom-parsers" id="toc-custom-parsers">17. Custom
 Parsers</a></li>
 <li><a href="#parsing-vs-normalization"
-id="toc-parsing-vs-normalization">18. Parsing vs Normalization</a>
-<ul>
-<li><a href="#parsing" id="toc-parsing">Parsing</a></li>
-<li><a href="#normalization"
-id="toc-normalization">Normalization</a></li>
-</ul></li>
+id="toc-parsing-vs-normalization">18. Parsing vs Normalization</a></li>
 <li><a href="#data-onboarding" id="toc-data-onboarding">19. Data
-Onboarding</a>
-<ul>
-<li><a href="#step-1-identify-the-source"
-id="toc-step-1-identify-the-source">Step 1 — Identify the
-Source</a></li>
-<li><a href="#step-2-identify-available-logs"
-id="toc-step-2-identify-available-logs">Step 2 — Identify Available
-Logs</a></li>
-<li><a href="#step-3-select-integration-method"
-id="toc-step-3-select-integration-method">Step 3 — Select Integration
-Method</a></li>
-<li><a href="#step-4-configure-source"
-id="toc-step-4-configure-source">Step 4 — Configure Source</a></li>
-<li><a href="#step-5-verify-transport"
-id="toc-step-5-verify-transport">Step 5 — Verify Transport</a></li>
-<li><a href="#step-6-parse" id="toc-step-6-parse">Step 6 —
-Parse</a></li>
-<li><a href="#step-7-normalize" id="toc-step-7-normalize">Step 7 —
-Normalize</a></li>
-<li><a href="#step-8-test-search" id="toc-step-8-test-search">Step 8 —
-Test Search</a></li>
-<li><a href="#step-9-create-detection"
-id="toc-step-9-create-detection">Step 9 — Create Detection</a></li>
-<li><a href="#step-10-monitor" id="toc-step-10-monitor">Step 10 —
-Monitor</a></li>
-</ul></li>
+Onboarding</a></li>
 <li><a href="#log-integration-testing"
 id="toc-log-integration-testing">20. Log Integration Testing</a></li>
 <li><a href="#end-to-end-validation" id="toc-end-to-end-validation">21.
 End-to-End Validation</a></li>
 <li><a href="#troubleshooting-logs-not-arriving"
 id="toc-troubleshooting-logs-not-arriving">22. Troubleshooting: Logs Not
-Arriving</a>
-<ul>
-<li><a href="#check-1-firewall" id="toc-check-1-firewall">Check 1 —
-Firewall</a></li>
-<li><a href="#check-2-configuration"
-id="toc-check-2-configuration">Check 2 — Configuration</a></li>
-<li><a href="#check-3-port" id="toc-check-3-port">Check 3 —
-Port</a></li>
-<li><a href="#check-4-network" id="toc-check-4-network">Check 4 —
-Network</a></li>
-<li><a href="#check-5-collector" id="toc-check-5-collector">Check 5 —
-Collector</a></li>
-<li><a href="#check-6-packet-capture"
-id="toc-check-6-packet-capture">Check 6 — Packet Capture</a></li>
-<li><a href="#check-7-parser" id="toc-check-7-parser">Check 7 —
-Parser</a></li>
-<li><a href="#check-8-indexdata-stream"
-id="toc-check-8-indexdata-stream">Check 8 — Index/Data Stream</a></li>
-<li><a href="#check-9-search" id="toc-check-9-search">Check 9 —
-Search</a></li>
-</ul></li>
+Arriving</a></li>
 <li><a href="#troubleshooting-logs-arrive-but-fields-are-empty"
 id="toc-troubleshooting-logs-arrive-but-fields-are-empty">23.
 Troubleshooting: Logs Arrive but Fields Are Empty</a></li>
@@ -563,14 +375,7 @@ Filtering</a></li>
 Cost and Data Volume</a></li>
 <li><a href="#critical-vs-non-critical-logs"
 id="toc-critical-vs-non-critical-logs">31. Critical vs Non-Critical
-Logs</a>
-<ul>
-<li><a href="#high-priority" id="toc-high-priority">High
-Priority</a></li>
-<li><a href="#medium-priority" id="toc-medium-priority">Medium
-Priority</a></li>
-<li><a href="#contextual" id="toc-contextual">Contextual</a></li>
-</ul></li>
+Logs</a></li>
 <li><a href="#log-integration-documentation"
 id="toc-log-integration-documentation">32. Log Integration
 Documentation</a></li>
@@ -587,15 +392,7 @@ id="toc-common-log-integration-mistakes">36. Common Log Integration
 Mistakes</a></li>
 <li><a href="#siem-engineer-log-integration-checklist"
 id="toc-siem-engineer-log-integration-checklist">37. SIEM Engineer Log
-Integration Checklist</a>
-<ul>
-<li><a href="#before-integration" id="toc-before-integration">Before
-Integration</a></li>
-<li><a href="#during-integration" id="toc-during-integration">During
-Integration</a></li>
-<li><a href="#after-integration" id="toc-after-integration">After
-Integration</a></li>
-</ul></li>
+Integration Checklist</a></li>
 <li><a href="#the-complete-integration-flow"
 id="toc-the-complete-integration-flow">38. The Complete Integration
 Flow</a></li>
@@ -603,31 +400,7 @@ Flow</a></li>
 id="toc-why-does-log-integration-matter">💡 Why Does Log Integration
 Matter?</a></li>
 <li><a href="#interview-questions"
-id="toc-interview-questions">Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-log-integration"
-id="toc-q1.-what-is-log-integration">Q1. What is Log
-Integration?</a></li>
-<li><a href="#q2.-what-are-common-log-integration-methods"
-id="toc-q2.-what-are-common-log-integration-methods">Q2. What are common
-log integration methods?</a></li>
-<li><a href="#q3.-what-would-you-check-if-syslog-logs-are-not-arriving"
-id="toc-q3.-what-would-you-check-if-syslog-logs-are-not-arriving">Q3.
-What would you check if Syslog logs are not arriving?</a></li>
-<li><a
-href="#q4.-what-is-the-difference-between-parsing-and-normalization"
-id="toc-q4.-what-is-the-difference-between-parsing-and-normalization">Q4.
-What is the difference between parsing and normalization?</a></li>
-<li><a href="#q5.-why-is-api-integration-important"
-id="toc-q5.-why-is-api-integration-important">Q5. Why is API integration
-important?</a></li>
-<li><a href="#q6.-what-is-cef" id="toc-q6.-what-is-cef">Q6. What is
-CEF?</a></li>
-<li><a href="#q7.-what-is-log-onboarding"
-id="toc-q7.-what-is-log-onboarding">Q7. What is log onboarding?</a></li>
-<li><a href="#q8.-what-is-eps" id="toc-q8.-what-is-eps">Q8. What is
-EPS?</a></li>
-</ul></li>
+id="toc-interview-questions">Interview Questions</a></li>
 <li><a href="#final-takeaway-2" id="toc-final-takeaway-2">Final
 Takeaway</a></li>
 <li><a href="#next-article-1" id="toc-next-article-1">Next Article</a>
@@ -637,10 +410,7 @@ id="toc-siem-engineer-04-detection-engineering">SIEM Engineer #04 —
 Detection Engineering</a></li>
 <li><a href="#siem-engineer-learning-series-2"
 id="toc-siem-engineer-learning-series-2">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-2" id="toc-navigation-2">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-04-detection-engineering-1"
 id="toc-siem-engineer-04-detection-engineering-1">SIEM Engineer #04 —
@@ -654,12 +424,7 @@ id="toc-what-is-detection-engineering">🧠 1. What is Detection
 Engineering?</a></li>
 <li><a href="#why-detection-engineering-matters"
 id="toc-why-detection-engineering-matters">🎯 2. Why Detection
-Engineering Matters</a>
-<ul>
-<li><a href="#example" id="toc-example">Example</a></li>
-<li><a href="#why-does-this-matter" id="toc-why-does-this-matter">💡 Why
-does this matter?</a></li>
-</ul></li>
+Engineering Matters</a></li>
 <li><a href="#detection-engineering-lifecycle"
 id="toc-detection-engineering-lifecycle">🔄 3. Detection Engineering
 Lifecycle</a></li>
@@ -670,10 +435,7 @@ id="toc-step-2-create-a-security-hypothesis">💡 5. Step 2 — Create a
 Security Hypothesis</a></li>
 <li><a href="#step-3-identify-required-telemetry"
 id="toc-step-3-identify-required-telemetry">📊 6. Step 3 — Identify
-Required Telemetry</a>
-<ul>
-<li><a href="#important" id="toc-important">Important</a></li>
-</ul></li>
+Required Telemetry</a></li>
 <li><a href="#detection-data-quality" id="toc-detection-data-quality">🧩
 7. Detection Data Quality</a></li>
 <li><a href="#detection-logic" id="toc-detection-logic">⚙️ 8. Detection
@@ -694,21 +456,12 @@ Anomaly Detection</a></li>
 9.5 Correlation Detection</a></li>
 <li><a href="#detection-rules-vs-correlation-rules"
 id="toc-detection-rules-vs-correlation-rules">🛡️ 10. Detection Rules vs
-Correlation Rules</a>
-<ul>
-<li><a href="#detection-rule" id="toc-detection-rule">Detection
-Rule</a></li>
-<li><a href="#correlation-rule" id="toc-correlation-rule">Correlation
-Rule</a></li>
-</ul></li>
+Correlation Rules</a></li>
 <li><a href="#sigma" id="toc-sigma">🧪 11. Sigma</a></li>
 <li><a href="#sigma-rule-structure" id="toc-sigma-rule-structure">🧠 12.
 Sigma Rule Structure</a></li>
 <li><a href="#mitre-attck-mapping" id="toc-mitre-attck-mapping">🎯 13.
-MITRE ATT&amp;CK Mapping</a>
-<ul>
-<li><a href="#important-1" id="toc-important-1">Important</a></li>
-</ul></li>
+MITRE ATT&amp;CK Mapping</a></li>
 <li><a href="#detection-coverage" id="toc-detection-coverage">🗺️ 14.
 Detection Coverage</a></li>
 <li><a href="#example-ssh-brute-force-detection"
@@ -726,11 +479,7 @@ Change Detection</a></li>
 id="toc-threat-intelligence-correlation">🌐 19. Threat Intelligence
 Correlation</a></li>
 <li><a href="#severity-and-confidence"
-id="toc-severity-and-confidence">🎚️ 20. Severity and Confidence</a>
-<ul>
-<li><a href="#severity" id="toc-severity">Severity</a></li>
-<li><a href="#confidence" id="toc-confidence">Confidence</a></li>
-</ul></li>
+id="toc-severity-and-confidence">🎚️ 20. Severity and Confidence</a></li>
 <li><a href="#false-positives" id="toc-false-positives">🚫 21. False
 Positives</a></li>
 <li><a href="#detection-tuning" id="toc-detection-tuning">🔧 22.
@@ -741,18 +490,7 @@ Alert Deduplication</a></li>
 id="toc-exceptions-and-allowlisting">📋 24. Exceptions and
 Allowlisting</a></li>
 <li><a href="#detection-testing" id="toc-detection-testing">🧪 25.
-Detection Testing</a>
-<ul>
-<li><a href="#unit-testing" id="toc-unit-testing">Unit Testing</a></li>
-<li><a href="#replay-testing" id="toc-replay-testing">Replay
-Testing</a></li>
-<li><a href="#synthetic-events" id="toc-synthetic-events">Synthetic
-Events</a></li>
-<li><a href="#attack-simulation" id="toc-attack-simulation">Attack
-Simulation</a></li>
-<li><a href="#regression-testing" id="toc-regression-testing">Regression
-Testing</a></li>
-</ul></li>
+Detection Testing</a></li>
 <li><a href="#example-detection-test" id="toc-example-detection-test">🔬
 26. Example Detection Test</a></li>
 <li><a href="#splunk-detection-example"
@@ -781,16 +519,7 @@ vs Detection Count</a></li>
 id="toc-detection-improvement-cycle">🔄 35. Detection Improvement
 Cycle</a></li>
 <li><a href="#practical-siem-lab" id="toc-practical-siem-lab">🧪 36.
-Practical SIEM Lab</a>
-<ul>
-<li><a href="#lab-1-ssh-detection" id="toc-lab-1-ssh-detection">Lab 1 —
-SSH Detection</a></li>
-<li><a href="#lab-2-windows-authentication"
-id="toc-lab-2-windows-authentication">Lab 2 — Windows
-Authentication</a></li>
-<li><a href="#lab-3-privilege-change"
-id="toc-lab-3-privilege-change">Lab 3 — Privilege Change</a></li>
-</ul></li>
+Practical SIEM Lab</a></li>
 <li><a href="#detection-engineering-checklist"
 id="toc-detection-engineering-checklist">📋 37. Detection Engineering
 Checklist</a></li>
@@ -799,66 +528,15 @@ id="toc-complete-detection-engineering-flow">🎯 38. Complete Detection
 Engineering Flow</a></li>
 <li><a href="#siem-engineer-interview-questions-1"
 id="toc-siem-engineer-interview-questions-1">🎤 39. SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-detection-engineering"
-id="toc-q1.-what-is-detection-engineering">Q1. What is Detection
-Engineering?</a></li>
-<li><a href="#q2.-what-is-a-detection-rule"
-id="toc-q2.-what-is-a-detection-rule">Q2. What is a detection
-rule?</a></li>
-<li><a href="#q3.-what-is-a-correlation-rule"
-id="toc-q3.-what-is-a-correlation-rule">Q3. What is a correlation
-rule?</a></li>
-<li><a href="#q4.-what-is-sigma" id="toc-q4.-what-is-sigma">Q4. What is
-Sigma?</a></li>
-<li><a
-href="#q5.-why-is-mitre-attck-important-for-detection-engineering"
-id="toc-q5.-why-is-mitre-attck-important-for-detection-engineering">Q5.
-Why is MITRE ATT&amp;CK important for Detection Engineering?</a></li>
-<li><a href="#q6.-what-is-a-false-positive"
-id="toc-q6.-what-is-a-false-positive">Q6. What is a false
-positive?</a></li>
-<li><a href="#q7.-how-do-you-reduce-false-positives"
-id="toc-q7.-how-do-you-reduce-false-positives">Q7. How do you reduce
-false positives?</a></li>
-<li><a href="#q8.-what-is-detection-tuning"
-id="toc-q8.-what-is-detection-tuning">Q8. What is detection
-tuning?</a></li>
-<li><a href="#q9.-what-is-detection-as-code"
-id="toc-q9.-what-is-detection-as-code">Q9. What is
-Detection-as-Code?</a></li>
-<li><a href="#q10.-what-makes-a-good-detection"
-id="toc-q10.-what-makes-a-good-detection">Q10. What makes a good
-detection?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#important-lessons" id="toc-important-lessons">🧠 40.
-Important Lessons</a>
-<ul>
-<li><a href="#logs-are-not-detections"
-id="toc-logs-are-not-detections">1️⃣ Logs are not detections</a></li>
-<li><a href="#more-alerts-do-not-mean-better-security"
-id="toc-more-alerts-do-not-mean-better-security">2️⃣ More alerts do not
-mean better security</a></li>
-<li><a href="#context-is-extremely-important"
-id="toc-context-is-extremely-important">3️⃣ Context is extremely
-important</a></li>
-<li><a href="#detection-engineering-is-continuous"
-id="toc-detection-engineering-is-continuous">4️⃣ Detection Engineering is
-continuous</a></li>
-<li><a href="#detection-depends-on-telemetry"
-id="toc-detection-depends-on-telemetry">5️⃣ Detection depends on
-telemetry</a></li>
-</ul></li>
+Important Lessons</a></li>
 <li><a href="#final-takeaway-3" id="toc-final-takeaway-3">🚀 Final
 Takeaway</a>
 <ul>
 <li><a href="#siem-engineer-learning-series-3"
 id="toc-siem-engineer-learning-series-3">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-3" id="toc-navigation-3">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-05-query-investigation"
 id="toc-siem-engineer-05-query-investigation">SIEM Engineer #05 — Query
@@ -871,22 +549,10 @@ Introduction</a></li>
 id="toc-what-is-query-investigation">🧠 1. What is Query &amp;
 Investigation?</a></li>
 <li><a href="#why-query-skills-matter"
-id="toc-why-query-skills-matter">🎯 2. Why Query Skills Matter</a>
-<ul>
-<li><a href="#why-does-this-matter-1" id="toc-why-does-this-matter-1">💡
-Why does this matter?</a></li>
-</ul></li>
+id="toc-why-query-skills-matter">🎯 2. Why Query Skills Matter</a></li>
 <li><a href="#the-basic-investigation-questions"
 id="toc-the-basic-investigation-questions">🔎 3. The Basic Investigation
-Questions</a>
-<ul>
-<li><a href="#who" id="toc-who">WHO?</a></li>
-<li><a href="#what" id="toc-what">WHAT?</a></li>
-<li><a href="#when" id="toc-when">WHEN?</a></li>
-<li><a href="#where" id="toc-where">WHERE?</a></li>
-<li><a href="#how" id="toc-how">HOW?</a></li>
-<li><a href="#why" id="toc-why">WHY?</a></li>
-</ul></li>
+Questions</a></li>
 <li><a href="#query-building-fundamentals"
 id="toc-query-building-fundamentals">🧩 4. Query Building
 Fundamentals</a></li>
@@ -929,16 +595,7 @@ Investigation</a></li>
 Alert Investigation</a></li>
 <li><a href="#true-positive-vs-false-positive"
 id="toc-true-positive-vs-false-positive">🧪 24. True Positive vs False
-Positive</a>
-<ul>
-<li><a href="#true-positive" id="toc-true-positive">True
 Positive</a></li>
-<li><a href="#false-positive" id="toc-false-positive">False
-Positive</a></li>
-<li><a href="#benign-expected" id="toc-benign-expected">Benign /
-Expected</a></li>
-<li><a href="#unknown" id="toc-unknown">Unknown</a></li>
-</ul></li>
 <li><a href="#threat-hunting" id="toc-threat-hunting">🔎 25. Threat
 Hunting</a></li>
 <li><a href="#threat-hunting-questions"
@@ -957,15 +614,7 @@ id="toc-statistical-investigation">📈 30. Statistical
 Investigation</a></li>
 <li><a href="#example-investigating-ssh-brute-force"
 id="toc-example-investigating-ssh-brute-force">🔥 31. Example —
-Investigating SSH Brute Force</a>
-<ul>
-<li><a href="#step-1" id="toc-step-1">Step 1</a></li>
-<li><a href="#step-2" id="toc-step-2">Step 2</a></li>
-<li><a href="#step-3" id="toc-step-3">Step 3</a></li>
-<li><a href="#step-4" id="toc-step-4">Step 4</a></li>
-<li><a href="#step-5" id="toc-step-5">Step 5</a></li>
-<li><a href="#step-6" id="toc-step-6">Step 6</a></li>
-</ul></li>
+Investigating SSH Brute Force</a></li>
 <li><a href="#example-windows-account-investigation"
 id="toc-example-windows-account-investigation">🪟 32. Example — Windows
 Account Investigation</a></li>
@@ -977,52 +626,15 @@ Investigation</a></li>
 <li><a href="#search-broad-narrow" id="toc-search-broad-narrow">📊 35.
 Search Broad → Narrow</a></li>
 <li><a href="#common-query-mistakes" id="toc-common-query-mistakes">🚫
-36. Common Query Mistakes</a>
-<ul>
-<li><a href="#mistake-1-wrong-time-range"
-id="toc-mistake-1-wrong-time-range">Mistake 1 — Wrong Time
-Range</a></li>
-<li><a href="#mistake-2-wrong-field"
-id="toc-mistake-2-wrong-field">Mistake 2 — Wrong Field</a></li>
-<li><a href="#mistake-3-case-sensitivity"
-id="toc-mistake-3-case-sensitivity">Mistake 3 — Case
-Sensitivity</a></li>
-<li><a href="#mistake-4-searching-only-one-event"
-id="toc-mistake-4-searching-only-one-event">Mistake 4 — Searching Only
-One Event</a></li>
-<li><a href="#mistake-5-ignoring-normal-activity"
-id="toc-mistake-5-ignoring-normal-activity">Mistake 5 — Ignoring Normal
-Activity</a></li>
-<li><a href="#mistake-6-overly-broad-queries"
-id="toc-mistake-6-overly-broad-queries">Mistake 6 — Overly Broad
-Queries</a></li>
-</ul></li>
+36. Common Query Mistakes</a></li>
 <li><a href="#query-performance" id="toc-query-performance">⚡ 37. Query
 Performance</a></li>
 <li><a href="#query-language-skills" id="toc-query-language-skills">📚
-38. Query Language Skills</a>
-<ul>
-<li><a href="#splunk-2" id="toc-splunk-2">Splunk</a></li>
-<li><a href="#microsoft-sentinel-2"
-id="toc-microsoft-sentinel-2">Microsoft Sentinel</a></li>
-<li><a href="#qradar-1" id="toc-qradar-1">QRadar</a></li>
-<li><a href="#elastic" id="toc-elastic">Elastic</a></li>
-<li><a href="#opensearch-1" id="toc-opensearch-1">OpenSearch</a></li>
-</ul></li>
+38. Query Language Skills</a></li>
 <li><a href="#query-skill-progression"
 id="toc-query-skill-progression">🧠 39. Query Skill Progression</a></li>
 <li><a href="#practical-siem-lab-1" id="toc-practical-siem-lab-1">🧪 40.
-Practical SIEM Lab</a>
-<ul>
-<li><a href="#lab-1" id="toc-lab-1">Lab 1</a></li>
-<li><a href="#lab-2" id="toc-lab-2">Lab 2</a></li>
-<li><a href="#lab-3" id="toc-lab-3">Lab 3</a></li>
-<li><a href="#lab-4" id="toc-lab-4">Lab 4</a></li>
-<li><a href="#lab-5" id="toc-lab-5">Lab 5</a></li>
-<li><a href="#lab-6" id="toc-lab-6">Lab 6</a></li>
-<li><a href="#lab-7" id="toc-lab-7">Lab 7</a></li>
-<li><a href="#lab-8" id="toc-lab-8">Lab 8</a></li>
-</ul></li>
+Practical SIEM Lab</a></li>
 <li><a href="#investigation-checklist"
 id="toc-investigation-checklist">📋 41. Investigation Checklist</a></li>
 <li><a href="#complete-investigation-flow"
@@ -1030,43 +642,13 @@ id="toc-complete-investigation-flow">🔄 42. Complete Investigation
 Flow</a></li>
 <li><a href="#siem-engineer-interview-questions-2"
 id="toc-siem-engineer-interview-questions-2">🎤 43. SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-a-siem-query"
-id="toc-q1.-what-is-a-siem-query">Q1. What is a SIEM query?</a></li>
-<li><a href="#q2.-what-is-spl" id="toc-q2.-what-is-spl">Q2. What is
-SPL?</a></li>
-<li><a href="#q3.-what-is-kql" id="toc-q3.-what-is-kql">Q3. What is
-KQL?</a></li>
-<li><a href="#q4.-what-is-pivoting" id="toc-q4.-what-is-pivoting">Q4.
-What is pivoting?</a></li>
-<li><a href="#q5.-why-is-time-range-important-during-investigation"
-id="toc-q5.-why-is-time-range-important-during-investigation">Q5. Why is
-time range important during investigation?</a></li>
-<li><a href="#q6.-what-is-threat-hunting"
-id="toc-q6.-what-is-threat-hunting">Q6. What is threat hunting?</a></li>
-<li><a href="#q7.-how-do-you-investigate-a-suspicious-ip"
-id="toc-q7.-how-do-you-investigate-a-suspicious-ip">Q7. How do you
-investigate a suspicious IP?</a></li>
-<li><a href="#q8.-what-is-correlation"
-id="toc-q8.-what-is-correlation">Q8. What is correlation?</a></li>
-<li><a href="#q9.-how-do-you-investigate-a-suspicious-login"
-id="toc-q9.-how-do-you-investigate-a-suspicious-login">Q9. How do you
-investigate a suspicious login?</a></li>
-<li><a
-href="#q10.-what-is-the-difference-between-searching-and-investigating"
-id="toc-q10.-what-is-the-difference-between-searching-and-investigating">Q10.
-What is the difference between searching and investigating?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#final-takeaway-4" id="toc-final-takeaway-4">🚀 44. Final
 Takeaway</a>
 <ul>
 <li><a href="#siem-engineer-learning-series-4"
 id="toc-siem-engineer-learning-series-4">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-4" id="toc-navigation-4">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-06-soc-operations"
 id="toc-siem-engineer-06-soc-operations">SIEM Engineer #06 — SOC
@@ -1126,12 +708,7 @@ Triage</a></li>
 Priority</a></li>
 <li><a href="#severity-vs-priority-vs-confidence"
 id="toc-severity-vs-priority-vs-confidence">🧠 21. Severity vs Priority
-vs Confidence</a>
-<ul>
-<li><a href="#severity-1" id="toc-severity-1">Severity</a></li>
-<li><a href="#confidence-1" id="toc-confidence-1">Confidence</a></li>
-<li><a href="#priority" id="toc-priority">Priority</a></li>
-</ul></li>
+vs Confidence</a></li>
 <li><a href="#ticket-management" id="toc-ticket-management">📋 22.
 Ticket Management</a></li>
 <li><a href="#alert-assignment" id="toc-alert-assignment">👥 23. Alert
@@ -1145,17 +722,9 @@ Root Cause Analysis</a></li>
 <li><a href="#attack-chain-analysis" id="toc-attack-chain-analysis">🧩
 27. Attack Chain Analysis</a></li>
 <li><a href="#soc-runbooks" id="toc-soc-runbooks">🛡️ 28. SOC
-Runbooks</a>
-<ul>
-<li><a href="#suspicious-login-runbook"
-id="toc-suspicious-login-runbook">Suspicious Login Runbook</a></li>
-</ul></li>
+Runbooks</a></li>
 <li><a href="#playbook-vs-runbook" id="toc-playbook-vs-runbook">⚙️ 29.
-Playbook vs Runbook</a>
-<ul>
-<li><a href="#runbook" id="toc-runbook">Runbook</a></li>
-<li><a href="#playbook" id="toc-playbook">Playbook</a></li>
-</ul></li>
+Playbook vs Runbook</a></li>
 <li><a href="#automation-in-soc" id="toc-automation-in-soc">🤖 30.
 Automation in SOC</a></li>
 <li><a href="#analyst-feedback" id="toc-analyst-feedback">🧠 31. Analyst
@@ -1177,114 +746,31 @@ Access Control</a></li>
 <li><a href="#soc-dashboard" id="toc-soc-dashboard">📈 40. SOC
 Dashboard</a></li>
 <li><a href="#practical-soc-lab" id="toc-practical-soc-lab">🧪 41.
-Practical SOC Lab</a>
-<ul>
-<li><a href="#scenario" id="toc-scenario">Scenario</a></li>
-</ul></li>
+Practical SOC Lab</a></li>
 <li><a href="#realistic-soc-investigation-example"
 id="toc-realistic-soc-investigation-example">🔥 42. Realistic SOC
-Investigation Example</a>
-<ul>
-<li><a href="#step-1-validate" id="toc-step-1-validate">Step 1 —
-Validate</a></li>
-<li><a href="#step-2-investigate" id="toc-step-2-investigate">Step 2 —
-Investigate</a></li>
-<li><a href="#step-3-check-successful-login"
-id="toc-step-3-check-successful-login">Step 3 — Check Successful
-Login</a></li>
-<li><a href="#step-4-check-host-activity"
-id="toc-step-4-check-host-activity">Step 4 — Check Host
-Activity</a></li>
-<li><a href="#step-5-determine-scope"
-id="toc-step-5-determine-scope">Step 5 — Determine Scope</a></li>
-<li><a href="#step-6-decide-response"
-id="toc-step-6-decide-response">Step 6 — Decide Response</a></li>
-<li><a href="#step-7-document" id="toc-step-7-document">Step 7 —
-Document</a></li>
-</ul></li>
+Investigation Example</a></li>
 <li><a href="#soc-and-siem-relationship"
 id="toc-soc-and-siem-relationship">🧠 43. SOC and SIEM
 Relationship</a></li>
 <li><a href="#siem-engineer-soc-analyst"
 id="toc-siem-engineer-soc-analyst">🔗 44. SIEM Engineer + SOC
-Analyst</a>
-<ul>
-<li><a href="#soc-analyst-says" id="toc-soc-analyst-says">SOC Analyst
-says:</a></li>
-<li><a href="#siem-engineer" id="toc-siem-engineer">SIEM
-Engineer:</a></li>
-<li><a href="#siem-engineer-says" id="toc-siem-engineer-says">SIEM
-Engineer says:</a></li>
-</ul></li>
+Analyst</a></li>
 <li><a href="#soc-operations-checklist"
 id="toc-soc-operations-checklist">📋 45. SOC Operations
 Checklist</a></li>
 <li><a href="#siem-engineer-soc-interview-questions"
 id="toc-siem-engineer-soc-interview-questions">🎤 46. SIEM Engineer /
-SOC Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-soc-operations"
-id="toc-q1.-what-is-soc-operations">Q1. What is SOC Operations?</a></li>
-<li><a
-href="#q2.-what-is-the-difference-between-an-event-alert-and-incident"
-id="toc-q2.-what-is-the-difference-between-an-event-alert-and-incident">Q2.
-What is the difference between an event, alert, and incident?</a></li>
-<li><a href="#q3.-explain-the-incident-response-lifecycle."
-id="toc-q3.-explain-the-incident-response-lifecycle.">Q3. Explain the
-incident response lifecycle.</a></li>
-<li><a href="#q4.-what-do-you-do-when-a-siem-alert-is-triggered"
-id="toc-q4.-what-do-you-do-when-a-siem-alert-is-triggered">Q4. What do
-you do when a SIEM alert is triggered?</a></li>
-<li><a href="#q5.-how-do-you-handle-false-positives"
-id="toc-q5.-how-do-you-handle-false-positives">Q5. How do you handle
-false positives?</a></li>
-<li><a href="#q6.-when-should-an-alert-be-escalated"
-id="toc-q6.-when-should-an-alert-be-escalated">Q6. When should an alert
-be escalated?</a></li>
-<li><a href="#q7.-what-information-should-be-included-in-an-escalation"
-id="toc-q7.-what-information-should-be-included-in-an-escalation">Q7.
-What information should be included in an escalation?</a></li>
-<li><a href="#q8.-what-is-mttd" id="toc-q8.-what-is-mttd">Q8. What is
-MTTD?</a></li>
-<li><a href="#q9.-what-is-mttr" id="toc-q9.-what-is-mttr">Q9. What is
-MTTR?</a></li>
-<li><a href="#q10.-what-is-a-soc-runbook"
-id="toc-q10.-what-is-a-soc-runbook">Q10. What is a SOC runbook?</a></li>
-<li><a href="#q11.-why-is-documentation-important-in-soc-operations"
-id="toc-q11.-why-is-documentation-important-in-soc-operations">Q11. Why
-is documentation important in SOC operations?</a></li>
-<li><a href="#q12.-what-is-the-role-of-a-siem-engineer-in-a-soc"
-id="toc-q12.-what-is-the-role-of-a-siem-engineer-in-a-soc">Q12. What is
-the role of a SIEM Engineer in a SOC?</a></li>
-</ul></li>
+SOC Interview Questions</a></li>
 <li><a href="#important-soc-principles"
-id="toc-important-soc-principles">🧠 47. Important SOC Principles</a>
-<ul>
-<li><a href="#principle-1-alert-incident"
-id="toc-principle-1-alert-incident">Principle 1 — Alert ≠
-Incident</a></li>
-<li><a href="#principle-2-evidence-before-conclusion"
-id="toc-principle-2-evidence-before-conclusion">Principle 2 — Evidence
-Before Conclusion</a></li>
-<li><a href="#principle-3-context-matters"
-id="toc-principle-3-context-matters">Principle 3 — Context
-Matters</a></li>
-<li><a href="#principle-4-document-everything-important"
-id="toc-principle-4-document-everything-important">Principle 4 —
-Document Everything Important</a></li>
-<li><a href="#principle-5-learn-from-every-incident"
-id="toc-principle-5-learn-from-every-incident">Principle 5 — Learn From
-Every Incident</a></li>
-</ul></li>
+id="toc-important-soc-principles">🧠 47. Important SOC
+Principles</a></li>
 <li><a href="#final-takeaway-5" id="toc-final-takeaway-5">🚀 48. Final
 Takeaway</a>
 <ul>
 <li><a href="#siem-engineer-learning-series-5"
 id="toc-siem-engineer-learning-series-5">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-5" id="toc-navigation-5">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-07-threat-intelligence"
 id="toc-siem-engineer-07-threat-intelligence">SIEM Engineer #07 — Threat
@@ -1371,11 +857,7 @@ Platform</a></li>
 id="toc-siem-threat-intelligence-integration">🔌 28. SIEM Threat
 Intelligence Integration</a></li>
 <li><a href="#stix-and-taxii" id="toc-stix-and-taxii">📦 29. STIX and
-TAXII</a>
-<ul>
-<li><a href="#stix" id="toc-stix">STIX</a></li>
-<li><a href="#taxii" id="toc-taxii">TAXII</a></li>
-</ul></li>
+TAXII</a></li>
 <li><a href="#threat-intelligence-detection-engineering"
 id="toc-threat-intelligence-detection-engineering">🧠 30. Threat
 Intelligence + Detection Engineering</a></li>
@@ -1402,17 +884,7 @@ Cost Management</a></li>
 id="toc-threat-intelligence-dashboard">📊 38. Threat Intelligence
 Dashboard</a></li>
 <li><a href="#practical-siem-lab-2" id="toc-practical-siem-lab-2">🧪 39.
-Practical SIEM Lab</a>
-<ul>
-<li><a href="#lab-1-ip-enrichment" id="toc-lab-1-ip-enrichment">Lab 1 —
-IP Enrichment</a></li>
-<li><a href="#lab-2-siem-correlation"
-id="toc-lab-2-siem-correlation">Lab 2 — SIEM Correlation</a></li>
-<li><a href="#lab-3-historical-search"
-id="toc-lab-3-historical-search">Lab 3 — Historical Search</a></li>
-<li><a href="#lab-4-detection" id="toc-lab-4-detection">Lab 4 —
-Detection</a></li>
-</ul></li>
+Practical SIEM Lab</a></li>
 <li><a href="#threat-intelligence-checklist"
 id="toc-threat-intelligence-checklist">📋 40. Threat Intelligence
 Checklist</a></li>
@@ -1421,71 +893,15 @@ id="toc-complete-threat-intelligence-flow">🔄 41. Complete Threat
 Intelligence Flow</a></li>
 <li><a href="#siem-engineer-interview-questions-3"
 id="toc-siem-engineer-interview-questions-3">🎤 42. SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-threat-intelligence"
-id="toc-q1.-what-is-threat-intelligence">Q1. What is Threat
-Intelligence?</a></li>
-<li><a href="#q2.-what-is-an-ioc" id="toc-q2.-what-is-an-ioc">Q2. What
-is an IOC?</a></li>
-<li><a href="#q3.-does-an-ioc-match-mean-the-system-is-compromised"
-id="toc-q3.-does-an-ioc-match-mean-the-system-is-compromised">Q3. Does
-an IOC match mean the system is compromised?</a></li>
-<li><a href="#q4.-what-is-ioc-enrichment"
-id="toc-q4.-what-is-ioc-enrichment">Q4. What is IOC enrichment?</a></li>
-<li><a
-href="#q5.-what-is-the-difference-between-threat-intelligence-and-an-ioc"
-id="toc-q5.-what-is-the-difference-between-threat-intelligence-and-an-ioc">Q5.
-What is the difference between Threat Intelligence and an IOC?</a></li>
-<li><a href="#q6.-what-is-stix" id="toc-q6.-what-is-stix">Q6. What is
-STIX?</a></li>
-<li><a href="#q7.-what-is-taxii" id="toc-q7.-what-is-taxii">Q7. What is
-TAXII?</a></li>
-<li><a href="#q8.-how-can-threat-intelligence-be-integrated-with-siem"
-id="toc-q8.-how-can-threat-intelligence-be-integrated-with-siem">Q8. How
-can Threat Intelligence be integrated with SIEM?</a></li>
-<li><a
-href="#q9.-how-do-you-handle-a-high-number-of-ioc-false-positives"
-id="toc-q9.-how-do-you-handle-a-high-number-of-ioc-false-positives">Q9.
-How do you handle a high number of IOC false positives?</a></li>
-<li><a href="#q10.-how-does-threat-intelligence-support-threat-hunting"
-id="toc-q10.-how-does-threat-intelligence-support-threat-hunting">Q10.
-How does Threat Intelligence support Threat Hunting?</a></li>
-<li><a href="#q11.-what-makes-a-good-threat-intelligence-feed"
-id="toc-q11.-what-makes-a-good-threat-intelligence-feed">Q11. What makes
-a good Threat Intelligence feed?</a></li>
-<li><a
-href="#q12.-how-can-threat-intelligence-improve-detection-engineering"
-id="toc-q12.-how-can-threat-intelligence-improve-detection-engineering">Q12.
-How can Threat Intelligence improve Detection Engineering?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#important-lessons-1" id="toc-important-lessons-1">🧠 43.
-Important Lessons</a>
-<ul>
-<li><a href="#intelligence-needs-context"
-id="toc-intelligence-needs-context">1️⃣ Intelligence needs
-context</a></li>
-<li><a href="#freshness-matters-1" id="toc-freshness-matters-1">2️⃣
-Freshness matters</a></li>
-<li><a href="#quality-matters-more-than-quantity"
-id="toc-quality-matters-more-than-quantity">3️⃣ Quality matters more than
-quantity</a></li>
-<li><a href="#internal-intelligence-is-valuable"
-id="toc-internal-intelligence-is-valuable">4️⃣ Internal intelligence is
-valuable</a></li>
-<li><a href="#intelligence-should-support-action"
-id="toc-intelligence-should-support-action">5️⃣ Intelligence should
-support action</a></li>
-</ul></li>
+Important Lessons</a></li>
 <li><a href="#final-takeaway-6" id="toc-final-takeaway-6">🚀 44. Final
 Takeaway</a>
 <ul>
 <li><a href="#siem-engineer-learning-series-6"
 id="toc-siem-engineer-learning-series-6">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-6" id="toc-navigation-6">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-08-automation-soar"
 id="toc-siem-engineer-08-automation-soar">SIEM Engineer #08 — Automation
@@ -1500,29 +916,15 @@ SOAR?</a></li>
 id="toc-why-automation-matters-in-soc">🎯 2. Why Automation Matters in
 SOC</a></li>
 <li><a href="#automation-vs-soar" id="toc-automation-vs-soar">⚙️ 3.
-Automation vs SOAR</a>
-<ul>
-<li><a href="#automation" id="toc-automation">Automation</a></li>
-<li><a href="#soar" id="toc-soar">SOAR</a></li>
-</ul></li>
+Automation vs SOAR</a></li>
 <li><a href="#what-is-orchestration" id="toc-what-is-orchestration">🔗
 4. What is Orchestration?</a></li>
 <li><a href="#basic-soar-architecture"
 id="toc-basic-soar-architecture">🔄 5. Basic SOAR Architecture</a></li>
 <li><a href="#what-is-a-playbook" id="toc-what-is-a-playbook">📋 6. What
-is a Playbook?</a>
-<ul>
-<li><a href="#suspicious-ip-playbook"
-id="toc-suspicious-ip-playbook">Suspicious IP Playbook</a></li>
-<li><a href="#phishing-playbook" id="toc-phishing-playbook">Phishing
-Playbook</a></li>
-</ul></li>
+is a Playbook?</a></li>
 <li><a href="#runbook-vs-playbook" id="toc-runbook-vs-playbook">🧩 7.
-Runbook vs Playbook</a>
-<ul>
-<li><a href="#runbook-1" id="toc-runbook-1">Runbook</a></li>
-<li><a href="#playbook-1" id="toc-playbook-1">Playbook</a></li>
-</ul></li>
+Runbook vs Playbook</a></li>
 <li><a href="#alert-automation" id="toc-alert-automation">🚨 8. Alert
 Automation</a></li>
 <li><a href="#enrichment-automation" id="toc-enrichment-automation">🧠
@@ -1543,13 +945,7 @@ Is Risky</a></li>
 Human-in-the-Loop</a></li>
 <li><a href="#fully-automated-vs-semi-automated"
 id="toc-fully-automated-vs-semi-automated">🟢 16. Fully Automated vs
-Semi-Automated</a>
-<ul>
-<li><a href="#fully-automated" id="toc-fully-automated">Fully
-Automated</a></li>
-<li><a href="#semi-automated"
-id="toc-semi-automated">Semi-Automated</a></li>
-</ul></li>
+Semi-Automated</a></li>
 <li><a href="#automation-decision-matrix"
 id="toc-automation-decision-matrix">🧠 17. Automation Decision
 Matrix</a></li>
@@ -1604,126 +1000,29 @@ id="toc-human-approval-workflow">🧠 38. Human Approval Workflow</a></li>
 <li><a href="#playbook-documentation" id="toc-playbook-documentation">📋
 39. Playbook Documentation</a></li>
 <li><a href="#practical-soar-lab" id="toc-practical-soar-lab">🧪 40.
-Practical SOAR Lab</a>
-<ul>
-<li><a href="#lab-1-ioc-enrichment" id="toc-lab-1-ioc-enrichment">Lab 1
-— IOC Enrichment</a></li>
-<li><a href="#lab-2-automatic-case-creation"
-id="toc-lab-2-automatic-case-creation">Lab 2 — Automatic Case
-Creation</a></li>
-<li><a href="#lab-3-notification" id="toc-lab-3-notification">Lab 3 —
-Notification</a></li>
-<li><a href="#lab-4-approval-based-response"
-id="toc-lab-4-approval-based-response">Lab 4 — Approval-Based
-Response</a></li>
-</ul></li>
+Practical SOAR Lab</a></li>
 <li><a href="#soc-automation-architecture"
 id="toc-soc-automation-architecture">📊 41. SOC Automation
 Architecture</a></li>
 <li><a href="#automation-maturity" id="toc-automation-maturity">⚡ 42.
-Automation Maturity</a>
-<ul>
-<li><a href="#level-1" id="toc-level-1">Level 1</a></li>
-<li><a href="#level-2" id="toc-level-2">Level 2</a></li>
-<li><a href="#level-3" id="toc-level-3">Level 3</a></li>
-<li><a href="#level-4" id="toc-level-4">Level 4</a></li>
-<li><a href="#level-5" id="toc-level-5">Level 5</a></li>
-</ul></li>
+Automation Maturity</a></li>
 <li><a href="#common-soar-mistakes" id="toc-common-soar-mistakes">🚫 43.
-Common SOAR Mistakes</a>
-<ul>
-<li><a href="#mistake-1-automating-everything"
-id="toc-mistake-1-automating-everything">Mistake 1 — Automating
-Everything</a></li>
-<li><a href="#mistake-2-no-error-handling"
-id="toc-mistake-2-no-error-handling">Mistake 2 — No Error
-Handling</a></li>
-<li><a href="#mistake-3-excessive-permissions"
-id="toc-mistake-3-excessive-permissions">Mistake 3 — Excessive
-Permissions</a></li>
-<li><a href="#mistake-4-no-approval"
-id="toc-mistake-4-no-approval">Mistake 4 — No Approval</a></li>
-<li><a href="#mistake-5-no-logging"
-id="toc-mistake-5-no-logging">Mistake 5 — No Logging</a></li>
-<li><a href="#mistake-6-no-rollback"
-id="toc-mistake-6-no-rollback">Mistake 6 — No Rollback</a></li>
-<li><a href="#mistake-7-no-testing"
-id="toc-mistake-7-no-testing">Mistake 7 — No Testing</a></li>
-<li><a href="#mistake-8-duplicate-actions"
-id="toc-mistake-8-duplicate-actions">Mistake 8 — Duplicate
-Actions</a></li>
-</ul></li>
+Common SOAR Mistakes</a></li>
 <li><a href="#soar-checklist" id="toc-soar-checklist">📋 44. SOAR
 Checklist</a></li>
 <li><a href="#complete-soar-flow" id="toc-complete-soar-flow">🔄 45.
 Complete SOAR Flow</a></li>
 <li><a href="#siem-engineer-interview-questions-4"
 id="toc-siem-engineer-interview-questions-4">🎤 46. SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-soar" id="toc-q1.-what-is-soar">Q1. What is
-SOAR?</a></li>
-<li><a href="#q2.-what-is-a-soar-playbook"
-id="toc-q2.-what-is-a-soar-playbook">Q2. What is a SOAR
-playbook?</a></li>
-<li><a href="#q3.-what-is-orchestration"
-id="toc-q3.-what-is-orchestration">Q3. What is orchestration?</a></li>
-<li><a href="#q4.-why-is-automation-important-in-a-soc"
-id="toc-q4.-why-is-automation-important-in-a-soc">Q4. Why is automation
-important in a SOC?</a></li>
-<li><a href="#q5.-should-every-response-action-be-automated"
-id="toc-q5.-should-every-response-action-be-automated">Q5. Should every
-response action be automated?</a></li>
-<li><a href="#q6.-what-is-human-in-the-loop-automation"
-id="toc-q6.-what-is-human-in-the-loop-automation">Q6. What is
-human-in-the-loop automation?</a></li>
-<li><a href="#q7.-how-do-you-secure-a-soar-platform"
-id="toc-q7.-how-do-you-secure-a-soar-platform">Q7. How do you secure a
-SOAR platform?</a></li>
-<li><a href="#q8.-how-do-you-handle-api-failures-in-automation"
-id="toc-q8.-how-do-you-handle-api-failures-in-automation">Q8. How do you
-handle API failures in automation?</a></li>
-<li><a href="#q9.-what-is-idempotency-in-automation"
-id="toc-q9.-what-is-idempotency-in-automation">Q9. What is idempotency
-in automation?</a></li>
-<li><a href="#q10.-how-would-you-automate-suspicious-ip-investigation"
-id="toc-q10.-how-would-you-automate-suspicious-ip-investigation">Q10.
-How would you automate suspicious IP investigation?</a></li>
-<li><a href="#q11.-what-should-be-included-in-a-soar-playbook"
-id="toc-q11.-what-should-be-included-in-a-soar-playbook">Q11. What
-should be included in a SOAR playbook?</a></li>
-<li><a href="#q12.-how-do-you-test-a-soar-workflow"
-id="toc-q12.-how-do-you-test-a-soar-workflow">Q12. How do you test a
-SOAR workflow?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#important-lessons-2" id="toc-important-lessons-2">🧠 47.
-Important Lessons</a>
-<ul>
-<li><a href="#automation-should-solve-a-problem"
-id="toc-automation-should-solve-a-problem">1️⃣ Automation should solve a
-problem</a></li>
-<li><a href="#automate-repetitive-work-first"
-id="toc-automate-repetitive-work-first">2️⃣ Automate repetitive work
-first</a></li>
-<li><a href="#high-impact-actions-need-control"
-id="toc-high-impact-actions-need-control">3️⃣ High-impact actions need
-control</a></li>
-<li><a href="#automation-must-be-observable"
-id="toc-automation-must-be-observable">4️⃣ Automation must be
-observable</a></li>
-<li><a href="#soar-is-not-a-replacement-for-analysts"
-id="toc-soar-is-not-a-replacement-for-analysts">5️⃣ SOAR is not a
-replacement for analysts</a></li>
-</ul></li>
+Important Lessons</a></li>
 <li><a href="#final-takeaway-7" id="toc-final-takeaway-7">🚀 48. Final
 Takeaway</a>
 <ul>
 <li><a href="#siem-engineer-learning-series-7"
 id="toc-siem-engineer-learning-series-7">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-7" id="toc-navigation-7">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-09-dashboard-reporting"
 id="toc-siem-engineer-09-dashboard-reporting">SIEM Engineer #09 —
@@ -1740,11 +1039,7 @@ Dashboard?</a></li>
 <li><a href="#why-does-this-matter-2" id="toc-why-does-this-matter-2">💡
 Why does this matter?</a></li>
 <li><a href="#dashboard-vs-report" id="toc-dashboard-vs-report">🧠 3.
-Dashboard vs Report</a>
-<ul>
-<li><a href="#dashboard-1" id="toc-dashboard-1">Dashboard</a></li>
-<li><a href="#report" id="toc-report">Report</a></li>
-</ul></li>
+Dashboard vs Report</a></li>
 <li><a href="#siem-engineers-role" id="toc-siem-engineers-role">👨‍💻 4.
 SIEM Engineer’s Role</a></li>
 <li><a href="#different-dashboard-users"
@@ -1759,11 +1054,7 @@ Trend</a></li>
 <li><a href="#severity-dashboard" id="toc-severity-dashboard">🛑 9.
 Severity Dashboard</a></li>
 <li><a href="#priority-vs-severity" id="toc-priority-vs-severity">🎯 10.
-Priority vs Severity</a>
-<ul>
-<li><a href="#severity-2" id="toc-severity-2">Severity</a></li>
-<li><a href="#priority-1" id="toc-priority-1">Priority</a></li>
-</ul></li>
+Priority vs Severity</a></li>
 <li><a href="#user-based-dashboard" id="toc-user-based-dashboard">👤 11.
 User-Based Dashboard</a></li>
 <li><a href="#endpoint-dashboard" id="toc-endpoint-dashboard">🖥️ 12.
@@ -1819,42 +1110,10 @@ id="toc-dashboard-investigation">🔎 33. Dashboard →
 Investigation</a></li>
 <li><a href="#dashboard-design-principles"
 id="toc-dashboard-design-principles">🎨 34. Dashboard Design
-Principles</a>
-<ul>
-<li><a href="#principle-1-keep-it-simple"
-id="toc-principle-1-keep-it-simple">Principle 1 — Keep it
-Simple</a></li>
-<li><a href="#principle-2-prioritize-important-information"
-id="toc-principle-2-prioritize-important-information">Principle 2 —
-Prioritize Important Information</a></li>
-<li><a href="#principle-3-use-consistent-terminology"
-id="toc-principle-3-use-consistent-terminology">Principle 3 — Use
-Consistent Terminology</a></li>
-<li><a href="#principle-4-provide-context"
-id="toc-principle-4-provide-context">Principle 4 — Provide
-Context</a></li>
-<li><a href="#principle-5-support-drill-down"
-id="toc-principle-5-support-drill-down">Principle 5 — Support
-Drill-Down</a></li>
-</ul></li>
+Principles</a></li>
 <li><a href="#common-dashboard-mistakes"
-id="toc-common-dashboard-mistakes">🚫 35. Common Dashboard Mistakes</a>
-<ul>
-<li><a href="#mistake-1-too-many-charts"
-id="toc-mistake-1-too-many-charts">Mistake 1 — Too Many Charts</a></li>
-<li><a href="#mistake-2-no-time-context"
-id="toc-mistake-2-no-time-context">Mistake 2 — No Time Context</a></li>
-<li><a href="#mistake-3-incorrect-queries"
-id="toc-mistake-3-incorrect-queries">Mistake 3 — Incorrect
-Queries</a></li>
-<li><a href="#mistake-4-no-validation"
-id="toc-mistake-4-no-validation">Mistake 4 — No Validation</a></li>
-<li><a href="#mistake-5-mixing-different-populations"
-id="toc-mistake-5-mixing-different-populations">Mistake 5 — Mixing
-Different Populations</a></li>
-<li><a href="#mistake-6-no-ownership"
-id="toc-mistake-6-no-ownership">Mistake 6 — No Ownership</a></li>
-</ul></li>
+id="toc-common-dashboard-mistakes">🚫 35. Common Dashboard
+Mistakes</a></li>
 <li><a href="#dashboard-validation" id="toc-dashboard-validation">🧪 36.
 Dashboard Validation</a></li>
 <li><a href="#dashboard-security" id="toc-dashboard-security">🔐 37.
@@ -1877,14 +1136,7 @@ Reporting</a></li>
 id="toc-siem-reporting-pipeline">🔄 44. SIEM Reporting Pipeline</a></li>
 <li><a href="#practical-lab-soc-dashboard"
 id="toc-practical-lab-soc-dashboard">🧩 45. Practical Lab — SOC
-Dashboard</a>
-<ul>
-<li><a href="#step-1-1" id="toc-step-1-1">Step 1</a></li>
-<li><a href="#step-2-1" id="toc-step-2-1">Step 2</a></li>
-<li><a href="#step-3-1" id="toc-step-3-1">Step 3</a></li>
-<li><a href="#step-4-1" id="toc-step-4-1">Step 4</a></li>
-<li><a href="#step-5-1" id="toc-step-5-1">Step 5</a></li>
-</ul></li>
+Dashboard</a></li>
 <li><a href="#practical-wazuh-dashboard-exercise"
 id="toc-practical-wazuh-dashboard-exercise">🛡️ 46. Practical Wazuh
 Dashboard Exercise</a></li>
@@ -1901,38 +1153,7 @@ id="toc-dashboard-as-an-investigation-tool">🔥 50. Dashboard as an
 Investigation Tool</a></li>
 <li><a href="#siem-engineer-interview-questions-5"
 id="toc-siem-engineer-interview-questions-5">🎤 51. SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-a-siem-dashboard"
-id="toc-q1.-what-is-a-siem-dashboard">Q1. What is a SIEM
-dashboard?</a></li>
-<li><a
-href="#q2.-what-is-the-difference-between-a-dashboard-and-a-report"
-id="toc-q2.-what-is-the-difference-between-a-dashboard-and-a-report">Q2.
-What is the difference between a dashboard and a report?</a></li>
-<li><a href="#q3.-what-metrics-would-you-include-in-a-soc-dashboard"
-id="toc-q3.-what-metrics-would-you-include-in-a-soc-dashboard">Q3. What
-metrics would you include in a SOC dashboard?</a></li>
-<li><a href="#q4.-what-is-mttd" id="toc-q4.-what-is-mttd">Q4. What is
-MTTD?</a></li>
-<li><a href="#q5.-what-is-mttr" id="toc-q5.-what-is-mttr">Q5. What is
-MTTR?</a></li>
-<li><a href="#q6.-why-are-dashboards-important-for-soc-operations"
-id="toc-q6.-why-are-dashboards-important-for-soc-operations">Q6. Why are
-dashboards important for SOC operations?</a></li>
-<li><a
-href="#q7.-how-would-you-troubleshoot-an-incorrect-dashboard-number"
-id="toc-q7.-how-would-you-troubleshoot-an-incorrect-dashboard-number">Q7.
-How would you troubleshoot an incorrect dashboard number?</a></li>
-<li><a href="#q8.-what-is-dashboard-drill-down"
-id="toc-q8.-what-is-dashboard-drill-down">Q8. What is dashboard
-drill-down?</a></li>
-<li><a href="#q9.-what-is-eps" id="toc-q9.-what-is-eps">Q9. What is
-EPS?</a></li>
-<li><a href="#q10.-how-do-you-design-an-executive-dashboard"
-id="toc-q10.-how-do-you-design-an-executive-dashboard">Q10. How do you
-design an executive dashboard?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#dashboard-checklist" id="toc-dashboard-checklist">📋 52.
 Dashboard Checklist</a></li>
 <li><a href="#complete-dashboard-reporting-flow"
@@ -1946,10 +1167,7 @@ Takeaway</a>
 <ul>
 <li><a href="#siem-engineer-learning-series-8"
 id="toc-siem-engineer-learning-series-8">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-8" id="toc-navigation-8">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-10-siem-infrastructure"
 id="toc-siem-engineer-10-siem-infrastructure">SIEM Engineer #10 — SIEM
@@ -1981,12 +1199,7 @@ Volume</a></li>
 <li><a href="#storage-planning" id="toc-storage-planning">💾 10. Storage
 Planning</a></li>
 <li><a href="#hot-warm-and-cold-data" id="toc-hot-warm-and-cold-data">🗄️
-11. Hot, Warm and Cold Data</a>
-<ul>
-<li><a href="#hot-data" id="toc-hot-data">Hot Data</a></li>
-<li><a href="#warm-data" id="toc-warm-data">Warm Data</a></li>
-<li><a href="#cold-data" id="toc-cold-data">Cold Data</a></li>
-</ul></li>
+11. Hot, Warm and Cold Data</a></li>
 <li><a href="#retention-planning" id="toc-retention-planning">📅 12.
 Retention Planning</a></li>
 <li><a href="#storage-full-problem" id="toc-storage-full-problem">🔥 13.
@@ -2007,11 +1220,7 @@ Control</a></li>
 <li><a href="#high-availability" id="toc-high-availability">🔄 21. High
 Availability</a></li>
 <li><a href="#single-node-vs-cluster" id="toc-single-node-vs-cluster">🏗️
-22. Single Node vs Cluster</a>
-<ul>
-<li><a href="#single-node" id="toc-single-node">Single Node</a></li>
-<li><a href="#cluster" id="toc-cluster">Cluster</a></li>
-</ul></li>
+22. Single Node vs Cluster</a></li>
 <li><a href="#load-balancing" id="toc-load-balancing">⚖️ 23. Load
 Balancing</a></li>
 <li><a href="#failover" id="toc-failover">🔁 24. Failover</a></li>
@@ -2022,11 +1231,8 @@ Disaster Recovery</a></li>
 <li><a href="#backup" id="toc-backup">💾 27. Backup</a></li>
 <li><a href="#restore-testing" id="toc-restore-testing">🔄 28. Restore
 Testing</a></li>
-<li><a href="#rpo-and-rto" id="toc-rpo-and-rto">📋 29. RPO and RTO</a>
-<ul>
-<li><a href="#rpo" id="toc-rpo">RPO</a></li>
-<li><a href="#rto" id="toc-rto">RTO</a></li>
-</ul></li>
+<li><a href="#rpo-and-rto" id="toc-rpo-and-rto">📋 29. RPO and
+RTO</a></li>
 <li><a href="#siem-upgrade" id="toc-siem-upgrade">🔧 30. SIEM
 Upgrade</a></li>
 <li><a href="#patch-management" id="toc-patch-management">🩹 31. Patch
@@ -2043,13 +1249,7 @@ Latency</a></li>
 Search Performance</a></li>
 <li><a href="#capacity-planning" id="toc-capacity-planning">🧠 37.
 Capacity Planning</a></li>
-<li><a href="#scaling" id="toc-scaling">📈 38. Scaling</a>
-<ul>
-<li><a href="#vertical-scaling" id="toc-vertical-scaling">Vertical
-Scaling</a></li>
-<li><a href="#horizontal-scaling" id="toc-horizontal-scaling">Horizontal
-Scaling</a></li>
-</ul></li>
+<li><a href="#scaling" id="toc-scaling">📈 38. Scaling</a></li>
 <li><a href="#data-tiering" id="toc-data-tiering">🧩 39. Data
 Tiering</a></li>
 <li><a href="#encryption" id="toc-encryption">🔐 40. Encryption</a></li>
@@ -2068,24 +1268,7 @@ id="toc-siem-infrastructure-testing">🧪 45. SIEM Infrastructure
 Testing</a></li>
 <li><a href="#common-infrastructure-failures"
 id="toc-common-infrastructure-failures">🚨 46. Common Infrastructure
-Failures</a>
-<ul>
-<li><a href="#failure-1-storage-full"
-id="toc-failure-1-storage-full">Failure 1 — Storage Full</a></li>
-<li><a href="#failure-2-cpu-saturation"
-id="toc-failure-2-cpu-saturation">Failure 2 — CPU Saturation</a></li>
-<li><a href="#failure-3-memory-pressure"
-id="toc-failure-3-memory-pressure">Failure 3 — Memory Pressure</a></li>
-<li><a href="#failure-4-network-failure"
-id="toc-failure-4-network-failure">Failure 4 — Network Failure</a></li>
-<li><a href="#failure-5-certificate-expired"
-id="toc-failure-5-certificate-expired">Failure 5 — Certificate
-Expired</a></li>
-<li><a href="#failure-6-broken-parser"
-id="toc-failure-6-broken-parser">Failure 6 — Broken Parser</a></li>
-<li><a href="#failure-7-index-failure"
-id="toc-failure-7-index-failure">Failure 7 — Index Failure</a></li>
-</ul></li>
+Failures</a></li>
 <li><a href="#siem-troubleshooting-method"
 id="toc-siem-troubleshooting-method">🔍 47. SIEM Troubleshooting
 Method</a></li>
@@ -2104,49 +1287,7 @@ id="toc-siem-infrastructure-security-checklist">🔥 52. SIEM
 Infrastructure Security Checklist</a></li>
 <li><a href="#siem-engineer-interview-questions-6"
 id="toc-siem-engineer-interview-questions-6">🎤 53. SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-siem-infrastructure"
-id="toc-q1.-what-is-siem-infrastructure">Q1. What is SIEM
-infrastructure?</a></li>
-<li><a href="#q2.-what-is-eps" id="toc-q2.-what-is-eps">Q2. What is
-EPS?</a></li>
-<li><a href="#q3.-how-do-you-calculate-siem-storage-requirements"
-id="toc-q3.-how-do-you-calculate-siem-storage-requirements">Q3. How do
-you calculate SIEM storage requirements?</a></li>
-<li><a href="#q4.-what-happens-when-siem-storage-becomes-full"
-id="toc-q4.-what-happens-when-siem-storage-becomes-full">Q4. What
-happens when SIEM storage becomes full?</a></li>
-<li><a href="#q5.-what-is-high-availability"
-id="toc-q5.-what-is-high-availability">Q5. What is High
-Availability?</a></li>
-<li><a
-href="#q6.-what-is-the-difference-between-vertical-and-horizontal-scaling"
-id="toc-q6.-what-is-the-difference-between-vertical-and-horizontal-scaling">Q6.
-What is the difference between vertical and horizontal scaling?</a></li>
-<li><a href="#q7.-how-would-you-troubleshoot-missing-logs"
-id="toc-q7.-how-would-you-troubleshoot-missing-logs">Q7. How would you
-troubleshoot missing logs?</a></li>
-<li><a href="#q8.-why-is-log-latency-important"
-id="toc-q8.-why-is-log-latency-important">Q8. Why is log latency
-important?</a></li>
-<li><a href="#q9.-what-is-rpo" id="toc-q9.-what-is-rpo">Q9. What is
-RPO?</a></li>
-<li><a href="#q10.-what-is-rto" id="toc-q10.-what-is-rto">Q10. What is
-RTO?</a></li>
-<li><a href="#q11.-why-is-siem-backup-important"
-id="toc-q11.-why-is-siem-backup-important">Q11. Why is SIEM backup
-important?</a></li>
-<li><a href="#q12.-why-should-restore-testing-be-performed"
-id="toc-q12.-why-should-restore-testing-be-performed">Q12. Why should
-restore testing be performed?</a></li>
-<li><a href="#q13.-what-siem-infrastructure-metrics-would-you-monitor"
-id="toc-q13.-what-siem-infrastructure-metrics-would-you-monitor">Q13.
-What SIEM infrastructure metrics would you monitor?</a></li>
-<li><a href="#q14.-how-would-you-plan-siem-capacity"
-id="toc-q14.-how-would-you-plan-siem-capacity">Q14. How would you plan
-SIEM capacity?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#complete-siem-infrastructure-checklist"
 id="toc-complete-siem-infrastructure-checklist">📋 54. Complete SIEM
 Infrastructure Checklist</a></li>
@@ -2162,10 +1303,7 @@ Takeaway</a></li>
 id="toc-siem-engineer-complete-learning-series">📚 SIEM Engineer —
 Complete Learning Series</a>
 <ul>
-<li><a href="#what-next" id="toc-what-next">🎯 What Next?</a>
-<ul>
-<li><a href="#navigation-9" id="toc-navigation-9">Navigation</a></li>
-</ul></li>
+<li><a href="#what-next" id="toc-what-next">🎯 What Next?</a></li>
 </ul></li>
 <li><a href="#siem-engineer-11-siem-architecture-design"
 id="toc-siem-engineer-11-siem-architecture-design">SIEM Engineer #11 —
@@ -2180,17 +1318,9 @@ id="toc-why-does-siem-architecture-matter">💡 2. Why does SIEM
 Architecture matter?</a></li>
 <li><a href="#siem-architecture-design-principles"
 id="toc-siem-architecture-design-principles">🏗️ 3. SIEM Architecture
-Design Principles</a>
-<ul>
-<li><a href="#মল-principles" id="toc-মল-principles">মূল
-principles:</a></li>
-</ul></li>
+Design Principles</a></li>
 <li><a href="#small-siem-architecture"
-id="toc-small-siem-architecture">🏠 4. Small SIEM Architecture</a>
-<ul>
-<li><a href="#সবধ" id="toc-সবধ">সুবিধা</a></li>
-<li><a href="#সমবদধত" id="toc-সমবদধত">সীমাবদ্ধতা</a></li>
-</ul></li>
+id="toc-small-siem-architecture">🏠 4. Small SIEM Architecture</a></li>
 <li><a href="#medium-siem-architecture"
 id="toc-medium-siem-architecture">🏢 5. Medium SIEM
 Architecture</a></li>
@@ -2202,11 +1332,7 @@ id="toc-centralized-vs-distributed-architecture">🔄 7. Centralized vs
 Distributed Architecture</a>
 <ul>
 <li><a href="#centralized-architecture"
-id="toc-centralized-architecture">Centralized Architecture</a>
-<ul>
-<li><a href="#সবধ-1" id="toc-সবধ-1">সুবিধা</a></li>
-<li><a href="#সমসয" id="toc-সমসয">সমস্যা</a></li>
-</ul></li>
+id="toc-centralized-architecture">Centralized Architecture</a></li>
 </ul></li>
 <li><a href="#distributed-architecture"
 id="toc-distributed-architecture">🌍 8. Distributed
@@ -2215,10 +1341,7 @@ Architecture</a></li>
 id="toc-single-node-vs-multi-node">🖥️ 9. Single-node vs Multi-node</a>
 <ul>
 <li><a href="#single-node-1" id="toc-single-node-1">Single-node</a></li>
-<li><a href="#multi-node" id="toc-multi-node">Multi-node</a>
-<ul>
-<li><a href="#সবধ-2" id="toc-সবধ-2">সুবিধা</a></li>
-</ul></li>
+<li><a href="#multi-node" id="toc-multi-node">Multi-node</a></li>
 </ul></li>
 <li><a href="#collector" id="toc-collector">📥 10. Collector</a></li>
 <li><a href="#forwarder-1" id="toc-forwarder-1">🚚 11.
@@ -2251,30 +1374,17 @@ id="toc-horizontal-scaling-1">Horizontal Scaling</a></li>
 </ul></li>
 <li><a href="#architecture-design-এর-আগ-ক-জনত-হব"
 id="toc-architecture-design-এর-আগ-ক-জনত-হব">📊 22. Architecture
-Design-এর আগে কী জানতে হবে?</a>
-<ul>
-<li><a href="#questions" id="toc-questions">Questions:</a></li>
-</ul></li>
+Design-এর আগে কী জানতে হবে?</a></li>
 <li><a href="#eps-events-per-second" id="toc-eps-events-per-second">📦
 23. EPS — Events Per Second</a></li>
 <li><a href="#storage-architecture" id="toc-storage-architecture">💾 24.
-Storage Architecture</a>
-<ul>
-<li><a href="#hot" id="toc-hot">Hot</a></li>
-<li><a href="#warm" id="toc-warm">Warm</a></li>
-<li><a href="#cold" id="toc-cold">Cold</a></li>
-<li><a href="#archive" id="toc-archive">Archive</a></li>
-</ul></li>
+Storage Architecture</a></li>
 <li><a href="#siem-network-architecture"
 id="toc-siem-network-architecture">🔐 25. SIEM Network
 Architecture</a></li>
 <li><a href="#siem-security-architecture"
 id="toc-siem-security-architecture">🔒 26. SIEM Security
-Architecture</a>
-<ul>
-<li><a href="#security-controls" id="toc-security-controls">Security
-controls:</a></li>
-</ul></li>
+Architecture</a></li>
 <li><a href="#role-based-access-control-rbac"
 id="toc-role-based-access-control-rbac">👥 27. Role-Based Access Control
 — RBAC</a></li>
@@ -2289,50 +1399,13 @@ Architecture</a></li>
 <li><a href="#disaster-recovery-dr" id="toc-disaster-recovery-dr">🛡️ 31.
 Disaster Recovery — DR</a></li>
 <li><a href="#rpo-and-rto-1" id="toc-rpo-and-rto-1">⏱️ 32. RPO and
-RTO</a>
-<ul>
-<li><a href="#rpo-recovery-point-objective"
-id="toc-rpo-recovery-point-objective">RPO — Recovery Point
-Objective</a></li>
-<li><a href="#rto-recovery-time-objective"
-id="toc-rto-recovery-time-objective">RTO — Recovery Time
-Objective</a></li>
-</ul></li>
+RTO</a></li>
 <li><a href="#observability-health-monitoring"
 id="toc-observability-health-monitoring">📡 33. Observability &amp;
 Health Monitoring</a></li>
 <li><a href="#common-siem-architecture-mistakes"
 id="toc-common-siem-architecture-mistakes">🔧 34. Common SIEM
-Architecture Mistakes</a>
-<ul>
-<li><a href="#mistake-1-শধ-current-workload-দখ"
-id="toc-mistake-1-শধ-current-workload-দখ">❌ Mistake 1 — শুধু current
-workload দেখা</a></li>
-<li><a href="#mistake-2-single-point-of-failure"
-id="toc-mistake-2-single-point-of-failure">❌ Mistake 2 — Single Point
-of Failure</a></li>
-<li><a href="#mistake-3-peak-eps-ignore-কর"
-id="toc-mistake-3-peak-eps-ignore-কর">❌ Mistake 3 — Peak EPS ignore
-করা</a></li>
-<li><a href="#mistake-4-storage-underestimate-কর"
-id="toc-mistake-4-storage-underestimate-কর">❌ Mistake 4 — Storage
-underestimate করা</a></li>
-<li><a href="#mistake-5-network-architecture-ignore-কর"
-id="toc-mistake-5-network-architecture-ignore-কর">❌ Mistake 5 — Network
-architecture ignore করা</a></li>
-<li><a href="#mistake-6-security-ignore-কর"
-id="toc-mistake-6-security-ignore-কর">❌ Mistake 6 — Security ignore
-করা</a></li>
-<li><a href="#mistake-7-backup-test-ন-কর"
-id="toc-mistake-7-backup-test-ন-কর">❌ Mistake 7 — Backup test না
-করা</a></li>
-<li><a href="#mistake-8-monitoring-ন-রখ"
-id="toc-mistake-8-monitoring-ন-রখ">❌ Mistake 8 — Monitoring না
-রাখা</a></li>
-<li><a href="#mistake-9-documentation-ন-কর"
-id="toc-mistake-9-documentation-ন-কর">❌ Mistake 9 — Documentation না
-করা</a></li>
-</ul></li>
+Architecture Mistakes</a></li>
 <li><a href="#practical-siem-architecture-lab"
 id="toc-practical-siem-architecture-lab">🧪 35. Practical SIEM
 Architecture Lab</a></li>
@@ -2346,15 +1419,7 @@ id="toc-architecture-documentation">📝 38. Architecture
 Documentation</a></li>
 <li><a href="#siem-platform-architecture-conceptual-view"
 id="toc-siem-platform-architecture-conceptual-view">🔍 39. SIEM Platform
-Architecture — Conceptual View</a>
-<ul>
-<li><a href="#wazuh-1" id="toc-wazuh-1">Wazuh</a></li>
-<li><a href="#splunk-3" id="toc-splunk-3">Splunk</a></li>
-<li><a href="#microsoft-sentinel-3"
-id="toc-microsoft-sentinel-3">Microsoft Sentinel</a></li>
-<li><a href="#elastic-opensearch" id="toc-elastic-opensearch">Elastic /
-OpenSearch</a></li>
-</ul></li>
+Architecture — Conceptual View</a></li>
 <li><a href="#siem-architecture-interview-questions-answers"
 id="toc-siem-architecture-interview-questions-answers">🎯 40. SIEM
 Architecture Interview Questions &amp; Answers</a>
@@ -2396,17 +1461,7 @@ delayed?</a></li>
 </ul></li>
 <li><a href="#siem-architecture-checklist"
 id="toc-siem-architecture-checklist">✅ 41. SIEM Architecture
-Checklist</a>
-<ul>
-<li><a href="#requirements" id="toc-requirements">Requirements</a></li>
-<li><a href="#infrastructure"
-id="toc-infrastructure">Infrastructure</a></li>
-<li><a href="#architecture" id="toc-architecture">Architecture</a></li>
-<li><a href="#availability" id="toc-availability">Availability</a></li>
-<li><a href="#security-1" id="toc-security-1">Security</a></li>
-<li><a href="#dr" id="toc-dr">DR</a></li>
-<li><a href="#operations" id="toc-operations">Operations</a></li>
-</ul></li>
+Checklist</a></li>
 <li><a href="#complete-siem-architecture-flow"
 id="toc-complete-siem-architecture-flow">🔄 42. Complete SIEM
 Architecture Flow</a></li>
@@ -2418,13 +1473,7 @@ id="toc-practical-security-takeaway">🚀 Practical Security
 Takeaway</a></li>
 <li><a href="#next-in-the-siem-engineer-series"
 id="toc-next-in-the-siem-engineer-series">📚 Next in the SIEM Engineer
-Series</a>
-<ul>
-<li><a href="#previous" id="toc-previous">Previous</a></li>
-<li><a href="#current" id="toc-current">Current</a></li>
-<li><a href="#next" id="toc-next">Next</a></li>
-<li><a href="#navigation-10" id="toc-navigation-10">Navigation</a></li>
-</ul></li>
+Series</a></li>
 <li><a href="#siem-engineer-12-siem-capacity-planning"
 id="toc-siem-engineer-12-siem-capacity-planning">🟢🟡🔴 SIEM Engineer
 #12 — SIEM Capacity Planning</a></li>
@@ -2497,19 +1546,7 @@ Capacity Alerting</a></li>
 id="toc-capacity-planning-lifecycle">🔄 30. Capacity Planning
 Lifecycle</a></li>
 <li><a href="#practical-lab-1" id="toc-practical-lab-1">🧪 31. Practical
-Lab</a>
-<ul>
-<li><a href="#step-1-2" id="toc-step-1-2">Step 1</a></li>
-<li><a href="#step-2-2" id="toc-step-2-2">Step 2</a></li>
-<li><a href="#step-3-2" id="toc-step-3-2">Step 3</a></li>
-<li><a href="#step-4-2" id="toc-step-4-2">Step 4</a></li>
-<li><a href="#step-5-2" id="toc-step-5-2">Step 5</a></li>
-<li><a href="#step-6-1" id="toc-step-6-1">Step 6</a></li>
-<li><a href="#step-7" id="toc-step-7">Step 7</a></li>
-<li><a href="#step-8" id="toc-step-8">Step 8</a></li>
-<li><a href="#step-9" id="toc-step-9">Step 9</a></li>
-<li><a href="#step-10" id="toc-step-10">Step 10</a></li>
-</ul></li>
+Lab</a></li>
 <li><a href="#interview-questions-answers"
 id="toc-interview-questions-answers">🎯 32. Interview Questions &amp;
 Answers</a>
@@ -2545,19 +1582,7 @@ metrics do you monitor for capacity?</a></li>
 </ul></li>
 <li><a href="#common-capacity-planning-mistakes"
 id="toc-common-capacity-planning-mistakes">❌ 33. Common Capacity
-Planning Mistakes</a>
-<ul>
-<li><a href="#mistake-1" id="toc-mistake-1">Mistake 1</a></li>
-<li><a href="#mistake-2" id="toc-mistake-2">Mistake 2</a></li>
-<li><a href="#mistake-3" id="toc-mistake-3">Mistake 3</a></li>
-<li><a href="#mistake-4" id="toc-mistake-4">Mistake 4</a></li>
-<li><a href="#mistake-5" id="toc-mistake-5">Mistake 5</a></li>
-<li><a href="#mistake-6" id="toc-mistake-6">Mistake 6</a></li>
-<li><a href="#mistake-7" id="toc-mistake-7">Mistake 7</a></li>
-<li><a href="#mistake-8" id="toc-mistake-8">Mistake 8</a></li>
-<li><a href="#mistake-9" id="toc-mistake-9">Mistake 9</a></li>
-<li><a href="#mistake-10" id="toc-mistake-10">Mistake 10</a></li>
-</ul></li>
+Planning Mistakes</a></li>
 <li><a href="#siem-engineer-mindset" id="toc-siem-engineer-mindset">🧠
 34. SIEM Engineer Mindset</a></li>
 <li><a href="#complete-capacity-planning-flow"
@@ -2567,13 +1592,7 @@ Planning Flow</a></li>
 Takeaway</a></li>
 <li><a href="#siem-engineer-series-navigation"
 id="toc-siem-engineer-series-navigation">📚 SIEM Engineer Series
-Navigation</a>
-<ul>
-<li><a href="#previous-1" id="toc-previous-1">Previous</a></li>
-<li><a href="#current-1" id="toc-current-1">Current</a></li>
-<li><a href="#next-1" id="toc-next-1">Next</a></li>
-<li><a href="#navigation-11" id="toc-navigation-11">Navigation</a></li>
-</ul></li>
+Navigation</a></li>
 <li><a href="#siem-engineer-13-siem-performance-tuning"
 id="toc-siem-engineer-13-siem-performance-tuning">🟢🟡🔴 SIEM Engineer
 #13 — SIEM Performance Tuning</a></li>
@@ -2654,16 +1673,7 @@ id="toc-real-world-problem-high-cpu">🔧 33. Real-World Problem — High
 CPU</a></li>
 <li><a href="#performance-optimization-areas"
 id="toc-performance-optimization-areas">📊 34. Performance Optimization
-Areas</a>
-<ul>
-<li><a href="#query" id="toc-query">Query</a></li>
-<li><a href="#detection" id="toc-detection">Detection</a></li>
-<li><a href="#storage-1" id="toc-storage-1">Storage</a></li>
-<li><a href="#infrastructure-1"
-id="toc-infrastructure-1">Infrastructure</a></li>
-<li><a href="#architecture-1"
-id="toc-architecture-1">Architecture</a></li>
-</ul></li>
+Areas</a></li>
 <li><a href="#detection-rule-performance"
 id="toc-detection-rule-performance">🤖 35. Detection Rule
 Performance</a></li>
@@ -2672,33 +1682,12 @@ Performance</a></li>
 <li><a href="#search-concurrency" id="toc-search-concurrency">📈 37.
 Search Concurrency</a></li>
 <li><a href="#performance-vs-capacity"
-id="toc-performance-vs-capacity">🧠 38. Performance vs Capacity</a>
-<ul>
-<li><a href="#capacity" id="toc-capacity">Capacity</a></li>
-<li><a href="#performance" id="toc-performance">Performance</a></li>
-</ul></li>
+id="toc-performance-vs-capacity">🧠 38. Performance vs Capacity</a></li>
 <li><a href="#practical-lab-2" id="toc-practical-lab-2">🧪 39. Practical
-Lab</a>
-<ul>
-<li><a href="#step-1-3" id="toc-step-1-3">Step 1</a></li>
-<li><a href="#step-2-3" id="toc-step-2-3">Step 2</a></li>
-<li><a href="#step-3-3" id="toc-step-3-3">Step 3</a></li>
-<li><a href="#step-4-3" id="toc-step-4-3">Step 4</a></li>
-<li><a href="#step-5-3" id="toc-step-5-3">Step 5</a></li>
-<li><a href="#step-6-2" id="toc-step-6-2">Step 6</a></li>
-<li><a href="#step-7-1" id="toc-step-7-1">Step 7</a></li>
-<li><a href="#step-8-1" id="toc-step-8-1">Step 8</a></li>
-</ul></li>
+Lab</a></li>
 <li><a href="#performance-troubleshooting-checklist"
 id="toc-performance-troubleshooting-checklist">📝 40. Performance
-Troubleshooting Checklist</a>
-<ul>
-<li><a href="#query-1" id="toc-query-1">Query</a></li>
-<li><a href="#infrastructure-2"
-id="toc-infrastructure-2">Infrastructure</a></li>
-<li><a href="#siem" id="toc-siem">SIEM</a></li>
-<li><a href="#operations-1" id="toc-operations-1">Operations</a></li>
-</ul></li>
+Troubleshooting Checklist</a></li>
 <li><a href="#interview-questions-answers-1"
 id="toc-interview-questions-answers-1">🎯 41. Interview Questions &amp;
 Answers</a>
@@ -2741,13 +1730,7 @@ Flow</a></li>
 id="toc-final-security-takeaway">💡 Final Security Takeaway</a></li>
 <li><a href="#siem-engineer-series-navigation-1"
 id="toc-siem-engineer-series-navigation-1">📚 SIEM Engineer Series
-Navigation</a>
-<ul>
-<li><a href="#previous-2" id="toc-previous-2">Previous</a></li>
-<li><a href="#current-2" id="toc-current-2">Current</a></li>
-<li><a href="#next-2" id="toc-next-2">Next</a></li>
-<li><a href="#navigation-12" id="toc-navigation-12">Navigation</a></li>
-</ul></li>
+Navigation</a></li>
 <li><a href="#siem-engineer-14-advanced-detection-engineering"
 id="toc-siem-engineer-14-advanced-detection-engineering">SIEM Engineer
 #14 — Advanced Detection Engineering</a>
@@ -2757,13 +1740,7 @@ Introduction</a></li>
 </ul></li>
 <li><a href="#what-is-advanced-detection-engineering"
 id="toc-what-is-advanced-detection-engineering">1️⃣ What is Advanced
-Detection Engineering?</a>
-<ul>
-<li><a href="#basic-detection" id="toc-basic-detection">Basic
-Detection</a></li>
-<li><a href="#advanced-detection" id="toc-advanced-detection">Advanced
-Detection</a></li>
-</ul></li>
+Detection Engineering?</a></li>
 <li><a href="#why-does-this-matter-3" id="toc-why-does-this-matter-3">2️⃣
 💡 Why does this matter?</a></li>
 <li><a href="#detection-engineering-lifecycle-1"
@@ -2772,17 +1749,8 @@ Lifecycle</a></li>
 <li><a href="#security-hypothesis" id="toc-security-hypothesis">4️⃣
 Security Hypothesis</a></li>
 <li><a href="#data-source-identification"
-id="toc-data-source-identification">5️⃣ Data Source Identification</a>
-<ul>
-<li><a href="#windows-detection" id="toc-windows-detection">Windows
-Detection</a></li>
-<li><a href="#linux-detection" id="toc-linux-detection">Linux
-Detection</a></li>
-<li><a href="#network-detection" id="toc-network-detection">Network
-Detection</a></li>
-<li><a href="#identity-detection" id="toc-identity-detection">Identity
-Detection</a></li>
-</ul></li>
+id="toc-data-source-identification">5️⃣ Data Source
+Identification</a></li>
 <li><a href="#understand-your-fields" id="toc-understand-your-fields">6️⃣
 Understand Your Fields</a></li>
 <li><a href="#single-event-detection" id="toc-single-event-detection">7️⃣
@@ -2792,10 +1760,7 @@ id="toc-correlation-detection-1">8️⃣ 🔗 Correlation Detection</a></li>
 <li><a href="#threshold-detection-1" id="toc-threshold-detection-1">9️⃣
 Threshold Detection</a></li>
 <li><a href="#sequence-detection-1" id="toc-sequence-detection-1">🔟
-Sequence Detection</a>
-<ul>
-<li><a href="#example-1" id="toc-example-1">Example</a></li>
-</ul></li>
+Sequence Detection</a></li>
 <li><a href="#behavioral-detection-1"
 id="toc-behavioral-detection-1">1️⃣1️⃣ Behavioral Detection</a></li>
 <li><a href="#baseline-analysis-1" id="toc-baseline-analysis-1">1️⃣2️⃣
@@ -2806,12 +1771,7 @@ id="toc-entity-based-detection">1️⃣3️⃣ Entity-Based Detection</a></li>
 Risk-Based Detection</a></li>
 <li><a href="#severity-vs-risk-vs-confidence"
 id="toc-severity-vs-risk-vs-confidence">1️⃣5️⃣ Severity vs Risk vs
-Confidence</a>
-<ul>
-<li><a href="#severity-3" id="toc-severity-3">Severity</a></li>
-<li><a href="#confidence-2" id="toc-confidence-2">Confidence</a></li>
-<li><a href="#risk" id="toc-risk">Risk</a></li>
-</ul></li>
+Confidence</a></li>
 <li><a href="#false-positive-reduction"
 id="toc-false-positive-reduction">1️⃣6️⃣ False Positive Reduction</a></li>
 <li><a href="#exceptions-and-allowlists"
@@ -2842,14 +1802,7 @@ Rules</a></li>
 <li><a href="#detection-as-code-1" id="toc-detection-as-code-1">2️⃣7️⃣
 Detection-as-Code</a></li>
 <li><a href="#detection-testing-1" id="toc-detection-testing-1">2️⃣8️⃣
-Detection Testing</a>
-<ul>
-<li><a href="#positive-test" id="toc-positive-test">Positive
-Test</a></li>
-<li><a href="#negative-test" id="toc-negative-test">Negative
-Test</a></li>
-<li><a href="#edge-case" id="toc-edge-case">Edge Case</a></li>
-</ul></li>
+Detection Testing</a></li>
 <li><a href="#detection-performance" id="toc-detection-performance">2️⃣9️⃣
 Detection Performance</a></li>
 <li><a href="#detection-monitoring" id="toc-detection-monitoring">3️⃣0️⃣
@@ -2861,21 +1814,7 @@ id="toc-real-world-example-suspicious-login">3️⃣2️⃣ Real-World Example �
 Suspicious Login</a></li>
 <li><a href="#practical-detection-engineering-lab"
 id="toc-practical-detection-engineering-lab">3️⃣3️⃣ Practical Detection
-Engineering Lab</a>
-<ul>
-<li><a href="#lab-01-ssh-brute-force"
-id="toc-lab-01-ssh-brute-force">Lab 01 — SSH Brute Force</a></li>
-<li><a href="#lab-02-successful-login-after-failures"
-id="toc-lab-02-successful-login-after-failures">Lab 02 — Successful
-Login After Failures</a></li>
-<li><a href="#lab-03-privilege-escalation"
-id="toc-lab-03-privilege-escalation">Lab 03 — Privilege
-Escalation</a></li>
-<li><a href="#lab-04-suspicious-process"
-id="toc-lab-04-suspicious-process">Lab 04 — Suspicious Process</a></li>
-<li><a href="#lab-05-network-scanning"
-id="toc-lab-05-network-scanning">Lab 05 — Network Scanning</a></li>
-</ul></li>
+Engineering Lab</a></li>
 <li><a href="#detection-engineering-documentation"
 id="toc-detection-engineering-documentation">3️⃣4️⃣ Detection Engineering
 Documentation</a></li>
@@ -2886,39 +1825,7 @@ SOC</a></li>
 Mistakes</a></li>
 <li><a href="#siem-engineer-interview-questions-7"
 id="toc-siem-engineer-interview-questions-7">3️⃣7️⃣ SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-detection-engineering-1"
-id="toc-q1.-what-is-detection-engineering-1">Q1. What is Detection
-Engineering?</a></li>
-<li><a href="#q2.-what-is-correlation-detection"
-id="toc-q2.-what-is-correlation-detection">Q2. What is correlation
-detection?</a></li>
-<li><a href="#q3.-what-is-behavioral-detection"
-id="toc-q3.-what-is-behavioral-detection">Q3. What is behavioral
-detection?</a></li>
-<li><a
-href="#q4.-what-is-the-difference-between-severity-and-confidence"
-id="toc-q4.-what-is-the-difference-between-severity-and-confidence">Q4.
-What is the difference between severity and confidence?</a></li>
-<li><a href="#q5.-how-do-you-reduce-false-positives"
-id="toc-q5.-how-do-you-reduce-false-positives">Q5. How do you reduce
-false positives?</a></li>
-<li><a href="#q6.-what-is-sequence-detection"
-id="toc-q6.-what-is-sequence-detection">Q6. What is sequence
-detection?</a></li>
-<li><a href="#q7.-why-is-baseline-important"
-id="toc-q7.-why-is-baseline-important">Q7. Why is baseline
-important?</a></li>
-<li><a href="#q8.-what-is-detection-as-code"
-id="toc-q8.-what-is-detection-as-code">Q8. What is
-Detection-as-Code?</a></li>
-<li><a href="#q9.-what-is-sigma" id="toc-q9.-what-is-sigma">Q9. What is
-Sigma?</a></li>
-<li><a href="#q10.-how-do-you-validate-a-detection"
-id="toc-q10.-how-do-you-validate-a-detection">Q10. How do you validate a
-detection?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#detection-engineering-checklist-1"
 id="toc-detection-engineering-checklist-1">3️⃣8️⃣ Detection Engineering
 Checklist</a></li>
@@ -2928,15 +1835,9 @@ Detection Flow</a></li>
 <li><a href="#final-takeaway-11" id="toc-final-takeaway-11">🎯 Final
 Takeaway</a>
 <ul>
-<li><a href="#practical-security-takeaway-1"
-id="toc-practical-security-takeaway-1">🔐 Practical Security
-Takeaway</a></li>
 <li><a href="#siem-engineer-learning-series-9"
 id="toc-siem-engineer-learning-series-9">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-13" id="toc-navigation-13">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-15-threat-hunting-with-siem"
 id="toc-siem-engineer-15-threat-hunting-with-siem">SIEM Engineer #15 —
@@ -2951,33 +1852,13 @@ What is Threat Hunting?</a></li>
 💡 Why does this matter?</a></li>
 <li><a href="#threat-hunting-vs-alert-investigation"
 id="toc-threat-hunting-vs-alert-investigation">3️⃣ Threat Hunting vs
-Alert Investigation</a>
-<ul>
-<li><a href="#alert-investigation-1"
-id="toc-alert-investigation-1">Alert Investigation</a></li>
-<li><a href="#threat-hunting-1" id="toc-threat-hunting-1">Threat
-Hunting</a></li>
-<li><a href="#alert-investigation-2"
-id="toc-alert-investigation-2">Alert Investigation</a></li>
-<li><a href="#threat-hunting-2" id="toc-threat-hunting-2">Threat
-Hunting</a></li>
-</ul></li>
+Alert Investigation</a></li>
 <li><a href="#threat-hunting-lifecycle"
 id="toc-threat-hunting-lifecycle">4️⃣ Threat Hunting Lifecycle</a></li>
 <li><a href="#start-with-a-hypothesis"
 id="toc-start-with-a-hypothesis">5️⃣ Start with a Hypothesis</a></li>
 <li><a href="#types-of-threat-hunting"
-id="toc-types-of-threat-hunting">6️⃣ Types of Threat Hunting</a>
-<ul>
-<li><a href="#ioc-hunting" id="toc-ioc-hunting">🔎 IOC Hunting</a></li>
-<li><a href="#ttp-hunting" id="toc-ttp-hunting">🧠 TTP Hunting</a></li>
-<li><a href="#user-hunting" id="toc-user-hunting">👤 User
-Hunting</a></li>
-<li><a href="#host-hunting" id="toc-host-hunting">🖥️ Host
-Hunting</a></li>
-<li><a href="#network-hunting" id="toc-network-hunting">🌐 Network
-Hunting</a></li>
-</ul></li>
+id="toc-types-of-threat-hunting">6️⃣ Types of Threat Hunting</a></li>
 <li><a href="#ioc-hunting-1" id="toc-ioc-hunting-1">7️⃣ IOC
 Hunting</a></li>
 <li><a href="#historical-ioc-hunting" id="toc-historical-ioc-hunting">8️⃣
@@ -2989,13 +1870,7 @@ id="toc-mitre-attck-and-threat-hunting">🔟 MITRE ATT&amp;CK and Threat
 Hunting</a></li>
 <li><a href="#data-sources-for-threat-hunting"
 id="toc-data-sources-for-threat-hunting">1️⃣1️⃣ Data Sources for Threat
-Hunting</a>
-<ul>
-<li><a href="#endpoint" id="toc-endpoint">Endpoint</a></li>
-<li><a href="#network" id="toc-network">Network</a></li>
-<li><a href="#identity" id="toc-identity">Identity</a></li>
-<li><a href="#application" id="toc-application">Application</a></li>
-</ul></li>
+Hunting</a></li>
 <li><a href="#search-strategy" id="toc-search-strategy">1️⃣2️⃣ Search
 Strategy</a></li>
 <li><a href="#time-based-hunting" id="toc-time-based-hunting">1️⃣3️⃣
@@ -3027,20 +1902,8 @@ Hunting</a></li>
 <li><a href="#threat-intelligence-enrichment"
 id="toc-threat-intelligence-enrichment">2️⃣5️⃣ Threat Intelligence
 Enrichment</a></li>
-<li><a href="#hunt-results" id="toc-hunt-results">2️⃣6️⃣ Hunt Results</a>
-<ul>
-<li><a href="#outcome-1-no-suspicious-activity"
-id="toc-outcome-1-no-suspicious-activity">Outcome 1 — No Suspicious
-Activity</a></li>
-<li><a href="#outcome-2-suspicious-activity"
-id="toc-outcome-2-suspicious-activity">Outcome 2 — Suspicious
-Activity</a></li>
-<li><a href="#outcome-3-confirmed-incident"
-id="toc-outcome-3-confirmed-incident">Outcome 3 — Confirmed
-Incident</a></li>
-<li><a href="#outcome-4-detection-gap"
-id="toc-outcome-4-detection-gap">Outcome 4 — Detection Gap</a></li>
-</ul></li>
+<li><a href="#hunt-results" id="toc-hunt-results">2️⃣6️⃣ Hunt
+Results</a></li>
 <li><a href="#threat-hunting-detection-engineering"
 id="toc-threat-hunting-detection-engineering">2️⃣7️⃣ Threat Hunting →
 Detection Engineering</a></li>
@@ -3064,49 +1927,10 @@ id="toc-threat-hunting-metrics">3️⃣3️⃣ Threat Hunting Metrics</a></li>
 id="toc-common-threat-hunting-mistakes">3️⃣4️⃣ Common Threat Hunting
 Mistakes</a></li>
 <li><a href="#threat-hunting-lab" id="toc-threat-hunting-lab">3️⃣5️⃣
-Threat Hunting Lab</a>
-<ul>
-<li><a href="#hunt-01" id="toc-hunt-01">Hunt 01</a></li>
-<li><a href="#hunt-02" id="toc-hunt-02">Hunt 02</a></li>
-<li><a href="#hunt-03" id="toc-hunt-03">Hunt 03</a></li>
-<li><a href="#hunt-04" id="toc-hunt-04">Hunt 04</a></li>
-<li><a href="#hunt-05" id="toc-hunt-05">Hunt 05</a></li>
-<li><a href="#hunt-06" id="toc-hunt-06">Hunt 06</a></li>
-</ul></li>
+Threat Hunting Lab</a></li>
 <li><a href="#siem-engineer-interview-questions-8"
 id="toc-siem-engineer-interview-questions-8">3️⃣6️⃣ SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-threat-hunting"
-id="toc-q1.-what-is-threat-hunting">Q1. What is Threat Hunting?</a></li>
-<li><a
-href="#q2.-what-is-the-difference-between-threat-hunting-and-alert-investigation"
-id="toc-q2.-what-is-the-difference-between-threat-hunting-and-alert-investigation">Q2.
-What is the difference between Threat Hunting and Alert
-Investigation?</a></li>
-<li><a href="#q3.-what-is-ioc-hunting"
-id="toc-q3.-what-is-ioc-hunting">Q3. What is IOC hunting?</a></li>
-<li><a href="#q4.-what-is-ttp-hunting"
-id="toc-q4.-what-is-ttp-hunting">Q4. What is TTP hunting?</a></li>
-<li><a href="#q5.-how-do-you-start-a-threat-hunt"
-id="toc-q5.-how-do-you-start-a-threat-hunt">Q5. How do you start a
-threat hunt?</a></li>
-<li><a href="#q6.-why-is-historical-data-important"
-id="toc-q6.-why-is-historical-data-important">Q6. Why is historical data
-important?</a></li>
-<li><a
-href="#q7.-what-do-you-do-when-a-hunt-discovers-suspicious-activity"
-id="toc-q7.-what-do-you-do-when-a-hunt-discovers-suspicious-activity">Q7.
-What do you do when a hunt discovers suspicious activity?</a></li>
-<li><a href="#q8.-how-can-threat-hunting-improve-siem"
-id="toc-q8.-how-can-threat-hunting-improve-siem">Q8. How can Threat
-Hunting improve SIEM?</a></li>
-<li><a href="#q9.-why-is-baseline-important-in-threat-hunting"
-id="toc-q9.-why-is-baseline-important-in-threat-hunting">Q9. Why is
-baseline important in threat hunting?</a></li>
-<li><a href="#q10.-what-is-pivoting" id="toc-q10.-what-is-pivoting">Q10.
-What is pivoting?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#threat-hunting-checklist"
 id="toc-threat-hunting-checklist">3️⃣7️⃣ Threat Hunting Checklist</a></li>
 <li><a href="#complete-threat-hunting-flow"
@@ -3120,10 +1944,7 @@ id="toc-practical-security-takeaway-2">🔐 Practical Security
 Takeaway</a></li>
 <li><a href="#siem-engineer-learning-series-10"
 id="toc-siem-engineer-learning-series-10">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-14" id="toc-navigation-14">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a href="#siem-engineer-16-siem-data-quality-troubleshooting"
 id="toc-siem-engineer-16-siem-data-quality-troubleshooting">SIEM
@@ -3138,18 +1959,7 @@ Quality?</a></li>
 <li><a href="#why-does-this-matter-5" id="toc-why-does-this-matter-5">2️⃣
 💡 Why does this matter?</a></li>
 <li><a href="#data-quality-dimensions"
-id="toc-data-quality-dimensions">3️⃣ Data Quality Dimensions</a>
-<ul>
-<li><a href="#availability-1" id="toc-availability-1">1.
-Availability</a></li>
-<li><a href="#completeness" id="toc-completeness">2.
-Completeness</a></li>
-<li><a href="#accuracy" id="toc-accuracy">3. Accuracy</a></li>
-<li><a href="#timeliness" id="toc-timeliness">4. Timeliness</a></li>
-<li><a href="#consistency" id="toc-consistency">5. Consistency</a></li>
-<li><a href="#uniqueness" id="toc-uniqueness">6. Uniqueness</a></li>
-<li><a href="#validity" id="toc-validity">7. Validity</a></li>
-</ul></li>
+id="toc-data-quality-dimensions">3️⃣ Data Quality Dimensions</a></li>
 <li><a href="#common-siem-data-problems"
 id="toc-common-siem-data-problems">4️⃣ Common SIEM Data Problems</a></li>
 <li><a href="#the-data-troubleshooting-flow"
@@ -3158,23 +1968,8 @@ Flow</a></li>
 <li><a href="#missing-logs" id="toc-missing-logs">6️⃣ Missing
 Logs</a></li>
 <li><a href="#missing-log-troubleshooting"
-id="toc-missing-log-troubleshooting">7️⃣ Missing Log Troubleshooting</a>
-<ul>
-<li><a href="#step-1-source" id="toc-step-1-source">Step 1 —
-Source</a></li>
-<li><a href="#step-2-destination" id="toc-step-2-destination">Step 2 —
-Destination</a></li>
-<li><a href="#step-3-network" id="toc-step-3-network">Step 3 —
-Network</a></li>
-<li><a href="#step-4-collector" id="toc-step-4-collector">Step 4 —
-Collector</a></li>
-<li><a href="#step-5-ingestion" id="toc-step-5-ingestion">Step 5 —
-Ingestion</a></li>
-<li><a href="#step-6-parsing" id="toc-step-6-parsing">Step 6 —
-Parsing</a></li>
-<li><a href="#step-7-search" id="toc-step-7-search">Step 7 —
-Search</a></li>
-</ul></li>
+id="toc-missing-log-troubleshooting">7️⃣ Missing Log
+Troubleshooting</a></li>
 <li><a href="#source-health-monitoring"
 id="toc-source-health-monitoring">8️⃣ Source Health Monitoring</a></li>
 <li><a href="#log-silence-detection" id="toc-log-silence-detection">9️⃣
@@ -3215,25 +2010,9 @@ Completeness</a></li>
 id="toc-data-quality-validation">2️⃣5️⃣ Data Quality Validation</a></li>
 <li><a href="#log-source-onboarding-validation"
 id="toc-log-source-onboarding-validation">2️⃣6️⃣ Log Source Onboarding
-Validation</a>
-<ul>
-<li><a href="#step-1-4" id="toc-step-1-4">Step 1</a></li>
-<li><a href="#step-2-4" id="toc-step-2-4">Step 2</a></li>
-<li><a href="#step-3-4" id="toc-step-3-4">Step 3</a></li>
-<li><a href="#step-4-4" id="toc-step-4-4">Step 4</a></li>
-<li><a href="#step-5-4" id="toc-step-5-4">Step 5</a></li>
-<li><a href="#step-6-3" id="toc-step-6-3">Step 6</a></li>
-<li><a href="#step-7-2" id="toc-step-7-2">Step 7</a></li>
-<li><a href="#step-8-2" id="toc-step-8-2">Step 8</a></li>
-<li><a href="#step-9-1" id="toc-step-9-1">Step 9</a></li>
-<li><a href="#step-10-1" id="toc-step-10-1">Step 10</a></li>
-</ul></li>
+Validation</a></li>
 <li><a href="#raw-vs-parsed-data" id="toc-raw-vs-parsed-data">2️⃣7️⃣ Raw
-vs Parsed Data</a>
-<ul>
-<li><a href="#raw-data" id="toc-raw-data">Raw Data</a></li>
-<li><a href="#parsed-data" id="toc-parsed-data">Parsed Data</a></li>
-</ul></li>
+vs Parsed Data</a></li>
 <li><a href="#detection-failure-because-of-data-quality"
 id="toc-detection-failure-because-of-data-quality">2️⃣8️⃣ Detection
 Failure Because of Data Quality</a></li>
@@ -3244,22 +2023,10 @@ Hunting</a></li>
 id="toc-data-quality-monitoring-dashboard">3️⃣0️⃣ Data Quality Monitoring
 Dashboard</a></li>
 <li><a href="#data-quality-alerts" id="toc-data-quality-alerts">3️⃣1️⃣
-Data Quality Alerts</a>
-<ul>
-<li><a href="#no-logs" id="toc-no-logs">No Logs</a></li>
-<li><a href="#eps-drop" id="toc-eps-drop">EPS Drop</a></li>
-<li><a href="#parsing-error" id="toc-parsing-error">Parsing
-Error</a></li>
-<li><a href="#queue-growth" id="toc-queue-growth">Queue Growth</a></li>
-<li><a href="#latency" id="toc-latency">Latency</a></li>
-</ul></li>
+Data Quality Alerts</a></li>
 <li><a href="#troubleshooting-example-firewall-logs-missing"
 id="toc-troubleshooting-example-firewall-logs-missing">3️⃣2️⃣
-Troubleshooting Example — Firewall Logs Missing</a>
-<ul>
-<li><a href="#investigation"
-id="toc-investigation">Investigation</a></li>
-</ul></li>
+Troubleshooting Example — Firewall Logs Missing</a></li>
 <li><a href="#troubleshooting-example-duplicate-events"
 id="toc-troubleshooting-example-duplicate-events">3️⃣3️⃣ Troubleshooting
 Example — Duplicate Events</a></li>
@@ -3273,68 +2040,18 @@ Example — Parsing Failure</a></li>
 Quality SLA</a></li>
 <li><a href="#critical-vs-non-critical-sources"
 id="toc-critical-vs-non-critical-sources">3️⃣7️⃣ Critical vs Non-Critical
-Sources</a>
-<ul>
-<li><a href="#critical" id="toc-critical">Critical</a></li>
-<li><a href="#important-2" id="toc-important-2">Important</a></li>
-<li><a href="#lower-priority" id="toc-lower-priority">Lower
-Priority</a></li>
-</ul></li>
+Sources</a></li>
 <li><a href="#data-quality-and-compliance"
 id="toc-data-quality-and-compliance">3️⃣8️⃣ Data Quality and
 Compliance</a></li>
 <li><a href="#practical-lab-3" id="toc-practical-lab-3">3️⃣9️⃣ Practical
-Lab</a>
-<ul>
-<li><a href="#lab-01-missing-logs" id="toc-lab-01-missing-logs">Lab 01 —
-Missing Logs</a></li>
-<li><a href="#lab-02-parsing" id="toc-lab-02-parsing">Lab 02 —
-Parsing</a></li>
-<li><a href="#lab-03-timestamp" id="toc-lab-03-timestamp">Lab 03 —
-Timestamp</a></li>
-<li><a href="#lab-04-duplicate-logs" id="toc-lab-04-duplicate-logs">Lab
-04 — Duplicate Logs</a></li>
-<li><a href="#lab-05-log-latency" id="toc-lab-05-log-latency">Lab 05 —
-Log Latency</a></li>
-</ul></li>
+Lab</a></li>
 <li><a href="#siem-data-quality-checklist"
 id="toc-siem-data-quality-checklist">4️⃣0️⃣ SIEM Data Quality
 Checklist</a></li>
 <li><a href="#siem-engineer-interview-questions-9"
 id="toc-siem-engineer-interview-questions-9">4️⃣1️⃣ SIEM Engineer
-Interview Questions</a>
-<ul>
-<li><a href="#q1.-what-is-siem-data-quality"
-id="toc-q1.-what-is-siem-data-quality">Q1. What is SIEM Data
-Quality?</a></li>
-<li><a href="#q2.-what-would-you-check-if-logs-suddenly-stopped"
-id="toc-q2.-what-would-you-check-if-logs-suddenly-stopped">Q2. What
-would you check if logs suddenly stopped?</a></li>
-<li><a href="#q3.-what-is-log-latency"
-id="toc-q3.-what-is-log-latency">Q3. What is log latency?</a></li>
-<li><a href="#q4.-what-causes-duplicate-logs"
-id="toc-q4.-what-causes-duplicate-logs">Q4. What causes duplicate
-logs?</a></li>
-<li><a href="#q5.-why-is-parsing-important"
-id="toc-q5.-why-is-parsing-important">Q5. Why is parsing
-important?</a></li>
-<li><a href="#q6.-how-do-you-troubleshoot-a-parsing-problem"
-id="toc-q6.-how-do-you-troubleshoot-a-parsing-problem">Q6. How do you
-troubleshoot a parsing problem?</a></li>
-<li><a href="#q7.-why-is-timestamp-accuracy-important"
-id="toc-q7.-why-is-timestamp-accuracy-important">Q7. Why is timestamp
-accuracy important?</a></li>
-<li><a href="#q8.-what-is-backpressure"
-id="toc-q8.-what-is-backpressure">Q8. What is backpressure?</a></li>
-<li><a href="#q9.-how-can-you-detect-a-silent-log-source"
-id="toc-q9.-how-can-you-detect-a-silent-log-source">Q9. How can you
-detect a silent log source?</a></li>
-<li><a
-href="#q10.-what-is-the-relationship-between-data-quality-and-detection-engineering"
-id="toc-q10.-what-is-the-relationship-between-data-quality-and-detection-engineering">Q10.
-What is the relationship between data quality and detection
-engineering?</a></li>
-</ul></li>
+Interview Questions</a></li>
 <li><a href="#complete-siem-data-quality-flow"
 id="toc-complete-siem-data-quality-flow">4️⃣2️⃣ Complete SIEM Data Quality
 Flow</a></li>
@@ -3346,10 +2063,7 @@ id="toc-practical-security-takeaway-3">🔐 Practical Security
 Takeaway</a></li>
 <li><a href="#siem-engineer-learning-series-11"
 id="toc-siem-engineer-learning-series-11">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-15" id="toc-navigation-15">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 <li><a
 href="#siem-engineer-17-hands-on-siem-multi-platform-practical-guide"
@@ -3364,15 +2078,7 @@ id="toc-platform-independent-core-skills">🧠 1. Platform-Independent
 Core Skills</a></li>
 <li><a href="#the-unified-lab-architecture"
 id="toc-the-unified-lab-architecture">🏗️ 2. The Unified Lab
-Architecture</a>
-<ul>
-<li><a href="#minimum-hardware-requirement"
-id="toc-minimum-hardware-requirement">Minimum hardware
-requirement</a></li>
-<li><a href="#vm-specification-recommended"
-id="toc-vm-specification-recommended">VM specification
-(recommended)</a></li>
-</ul></li>
+Architecture</a></li>
 <li><a href="#platform-setup-কনট-কভব" id="toc-platform-setup-কনট-কভব">📦
 3. Platform Setup — কোনটা কীভাবে</a>
 <ul>
@@ -3481,74 +2187,47 @@ id="toc-windows-event-id-cheat-sheet-lab-এ-য-collect-করবন">📝 14.
 Windows Event ID Cheat Sheet (Lab-এ যা collect করবেন)</a></li>
 <li><a href="#common-multi-platform-lab-mistakes"
 id="toc-common-multi-platform-lab-mistakes">🚫 15. Common Multi-Platform
-Lab Mistakes</a>
-<ul>
-<li><a href="#mistake-1-সব-platform-একসথ-চলন"
-id="toc-mistake-1-সব-platform-একসথ-চলন">❌ Mistake 1 — সব platform
-একসাথে চালানো</a></li>
-<li><a href="#mistake-2-শধ-install-কর-থম-যওয"
-id="toc-mistake-2-শধ-install-কর-থম-যওয">❌ Mistake 2 — শুধু install করে
-থেমে যাওয়া</a></li>
-<li><a href="#mistake-3-একই-dataset-ন-বযবহর-কর"
-id="toc-mistake-3-একই-dataset-ন-বযবহর-কর">❌ Mistake 3 — একই dataset না
-ব্যবহার করা</a></li>
-<li><a href="#mistake-4-alert-tune-ন-কর-পরর-platform-এ-যওয"
-id="toc-mistake-4-alert-tune-ন-কর-পরর-platform-এ-যওয">❌ Mistake 4 —
-Alert tune না করে পরের platform-এ যাওয়া</a></li>
-<li><a href="#mistake-5-documentation-ন-রখ"
-id="toc-mistake-5-documentation-ন-রখ">❌ Mistake 5 — Documentation না
-রাখা</a></li>
-<li><a href="#mistake-6-cloud-cost-ignore-কর"
-id="toc-mistake-6-cloud-cost-ignore-কর">❌ Mistake 6 — Cloud cost ignore
-করা</a></li>
-</ul></li>
+Lab Mistakes</a></li>
 <li><a href="#multi-platform-siem-checklist"
 id="toc-multi-platform-siem-checklist">✅ 16. Multi-Platform SIEM
 Checklist</a></li>
 <li><a href="#interview-questions-1" id="toc-interview-questions-1">🎤
-17. Interview Questions</a>
-<ul>
-<li><a href="#q1.-আপন-কন-কন-siem-platform-এ-কজ-করছন"
-id="toc-q1.-আপন-কন-কন-siem-platform-এ-কজ-করছন">Q1. আপনি কোন কোন SIEM
-platform-এ কাজ করেছেন?</a></li>
-<li><a href="#q2.-splunk-আর-sentinel-এ-একই-detection-কভব-লখবন"
-id="toc-q2.-splunk-আর-sentinel-এ-একই-detection-কভব-লখবন">Q2. Splunk আর
-Sentinel-এ একই detection কীভাবে লিখবেন?</a></li>
-<li><a href="#q3.-wazuh-এর-সমবদধত-ক-আর-enterprise-siem-কথয-এগয"
-id="toc-q3.-wazuh-এর-সমবদধত-ক-আর-enterprise-siem-কথয-এগয">Q3. Wazuh-এর
-সীমাবদ্ধতা কী, আর enterprise SIEM কোথায় এগিয়ে?</a></li>
-<li><a href="#q4.-একট-নতন-siem-platform-শখত-কতদন-লগব"
-id="toc-q4.-একট-নতন-siem-platform-শখত-কতদন-লগব">Q4. একটি নতুন SIEM
-platform শিখতে কতদিন লাগবে?</a></li>
-<li><a href="#q5.-sigma-rule-কন-বযবহর-করবন"
-id="toc-q5.-sigma-rule-কন-বযবহর-করবন">Q5. Sigma rule কেন ব্যবহার
-করবেন?</a></li>
-</ul></li>
+17. Interview Questions</a></li>
 <li><a href="#final-takeaway-14" id="toc-final-takeaway-14">🚀 Final
 Takeaway</a>
 <ul>
 <li><a href="#siem-engineer-learning-series-12"
 id="toc-siem-engineer-learning-series-12">📚 SIEM Engineer Learning
-Series</a>
-<ul>
-<li><a href="#navigation-16" id="toc-navigation-16">Navigation</a></li>
-</ul></li>
+Series</a></li>
 </ul></li>
 </ul>
 </nav>
 <h1 id="siem-engineer-study-notes">🛡️ SIEM Engineer — Study Notes</h1>
-<p>A complete study-note series covering the <strong>SIEM
-Engineer</strong> learning path — from log management fundamentals to
-enterprise SIEM architecture design. Written for SOC/SIEM engineer
-interview preparation and hands-on lab practice.</p>
+<p><img src="https://img.shields.io/badge/articles-17-blue"
+alt="Articles" /> <img
+src="https://img.shields.io/badge/hands--on-Wazuh%20%7C%20Splunk%20%7C%20Elastic%20%7C%20Sentinel-green"
+alt="Hands-on" /> <img
+src="https://img.shields.io/badge/language-English%20%2B%20Banglish-orange"
+alt="Language" /></p>
+<p>A complete <strong>SIEM Engineer</strong> learning path — from log
+management fundamentals to enterprise SIEM architecture design, with a
+multi-platform hands-on capstone. Written for <strong>SOC / SIEM
+engineer interview preparation</strong> and lab practice.</p>
+<p><strong>Who is this for:</strong> SOC analysts (L1/L2), aspiring SIEM
+engineers, and anyone preparing for SIEM interviews who wants theory +
+query + detection + lab in one place.</p>
 <blockquote>
-<p><strong>Languages:</strong> Articles #01–#03, #11–#13, #17 are
-written in <strong>Bengali + English (Banglish)</strong>. Articles
-#04–#10 and #14–#16 are in <strong>English</strong>.</p>
+<p><strong>Languages (verified):</strong> <strong>#01, #11–#13,
+#17</strong> are written in <strong>Bengali + English
+(Banglish)</strong>. <strong>#02–#10 and #14–#16</strong> are in
+<strong>English</strong>.</p>
 </blockquote>
 <blockquote>
-<p>📁 <strong>Note:</strong> The full series (all 17 articles) lives in
-the <a href="all/"><code>all/</code></a> folder.</p>
+<p>📁 <strong>Folders:</strong> all 17 articles live in <a
+href="all/"><code>all/</code></a>. The combined professional edition
+(read online or print) is in <a href="book/"><code>book/</code></a> — <a
+href="book/book.html"><code>book.html</code></a> + <a
+href="book/book.pdf"><code>book.pdf</code></a>.</p>
 </blockquote>
 <hr />
 <h2 id="series-index">📚 Series Index</h2>
