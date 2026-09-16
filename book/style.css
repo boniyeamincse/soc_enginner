@@ -45,11 +45,18 @@ header#title-block-header .date { opacity: 0.9; }
 #TOC ul { padding-left: 1.2rem; }
 #TOC a { color: var(--accent); text-decoration: none; }
 #TOC a:hover { text-decoration: underline; }
-/* Headings */
+/* Headings — chapter openers */
 h1, h2, h3, h4 { line-height: 1.35; color: #102a43; }
-h1 { font-size: 1.9rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.4rem; margin-top: 3rem; }
-h2 { font-size: 1.45rem; margin-top: 2.2rem; }
-h3 { font-size: 1.15rem; }
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  padding: 1.2rem 0 0.6rem;
+  border-top: 6px solid var(--accent);
+  border-bottom: 1px solid var(--border);
+}
+h1 .header-section-number { color: var(--accent); margin-right: 0.5rem; }
+h2 { font-size: 1.4rem; margin-top: 2.2rem; padding-bottom: 0.25rem; border-bottom: 2px solid var(--border); }
+h3 { font-size: 1.12rem; color: #24435f; }
 a { color: var(--accent); }
 blockquote {
   border-left: 4px solid var(--accent);
@@ -68,8 +75,9 @@ pre {
   overflow-x: auto;
   line-height: 1.55;
 }
-pre code { background: none; font-size: 0.85rem; white-space: pre; }
-table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.95rem; }
+pre code { background: none; font-size: 0.82rem; white-space: pre; }
+table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.93rem; }
+thead { display: table-header-group; }
 th, td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; }
 th { background: #102a43; color: #fff; }
 tr:nth-child(even) td { background: #f8fafc; }
