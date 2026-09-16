@@ -7,93 +7,191 @@
   <meta name="author" content="Boni Yeamin" />
   <title>SIEM Engineer — Complete Study Notes</title>
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {  background-color: #f8f8f8; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ef2929; } /* Alert */
-    code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #204a87; } /* Attribute */
-    code span.bn { color: #0000cf; } /* BaseN */
-    code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4e9a06; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #8f5902; font-style: italic; } /* Comment */
-    code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-    code span.dt { color: #204a87; } /* DataType */
-    code span.dv { color: #0000cf; } /* DecVal */
-    code span.er { color: #a40000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #0000cf; } /* Float */
-    code span.fu { color: #204a87; font-weight: bold; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-    code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-    code span.ot { color: #8f5902; } /* Other */
-    code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-    code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
-    code span.ss { color: #4e9a06; } /* SpecialString */
-    code span.st { color: #4e9a06; } /* String */
-    code span.va { color: #000000; } /* Variable */
-    code span.vs { color: #4e9a06; } /* VerbatimString */
-    code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="style.css" />
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+  <style type="text/css">
+:root {
+--ink: #1a2332;
+--muted: #5b6b7f;
+--accent: #0e639c;
+--accent-bg: #eaf3fb;
+--border: #d7e0ea;
+--code-bg: #f4f6f9;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: "Noto Serif Bengali", "Noto Sans Bengali", "Noto Sans", Georgia, "Times New Roman", serif;
+color: var(--ink);
+line-height: 1.75;
+max-width: 860px;
+margin: 0 auto;
+padding: 2rem 1.5rem 4rem;
+background: #fff;
+}
+
+header#title-block-header {
+text-align: center;
+padding: 3.5rem 1rem 2.5rem;
+margin-bottom: 2rem;
+background: linear-gradient(160deg, #0f2027, #203a43 55%, #0e639c);
+color: #fff;
+border-radius: 14px;
+}
+header#title-block-header .title {
+font-size: 2.2rem;
+line-height: 1.25;
+margin: 0 0 0.75rem;
+}
+header#title-block-header .author,
+header#title-block-header .date { opacity: 0.9; }
+
+#TOC {
+background: var(--accent-bg);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 1.25rem 1.5rem;
+margin: 0 0 2.5rem;
+}
+#TOC ul { padding-left: 1.2rem; }
+#TOC a { color: var(--accent); text-decoration: none; }
+#TOC a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4 { line-height: 1.35; color: #102a43; }
+h1 {
+font-size: 2rem;
+margin: 0 0 1rem;
+padding: 1.2rem 0 0.6rem;
+border-top: 6px solid var(--accent);
+border-bottom: 1px solid var(--border);
+}
+h1 .header-section-number { color: var(--accent); margin-right: 0.5rem; }
+h2 { font-size: 1.4rem; margin-top: 2.2rem; padding-bottom: 0.25rem; border-bottom: 2px solid var(--border); }
+h3 { font-size: 1.12rem; color: #24435f; }
+a { color: var(--accent); }
+blockquote {
+border-left: 4px solid var(--accent);
+background: var(--accent-bg);
+margin: 1.2rem 0;
+padding: 0.8rem 1rem;
+border-radius: 0 8px 8px 0;
+color: #243b53;
+}
+code { font-family: "JetBrains Mono", "Noto Sans Mono", Consolas, monospace; font-size: 0.88em; }
+pre {
+background: var(--code-bg);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 1rem;
+overflow-x: auto;
+line-height: 1.55;
+}
+pre code { background: none; font-size: 0.82rem; white-space: pre; }
+table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.93rem; }
+thead { display: table-header-group; }
+th, td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; }
+th { background: #102a43; color: #fff; }
+tr:nth-child(even) td { background: #f8fafc; }
+hr { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+.book-footer { text-align: center; color: var(--muted); margin-top: 3rem; font-size: 0.9rem; }
+
+@page {
+size: A4;
+margin: 20mm 16mm 22mm 16mm;
+@bottom-center { content: counter(page); color: #5b6b7f; font-size: 9pt; }
+@top-center { content: "SIEM Engineer — Study Notes"; color: #8a9bb0; font-size: 8pt; }
+}
+@media print {
+body { max-width: none; padding: 0; font-size: 11pt; }
+header#title-block-header { border-radius: 0; }
+h1 { page-break-before: always; }
+header#title-block-header + h1, h1:first-of-type { page-break-before: avoid; }
+pre, table, blockquote { page-break-inside: avoid; }
+a { text-decoration: none; }
+}
+</style>
 </head>
 <body>
 <header id="title-block-header">
@@ -103,84 +201,57 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#siem-engineer-study-notes"
-id="toc-siem-engineer-study-notes">🛡️ SIEM Engineer — Study
+<li><a href="#siem-engineer-study-notes" id="toc-siem-engineer-study-notes">🛡️ SIEM Engineer — Study
 Notes</a></li>
 <li><a href="#part-i-foundation" id="toc-part-i-foundation">Part I —
 Foundation</a></li>
-<li><a href="#siem-engineer-01-log-management"
-id="toc-siem-engineer-01-log-management">SIEM Engineer #01 — Log
+<li><a href="#siem-engineer-01-log-management" id="toc-siem-engineer-01-log-management">SIEM Engineer #01 — Log
 Management</a></li>
-<li><a href="#siem-engineer-02-siem-platforms"
-id="toc-siem-engineer-02-siem-platforms">SIEM Engineer #02 — SIEM
+<li><a href="#siem-engineer-02-siem-platforms" id="toc-siem-engineer-02-siem-platforms">SIEM Engineer #02 — SIEM
 Platforms</a></li>
-<li><a href="#siem-engineer-03-log-integration"
-id="toc-siem-engineer-03-log-integration">SIEM Engineer #03 — Log
+<li><a href="#siem-engineer-03-log-integration" id="toc-siem-engineer-03-log-integration">SIEM Engineer #03 — Log
 Integration</a></li>
-<li><a href="#part-ii-detection-investigation"
-id="toc-part-ii-detection-investigation">Part II — Detection &amp;
+<li><a href="#part-ii-detection-investigation" id="toc-part-ii-detection-investigation">Part II — Detection &amp;
 Investigation</a></li>
-<li><a href="#siem-engineer-04-detection-engineering-1"
-id="toc-siem-engineer-04-detection-engineering-1">SIEM Engineer #04 —
+<li><a href="#siem-engineer-04-detection-engineering-1" id="toc-siem-engineer-04-detection-engineering-1">SIEM Engineer #04 —
 Detection Engineering</a></li>
-<li><a href="#siem-engineer-05-query-investigation"
-id="toc-siem-engineer-05-query-investigation">SIEM Engineer #05 — Query
+<li><a href="#siem-engineer-05-query-investigation" id="toc-siem-engineer-05-query-investigation">SIEM Engineer #05 — Query
 &amp; Investigation</a></li>
-<li><a href="#part-iii-soc-intel-automation"
-id="toc-part-iii-soc-intel-automation">Part III — SOC, Intel &amp;
+<li><a href="#part-iii-soc-intel-automation" id="toc-part-iii-soc-intel-automation">Part III — SOC, Intel &amp;
 Automation</a></li>
-<li><a href="#siem-engineer-06-soc-operations"
-id="toc-siem-engineer-06-soc-operations">SIEM Engineer #06 — SOC
+<li><a href="#siem-engineer-06-soc-operations" id="toc-siem-engineer-06-soc-operations">SIEM Engineer #06 — SOC
 Operations</a></li>
-<li><a href="#siem-engineer-07-threat-intelligence"
-id="toc-siem-engineer-07-threat-intelligence">SIEM Engineer #07 — Threat
+<li><a href="#siem-engineer-07-threat-intelligence" id="toc-siem-engineer-07-threat-intelligence">SIEM Engineer #07 — Threat
 Intelligence</a></li>
-<li><a href="#siem-engineer-08-automation-soar"
-id="toc-siem-engineer-08-automation-soar">SIEM Engineer #08 — Automation
+<li><a href="#siem-engineer-08-automation-soar" id="toc-siem-engineer-08-automation-soar">SIEM Engineer #08 — Automation
 &amp; SOAR</a></li>
-<li><a href="#part-iv-reporting-infrastructure"
-id="toc-part-iv-reporting-infrastructure">Part IV — Reporting &amp;
+<li><a href="#part-iv-reporting-infrastructure" id="toc-part-iv-reporting-infrastructure">Part IV — Reporting &amp;
 Infrastructure</a></li>
-<li><a href="#siem-engineer-09-dashboard-reporting"
-id="toc-siem-engineer-09-dashboard-reporting">SIEM Engineer #09 —
+<li><a href="#siem-engineer-09-dashboard-reporting" id="toc-siem-engineer-09-dashboard-reporting">SIEM Engineer #09 —
 Dashboard &amp; Reporting</a></li>
-<li><a href="#siem-engineer-10-siem-infrastructure"
-id="toc-siem-engineer-10-siem-infrastructure">SIEM Engineer #10 — SIEM
+<li><a href="#siem-engineer-10-siem-infrastructure" id="toc-siem-engineer-10-siem-infrastructure">SIEM Engineer #10 — SIEM
 Infrastructure</a></li>
-<li><a href="#siem-engineer-11-siem-architecture-design"
-id="toc-siem-engineer-11-siem-architecture-design">SIEM Engineer #11 —
+<li><a href="#siem-engineer-11-siem-architecture-design" id="toc-siem-engineer-11-siem-architecture-design">SIEM Engineer #11 —
 SIEM Architecture Design</a></li>
-<li><a href="#siem-engineer-12-siem-capacity-planning"
-id="toc-siem-engineer-12-siem-capacity-planning">🟢🟡🔴 SIEM Engineer
+<li><a href="#siem-engineer-12-siem-capacity-planning" id="toc-siem-engineer-12-siem-capacity-planning">🟢🟡🔴 SIEM Engineer
 #12 — SIEM Capacity Planning</a></li>
-<li><a href="#siem-engineer-13-siem-performance-tuning"
-id="toc-siem-engineer-13-siem-performance-tuning">🟢🟡🔴 SIEM Engineer
+<li><a href="#siem-engineer-13-siem-performance-tuning" id="toc-siem-engineer-13-siem-performance-tuning">🟢🟡🔴 SIEM Engineer
 #13 — SIEM Performance Tuning</a></li>
-<li><a href="#siem-engineer-14-advanced-detection-engineering"
-id="toc-siem-engineer-14-advanced-detection-engineering">SIEM Engineer
+<li><a href="#siem-engineer-14-advanced-detection-engineering" id="toc-siem-engineer-14-advanced-detection-engineering">SIEM Engineer
 #14 — Advanced Detection Engineering</a></li>
-<li><a href="#siem-engineer-15-threat-hunting-with-siem"
-id="toc-siem-engineer-15-threat-hunting-with-siem">SIEM Engineer #15 —
+<li><a href="#siem-engineer-15-threat-hunting-with-siem" id="toc-siem-engineer-15-threat-hunting-with-siem">SIEM Engineer #15 —
 Threat Hunting with SIEM</a></li>
-<li><a href="#siem-engineer-16-siem-data-quality-troubleshooting"
-id="toc-siem-engineer-16-siem-data-quality-troubleshooting">SIEM
+<li><a href="#siem-engineer-16-siem-data-quality-troubleshooting" id="toc-siem-engineer-16-siem-data-quality-troubleshooting">SIEM
 Engineer #16 — SIEM Data Quality &amp; Troubleshooting</a></li>
 <li><a href="#part-v-capstone" id="toc-part-v-capstone">Part V —
 Capstone</a></li>
-<li><a
-href="#siem-engineer-17-hands-on-siem-multi-platform-practical-guide"
-id="toc-siem-engineer-17-hands-on-siem-multi-platform-practical-guide">🟢🟡🔴
+<li><a href="#siem-engineer-17-hands-on-siem-multi-platform-practical-guide" id="toc-siem-engineer-17-hands-on-siem-multi-platform-practical-guide">🟢🟡🔴
 SIEM Engineer #17 — Hands-On SIEM: Multi-Platform Practical
 Guide</a></li>
 </ul>
 </nav>
 <h1 id="siem-engineer-study-notes">🛡️ SIEM Engineer — Study Notes</h1>
-<p><img src="https://img.shields.io/badge/articles-17-blue"
-alt="Articles" /> <img
-src="https://img.shields.io/badge/hands--on-Wazuh%20%7C%20Splunk%20%7C%20Elastic%20%7C%20Sentinel-green"
-alt="Hands-on" /> <img
-src="https://img.shields.io/badge/language-English%20%2B%20Banglish-orange"
-alt="Language" /></p>
+<p><img role="img" aria-label="Articles" src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSIyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJhcnRpY2xlczogMTciPjx0aXRsZT5hcnRpY2xlczogMTc8L3RpdGxlPjxmaWx0ZXIgaWQ9ImJsdXIiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjE2Ii8+PC9maWx0ZXI+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4Mj0iMCIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiYiIgc3RvcC1vcGFjaXR5PSIuMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIuMSIvPjwvbGluZWFyR3JhZGllbnQ+PGNsaXBQYXRoIGlkPSJyIj48cmVjdCB3aWR0aD0iNzIiIGhlaWdodD0iMjAiIHJ4PSIzIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjcikiPjxyZWN0IHdpZHRoPSI0OSIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjQ5IiB3aWR0aD0iMjMiIGhlaWdodD0iMjAiIGZpbGw9IiMwMDdlYzYiLz48cmVjdCB3aWR0aD0iNzIiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjcykiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTEwIj48ZyB0cmFuc2Zvcm09InNjYWxlKC4xKSI+PGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiMwMTAxMDEiPjx0ZXh0IHg9IjI1NSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii44IiBmaWx0ZXI9InVybCgjYmx1cikiIHRleHRMZW5ndGg9IjM5MCI+YXJ0aWNsZXM8L3RleHQ+PHRleHQgeD0iMjU1IiB5PSIxNTAiIGZpbGwtb3BhY2l0eT0iLjMiIHRleHRMZW5ndGg9IjM5MCI+YXJ0aWNsZXM8L3RleHQ+PC9nPjx0ZXh0IHg9IjI1NSIgeT0iMTQwIiB0ZXh0TGVuZ3RoPSIzOTAiPmFydGljbGVzPC90ZXh0PjwvZz48ZyB0cmFuc2Zvcm09InNjYWxlKC4xKSI+PGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiMwMTAxMDEiPjx0ZXh0IHg9IjU5NSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii44IiBmaWx0ZXI9InVybCgjYmx1cikiIHRleHRMZW5ndGg9IjEzMCI+MTc8L3RleHQ+PHRleHQgeD0iNTk1IiB5PSIxNTAiIGZpbGwtb3BhY2l0eT0iLjMiIHRleHRMZW5ndGg9IjEzMCI+MTc8L3RleHQ+PC9nPjx0ZXh0IHg9IjU5NSIgeT0iMTQwIiB0ZXh0TGVuZ3RoPSIxMzAiPjE3PC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="Articles" /> <img role="img" aria-label="Hands-on" src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNjQiIGhlaWdodD0iMjAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iaGFuZHMtb246IFdhenVoIHwgU3BsdW5rIHwgRWxhc3RpYyB8IFNlbnRpbmVsIj48dGl0bGU+aGFuZHMtb246IFdhenVoIHwgU3BsdW5rIHwgRWxhc3RpYyB8IFNlbnRpbmVsPC90aXRsZT48ZmlsdGVyIGlkPSJibHVyIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxNiIvPjwvZmlsdGVyPjxsaW5lYXJHcmFkaWVudCBpZD0icyIgeDI9IjAiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiYmIiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz48L2xpbmVhckdyYWRpZW50PjxjbGlwUGF0aCBpZD0iciI+PHJlY3Qgd2lkdGg9IjI2NCIgaGVpZ2h0PSIyMCIgcng9IjMiLz48L2NsaXBQYXRoPjxnIGNsaXAtcGF0aD0idXJsKCNyKSI+PHJlY3Qgd2lkdGg9IjYxIiBoZWlnaHQ9IjIwIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNjEiIHdpZHRoPSIyMDMiIGhlaWdodD0iMjAiIGZpbGw9IiM2N2FjMDkiLz48cmVjdCB3aWR0aD0iMjY0IiBoZWlnaHQ9IjIwIiBmaWxsPSJ1cmwoI3MpIi8+PC9nPjxnIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJWZXJkYW5hLEdlbmV2YSxEZWphVnUgU2FucyxzYW5zLXNlcmlmIiB0ZXh0LXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIiBmb250LXNpemU9IjExMCI+PGcgdHJhbnNmb3JtPSJzY2FsZSguMSkiPjxnIGFyaWEtaGlkZGVuPSJ0cnVlIiBmaWxsPSIjMDEwMTAxIj48dGV4dCB4PSIzMTUiIHk9IjE1MCIgZmlsbC1vcGFjaXR5PSIuOCIgZmlsdGVyPSJ1cmwoI2JsdXIpIiB0ZXh0TGVuZ3RoPSI1MTAiPmhhbmRzLW9uPC90ZXh0Pjx0ZXh0IHg9IjMxNSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii4zIiB0ZXh0TGVuZ3RoPSI1MTAiPmhhbmRzLW9uPC90ZXh0PjwvZz48dGV4dCB4PSIzMTUiIHk9IjE0MCIgdGV4dExlbmd0aD0iNTEwIj5oYW5kcy1vbjwvdGV4dD48L2c+PGcgdHJhbnNmb3JtPSJzY2FsZSguMSkiPjxnIGFyaWEtaGlkZGVuPSJ0cnVlIiBmaWxsPSIjMDEwMTAxIj48dGV4dCB4PSIxNjE1IiB5PSIxNTAiIGZpbGwtb3BhY2l0eT0iLjgiIGZpbHRlcj0idXJsKCNibHVyKSIgdGV4dExlbmd0aD0iMTkzMCI+V2F6dWggfCBTcGx1bmsgfCBFbGFzdGljIHwgU2VudGluZWw8L3RleHQ+PHRleHQgeD0iMTYxNSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii4zIiB0ZXh0TGVuZ3RoPSIxOTMwIj5XYXp1aCB8IFNwbHVuayB8IEVsYXN0aWMgfCBTZW50aW5lbDwvdGV4dD48L2c+PHRleHQgeD0iMTYxNSIgeT0iMTQwIiB0ZXh0TGVuZ3RoPSIxOTMwIj5XYXp1aCB8IFNwbHVuayB8IEVsYXN0aWMgfCBTZW50aW5lbDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" alt="Hands-on" /> <img role="img" aria-label="Language" src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzQiIGhlaWdodD0iMjAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0ibGFuZ3VhZ2U6IEVuZ2xpc2ggKyBCYW5nbGlzaCI+PHRpdGxlPmxhbmd1YWdlOiBFbmdsaXNoICsgQmFuZ2xpc2g8L3RpdGxlPjxmaWx0ZXIgaWQ9ImJsdXIiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjE2Ii8+PC9maWx0ZXI+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4Mj0iMCIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiYiIgc3RvcC1vcGFjaXR5PSIuMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIuMSIvPjwvbGluZWFyR3JhZGllbnQ+PGNsaXBQYXRoIGlkPSJyIj48cmVjdCB3aWR0aD0iMTc0IiBoZWlnaHQ9IjIwIiByeD0iMyIvPjwvY2xpcFBhdGg+PGcgY2xpcC1wYXRoPSJ1cmwoI3IpIj48cmVjdCB3aWR0aD0iNjEiIGhlaWdodD0iMjAiIGZpbGw9IiM1NTUiLz48cmVjdCB4PSI2MSIgd2lkdGg9IjExMyIgaGVpZ2h0PSIyMCIgZmlsbD0iI2VhNzIzMyIvPjxyZWN0IHdpZHRoPSIxNzQiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjcykiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTEwIj48ZyB0cmFuc2Zvcm09InNjYWxlKC4xKSI+PGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiMwMTAxMDEiPjx0ZXh0IHg9IjMxNSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii44IiBmaWx0ZXI9InVybCgjYmx1cikiIHRleHRMZW5ndGg9IjUxMCI+bGFuZ3VhZ2U8L3RleHQ+PHRleHQgeD0iMzE1IiB5PSIxNTAiIGZpbGwtb3BhY2l0eT0iLjMiIHRleHRMZW5ndGg9IjUxMCI+bGFuZ3VhZ2U8L3RleHQ+PC9nPjx0ZXh0IHg9IjMxNSIgeT0iMTQwIiB0ZXh0TGVuZ3RoPSI1MTAiPmxhbmd1YWdlPC90ZXh0PjwvZz48ZyB0cmFuc2Zvcm09InNjYWxlKC4xKSI+PGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiMwMTAxMDEiPjx0ZXh0IHg9IjExNjUiIHk9IjE1MCIgZmlsbC1vcGFjaXR5PSIuOCIgZmlsdGVyPSJ1cmwoI2JsdXIpIiB0ZXh0TGVuZ3RoPSIxMDMwIj5FbmdsaXNoICsgQmFuZ2xpc2g8L3RleHQ+PHRleHQgeD0iMTE2NSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii4zIiB0ZXh0TGVuZ3RoPSIxMDMwIj5FbmdsaXNoICsgQmFuZ2xpc2g8L3RleHQ+PC9nPjx0ZXh0IHg9IjExNjUiIHk9IjE0MCIgdGV4dExlbmd0aD0iMTAzMCI+RW5nbGlzaCArIEJhbmdsaXNoPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="Language" /></p>
 <p>A complete <strong>SIEM Engineer</strong> learning path — from log
 management fundamentals to enterprise SIEM architecture design, with a
 multi-platform hands-on capstone. Written for <strong>SOC / SIEM
@@ -195,11 +266,8 @@ query + detection + lab in one place.</p>
 <strong>English</strong>.</p>
 </blockquote>
 <blockquote>
-<p>📁 <strong>Folders:</strong> all 17 articles live in <a
-href="all/"><code>all/</code></a>. The combined professional edition
-(read online or print) is in <a href="book/"><code>book/</code></a> — <a
-href="book/book.html"><code>book.html</code></a> + <a
-href="book/book.pdf"><code>book.pdf</code></a>.</p>
+<p>📁 <strong>Folders:</strong> all 17 articles live in <a href="#TOC"><code>all/</code></a>. The combined professional edition
+(read online or print) is in <a href="book/"><code>book/</code></a> — <a href="#TOC"><code>book.html</code></a> + <a href="book/book.pdf"><code>book.pdf</code></a>.</p>
 </blockquote>
 <hr />
 <h2 id="series-index">📚 Series Index</h2>
@@ -221,103 +289,103 @@ href="book/book.pdf"><code>book.pdf</code></a>.</p>
 <tbody>
 <tr>
 <td>01</td>
-<td><a href="all/01_soc.md">01_soc.md</a></td>
+<td><a href="#siem-engineer-01-log-management">01_soc.md</a></td>
 <td>Log Management</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>02</td>
-<td><a href="all/02_soc.md">02_soc.md</a></td>
+<td><a href="#siem-engineer-02-siem-platforms">02_soc.md</a></td>
 <td>SIEM Platforms</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>03</td>
-<td><a href="all/03_soc.md">03_soc.md</a></td>
+<td><a href="#siem-engineer-03-log-integration">03_soc.md</a></td>
 <td>Log Integration</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>04</td>
-<td><a href="all/04_soc.md">04_soc.md</a></td>
+<td><a href="#siem-engineer-04-detection-engineering-1">04_soc.md</a></td>
 <td>Detection Engineering</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>05</td>
-<td><a href="all/05_soc.md">05_soc.md</a></td>
+<td><a href="#siem-engineer-05-query-investigation">05_soc.md</a></td>
 <td>Query &amp; Investigation</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>06</td>
-<td><a href="all/06_soc.md">06_soc.md</a></td>
+<td><a href="#siem-engineer-06-soc-operations">06_soc.md</a></td>
 <td>SOC Operations</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>07</td>
-<td><a href="all/07_soc.md">07_soc.md</a></td>
+<td><a href="#siem-engineer-07-threat-intelligence">07_soc.md</a></td>
 <td>Threat Intelligence</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>08</td>
-<td><a href="all/08_soc.md">08_soc.md</a></td>
+<td><a href="#siem-engineer-08-automation-soar">08_soc.md</a></td>
 <td>Automation &amp; SOAR</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>09</td>
-<td><a href="all/09_soc.md">09_soc.md</a></td>
+<td><a href="#siem-engineer-09-dashboard-reporting">09_soc.md</a></td>
 <td>Dashboard &amp; Reporting</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>10</td>
-<td><a href="all/10_soc.md">10_soc.md</a></td>
+<td><a href="#siem-engineer-10-siem-infrastructure">10_soc.md</a></td>
 <td>SIEM Infrastructure</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>11</td>
-<td><a href="all/11_soc.md">11_soc.md</a></td>
+<td><a href="#siem-engineer-11-siem-architecture-design">11_soc.md</a></td>
 <td>SIEM Architecture Design</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>12</td>
-<td><a href="all/12_soc.md">12_soc.md</a></td>
+<td><a href="#siem-engineer-12-siem-capacity-planning">12_soc.md</a></td>
 <td>SIEM Capacity Planning</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>13</td>
-<td><a href="all/13_soc.md">13_soc.md</a></td>
+<td><a href="#siem-engineer-13-siem-performance-tuning">13_soc.md</a></td>
 <td>SIEM Performance Tuning</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>14</td>
-<td><a href="all/14_soc.md">14_soc.md</a></td>
+<td><a href="#siem-engineer-14-advanced-detection-engineering">14_soc.md</a></td>
 <td>Advanced Detection Engineering</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>15</td>
-<td><a href="all/15_SIEM.md">15_SIEM.md</a></td>
+<td><a href="#siem-engineer-15-threat-hunting-with-siem">15_SIEM.md</a></td>
 <td>Threat Hunting with SIEM</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>16</td>
-<td><a href="all/16_SIEM.md">16_SIEM.md</a></td>
+<td><a href="#siem-engineer-16-siem-data-quality-troubleshooting">16_SIEM.md</a></td>
 <td>SIEM Data Quality &amp; Troubleshooting</td>
 <td>✅ Complete</td>
 </tr>
 <tr>
 <td>17</td>
-<td><a href="all/17_SIEM.md">17_SIEM.md</a></td>
+<td><a href="#siem-engineer-17-hands-on-siem-multi-platform-practical-guide">17_SIEM.md</a></td>
 <td>🆕 Hands-On SIEM: Multi-Platform Practical Guide</td>
 <td>✅ Complete</td>
 </tr>
@@ -331,7 +399,7 @@ flow → hands-on outcome</strong>. Click the title to open the full
 note.</p>
 </blockquote>
 <p><strong>Phase 1 — Foundation (#01–#03)</strong></p>
-<h3 id="log-management"><a href="all/01_soc.md">#01 — Log
+<h3 id="log-management"><a href="#siem-engineer-01-log-management">#01 — Log
 Management</a></h3>
 <blockquote>
 <p>What logs are and how they reach the SIEM. - <strong>Covers:</strong>
@@ -342,7 +410,7 @@ normalization, enrichment - <strong>Key flow:</strong>
 - <strong>Hands-on:</strong> EPS basics, data quality, log loss &amp;
 duplicates, retention, missing-log troubleshooting</p>
 </blockquote>
-<h3 id="siem-platforms"><a href="all/02_soc.md">#02 — SIEM
+<h3 id="siem-platforms"><a href="#siem-engineer-02-siem-platforms">#02 — SIEM
 Platforms</a></h3>
 <blockquote>
 <p>How the major SIEMs work and how concepts map across them. -
@@ -353,7 +421,7 @@ Elastic, OpenSearch, Wazuh - <strong>Key idea:</strong>
 - <strong>Hands-on:</strong> Compare the same workflow on different
 platforms, platform-health checks, lab with Wazuh</p>
 </blockquote>
-<h3 id="log-integration"><a href="all/03_soc.md">#03 — Log
+<h3 id="log-integration"><a href="#siem-engineer-03-log-integration">#03 — Log
 Integration</a></h3>
 <blockquote>
 <p>Connecting a new source and making it usable in the SIEM. -
@@ -367,7 +435,7 @@ normalization, end-to-end validation, troubleshooting</p>
 </blockquote>
 <p><strong>Phase 2 — Detection &amp; Investigation (#04–#05,
 #14–#15)</strong></p>
-<h3 id="detection-engineering"><a href="all/04_soc.md">#04 — Detection
+<h3 id="detection-engineering"><a href="#siem-engineer-04-detection-engineering-1">#04 — Detection
 Engineering</a></h3>
 <blockquote>
 <p>Turning telemetry into reliable detections. -
@@ -379,7 +447,7 @@ confidence - <strong>Key flow:</strong>
 - <strong>Hands-on:</strong> SSH brute-force, Windows failed-login,
 PowerShell rules, FP tuning, deduplication, Detection-as-Code</p>
 </blockquote>
-<h3 id="query-investigation"><a href="all/05_soc.md">#05 — Query &amp;
+<h3 id="query-investigation"><a href="#siem-engineer-05-query-investigation">#05 — Query &amp;
 Investigation</a></h3>
 <blockquote>
 <p>Finding the story in the data with SPL / KQL. -
@@ -392,7 +460,7 @@ flow:</strong>
 investigations, TP vs FP verdicts, IOC hunting, query-performance
 pitfalls</p>
 </blockquote>
-<h3 id="advanced-detection-engineering"><a href="all/14_soc.md">#14 —
+<h3 id="advanced-detection-engineering"><a href="#siem-engineer-14-advanced-detection-engineering">#14 —
 Advanced Detection Engineering</a></h3>
 <blockquote>
 <p>Accurate, context-aware detections beyond single events. -
@@ -403,7 +471,7 @@ suppression, FP-rate reduction - <strong>Key idea:</strong>
 <strong>Hands-on:</strong> Brute-force, PowerShell, privesc,
 lateral-movement, scanning detections + Sigma YAML structure</p>
 </blockquote>
-<h3 id="threat-hunting-with-siem"><a href="all/15_SIEM.md">#15 — Threat
+<h3 id="threat-hunting-with-siem"><a href="#siem-engineer-15-threat-hunting-with-siem">#15 — Threat
 Hunting with SIEM</a></h3>
 <blockquote>
 <p>Proactively looking for what alerts missed. -
@@ -415,7 +483,7 @@ hunting, pivoting - <strong>Key flow:</strong>
 enrichment, hunt → detection promotion</p>
 </blockquote>
 <p><strong>Phase 3 — SOC, Intel &amp; Automation (#06–#08)</strong></p>
-<h3 id="soc-operations"><a href="all/06_soc.md">#06 — SOC
+<h3 id="soc-operations"><a href="#siem-engineer-06-soc-operations">#06 — SOC
 Operations</a></h3>
 <blockquote>
 <p>How a SOC turns alerts into resolved incidents. -
@@ -427,7 +495,7 @@ flow:</strong>
 - <strong>Hands-on:</strong> Suspicious-login runbook, runbook vs
 playbook, MTTD / MTTR, shift handover, evidence handling</p>
 </blockquote>
-<h3 id="threat-intelligence"><a href="all/07_soc.md">#07 — Threat
+<h3 id="threat-intelligence"><a href="#siem-engineer-07-threat-intelligence">#07 — Threat
 Intelligence</a></h3>
 <blockquote>
 <p>Giving alerts context with IOCs and intel lifecycle. -
@@ -439,7 +507,7 @@ flow:</strong>
 - <strong>Hands-on:</strong> IP / domain / URL / hash / email intel,
 feed quality, freshness &amp; confidence, internal IOCs</p>
 </blockquote>
-<h3 id="automation-soar"><a href="all/08_soc.md">#08 — Automation &amp;
+<h3 id="automation-soar"><a href="#siem-engineer-08-automation-soar">#08 — Automation &amp;
 SOAR</a></h3>
 <blockquote>
 <p>Automating the repetitive SOC work safely. - <strong>Covers:</strong>
@@ -452,7 +520,7 @@ compromised-account workflows, decision matrix, automation metrics</p>
 </blockquote>
 <p><strong>Phase 4 — Reporting &amp; Infrastructure (#09–#13,
 #16)</strong></p>
-<h3 id="dashboard-reporting"><a href="all/09_soc.md">#09 — Dashboard
+<h3 id="dashboard-reporting"><a href="#siem-engineer-09-dashboard-reporting">#09 — Dashboard
 &amp; Reporting</a></h3>
 <blockquote>
 <p>Making SOC activity visible and measurable. -
@@ -463,7 +531,7 @@ metrics:</strong> MTTD / MTTR, EPS &amp; source-health, detection
 coverage - <strong>Hands-on:</strong> Time-series / geo / table
 visualizations, filters, dashboard → investigation workflow</p>
 </blockquote>
-<h3 id="siem-infrastructure"><a href="all/10_soc.md">#10 — SIEM
+<h3 id="siem-infrastructure"><a href="#siem-engineer-10-siem-infrastructure">#10 — SIEM
 Infrastructure</a></h3>
 <blockquote>
 <p>What the SIEM runs on and how to keep it healthy. -
@@ -475,7 +543,7 @@ data-volume math, <code>Hot → Warm → Cold</code> storage, retention, CPU
 Storage estimation (<code>~172 GB/day</code> example), health
 monitoring, scaling vertical vs horizontal</p>
 </blockquote>
-<h3 id="siem-architecture-design"><a href="all/11_soc.md">#11 — SIEM
+<h3 id="siem-architecture-design"><a href="#siem-engineer-11-siem-architecture-design">#11 — SIEM
 Architecture Design</a></h3>
 <blockquote>
 <p>Designing small, medium and enterprise SIEMs. -
@@ -487,7 +555,7 @@ cloud vs hybrid, observability, DR - <strong>Hands-on:</strong>
 Real-world design example, common architecture mistakes, sizing inputs
 for #12</p>
 </blockquote>
-<h3 id="siem-capacity-planning"><a href="all/12_soc.md">#12 — SIEM
+<h3 id="siem-capacity-planning"><a href="#siem-engineer-12-siem-capacity-planning">#12 — SIEM
 Capacity Planning</a></h3>
 <blockquote>
 <p>Sizing the SIEM with real numbers. - <strong>Covers:</strong> EPS,
@@ -499,7 +567,7 @@ formulas:</strong> <code>Events/day = EPS × 86400</code> →
 Planning worksheet, <code>2000 EPS × 1KB × 30d ≈ 5.18TB</code> example,
 capacity alerts (80% warn / 90% crit)</p>
 </blockquote>
-<h3 id="siem-performance-tuning"><a href="all/13_soc.md">#13 — SIEM
+<h3 id="siem-performance-tuning"><a href="#siem-engineer-13-siem-performance-tuning">#13 — SIEM
 Performance Tuning</a></h3>
 <blockquote>
 <p>Finding and fixing slowness. - <strong>Covers:</strong> Bottlenecks
@@ -510,7 +578,7 @@ slow-search analysis, time-range &amp; filter-early optimization, index
 - <strong>Hands-on:</strong> Slow-search, delayed-logs &amp; high-CPU
 scenarios, queue &amp; latency checks</p>
 </blockquote>
-<h3 id="siem-data-quality-troubleshooting"><a href="all/16_SIEM.md">#16
+<h3 id="siem-data-quality-troubleshooting"><a href="#siem-engineer-16-siem-data-quality-troubleshooting">#16
 — SIEM Data Quality &amp; Troubleshooting</a></h3>
 <blockquote>
 <p>Making sure the data is trustworthy for detection. -
@@ -523,8 +591,7 @@ parsing-failure triage, example SLAs (99.5% availability, ≤5 min
 latency)</p>
 </blockquote>
 <p><strong>Capstone (#17)</strong></p>
-<h3 id="hands-on-siem-multi-platform-practical-guide"><a
-href="all/17_SIEM.md">#17 — Hands-On SIEM: Multi-Platform Practical
+<h3 id="hands-on-siem-multi-platform-practical-guide"><a href="#siem-engineer-17-hands-on-siem-multi-platform-practical-guide">#17 — Hands-On SIEM: Multi-Platform Practical
 Guide 🆕</a></h3>
 <blockquote>
 <p>One lab, one dataset, same exercises on 5 platforms. -
@@ -679,18 +746,17 @@ Reference)</h2>
 <hr />
 <h2 id="next-steps">⏭️ Next Steps</h2>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="" /><del>Write <strong>#12 —
-SIEM Capacity Planning</strong></del> → <a
-href="all/12_soc.md">all/12_soc.md</a></label></li>
-<li><label><input type="checkbox" />Practice hands-on: complete the
+<li><label><input type="checkbox" checked></input><del>Write <strong>#12 —
+SIEM Capacity Planning</strong></del> → <a href="#siem-engineer-12-siem-capacity-planning">all/12_soc.md</a></label></li>
+<li><label><input type="checkbox"></input>Practice hands-on: complete the
 Wazuh lab exercises from each article</label></li>
-<li><label><input type="checkbox" />Review all interview Q&amp;A
+<li><label><input type="checkbox"></input>Review all interview Q&amp;A
 sections before applying</label></li>
-<li><label><input type="checkbox" />Build a SOC dashboard project from
+<li><label><input type="checkbox"></input>Build a SOC dashboard project from
 #09 concepts</label></li>
-<li><label><input type="checkbox" />Run a full threat-hunt exercise
+<li><label><input type="checkbox"></input>Run a full threat-hunt exercise
 (#15) in the lab and document findings</label></li>
-<li><label><input type="checkbox" />Complete the <strong>#17
+<li><label><input type="checkbox"></input>Complete the <strong>#17
 multi-platform lab plan</strong> (Wazuh → Splunk → Elastic → Sentinel)
 and build a GitHub portfolio</label></li>
 </ul>
@@ -1601,8 +1667,7 @@ normalization?</h3>
 <p><strong>Answer:</strong> Normalization converts different log formats
 and field names into a consistent structure so that common searches and
 detection rules can work across multiple log sources.</p>
-<h3
-id="q5.-what-would-you-check-if-logs-suddenly-stop-coming-into-the-siem">Q5.
+<h3 id="q5.-what-would-you-check-if-logs-suddenly-stop-coming-into-the-siem">Q5.
 What would you check if logs suddenly stop coming into the SIEM?</h3>
 <p><strong>Answer:</strong></p>
 <p><strong>Source → Configuration → Network → Port → Collector →
@@ -2840,8 +2905,7 @@ SIEM.”</strong></p>
 <p>Tools such as <code>tcpdump</code> can help verify network
 traffic.</p>
 <p>Example:</p>
-<div class="sourceCode" id="cb59"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tcpdump</span> <span class="at">-ni</span> any port 514</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tcpdump</span> <span class="at">-ni</span> any port 514</span></code></pre></div>
 <h3 id="check-7-parser">Check 7 — Parser</h3>
 <p>Are events arriving but failing to parse?</p>
 <h3 id="check-8-indexdata-stream">Check 8 — Index/Data Stream</h3>
@@ -3224,8 +3288,7 @@ log integration methods?</h3>
 What would you check if Syslog logs are not arriving?</h3>
 <p><strong>Source → Configuration → Network → Port → Collector →
 Transport → Parser → Index → Search</strong></p>
-<h3
-id="q4.-what-is-the-difference-between-parsing-and-normalization">Q4.
+<h3 id="q4.-what-is-the-difference-between-parsing-and-normalization">Q4.
 What is the difference between parsing and normalization?</h3>
 <p><strong>Parsing</strong> extracts fields from raw logs.</p>
 <p><strong>Normalization</strong> maps different formats and field names
@@ -3608,8 +3671,7 @@ Known malicious destination</code></pre>
 <p><strong>Sigma</strong> is a generic, open detection-rule format
 designed to describe suspicious activity in a SIEM-independent way.</p>
 <p>A simplified Sigma-style rule can look like:</p>
-<div class="sourceCode" id="cb89"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Multiple Failed SSH Logins</span></span>
+<div class="sourceCode" id="cb89"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Multiple Failed SSH Logins</span></span>
 <span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="fu">status</span><span class="kw">:</span><span class="at"> experimental</span></span>
 <span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logsource</span><span class="kw">:</span></span>
@@ -3648,8 +3710,7 @@ detection
 falsepositives
 level</code></pre>
 <p>Example concept:</p>
-<div class="sourceCode" id="cb92"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Suspicious Authentication Activity</span></span>
+<div class="sourceCode" id="cb92"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Suspicious Authentication Activity</span></span>
 <span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Detects repeated authentication failures.</span></span>
 <span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -5527,8 +5588,7 @@ authentication result, timestamp, login type, historical activity,
 related authentication events, privilege changes, endpoint activity, and
 network activity.</p>
 <hr />
-<h3
-id="q10.-what-is-the-difference-between-searching-and-investigating">Q10.
+<h3 id="q10.-what-is-the-difference-between-searching-and-investigating">Q10.
 What is the difference between searching and investigating?</h3>
 <p><strong>Answer:</strong></p>
 <p>Searching retrieves relevant data. Investigation analyzes that data,
@@ -6550,8 +6610,7 @@ SOC Interview Questions</h2>
 telemetry, detecting suspicious activity, investigating alerts,
 responding to incidents, and documenting the results.</p>
 <hr />
-<h3
-id="q2.-what-is-the-difference-between-an-event-alert-and-incident">Q2.
+<h3 id="q2.-what-is-the-difference-between-an-event-alert-and-incident">Q2.
 What is the difference between an event, alert, and incident?</h3>
 <p><strong>Answer:</strong></p>
 <p>An event is recorded activity. An alert is generated when a detection
@@ -7634,8 +7693,7 @@ occurred.</p>
 as threat source, confidence, first-seen/last-seen information, threat
 type, or reputation.</p>
 <hr />
-<h3
-id="q5.-what-is-the-difference-between-threat-intelligence-and-an-ioc">Q5.
+<h3 id="q5.-what-is-the-difference-between-threat-intelligence-and-an-ioc">Q5.
 What is the difference between Threat Intelligence and an IOC?</h3>
 <p><strong>Answer:</strong></p>
 <p>An IOC is a specific indicator. Threat Intelligence is broader
@@ -7681,8 +7739,7 @@ a good Threat Intelligence feed?</h3>
 transparency of sourcing, useful context, appropriate confidence,
 manageable false positives, and reliable integration.</p>
 <hr />
-<h3
-id="q12.-how-can-threat-intelligence-improve-detection-engineering">Q12.
+<h3 id="q12.-how-can-threat-intelligence-improve-detection-engineering">Q12.
 How can Threat Intelligence improve Detection Engineering?</h3>
 <p><strong>Answer:</strong></p>
 <p>Threat Intelligence can identify new indicators, adversary behaviors,
@@ -10084,8 +10141,7 @@ dashboards important for SOC operations?</h3>
 health, and operational metrics, allowing analysts and managers to
 understand security activity more efficiently.</p>
 <hr />
-<h3
-id="q7.-how-would-you-troubleshoot-an-incorrect-dashboard-number">Q7.
+<h3 id="q7.-how-would-you-troubleshoot-an-incorrect-dashboard-number">Q7.
 How would you troubleshoot an incorrect dashboard number?</h3>
 <p><strong>Answer:</strong></p>
 <p>I would verify the time range, query logic, filters, field mappings,
@@ -11339,8 +11395,7 @@ Availability?</h3>
 <p>High Availability is an architecture designed to reduce service
 disruption by providing redundancy and failover mechanisms.</p>
 <hr />
-<h3
-id="q6.-what-is-the-difference-between-vertical-and-horizontal-scaling">Q6.
+<h3 id="q6.-what-is-the-difference-between-vertical-and-horizontal-scaling">Q6.
 What is the difference between vertical and horizontal scaling?</h3>
 <p><strong>Answer:</strong></p>
 <p>Vertical scaling increases resources on an existing system, such as
@@ -12836,8 +12891,7 @@ fails, organizations may lose visibility or miss security events. HA
 reduces dependency on a single component and improves service
 availability.</p>
 <hr />
-<h2
-id="q6.-what-is-the-difference-between-vertical-and-horizontal-scaling-1">Q6.
+<h2 id="q6.-what-is-the-difference-between-vertical-and-horizontal-scaling-1">Q6.
 What is the difference between vertical and horizontal scaling?</h2>
 <p><strong>Answer:</strong></p>
 <p>Vertical scaling means increasing resources such as CPU, RAM or
@@ -12845,8 +12899,7 @@ storage on an existing node.</p>
 <p>Horizontal scaling means adding more nodes to distribute the
 workload.</p>
 <hr />
-<h2
-id="q7.-what-factors-do-you-consider-when-designing-siem-architecture">Q7.
+<h2 id="q7.-what-factors-do-you-consider-when-designing-siem-architecture">Q7.
 What factors do you consider when designing SIEM architecture?</h2>
 <p><strong>Answer:</strong></p>
 <p>I consider:</p>
@@ -12885,8 +12938,7 @@ amount of data loss measured in time after a failure.</p>
 <p>RTO stands for Recovery Time Objective. It defines the target time
 within which a service should be restored after a failure.</p>
 <hr />
-<h2
-id="q11.-how-would-you-troubleshoot-a-siem-architecture-where-logs-are-delayed">Q11.
+<h2 id="q11.-how-would-you-troubleshoot-a-siem-architecture-where-logs-are-delayed">Q11.
 How would you troubleshoot a SIEM architecture where logs are
 delayed?</h2>
 <p><strong>Answer:</strong></p>
@@ -15491,8 +15543,7 @@ SIEM query language and then adapted to platforms such as:</p>
 <p>Always validate the converted query against your actual data.</p>
 <p>Minimal Sigma example structure (see #17 for runnable YAML +
 <code>sigma convert</code>):</p>
-<div class="sourceCode" id="cb800"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb800-1"><a href="#cb800-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Multiple Failed SSH Logins</span></span>
+<div class="sourceCode" id="cb800"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb800-1"><a href="#cb800-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Multiple Failed SSH Logins</span></span>
 <span id="cb800-2"><a href="#cb800-2" aria-hidden="true" tabindex="-1"></a><span class="fu">logsource</span><span class="kw">:</span></span>
 <span id="cb800-3"><a href="#cb800-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">product</span><span class="kw">:</span><span class="at"> linux</span></span>
 <span id="cb800-4"><a href="#cb800-4" aria-hidden="true" tabindex="-1"></a><span class="fu">detection</span><span class="kw">:</span></span>
@@ -16846,8 +16897,7 @@ Interview Questions</h2>
 suspicious or malicious activity that may not have generated an existing
 SIEM alert.</p>
 <hr />
-<h3
-id="q2.-what-is-the-difference-between-threat-hunting-and-alert-investigation">Q2.
+<h3 id="q2.-what-is-the-difference-between-threat-hunting-and-alert-investigation">Q2.
 What is the difference between Threat Hunting and Alert
 Investigation?</h3>
 <p><strong>Answer:</strong></p>
@@ -16880,8 +16930,7 @@ important?</h3>
 discovered IOC, account, host, or behavior and helps determine the
 potential scope and timeline.</p>
 <hr />
-<h3
-id="q7.-what-do-you-do-when-a-hunt-discovers-suspicious-activity">Q7.
+<h3 id="q7.-what-do-you-do-when-a-hunt-discovers-suspicious-activity">Q7.
 What do you do when a hunt discovers suspicious activity?</h3>
 <p><strong>Answer:</strong></p>
 <p>I preserve the relevant evidence, investigate the scope and context,
@@ -17971,8 +18020,7 @@ detect a silent log source?</h3>
 generate a health alert when activity falls below an appropriate
 threshold or stops for a defined period.</p>
 <hr />
-<h3
-id="q10.-what-is-the-relationship-between-data-quality-and-detection-engineering">Q10.
+<h3 id="q10.-what-is-the-relationship-between-data-quality-and-detection-engineering">Q10.
 What is the relationship between data quality and detection
 engineering?</h3>
 <p><strong>Answer:</strong></p>
@@ -18062,8 +18110,7 @@ first.</p>
 <h1 id="part-v-capstone">Part V — Capstone</h1>
 <p><em>One lab, one dataset, five platforms.</em></p>
 <hr />
-<h1
-id="siem-engineer-17-hands-on-siem-multi-platform-practical-guide">🟢🟡🔴
+<h1 id="siem-engineer-17-hands-on-siem-multi-platform-practical-guide">🟢🟡🔴
 SIEM Engineer #17 — Hands-On SIEM: Multi-Platform Practical Guide</h1>
 <h2 id="introduction-13">🛡️ Introduction</h2>
 <p>এখন পর্যন্ত আমরা যা শিখেছি তার বেশিরভাগই <strong>theory</strong>।</p>
@@ -18161,8 +18208,7 @@ VM নিয়েও lab করা যায়, কিন্তু brute-force
 <h2 id="wazuh-free-open-source-primary">3.1 Wazuh (Free, Open-Source) —
 Primary</h2>
 <p>সবচেয়ে সহজ start:</p>
-<div class="sourceCode" id="cb1008"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1008-1"><a href="#cb1008-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Ubuntu Server-এ all-in-one install</span></span>
+<div class="sourceCode" id="cb1008"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1008-1"><a href="#cb1008-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Ubuntu Server-এ all-in-one install</span></span>
 <span id="cb1008-2"><a href="#cb1008-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sO</span> https://packages.wazuh.com/4.14/wazuh-install.sh</span>
 <span id="cb1008-3"><a href="#cb1008-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> bash ./wazuh-install.sh <span class="at">-a</span></span></code></pre></div>
 <p>Components:</p>
@@ -18172,8 +18218,7 @@ Dashboard      → web UI (port 443)
 Agent          → Windows/Linux endpoint-এ</code></pre>
 <h2 id="splunk-freetrial-lab-option-500-mbday">3.2 Splunk (Free/Trial
 Lab Option — 500 MB/day)</h2>
-<div class="sourceCode" id="cb1010"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1010-1"><a href="#cb1010-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Docker (easiest)</span></span>
+<div class="sourceCode" id="cb1010"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1010-1"><a href="#cb1010-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Docker (easiest)</span></span>
 <span id="cb1010-2"><a href="#cb1010-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-p</span> 8000:8000 <span class="at">-p</span> 8088:8088 <span class="at">-p</span> 9997:9997 <span class="dt">\</span></span>
 <span id="cb1010-3"><a href="#cb1010-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-e</span> SPLUNK_START_ARGS=<span class="st">&quot;--accept-license&quot;</span> <span class="dt">\</span></span>
 <span id="cb1010-4"><a href="#cb1010-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-e</span> SPLUNK_PASSWORD=<span class="st">&quot;YourStrongPass123&quot;</span> <span class="dt">\</span></span>
@@ -18187,8 +18232,7 @@ HEC port    → 8088 (HTTP Event Collector)
 UF port     → 9997 (Universal Forwarder)</code></pre>
 <h2 id="elastic-security-basic-license-lab-option">3.3 Elastic Security
 (Basic License Lab Option)</h2>
-<div class="sourceCode" id="cb1012"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1012-1"><a href="#cb1012-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Docker Compose (official quickstart - see elastic.co docs for current URL)</span></span>
+<div class="sourceCode" id="cb1012"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1012-1"><a href="#cb1012-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Docker Compose (official quickstart - see elastic.co docs for current URL)</span></span>
 <span id="cb1012-2"><a href="#cb1012-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sO</span> https://raw.githubusercontent.com/elastic/elasticsearch/main/docs/reference/setup/install/docker/docker-compose.yml</span>
 <span id="cb1012-3"><a href="#cb1012-3" aria-hidden="true" tabindex="-1"></a><span class="co">## অথবা simplified:</span></span>
 <span id="cb1012-4"><a href="#cb1012-4" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> network create elastic</span>
@@ -18202,8 +18246,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1012-1"><a hre
 endpoint-এ agent install।</p>
 <h2 id="opensearch-open-source-lab-option">3.4 OpenSearch (Open-Source
 Lab Option)</h2>
-<div class="sourceCode" id="cb1013"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1013-1"><a href="#cb1013-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Docker Compose</span></span>
+<div class="sourceCode" id="cb1013"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1013-1"><a href="#cb1013-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Docker Compose</span></span>
 <span id="cb1013-2"><a href="#cb1013-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/opensearch-project/opensearch-devops</span>
 <span id="cb1013-3"><a href="#cb1013-3" aria-hidden="true" tabindex="-1"></a><span class="co">## অথবা simple:</span></span>
 <span id="cb1013-4"><a href="#cb1013-4" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> network create opensearch-net</span>
@@ -18260,8 +18303,7 @@ generate করবেন</h2>
 <h2 id="attack-simulation-script-ssh-brute-force">4.2 Attack Simulation
 Script (SSH Brute Force)</h2>
 <p>Attacker VM থেকে:</p>
-<div class="sourceCode" id="cb1016"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1016-1"><a href="#cb1016-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<div class="sourceCode" id="cb1016"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1016-1"><a href="#cb1016-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb1016-2"><a href="#cb1016-2" aria-hidden="true" tabindex="-1"></a><span class="co">## brute.sh — controlled lab simulation ONLY</span></span>
 <span id="cb1016-3"><a href="#cb1016-3" aria-hidden="true" tabindex="-1"></a><span class="va">TARGET</span><span class="op">=</span><span class="st">&quot;192.168.56.10&quot;</span>    <span class="co"># আপনার lab Ubuntu-র IP</span></span>
 <span id="cb1016-4"><a href="#cb1016-4" aria-hidden="true" tabindex="-1"></a><span class="va">USER</span><span class="op">=</span><span class="st">&quot;admin&quot;</span></span>
@@ -18409,8 +18451,7 @@ login করেছে?”</em></p>
 <p>Dashboard → Security events → filter:</p>
 <pre class="text"><code>rule.groups: authentication_failed</code></pre>
 <p>অথবা API:</p>
-<div class="sourceCode" id="cb1021"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1021-1"><a href="#cb1021-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-k</span> <span class="at">-H</span> <span class="st">&quot;Authorization: Bearer </span><span class="va">$TOKEN</span><span class="st">&quot;</span> <span class="dt">\</span></span>
+<div class="sourceCode" id="cb1021"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1021-1"><a href="#cb1021-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-k</span> <span class="at">-H</span> <span class="st">&quot;Authorization: Bearer </span><span class="va">$TOKEN</span><span class="st">&quot;</span> <span class="dt">\</span></span>
 <span id="cb1021-2"><a href="#cb1021-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://localhost:55000/events?rule.groups=authentication_failed&quot;</span></span></code></pre></div>
 <h2 id="splunk-spl-1">Splunk (SPL)</h2>
 <pre class="spl"><code>index=linux sourcetype=linux_secure &quot;Failed password&quot;
@@ -18442,8 +18483,7 @@ WITHIN 5 minutes
 THEN alert (severity: high)</code></pre>
 <h2 id="wazuh-custom-rule">7.1 Wazuh Custom Rule</h2>
 <p><code>/var/ossec/etc/rules/local_rules.xml</code>:</p>
-<div class="sourceCode" id="cb1027"><pre
-class="sourceCode xml"><code class="sourceCode xml"><span id="cb1027-1"><a href="#cb1027-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">group</span> <span class="ot">name=</span><span class="st">&quot;linux,sshd,brute_force,&quot;</span>&gt;</span>
+<div class="sourceCode" id="cb1027"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1027-1"><a href="#cb1027-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">group</span> <span class="ot">name=</span><span class="st">&quot;linux,sshd,brute_force,&quot;</span>&gt;</span>
 <span id="cb1027-2"><a href="#cb1027-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- Frequency-based brute force using if_matched_sid --&gt;</span></span>
 <span id="cb1027-3"><a href="#cb1027-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">rule</span> <span class="ot">id=</span><span class="st">&quot;100100&quot;</span> <span class="ot">level=</span><span class="st">&quot;10&quot;</span> <span class="ot">frequency=</span><span class="st">&quot;10&quot;</span> <span class="ot">timeframe=</span><span class="st">&quot;300&quot;</span>&gt;</span>
 <span id="cb1027-4"><a href="#cb1027-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">if_matched_sid</span>&gt;5710&lt;/<span class="kw">if_matched_sid</span>&gt;  <span class="co">&lt;!-- sshd auth failed --&gt;</span></span>
@@ -18451,8 +18491,7 @@ class="sourceCode xml"><code class="sourceCode xml"><span id="cb1027-1"><a href=
 <span id="cb1027-6"><a href="#cb1027-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">mitre</span>&gt;&lt;<span class="kw">id</span>&gt;T1110&lt;/<span class="kw">id</span>&gt;&lt;/<span class="kw">mitre</span>&gt;</span>
 <span id="cb1027-7"><a href="#cb1027-7" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">rule</span>&gt;</span>
 <span id="cb1027-8"><a href="#cb1027-8" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">group</span>&gt;</span></code></pre></div>
-<div class="sourceCode" id="cb1028"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1028-1"><a href="#cb1028-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart wazuh-manager</span></code></pre></div>
+<div class="sourceCode" id="cb1028"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1028-1"><a href="#cb1028-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart wazuh-manager</span></code></pre></div>
 <p>Test: brute.sh চালান → Dashboard-এ <code>rule.id:100100</code> alert
 দেখুন।</p>
 <h2 id="splunk-correlation-search">7.2 Splunk Correlation Search</h2>
@@ -18570,16 +18609,14 @@ Automation: SOAR Mini-Lab</h2>
 Script</h2>
 <p>Wazuh Integration (একটি উদাহরণ):</p>
 <p><code>/var/ossec/etc/ossec.conf</code>:</p>
-<div class="sourceCode" id="cb1039"><pre
-class="sourceCode xml"><code class="sourceCode xml"><span id="cb1039-1"><a href="#cb1039-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">integration</span>&gt;</span>
+<div class="sourceCode" id="cb1039"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1039-1"><a href="#cb1039-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">integration</span>&gt;</span>
 <span id="cb1039-2"><a href="#cb1039-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">name</span>&gt;custom-webhook&lt;/<span class="kw">name</span>&gt;</span>
 <span id="cb1039-3"><a href="#cb1039-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">hook_url</span>&gt;http://192.168.56.30:5000/alert&lt;/<span class="kw">hook_url</span>&gt;</span>
 <span id="cb1039-4"><a href="#cb1039-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">level</span>&gt;10&lt;/<span class="kw">level</span>&gt;</span>
 <span id="cb1039-5"><a href="#cb1039-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">alert_format</span>&gt;json&lt;/<span class="kw">alert_format</span>&gt;</span>
 <span id="cb1039-6"><a href="#cb1039-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">integration</span>&gt;</span></code></pre></div>
 <p>Python listener:</p>
-<div class="sourceCode" id="cb1040"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1040-1"><a href="#cb1040-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> flask <span class="im">import</span> Flask, request</span>
+<div class="sourceCode" id="cb1040"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1040-1"><a href="#cb1040-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> flask <span class="im">import</span> Flask, request</span>
 <span id="cb1040-2"><a href="#cb1040-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb1040-3"><a href="#cb1040-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1040-4"><a href="#cb1040-4" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> Flask(<span class="va">__name__</span>)</span>
@@ -18616,8 +18653,7 @@ Add comment to incident</code></pre>
 <h2 id="exercise-6-threat-intel-integration">🌍 11. Exercise 6 — Threat
 Intel Integration</h2>
 <h2 id="misp-lab-free-tip">MISP Lab (Free TIP)</h2>
-<div class="sourceCode" id="cb1043"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1043-1"><a href="#cb1043-1" aria-hidden="true" tabindex="-1"></a><span class="co">## MISP docker</span></span>
+<div class="sourceCode" id="cb1043"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1043-1"><a href="#cb1043-1" aria-hidden="true" tabindex="-1"></a><span class="co">## MISP docker</span></span>
 <span id="cb1043-2"><a href="#cb1043-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/MISP/misp-docker</span>
 <span id="cb1043-3"><a href="#cb1043-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> misp-docker <span class="kw">&amp;&amp;</span> <span class="ex">docker</span> compose up <span class="at">-d</span></span></code></pre></div>
 <pre class="text"><code>1. MISP-এ event create করুন → আপনার lab attacker IP add করুন
@@ -18671,8 +18707,7 @@ WEEK 6 — Advanced + Portfolio
 <h2 id="sigma-একবর-লখন-সব-জযগয-চলন">🗂️ 13. Sigma — একবার লিখুন, সব জায়গায়
 চালান</h2>
 <p>আগের exercise-এর rule-টাই Sigma-তে:</p>
-<div class="sourceCode" id="cb1046"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1046-1"><a href="#cb1046-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> SSH Brute Force Detection</span></span>
+<div class="sourceCode" id="cb1046"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1046-1"><a href="#cb1046-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> SSH Brute Force Detection</span></span>
 <span id="cb1046-2"><a href="#cb1046-2" aria-hidden="true" tabindex="-1"></a><span class="fu">id</span><span class="kw">:</span><span class="at"> 100100-bf-ssh</span></span>
 <span id="cb1046-3"><a href="#cb1046-3" aria-hidden="true" tabindex="-1"></a><span class="fu">status</span><span class="kw">:</span><span class="at"> stable</span></span>
 <span id="cb1046-4"><a href="#cb1046-4" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Multiple failed SSH logins from same source in short window</span></span>
@@ -18691,8 +18726,7 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1046-1"><a hre
 <span id="cb1046-17"><a href="#cb1046-17" aria-hidden="true" tabindex="-1"></a><span class="fu">tags</span><span class="kw">:</span></span>
 <span id="cb1046-18"><a href="#cb1046-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> attack.credential_access</span></span>
 <span id="cb1046-19"><a href="#cb1046-19" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> attack.t1110</span></span></code></pre></div>
-<div class="sourceCode" id="cb1047"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1047-1"><a href="#cb1047-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install sigma-cli pySigma</span>
+<div class="sourceCode" id="cb1047"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1047-1"><a href="#cb1047-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install sigma-cli pySigma</span>
 <span id="cb1047-2"><a href="#cb1047-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sigma</span> convert <span class="at">-t</span> splunk <span class="at">-p</span> splunk rule.yml   <span class="co"># → SPL</span></span>
 <span id="cb1047-3"><a href="#cb1047-3" aria-hidden="true" tabindex="-1"></a><span class="ex">sigma</span> convert <span class="at">-t</span> lucene <span class="at">-p</span> ecs-elastic rule.yml  <span class="co"># → Elastic query</span></span></code></pre></div>
 <blockquote>
@@ -18718,8 +18752,7 @@ Windows Event ID Cheat Sheet (Lab-এ যা collect করবেন)</h2>
 4740  Account locked out
 1102  Audit log cleared      → tampering indicator</code></pre>
 <p>Wazuh rule test:</p>
-<div class="sourceCode" id="cb1049"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1049-1"><a href="#cb1049-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Windows VM-এ test user বানান → 4720 → SIEM-এ verify</span></span>
+<div class="sourceCode" id="cb1049"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1049-1"><a href="#cb1049-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Windows VM-এ test user বানান → 4720 → SIEM-এ verify</span></span>
 <span id="cb1049-2"><a href="#cb1049-2" aria-hidden="true" tabindex="-1"></a><span class="ex">net</span> user testuser Pass123! /add</span></code></pre></div>
 <hr />
 <h2 id="common-multi-platform-lab-mistakes">🚫 15. Common Multi-Platform
